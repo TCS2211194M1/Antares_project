@@ -1,252 +1,252 @@
 c_Pais,Descripción,Formato de código postal,Formato de Registro de Identidad Tributaria,Validación del Registro de Identidad Tributaria,Agrupaciones,entry_status,create_date,create_by,update_date,update_by
-AFG,Afganistán,,,,,,,,,
-ALA,Islas Åland,,,,,,,,,
-ALB,Albania,,,,,,,,,
-DEU,Alemania,,,,Unión Europea,,,,,
-AND,Andorra,,,,,,,,,
-AGO,Angola,,,,,,,,,
-AIA,Anguila,,,,,,,,,
-ATA,Antártida,,,,,,,,,
-ATG,Antigua y Barbuda,,,,,,,,,
-SAU,Arabia Saudita,,,,,,,,,
-DZA,Argelia,,,,,,,,,
-ARG,Argentina,,,,,,,,,
-ARM,Armenia,,,,,,,,,
-ABW,Aruba,,,,,,,,,
-AUS,Australia,,,,,,,,,
-AUT,Austria,,,,Unión Europea,,,,,
-AZE,Azerbaiyán,,,,,,,,,
-BHS,Bahamas (las),,,,,,,,,
-BGD,Bangladés,,,,,,,,,
-BRB,Barbados,,,,,,,,,
-BHR,Baréin,,,,,,,,,
-BEL,Bélgica,,,,Unión Europea,,,,,
-BLZ,Belice,,,,,,,,,
-BEN,Benín,,,,,,,,,
-BMU,Bermudas,,,,,,,,,
-BLR,Bielorrusia,,,,,,,,,
-MMR,Myanmar,,,,,,,,,
-BOL,"Bolivia, Estado Plurinacional de",,,,,,,,,
-BIH,Bosnia y Herzegovina,,,,,,,,,
-BWA,Botsuana,,,,,,,,,
-BRA,Brasil,,,,,,,,,
-BRN,Brunéi Darussalam,,,,,,,,,
-BGR,Bulgaria,,,,Unión Europea,,,,,
-BFA,Burkina Faso,,,,,,,,,
-BDI,Burundi,,,,,,,,,
-BTN,Bután,,,,,,,,,
-CPV,Cabo Verde,,,,,,,,,
-KHM,Camboya,,,,,,,,,
-CMR,Camerún,,,,,,,,,
-CAN,Canadá,[A-Z][0-9][A-Z] [0-9][A-Z][0-9],[0-9]{9},,TLCAN,,,,,
-QAT,Catar,,,,,,,,,
-BES,"Bonaire, San Eustaquio y Saba",,,,,,,,,
-TCD,Chad,,,,,,,,,
-CHL,Chile,,,,,,,,,
-CHN,China,,,,,,,,,
-CYP,Chipre,,,,Unión Europea,,,,,
-COL,Colombia,,,,,,,,,
-COM,Comoras,,,,,,,,,
-PRK,Corea (la República Democrática Popular de),,,,,,,,,
-KOR,Corea (la República de),,,,,,,,,
-CIV,Côte d'Ivoire,,,,,,,,,
-CRI,Costa Rica,,,,,,,,,
-HRV,Croacia,,,,Unión Europea,,,,,
-CUB,Cuba,,,,,,,,,
-CUW,Curaçao,,,,,,,,,
-DNK,Dinamarca,,,,Unión Europea,,,,,
-DMA,Dominica,,,,,,,,,
-ECU,Ecuador,,,,,,,,,
-EGY,Egipto,,,,,,,,,
-SLV,El Salvador,,,,,,,,,
-ARE,Emiratos Árabes Unidos (Los),,,,,,,,,
-ERI,Eritrea,,,,,,,,,
-SVK,Eslovaquia,,,,Unión Europea,,,,,
-SVN,Eslovenia,,,,Unión Europea,,,,,
-ESP,España,,,,Unión Europea,,,,,
-USA,Estados Unidos (los),[0-9]{5}(-[0-9]{4})?,[0-9]{9},,TLCAN,,,,,
-EST,Estonia,,,,Unión Europea,,,,,
-ETH,Etiopía,,,,,,,,,
-PHL,Filipinas (las),,,,,,,,,
-FIN,Finlandia,,,,Unión Europea,,,,,
-FJI,Fiyi,,,,,,,,,
-FRA,Francia,,,,Unión Europea,,,,,
-GAB,Gabón,,,,,,,,,
-GMB,Gambia (La),,,,,,,,,
-GEO,Georgia,,,,,,,,,
-GHA,Ghana,,,,,,,,,
-GIB,Gibraltar,,,,,,,,,
-GRD,Granada,,,,,,,,,
-GRC,Grecia,,,,Unión Europea,,,,,
-GRL,Groenlandia,,,,,,,,,
-GLP,Guadalupe,,,,,,,,,
-GUM,Guam,,,,,,,,,
-GTM,Guatemala,,,,,,,,,
-GUF,Guayana Francesa,,,,,,,,,
-GGY,Guernsey,,,,,,,,,
-GIN,Guinea,,,,,,,,,
-GNB,Guinea-Bisáu,,,,,,,,,
-GNQ,Guinea Ecuatorial,,,,,,,,,
-GUY,Guyana,,,,,,,,,
-HTI,Haití,,,,,,,,,
-HND,Honduras,,,,,,,,,
-HKG,Hong Kong,,,,,,,,,
-HUN,Hungría,,,,Unión Europea,,,,,
-IND,India,,,,,,,,,
-IDN,Indonesia,,,,,,,,,
-IRQ,Irak,,,,,,,,,
-IRN,Irán (la República Islámica de),,,,,,,,,
-IRL,Irlanda,,,,Unión Europea,,,,,
-BVT,Isla Bouvet,,,,,,,,,
-IMN,Isla de Man,,,,,,,,,
-CXR,Isla de Navidad,,,,,,,,,
-NFK,Isla Norfolk,,,,,,,,,
-ISL,Islandia,,,,,,,,,
-CYM,Islas Caimán (las),,,,,,,,,
-CCK,Islas Cocos (Keeling),,,,,,,,,
-COK,Islas Cook (las),,,,,,,,,
-FRO,Islas Feroe (las),,,,,,,,,
-SGS,Georgia del sur y las islas sandwich del sur,,,,,,,,,
-HMD,Isla Heard e Islas McDonald,,,,,,,,,
-FLK,Islas Malvinas [Falkland] (las),,,,,,,,,
-MNP,Islas Marianas del Norte (las),,,,,,,,,
-MHL,Islas Marshall (las),,,,,,,,,
-PCN,Pitcairn,,,,,,,,,
-SLB,Islas Salomón (las),,,,,,,,,
-TCA,Islas Turcas y Caicos (las),,,,,,,,,
-UMI,Islas de Ultramar Menores de Estados Unidos (las),,,,,,,,,
-VGB,Islas Vírgenes (Británicas),,,,,,,,,
-VIR,Islas Vírgenes (EE.UU.),,,,,,,,,
-ISR,Israel,,,,,,,,,
-ITA,Italia,,,,Unión Europea,,,,,
-JAM,Jamaica,,,,,,,,,
-JPN,Japón,,,,,,,,,
-JEY,Jersey,,,,,,,,,
-JOR,Jordania,,,,,,,,,
-KAZ,Kazajistán,,,,,,,,,
-KEN,Kenia,,,,,,,,,
-KGZ,Kirguistán,,,,,,,,,
-KIR,Kiribati,,,,,,,,,
-KWT,Kuwait,,,,,,,,,
-LAO,"Lao, (la) República Democrática Popular",,,,,,,,,
-LSO,Lesoto,,,,,,,,,
-LVA,Letonia,,,,Unión Europea,,,,,
-LBN,Líbano,,,,,,,,,
-LBR,Liberia,,,,,,,,,
-LBY,Libia,,,,,,,,,
-LIE,Liechtenstein,,,,,,,,,
-LTU,Lituania,,,,Unión Europea,,,,,
-LUX,Luxemburgo,,,,Unión Europea,,,,,
-MAC,Macao,,,,,,,,,
-MDG,Madagascar,,,,,,,,,
-MYS,Malasia,,,,,,,,,
-MWI,Malaui,,,,,,,,,
-MDV,Maldivas,,,,,,,,,
-MLI,Malí,,,,,,,,,
-MLT,Malta,,,,Unión Europea,,,,,
-MAR,Marruecos,,,,,,,,,
-MTQ,Martinica,,,,,,,,,
-MUS,Mauricio,,,,,,,,,
-MRT,Mauritania,,,,,,,,,
-MYT,Mayotte,,,,,,,,,
+AFG,Afganistán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ALA,Islas Åland,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ALB,Albania,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+DEU,Alemania,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+AND,Andorra,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+AGO,Angola,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+AIA,Anguila,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ATA,Antártida,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ATG,Antigua y Barbuda,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SAU,Arabia Saudita,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+DZA,Argelia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ARG,Argentina,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ARM,Armenia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ABW,Aruba,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+AUS,Australia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+AUT,Austria,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+AZE,Azerbaiyán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BHS,Bahamas (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BGD,Bangladés,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BRB,Barbados,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BHR,Baréin,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BEL,Bélgica,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+BLZ,Belice,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BEN,Benín,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BMU,Bermudas,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BLR,Bielorrusia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MMR,Myanmar,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BOL,"Bolivia, Estado Plurinacional de",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BIH,Bosnia y Herzegovina,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BWA,Botsuana,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BRA,Brasil,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BRN,Brunéi Darussalam,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BGR,Bulgaria,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+BFA,Burkina Faso,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BDI,Burundi,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BTN,Bután,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CPV,Cabo Verde,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KHM,Camboya,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CMR,Camerún,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CAN,Canadá,[A-Z][0-9][A-Z] [0-9][A-Z][0-9],[0-9]{9},,TLCAN,0,09/02/2023,2309150001,09/02/2023,2309150001
+QAT,Catar,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BES,"Bonaire, San Eustaquio y Saba",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TCD,Chad,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CHL,Chile,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CHN,China,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CYP,Chipre,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+COL,Colombia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+COM,Comoras,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PRK,Corea (la República Democrática Popular de),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KOR,Corea (la República de),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CIV,Côte d'Ivoire,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CRI,Costa Rica,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+HRV,Croacia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+CUB,Cuba,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CUW,Curaçao,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+DNK,Dinamarca,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+DMA,Dominica,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ECU,Ecuador,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+EGY,Egipto,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SLV,El Salvador,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ARE,Emiratos Árabes Unidos (Los),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ERI,Eritrea,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SVK,Eslovaquia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+SVN,Eslovenia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+ESP,España,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+USA,Estados Unidos (los),[0-9]{5}(-[0-9]{4})?,[0-9]{9},,TLCAN,0,09/02/2023,2309150001,09/02/2023,2309150001
+EST,Estonia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+ETH,Etiopía,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PHL,Filipinas (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+FIN,Finlandia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+FJI,Fiyi,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+FRA,Francia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+GAB,Gabón,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GMB,Gambia (La),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GEO,Georgia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GHA,Ghana,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GIB,Gibraltar,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GRD,Granada,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GRC,Grecia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+GRL,Groenlandia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GLP,Guadalupe,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GUM,Guam,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GTM,Guatemala,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GUF,Guayana Francesa,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GGY,Guernsey,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GIN,Guinea,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GNB,Guinea-Bisáu,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GNQ,Guinea Ecuatorial,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GUY,Guyana,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+HTI,Haití,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+HND,Honduras,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+HKG,Hong Kong,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+HUN,Hungría,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+IND,India,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+IDN,Indonesia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+IRQ,Irak,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+IRN,Irán (la República Islámica de),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+IRL,Irlanda,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+BVT,Isla Bouvet,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+IMN,Isla de Man,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CXR,Isla de Navidad,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NFK,Isla Norfolk,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ISL,Islandia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CYM,Islas Caimán (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CCK,Islas Cocos (Keeling),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+COK,Islas Cook (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+FRO,Islas Feroe (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SGS,Georgia del sur y las islas sandwich del sur,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+HMD,Isla Heard e Islas McDonald,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+FLK,Islas Malvinas [Falkland] (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MNP,Islas Marianas del Norte (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MHL,Islas Marshall (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PCN,Pitcairn,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SLB,Islas Salomón (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TCA,Islas Turcas y Caicos (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+UMI,Islas de Ultramar Menores de Estados Unidos (las),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+VGB,Islas Vírgenes (Británicas),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+VIR,Islas Vírgenes (EE.UU.),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ISR,Israel,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ITA,Italia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+JAM,Jamaica,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+JPN,Japón,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+JEY,Jersey,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+JOR,Jordania,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KAZ,Kazajistán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KEN,Kenia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KGZ,Kirguistán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KIR,Kiribati,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KWT,Kuwait,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LAO,"Lao, (la) República Democrática Popular",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LSO,Lesoto,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LVA,Letonia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+LBN,Líbano,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LBR,Liberia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LBY,Libia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LIE,Liechtenstein,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LTU,Lituania,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+LUX,Luxemburgo,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+MAC,Macao,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MDG,Madagascar,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MYS,Malasia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MWI,Malaui,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MDV,Maldivas,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MLI,Malí,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MLT,Malta,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+MAR,Marruecos,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MTQ,Martinica,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MUS,Mauricio,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MRT,Mauritania,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MYT,Mayotte,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
 MEX,México,[0-9]{5},"[A-Z&Ñ]{3,4}[0-9]{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])[A-Z0-9]{2}[0
--9A]",Lista del SAT,TLCAN,,,,,
-FSM,Micronesia (los Estados Federados de),,,,,,,,,
-MDA,Moldavia (la República de),,,,,,,,,
-MCO,Mónaco,,,,,,,,,
-MNG,Mongolia,,,,,,,,,
-MNE,Montenegro,,,,,,,,,
-MSR,Montserrat,,,,,,,,,
-MOZ,Mozambique,,,,,,,,,
-NAM,Namibia,,,,,,,,,
-NRU,Nauru,,,,,,,,,
-NPL,Nepal,,,,,,,,,
-NIC,Nicaragua,,,,,,,,,
-NER,Níger (el),,,,,,,,,
-NGA,Nigeria,,,,,,,,,
-NIU,Niue,,,,,,,,,
-NOR,Noruega,,,,,,,,,
-NCL,Nueva Caledonia,,,,,,,,,
-NZL,Nueva Zelanda,,,,,,,,,
-OMN,Omán,,,,,,,,,
-NLD,Países Bajos (los),,,,Unión Europea,,,,,
-PAK,Pakistán,,,,,,,,,
-PLW,Palaos,,,,,,,,,
-PSE,"Palestina, Estado de",,,,,,,,,
-PAN,Panamá,,,,,,,,,
-PNG,Papúa Nueva Guinea,,,,,,,,,
-PRY,Paraguay,,,,,,,,,
-PER,Perú,,,,,,,,,
-PYF,Polinesia Francesa,,,,,,,,,
-POL,Polonia,,,,Unión Europea,,,,,
-PRT,Portugal,,,,Unión Europea,,,,,
-PRI,Puerto Rico,,,,,,,,,
-GBR,Reino Unido (el),,,,Unión Europea,,,,,
-CAF,República Centroafricana (la),,,,,,,,,
-CZE,República Checa (la),,,,Unión Europea,,,,,
-MKD,Macedonia (la antigua República Yugoslava de),,,,,,,,,
-COG,Congo,,,,,,,,,
-COD,Congo (la República Democrática del),,,,,,,,,
-DOM,República Dominicana (la),,,,,,,,,
-REU,Reunión,,,,,,,,,
-RWA,Ruanda,,,,,,,,,
-ROU,Rumania,,,,Unión Europea,,,,,
-RUS,"Rusia, (la) Federación de",,,,,,,,,
-ESH,Sahara Occidental,,,,,,,,,
-WSM,Samoa,,,,,,,,,
-ASM,Samoa Americana,,,,,,,,,
-BLM,San Bartolomé,,,,,,,,,
-KNA,San Cristóbal y Nieves,,,,,,,,,
-SMR,San Marino,,,,,,,,,
-MAF,San Martín (parte francesa),,,,,,,,,
-SPM,San Pedro y Miquelón,,,,,,,,,
-VCT,San Vicente y las Granadinas,,,,,,,,,
-SHN,"Santa Helena, Ascensión y Tristán de Acuña",,,,,,,,,
-LCA,Santa Lucía,,,,,,,,,
-STP,Santo Tomé y Príncipe,,,,,,,,,
-SEN,Senegal,,,,,,,,,
-SRB,Serbia,,,,,,,,,
-SYC,Seychelles,,,,,,,,,
-SLE,Sierra leona,,,,,,,,,
-SGP,Singapur,,,,,,,,,
-SXM,Sint Maarten (parte holandesa),,,,,,,,,
-SYR,"Siria, (la) República Árabe",,,,,,,,,
-SOM,Somalia,,,,,,,,,
-LKA,Sri Lanka,,,,,,,,,
-SWZ,Suazilandia,,,,,,,,,
-ZAF,Sudáfrica,,,,,,,,,
-SDN,Sudán (el),,,,,,,,,
-SSD,Sudán del Sur,,,,,,,,,
-SWE,Suecia,,,,Unión Europea,,,,,
-CHE,Suiza,,,,,,,,,
-SUR,Surinam,,,,,,,,,
-SJM,Svalbard y Jan Mayen,,,,,,,,,
-THA,Tailandia,,,,,,,,,
-TWN,Taiwán (Provincia de China),,,,,,,,,
-TZA,"Tanzania, República Unida de",,,,,,,,,
-TJK,Tayikistán,,,,,,,,,
-IOT,Territorio Británico del Océano Índico (el),,,,,,,,,
-ATF,Territorios Australes Franceses (los),,,,,,,,,
-TLS,Timor-Leste,,,,,,,,,
-TGO,Togo,,,,,,,,,
-TKL,Tokelau,,,,,,,,,
-TON,Tonga,,,,,,,,,
-TTO,Trinidad y Tobago,,,,,,,,,
-TUN,Túnez,,,,,,,,,
-TKM,Turkmenistán,,,,,,,,,
-TUR,Turquía,,,,,,,,,
-TUV,Tuvalu,,,,,,,,,
-UKR,Ucrania,,,,,,,,,
-UGA,Uganda,,,,,,,,,
-URY,Uruguay,,,,,,,,,
-UZB,Uzbekistán,,,,,,,,,
-VUT,Vanuatu,,,,,,,,,
-VAT,Santa Sede[Estado de la Ciudad del Vaticano] (la),,,,,,,,,
-VEN,"Venezuela, República Bolivariana de",,,,,,,,,
-VNM,Viet Nam,,,,,,,,,
-WLF,Wallis y Futuna,,,,,,,,,
-YEM,Yemen,,,,,,,,,
-DJI,Yibuti,,,,,,,,,
-ZMB,Zambia,,,,,,,,,
-ZWE,Zimbabue,,,,,,,,,
-ZZZ,Países no declarados,,,,,,,,,
+-9A]",Lista del SAT,TLCAN,0,09/02/2023,2309150001,09/02/2023,2309150001
+FSM,Micronesia (los Estados Federados de),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MDA,Moldavia (la República de),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MCO,Mónaco,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MNG,Mongolia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MNE,Montenegro,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MSR,Montserrat,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MOZ,Mozambique,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NAM,Namibia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NRU,Nauru,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NPL,Nepal,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NIC,Nicaragua,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NER,Níger (el),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NGA,Nigeria,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NIU,Niue,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NOR,Noruega,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NCL,Nueva Caledonia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NZL,Nueva Zelanda,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+OMN,Omán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+NLD,Países Bajos (los),,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+PAK,Pakistán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PLW,Palaos,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PSE,"Palestina, Estado de",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PAN,Panamá,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PNG,Papúa Nueva Guinea,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PRY,Paraguay,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PER,Perú,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+PYF,Polinesia Francesa,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+POL,Polonia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+PRT,Portugal,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+PRI,Puerto Rico,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+GBR,Reino Unido (el),,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+CAF,República Centroafricana (la),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+CZE,República Checa (la),,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+MKD,Macedonia (la antigua República Yugoslava de),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+COG,Congo,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+COD,Congo (la República Democrática del),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+DOM,República Dominicana (la),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+REU,Reunión,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+RWA,Ruanda,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ROU,Rumania,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+RUS,"Rusia, (la) Federación de",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ESH,Sahara Occidental,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+WSM,Samoa,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ASM,Samoa Americana,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+BLM,San Bartolomé,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+KNA,San Cristóbal y Nieves,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SMR,San Marino,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+MAF,San Martín (parte francesa),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SPM,San Pedro y Miquelón,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+VCT,San Vicente y las Granadinas,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SHN,"Santa Helena, Ascensión y Tristán de Acuña",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LCA,Santa Lucía,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+STP,Santo Tomé y Príncipe,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SEN,Senegal,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SRB,Serbia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SYC,Seychelles,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SLE,Sierra leona,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SGP,Singapur,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SXM,Sint Maarten (parte holandesa),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SYR,"Siria, (la) República Árabe",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SOM,Somalia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+LKA,Sri Lanka,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SWZ,Suazilandia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ZAF,Sudáfrica,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SDN,Sudán (el),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SSD,Sudán del Sur,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SWE,Suecia,,,,Unión Europea,0,09/02/2023,2309150001,09/02/2023,2309150001
+CHE,Suiza,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SUR,Surinam,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+SJM,Svalbard y Jan Mayen,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+THA,Tailandia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TWN,Taiwán (Provincia de China),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TZA,"Tanzania, República Unida de",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TJK,Tayikistán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+IOT,Territorio Británico del Océano Índico (el),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ATF,Territorios Australes Franceses (los),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TLS,Timor-Leste,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TGO,Togo,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TKL,Tokelau,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TON,Tonga,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TTO,Trinidad y Tobago,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TUN,Túnez,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TKM,Turkmenistán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TUR,Turquía,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+TUV,Tuvalu,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+UKR,Ucrania,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+UGA,Uganda,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+URY,Uruguay,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+UZB,Uzbekistán,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+VUT,Vanuatu,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+VAT,Santa Sede[Estado de la Ciudad del Vaticano] (la),,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+VEN,"Venezuela, República Bolivariana de",,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+VNM,Viet Nam,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+WLF,Wallis y Futuna,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+YEM,Yemen,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+DJI,Yibuti,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ZMB,Zambia,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ZWE,Zimbabue,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
+ZZZ,Países no declarados,,,,,0,09/02/2023,2309150001,09/02/2023,2309150001
