@@ -1,8 +1,8 @@
 c_TipoRelacion,Descripción,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
-1,Nota de crédito de los documentos relacionados,01/01/2022,,,,,,
-2,Nota de débito de los documentos relacionados,01/01/2022,,,,,,
-3,Devolución de mercancía sobre facturas o traslados previos,01/01/2022,,,,,,
-4,Sustitución de los CFDI previos,01/01/2022,,,,,,
-5,Traslados de mercancías facturados previamente,01/01/2022,,,,,,
-6,Factura generada por los traslados previos,01/01/2022,,,,,,
-7,CFDI por aplicación de anticipo,01/01/2022,,,,,,
+1,Nota de crédito de los documentos relacionados,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+2,Nota de débito de los documentos relacionados,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+3,Devolución de mercancía sobre facturas o traslados previos,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+4,Sustitución de los CFDI previos,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+5,Traslados de mercancías facturados previamente,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+6,Factura generada por los traslados previos,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+7,CFDI por aplicación de anticipo,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
