@@ -1,5 +1,5 @@
 c_Exportacion,Descripción,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
-1,No aplica,01/01/2022,,,,,,
-2,Definitiva con clave A1,01/01/2022,,,,,,
-3,Temporal,01/01/2022,,,,,,
-4,Definitiva con clave distinta a A1 o cuando no existe enajenación en términos del CFF,25/02/2022,,,,,,
+1,No aplica,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+2,Definitiva con clave A1,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+3,Temporal,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+4,Definitiva con clave distinta a A1 o cuando no existe enajenación en términos del CFF,25/02/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
