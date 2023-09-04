@@ -39,13 +39,13 @@
                             <input type="button" value="Client" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('client', 'add', null);">
                         </li>
                         <li class="nav-item">
-                            <input type="button" value="OTHER" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('grupos', 'listado', null);">
+                            <input type="button" value="OTHER" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('', '', null);">
                         </li>
                         <li class="nav-item dropdown">
-                            <input type="button" value="OTHER" class="btn btn-outline-secondary mb-3 w-100" onclick="javascript:cargarInterfaz('alumnos', 'listado', null);">
+                            <input type="button" value="OTHER" class="btn btn-outline-secondary mb-3 w-100" onclick="javascript:cargarInterfaz('', '', null);">
                         </li>
                         <li class="nav-item dropdown">
-                            <input type="button" value="OTHER" class="btn btn-outline-secondary mb-3 w-100" onclick="javascript:cargarInterfaz('carreras', 'listado', null);">
+                            <input type="button" value="OTHER" class="btn btn-outline-secondary mb-3 w-100" onclick="javascript:cargarInterfaz('', '', null);">
                         </li>
                     </ul>
                 </div>
