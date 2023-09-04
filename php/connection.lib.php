@@ -6,7 +6,7 @@ class Connection
 
     function open()
     {
-        $this->con = new mysqli("localhost", "root", "root", "nube");
+        $this->con = new mysqli("localhost", "root", "root", "antares_project");
         if (mysqli_connect_errno()) {
             exit();
         }

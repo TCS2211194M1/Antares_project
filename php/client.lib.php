@@ -11,16 +11,16 @@ class Client extends Connection
 
     function add($request)
     {
-        $ejec = $this->execute("");
+        $ejec = $this->execute("INSERT INTO client VALUES('$request[a]', '1', NOW(), NOW())");
         return $ejec;
     }
 
     function list($opc)
     {
-        if ($opc != null) {
-            $consult = $this->execute("CONSULTA GENERAL");
+        if ($opc == null) {
+            $consult = $this->execute("SELECT * FROM t_login");
         } else {
-            $consult = $this->execute("CONSULTA ESPECÍFICA");
+            $consult = $this->execute("SELECT * FROM t_login where status_log= '1'");
         }
         return $consult;
     }

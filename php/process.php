@@ -9,7 +9,7 @@ switch ($_POST["opc"]) {
         $client = new Client();
         switch ($_POST["acc"]) {
             case 'add':
-
+                echo $client->add($_POST);
                 break;
 
             case 'update':
