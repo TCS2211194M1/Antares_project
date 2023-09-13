@@ -17,11 +17,11 @@ switch ($_POST["opc"]) {
                 break;
 
             case 'delete':
-
+                echo $client->delete($_POST);
                 break;
 
             default:
-                # code...
+                echo "Error, no seleccionaste una opción para clientes";
                 break;
         }
         break;

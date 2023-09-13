@@ -36,7 +36,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <input type="button" value="Client" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('client', 'add', null);">
+                            <input type="button" value="Client" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('client', 'list', null);">
                         </li>
                         <li class="nav-item">
                             <input type="button" value="OTHER" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('', '', null);">
@@ -54,7 +54,6 @@
     </nav>
     <br><br><br>
     <div class="container" id="container"></div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
 </body>
