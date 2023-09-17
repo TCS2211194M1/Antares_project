@@ -1,5 +1,5 @@
 c_ObjetoImp,Descripción,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
-1,No objeto de impuesto.,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
-2,Sí objeto de impuesto.,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
-3,Sí objeto del impuesto y no obligado al desglose.,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
-4,Sí objeto del impuesto y no causa impuesto.,01/01/2022,,0,09/02/2023,2309150001,09/02/2023,2309150001
+1,No objeto de impuesto.,2022/01/01 00:00:00,,0,2023/09/01 00:00:00,2309150001,2023/09/01 00:00:00,2309150001
+2,Sí objeto de impuesto.,2022/01/01 00:00:00,,0,2023/09/01 00:00:00,2309150001,2023/09/01 00:00:00,2309150001
+3,Sí objeto del impuesto y no obligado al desglose.,2022/01/03 00:00:00,,0,2023/09/01 00:00:00,2309150001,2023/09/01 00:00:00,2309150001
+4,Sí objeto del impuesto y no causa impuesto.,2022/01/04 00:00:00,,0,2023/09/01 00:00:00,2309150001,2023/09/01 00:00:00,2309150001
