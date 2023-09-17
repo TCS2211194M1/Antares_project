@@ -1,4 +1,4 @@
-﻿C_MONEDA,DESCRIPCION,CURRENCY_SYMBOL,Decimales,Porcentaje variación,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
+﻿c_moneda,DESCRIPCION,CURRENCY_SYMBOL,Decimales,Porcentaje variación,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
 AED,Dirham de EAU,Ø¥.Ø¯,2,500%,01/01/2022 00:00,,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
 AFN,Afghani,Ø‹,2,500%,01/01/2022 00:00,,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
 ALL,Lek,Lek,2,500%,01/01/2022 00:00,,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
