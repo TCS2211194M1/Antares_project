@@ -1,5 +1,5 @@
-t_Product,Description,Service_type,Domain,HDD_SPACE,Precio,c_Moneda,Periodicidad,Fecha de inicio de vigencia,Fecha de fin de vigencia,entry_status,create_date,create_by,update_date,update_by
-1,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Mensual",Web Hosting Startup,1,10 GB,2.89,USD,Mensual,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
-2,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Cuatrimestral",Web Hosting Startup,1,10 GB,11,USD,Cuatrimestral,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
-3,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Semestral",Web Hosting Startup,1,10 GB,17,USD,Semestral,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
-4,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Annual",Web Hosting Startup,1,10 GB,34,USD,Annual,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
+t_Product,Description,Service_type,Domain,HDD_SPACE,product_value,c_Moneda,Periodicidad,c_ObjetoImp,c_Impuesto,c_tasa,product_tax,Fecha de inicio de vigencia,Fecha de fin de vigencia,entry_status,create_date,create_by,update_date,update_by
+1,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Mensual",Web Hosting Startup,1,10 GB,2.89,USD,Mensual,2,2,,,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
+2,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Cuatrimestral",Web Hosting Startup,1,10 GB,11,USD,Cuatrimestral,2,2,,,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
+3,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Semestral",Web Hosting Startup,1,10 GB,17,USD,Semestral,2,2,,,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
+4,"Web Hosting Startup, 1 Domain, 10 GB HDD_SPACE, Annual",Web Hosting Startup,1,10 GB,34,USD,Anual,2,2,,,01/01/2023 00:00,31/12/2023 23:59,0,01/09/2023 00:00,2309150001,01/09/2023 00:00,2309150001
