@@ -1,5 +1,5 @@
 t_privilege,Grant Table Column,Context,URL,entry_status,create_date,create_by,update_date,update_by
-ALL PRIVILEGES,Synonym for “all privileges”,Server administration,ALL [PRIVILEGES],0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+ALL PRIVILEGES,Synonym for all privileges,Server administration,ALL [PRIVILEGES],0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 ALTER,Alter_priv,Tables,ALTER,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 ALTER ROUTINE,Alter_routine_priv,Stored routines,ALTER ROUTINE,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 CREATE,Create_priv,"Databases, tables, or indexes",CREATE,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
