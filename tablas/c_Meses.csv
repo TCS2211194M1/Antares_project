@@ -1,4 +1,4 @@
-c_Meses,Descripción,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
+c_Meses,DescripciÃ³n,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
 1,Enero,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 2,Febrero,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 3,Marzo,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001

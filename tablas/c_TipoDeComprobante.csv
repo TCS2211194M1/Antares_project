@@ -1,4 +1,4 @@
-c_TipoDeComprobante,DescripciÛn,Valor m·ximo,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
+c_TipoDeComprobante,Descripci√≥n,Valor m√°ximo,Fecha inicio de vigencia,Fecha fin de vigencia,entry_status,create_date,create_by,update_date,update_by
 I,Ingreso,1.00E+18,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 E,Egreso,1.00E+18,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 T,Traslado,1.00E+18,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001

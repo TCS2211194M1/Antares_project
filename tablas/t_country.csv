@@ -46,7 +46,7 @@ t_country,name,iso3,iso2,numeric_code,phone_code,capital,c_Moneda,tld,region_nam
 45,China,CHN,CN,156,86,Beijing,CNY,.cn,Asia,Eastern Asia,Chinese,Asia/Shanghai,35,105,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 46,Christmas Island,CXR,CX,162,61,Flying Fish Cove,AUD,.cx,Oceania,Australia and New Zealand,Christmas Island,Indian/Christmas,-10.5,105.6666667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 47,Cocos (Keeling) Islands,CCK,CC,166,61,West Island,AUD,.cc,Oceania,Australia and New Zealand,Cocos Island,Indian/Cocos,-12.5,96.83333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
-48,Colombia,COL,CO,170,57,Bogotá,COP,.co,Americas,South America,Colombian,America/Bogota,4,-72,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+48,Colombia,COL,CO,170,57,BogotÃ¡,COP,.co,Americas,South America,Colombian,America/Bogota,4,-72,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 49,Comoros,COM,KM,174,269,Moroni,KMF,.km,Africa,Eastern Africa,"Comoran, Comorian",Indian/Comoro,-12.16666666,44.25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 50,Congo,COG,CG,178,242,Brazzaville,XAF,.cg,Africa,Middle Africa,Congolese,Africa/Brazzaville,-1,15,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 52,Cook Islands,COK,CK,184,682,Avarua,NZD,.ck,Oceania,Polynesia,Cook Island,Pacific/Rarotonga,-21.23333333,-159.7666667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
@@ -54,7 +54,7 @@ t_country,name,iso3,iso2,numeric_code,phone_code,capital,c_Moneda,tld,region_nam
 54,Cote D'Ivoire (Ivory Coast),CIV,CI,384,225,Yamoussoukro,XOF,.ci,Africa,Western Africa,Ivorian,Africa/Abidjan,8,-5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 55,Croatia,HRV,HR,191,385,Zagreb,HRK,.hr,Europe,Southern Europe,Croatian,Europe/Zagreb,45.16666666,15.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 56,Cuba,CUB,CU,192,53,Havana,CUP,.cu,Americas,Caribbean,Cuban,America/Havana,21.5,-80,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
-249,Curaçao,CUW,CW,531,599,Willemstad,ANG,.cw,Americas,Caribbean,Curacaoan,America/Curacao,12.116667,-68.933333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+249,CuraÃ§ao,CUW,CW,531,599,Willemstad,ANG,.cw,Americas,Caribbean,Curacaoan,America/Curacao,12.116667,-68.933333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 57,Cyprus,CYP,CY,196,357,Nicosia,EUR,.cy,Europe,Southern Europe,Cypriot,Asia/Famagusta,35,33,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 58,Czech Republic,CZE,CZ,203,420,Prague,CZK,.cz,Europe,Eastern Europe,Czech,Europe/Prague,49.75,15.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 51,Democratic Republic of the Congo,COD,CD,180,243,Kinshasa,CDF,.cd,Africa,Middle Africa,Congolese,Africa/Kinshasa,0,25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
@@ -139,7 +139,7 @@ t_country,name,iso3,iso2,numeric_code,phone_code,capital,c_Moneda,tld,region_nam
 139,Mauritania,MRT,MR,478,222,Nouakchott,MRO,.mr,Africa,Western Africa,Mauritanian,Africa/Nouakchott,20,-12,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 140,Mauritius,MUS,MU,480,230,Port Louis,MUR,.mu,Africa,Eastern Africa,Mauritian,Indian/Mauritius,-20.28333333,57.55,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 141,Mayotte,MYT,YT,175,262,Mamoudzou,EUR,.yt,Africa,Eastern Africa,Mahoran,Indian/Mayotte,-12.83333333,45.16666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
-142,Mexico,MEX,MX,484,52,Ciudad de México,MXN,.mx,Americas,Central America,Mexican,America/Bahia_Banderas,23,-102,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+142,Mexico,MEX,MX,484,52,Ciudad de MÃ©xico,MXN,.mx,Americas,Central America,Mexican,America/Bahia_Banderas,23,-102,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 143,Micronesia,FSM,FM,583,691,Palikir,USD,.fm,Oceania,Micronesia,Micronesian,Pacific/Chuuk,6.91666666,158.25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 144,Moldova,MDA,MD,498,373,Chisinau,MDL,.md,Europe,Eastern Europe,Moldovan,Europe/Chisinau,47,29,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 145,Monaco,MCO,MC,492,377,Monaco,EUR,.mc,Europe,Western Europe,"Monegasque, Monacan",Europe/Monaco,43.73333333,7.4,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001

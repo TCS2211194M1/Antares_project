@@ -1,4 +1,4 @@
-﻿c_Impuesto,Descripción,c_tipofactor,c_tasa,Retención,Traslado,Local o federal,FECHA_INICIO_DE_VIGENCIA,FECHA_FIN_DE_VIGENCIA,entry_status,create_date,create_by,update_date,update_by
+ï»¿c_Impuesto,DescripciÃ³n,c_tipofactor,c_tasa,RetenciÃ³n,Traslado,Local o federal,FECHA_INICIO_DE_VIGENCIA,FECHA_FIN_DE_VIGENCIA,entry_status,create_date,create_by,update_date,update_by
 1,ISR,Tasa,0.35,1,0,Federal,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 2,IVA,Tasa,0.16,1,1,Federal,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 3,IEPS,Tasa,0,1,1,Federal,2023-01-01 00:00:00,2025-01-01 00:00:00,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
