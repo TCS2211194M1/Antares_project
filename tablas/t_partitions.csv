@@ -1,2 +1,2 @@
-t_partitions,DEVICE_NAME ,ATTACHMENT_POINT,entry_status,create_date,create_by,update_date,update_by
-nvme1n1p01,nvme1n1,/var/www/,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+﻿t_partitions,DEVICE_NAME ,ATTACHMENT_POINT,entry_status,create_date,create_by,update_date,update_by
+nvme1n1p01,nvme1n1,/var/www/,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
