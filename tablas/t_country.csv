@@ -1,251 +1,251 @@
 ﻿t_country,name,iso3,iso2,numeric_code,phone_code,capital,c_Moneda,tld,region_name,subregion,nationality,time_zone_name,latitude,longitude,entry_status,create_date,create_by,update_date,update_by
-1,Afghanistan,AFG,AF,4,93,Kabul,AFN,.af,Asia,Southern Asia,Afghan,Asia/Kabul,33,65,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-2,Aland Islands,ALA,AX,248,340,Mariehamn,EUR,.ax,Europe,Northern Europe,Aland Island,Europe/Mariehamn,60.116667,19.9,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-3,Albania,ALB,AL,8,355,Tirana,ALL,.al,Europe,Southern Europe,Albanian ,Europe/Tirane,41,20,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-4,Algeria,DZA,DZ,12,213,Algiers,DZD,.dz,Africa,Northern Africa,Algerian,Africa/Algiers,28,3,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-5,American Samoa,ASM,AS,16,-683,Pago Pago,USD,.as,Oceania,Polynesia,American Samoan,Pacific/Pago_Pago,-14.33333333,-170,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-6,Andorra,AND,AD,20,376,Andorra la Vella,EUR,.ad,Europe,Southern Europe,Andorran,Europe/Andorra,42.5,1.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-7,Angola,AGO,AO,24,244,Luanda,AOA,.ao,Africa,Middle Africa,Angolan,Africa/Luanda,-12.5,18.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-8,Anguilla,AIA,AI,660,-263,The Valley,XCD,.ai,Americas,Caribbean,Anguillan,America/Anguilla,18.25,-63.16666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-9,Antarctica,ATA,AQ,10,672,,AAD,.aq,Polar,Antarctica,Antarctic,Antarctica/Casey,-74.65,4.48,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-10,Antigua And Barbuda,ATG,AG,28,-267,St. John's,XCD,.ag,Americas,Caribbean,Antiguan or Barbudan,America/Antigua,17.05,-61.8,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-11,Argentina,ARG,AR,32,54,Buenos Aires,ARS,.ar,Americas,South America,Argentine,America/Argentina/Buenos_Aires,-34,-64,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-12,Armenia,ARM,AM,51,374,Yerevan,AMD,.am,Asia,Western Asia,Armenian,Asia/Yerevan,40,45,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-13,Aruba,ABW,AW,533,297,Oranjestad,AWG,.aw,Americas,Caribbean,Aruban,America/Aruba,12.5,-69.96666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-14,Australia,AUS,AU,36,61,Canberra,AUD,.au,Oceania,Australia and New Zealand,Australian,Antarctica/Macquarie,-27,133,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-15,Austria,AUT,AT,40,43,Vienna,EUR,.at,Europe,Western Europe,Austrian,Europe/Vienna,47.33333333,13.33333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-16,Azerbaijan,AZE,AZ,31,994,Baku,AZN,.az,Asia,Western Asia,"Azerbaijani, Azeri",Asia/Baku,40.5,47.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-18,Bahrain,BHR,BH,48,973,Manama,BHD,.bh,Asia,Western Asia,Bahraini,Asia/Bahrain,26,50.55,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-19,Bangladesh,BGD,BD,50,880,Dhaka,BDT,.bd,Asia,Southern Asia,Bangladeshi,Asia/Dhaka,24,90,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-20,Barbados,BRB,BB,52,-245,Bridgetown,BBD,.bb,Americas,Caribbean,Barbadian,America/Barbados,13.16666666,-59.53333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-21,Belarus,BLR,BY,112,375,Minsk,BYN,.by,Europe,Eastern Europe,Belarusian,Europe/Minsk,53,28,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-22,Belgium,BEL,BE,56,32,Brussels,EUR,.be,Europe,Western Europe,Belgian,Europe/Brussels,50.83333333,4,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-23,Belize,BLZ,BZ,84,501,Belmopan,BZD,.bz,Americas,Central America,Belizean,America/Belize,17.25,-88.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-24,Benin,BEN,BJ,204,229,Porto-Novo,XOF,.bj,Africa,Western Africa,"Beninese, Beninois",Africa/Porto-Novo,9.5,2.25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-25,Bermuda,BMU,BM,60,-440,Hamilton,BMD,.bm,Americas,Northern America,"Bermudian, Bermudan",Atlantic/Bermuda,32.33333333,-64.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-26,Bhutan,BTN,BT,64,975,Thimphu,BTN,.bt,Asia,Southern Asia,Bhutanese,Asia/Thimphu,27.5,90.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-27,Bolivia,BOL,BO,68,591,Sucre,BOB,.bo,Americas,South America,Bolivian,America/La_Paz,-17,-65,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-155,"Bonaire, Sint Eustatius and Saba",BES,BQ,535,599,Kralendijk,USD,.an,Americas,Caribbean,Bonaire,America/Kralendijk,12.15,-68.266667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-28,Bosnia and Herzegovina,BIH,BA,70,387,Sarajevo,BAM,.ba,Europe,Southern Europe,Bosnian or Herzegovinian,Europe/Sarajevo,44,18,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-29,Botswana,BWA,BW,72,267,Gaborone,BWP,.bw,Africa,Southern Africa,"Motswana, Botswanan",Africa/Gaborone,-22,24,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-30,Bouvet Island,BVT,BV,74,55,,NOK,.bv,,,Bouvet Island,#N/A,-54.43333333,3.4,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-31,Brazil,BRA,BR,76,55,Brasilia,BRL,.br,Americas,South America,Brazilian,America/Araguaina,-10,-55,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-32,British Indian Ocean Territory,IOT,IO,86,246,Diego Garcia,USD,.io,Africa,Eastern Africa,BIOT,Indian/Chagos,-6,71.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-33,Brunei,BRN,BN,96,673,Bandar Seri Begawan,BND,.bn,Asia,South-Eastern Asia,Bruneian,Asia/Brunei,4.5,114.6666667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-34,Bulgaria,BGR,BG,100,359,Sofia,BGN,.bg,Europe,Eastern Europe,Bulgarian,Europe/Sofia,43,25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-35,Burkina Faso,BFA,BF,854,226,Ouagadougou,XOF,.bf,Africa,Western Africa,Burkinabe,Africa/Ouagadougou,13,-2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-36,Burundi,BDI,BI,108,257,Bujumbura,BIF,.bi,Africa,Eastern Africa,Burundian,Africa/Bujumbura,-3.5,30,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-37,Cambodia,KHM,KH,116,855,Phnom Penh,KHR,.kh,Asia,South-Eastern Asia,Cambodian,Asia/Phnom_Penh,13,105,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-38,Cameroon,CMR,CM,120,237,Yaounde,XAF,.cm,Africa,Middle Africa,Cameroonian,Africa/Douala,6,12,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-39,Canada,CAN,CA,124,1,Ottawa,CAD,.ca,Americas,Northern America,Canadian,America/Atikokan,60,-95,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-40,Cape Verde,CPV,CV,132,238,Praia,CVE,.cv,Africa,Western Africa,Verdean,Atlantic/Cape_Verde,16,-24,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-41,Cayman Islands,CYM,KY,136,-344,George Town,KYD,.ky,Americas,Caribbean,Caymanian,America/Cayman,19.5,-80.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-42,Central African Republic,CAF,CF,140,236,Bangui,XAF,.cf,Africa,Middle Africa,Central African,Africa/Bangui,7,21,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-43,Chad,TCD,TD,148,235,N'Djamena,XAF,.td,Africa,Middle Africa,Chadian,Africa/Ndjamena,15,19,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-44,Chile,CHL,CL,152,56,Santiago,CLP,.cl,Americas,South America,Chilean,America/Punta_Arenas,-30,-71,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-45,China,CHN,CN,156,86,Beijing,CNY,.cn,Asia,Eastern Asia,Chinese,Asia/Shanghai,35,105,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-46,Christmas Island,CXR,CX,162,61,Flying Fish Cove,AUD,.cx,Oceania,Australia and New Zealand,Christmas Island,Indian/Christmas,-10.5,105.6666667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-47,Cocos (Keeling) Islands,CCK,CC,166,61,West Island,AUD,.cc,Oceania,Australia and New Zealand,Cocos Island,Indian/Cocos,-12.5,96.83333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-48,Colombia,COL,CO,170,57,BogotÃƒÂ¡,COP,.co,Americas,South America,Colombian,America/Bogota,4,-72,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-49,Comoros,COM,KM,174,269,Moroni,KMF,.km,Africa,Eastern Africa,"Comoran, Comorian",Indian/Comoro,-12.16666666,44.25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-50,Congo,COG,CG,178,242,Brazzaville,XAF,.cg,Africa,Middle Africa,Congolese,Africa/Brazzaville,-1,15,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-52,Cook Islands,COK,CK,184,682,Avarua,NZD,.ck,Oceania,Polynesia,Cook Island,Pacific/Rarotonga,-21.23333333,-159.7666667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-53,Costa Rica,CRI,CR,188,506,San Jose,CRC,.cr,Americas,Central America,Costa Rican,America/Costa_Rica,10,-84,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-54,Cote D'Ivoire (Ivory Coast),CIV,CI,384,225,Yamoussoukro,XOF,.ci,Africa,Western Africa,Ivorian,Africa/Abidjan,8,-5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-55,Croatia,HRV,HR,191,385,Zagreb,HRK,.hr,Europe,Southern Europe,Croatian,Europe/Zagreb,45.16666666,15.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-56,Cuba,CUB,CU,192,53,Havana,CUP,.cu,Americas,Caribbean,Cuban,America/Havana,21.5,-80,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-249,CuraÃƒÂ§ao,CUW,CW,531,599,Willemstad,ANG,.cw,Americas,Caribbean,Curacaoan,America/Curacao,12.116667,-68.933333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-57,Cyprus,CYP,CY,196,357,Nicosia,EUR,.cy,Europe,Southern Europe,Cypriot,Asia/Famagusta,35,33,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-58,Czech Republic,CZE,CZ,203,420,Prague,CZK,.cz,Europe,Eastern Europe,Czech,Europe/Prague,49.75,15.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-51,Democratic Republic of the Congo,COD,CD,180,243,Kinshasa,CDF,.cd,Africa,Middle Africa,Congolese,Africa/Kinshasa,0,25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-59,Denmark,DNK,DK,208,45,Copenhagen,DKK,.dk,Europe,Northern Europe,Danish,Europe/Copenhagen,56,10,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-60,Djibouti,DJI,DJ,262,253,Djibouti,DJF,.dj,Africa,Eastern Africa,Djiboutian,Africa/Djibouti,11.5,43,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-61,Dominica,DMA,DM,212,-766,Roseau,XCD,.dm,Americas,Caribbean,Dominican,America/Dominica,15.41666666,-61.33333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-62,Dominican Republic,DOM,DO,214,+1-809 and 1-829,Santo Domingo,DOP,.do,Americas,Caribbean,Dominican,America/Santo_Domingo,19,-70.66666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-63,East Timor,TLS,TL,626,670,Dili,USD,.tl,Asia,South-Eastern Asia,Timorese,Asia/Dili,-8.83333333,125.9166667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-64,Ecuador,ECU,EC,218,593,Quito,USD,.ec,Americas,South America,Ecuadorian,America/Guayaquil,-2,-77.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-65,Egypt,EGY,EG,818,20,Cairo,EGP,.eg,Africa,Northern Africa,Egyptian,Africa/Cairo,27,30,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-66,El Salvador,SLV,SV,222,503,San Salvador,USD,.sv,Americas,Central America,Salvadoran,America/El_Salvador,13.83333333,-88.91666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-67,Equatorial Guinea,GNQ,GQ,226,240,Malabo,XAF,.gq,Africa,Middle Africa,"Equatorial Guinean, Equatoguinean",Africa/Malabo,2,10,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-68,Eritrea,ERI,ER,232,291,Asmara,ERN,.er,Africa,Eastern Africa,Eritrean,Africa/Asmara,15,39,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-69,Estonia,EST,EE,233,372,Tallinn,EUR,.ee,Europe,Northern Europe,Estonian,Europe/Tallinn,59,26,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-70,Ethiopia,ETH,ET,231,251,Addis Ababa,ETB,.et,Africa,Eastern Africa,Ethiopian,Africa/Addis_Ababa,8,38,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-71,Falkland Islands,FLK,FK,238,500,Stanley,FKP,.fk,Americas,South America,Falkland Island,Atlantic/Stanley,-51.75,-59,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-72,Faroe Islands,FRO,FO,234,298,Torshavn,DKK,.fo,Europe,Northern Europe,Faroese,Atlantic/Faroe,62,-7,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-73,Fiji Islands,FJI,FJ,242,679,Suva,FJD,.fj,Oceania,Melanesia,Fijian,Pacific/Fiji,-18,175,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-74,Finland,FIN,FI,246,358,Helsinki,EUR,.fi,Europe,Northern Europe,Finnish,Europe/Helsinki,64,26,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-75,France,FRA,FR,250,33,Paris,EUR,.fr,Europe,Western Europe,French,Europe/Paris,46,2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-76,French Guiana,GUF,GF,254,594,Cayenne,EUR,.gf,Americas,South America,French Guianese,America/Cayenne,4,-53,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-77,French Polynesia,PYF,PF,258,689,Papeete,XPF,.pf,Oceania,Polynesia,French Polynesia,Pacific/Gambier,-15,-140,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-78,French Southern Territories,ATF,TF,260,262,Port-aux-Francais,EUR,.tf,Africa,Southern Africa,French Southern Territories,Indian/Kerguelen,-49.25,69.167,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-79,Gabon,GAB,GA,266,241,Libreville,XAF,.ga,Africa,Middle Africa,Gabonese,Africa/Libreville,-1,11.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-80,Gambia The,GMB,GM,270,220,Banjul,GMD,.gm,Africa,Western Africa,Gambian,Africa/Banjul,13.46666666,-16.56666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-81,Georgia,GEO,GE,268,995,Tbilisi,GEL,.ge,Asia,Western Asia,Georgian,Asia/Tbilisi,42,43.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-82,Germany,DEU,DE,276,49,Berlin,EUR,.de,Europe,Western Europe,German,Europe/Berlin,51,9,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-83,Ghana,GHA,GH,288,233,Accra,GHS,.gh,Africa,Western Africa,Ghanaian,Africa/Accra,8,-2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-84,Gibraltar,GIB,GI,292,350,Gibraltar,GIP,.gi,Europe,Southern Europe,Gibraltar,Europe/Gibraltar,36.13333333,-5.35,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-85,Greece,GRC,GR,300,30,Athens,EUR,.gr,Europe,Southern Europe,"Greek, Hellenic",Europe/Athens,39,22,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-86,Greenland,GRL,GL,304,299,Nuuk,DKK,.gl,Americas,Northern America,Greenlandic,America/Danmarkshavn,72,-40,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-87,Grenada,GRD,GD,308,-472,St. George's,XCD,.gd,Americas,Caribbean,Grenadian,America/Grenada,12.11666666,-61.66666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-88,Guadeloupe,GLP,GP,312,590,Basse-Terre,EUR,.gp,Americas,Caribbean,Guadeloupe,America/Guadeloupe,16.25,-61.583333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-89,Guam,GUM,GU,316,-670,Hagatna,USD,.gu,Oceania,Micronesia,"Guamanian, Guambat",Pacific/Guam,13.46666666,144.7833333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-90,Guatemala,GTM,GT,320,502,Guatemala City,GTQ,.gt,Americas,Central America,Guatemalan,America/Guatemala,15.5,-90.25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-91,Guernsey and Alderney,GGY,GG,831,-1437,St Peter Port,GBP,.gg,Europe,Northern Europe,Channel Island,Europe/Guernsey,49.46666666,-2.58333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-92,Guinea,GIN,GN,324,224,Conakry,GNF,.gn,Africa,Western Africa,Guinean,Africa/Conakry,11,-10,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-93,Guinea-Bissau,GNB,GW,624,245,Bissau,XOF,.gw,Africa,Western Africa,Bissau-Guinean,Africa/Bissau,12,-15,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-94,Guyana,GUY,GY,328,592,Georgetown,GYD,.gy,Americas,South America,Guyanese,America/Guyana,5,-59,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-95,Haiti,HTI,HT,332,509,Port-au-Prince,HTG,.ht,Americas,Caribbean,Haitian,America/Port-au-Prince,19,-72.41666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-96,Heard Island and McDonald Islands,HMD,HM,334,672,,AUD,.hm,,,Heard Island or McDonald Islands,#N/A,-53.1,72.51666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-97,Honduras,HND,HN,340,504,Tegucigalpa,HNL,.hn,Americas,Central America,Honduran,America/Tegucigalpa,15,-86.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-98,Hong Kong S.A.R.,HKG,HK,344,852,Hong Kong,HKD,.hk,Asia,Eastern Asia,"Hong Kong, Hong Kongese",Asia/Hong_Kong,22.25,114.1666667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-99,Hungary,HUN,HU,348,36,Budapest,HUF,.hu,Europe,Eastern Europe,"Hungarian, Magyar",Europe/Budapest,47,20,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-100,Iceland,ISL,IS,352,354,Reykjavik,ISK,.is,Europe,Northern Europe,Icelandic,Atlantic/Reykjavik,65,-18,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-101,India,IND,IN,356,91,New Delhi,INR,.in,Asia,Southern Asia,Indian,Asia/Kolkata,20,77,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-102,Indonesia,IDN,ID,360,62,Jakarta,IDR,.id,Asia,South-Eastern Asia,Indonesian,Asia/Jakarta,-5,120,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-103,Iran,IRN,IR,364,98,Tehran,IRR,.ir,Asia,Southern Asia,"Iranian, Persian",Asia/Tehran,32,53,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-104,Iraq,IRQ,IQ,368,964,Baghdad,IQD,.iq,Asia,Western Asia,Iraqi,Asia/Baghdad,33,44,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-105,Ireland,IRL,IE,372,353,Dublin,EUR,.ie,Europe,Northern Europe,Irish,Europe/Dublin,53,-8,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-106,Israel,ISR,IL,376,972,Jerusalem,ILS,.il,Asia,Western Asia,Israeli,Asia/Jerusalem,31.5,34.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-107,Italy,ITA,IT,380,39,Rome,EUR,.it,Europe,Southern Europe,Italian,Europe/Rome,42.83333333,12.83333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-108,Jamaica,JAM,JM,388,-875,Kingston,JMD,.jm,Americas,Caribbean,Jamaican,America/Jamaica,18.25,-77.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-109,Japan,JPN,JP,392,81,Tokyo,JPY,.jp,Asia,Eastern Asia,Japanese,Asia/Tokyo,36,138,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-110,Jersey,JEY,JE,832,-1490,Saint Helier,GBP,.je,Europe,Northern Europe,Channel Island,Europe/Jersey,49.25,-2.16666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-111,Jordan,JOR,JO,400,962,Amman,JOD,.jo,Asia,Western Asia,Jordanian,Asia/Amman,31,36,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-112,Kazakhstan,KAZ,KZ,398,7,Astana,KZT,.kz,Asia,Central Asia,"Kazakhstani, Kazakh",Asia/Almaty,48,68,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-113,Kenya,KEN,KE,404,254,Nairobi,KES,.ke,Africa,Eastern Africa,Kenyan,Africa/Nairobi,1,38,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-114,Kiribati,KIR,KI,296,686,Tarawa,AUD,.ki,Oceania,Micronesia,I-Kiribati,Pacific/Kanton,1.41666666,173,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-248,Kosovo,XKX,XK,926,383,Pristina,EUR,.xk,Europe,Eastern Europe,"Kosovar, Kosovan",#N/A,42.5612909,20.3403035,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-117,Kuwait,KWT,KW,414,965,Kuwait City,KWD,.kw,Asia,Western Asia,Kuwaiti,Asia/Kuwait,29.5,45.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-118,Kyrgyzstan,KGZ,KG,417,996,Bishkek,KGS,.kg,Asia,Central Asia,"Kyrgyzstani, Kyrgyz, Kirgiz, Kirghiz",Asia/Bishkek,41,75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-119,Laos,LAO,LA,418,856,Vientiane,LAK,.la,Asia,South-Eastern Asia,"Lao, Laotian",Asia/Vientiane,18,105,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-120,Latvia,LVA,LV,428,371,Riga,EUR,.lv,Europe,Northern Europe,Latvian,Europe/Riga,57,25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-121,Lebanon,LBN,LB,422,961,Beirut,LBP,.lb,Asia,Western Asia,Lebanese,Asia/Beirut,33.83333333,35.83333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-122,Lesotho,LSO,LS,426,266,Maseru,LSL,.ls,Africa,Southern Africa,Basotho,Africa/Maseru,-29.5,28.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-123,Liberia,LBR,LR,430,231,Monrovia,LRD,.lr,Africa,Western Africa,Liberian,Africa/Monrovia,6.5,-9.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-124,Libya,LBY,LY,434,218,Tripolis,LYD,.ly,Africa,Northern Africa,Libyan,Africa/Tripoli,25,17,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-125,Liechtenstein,LIE,LI,438,423,Vaduz,CHF,.li,Europe,Western Europe,Liechtenstein,Europe/Vaduz,47.26666666,9.53333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-126,Lithuania,LTU,LT,440,370,Vilnius,EUR,.lt,Europe,Northern Europe,Lithuanian,Europe/Vilnius,56,24,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-127,Luxembourg,LUX,LU,442,352,Luxembourg,EUR,.lu,Europe,Western Europe,"Luxembourg, Luxembourgish",Europe/Luxembourg,49.75,6.16666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-128,Macau S.A.R.,MAC,MO,446,853,Macao,MOP,.mo,Asia,Eastern Asia,"Macanese, Chinese",Asia/Macau,22.16666666,113.55,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-130,Madagascar,MDG,MG,450,261,Antananarivo,MGA,.mg,Africa,Eastern Africa,Malagasy,Indian/Antananarivo,-20,47,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-131,Malawi,MWI,MW,454,265,Lilongwe,MWK,.mw,Africa,Eastern Africa,Malawian,Africa/Blantyre,-13.5,34,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-132,Malaysia,MYS,MY,458,60,Kuala Lumpur,MYR,.my,Asia,South-Eastern Asia,Malaysian,Asia/Kuala_Lumpur,2.5,112.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-133,Maldives,MDV,MV,462,960,Male,MVR,.mv,Asia,Southern Asia,Maldivian,Indian/Maldives,3.25,73,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-134,Mali,MLI,ML,466,223,Bamako,XOF,.ml,Africa,Western Africa,"Malian, Malinese",Africa/Bamako,17,-4,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-135,Malta,MLT,MT,470,356,Valletta,EUR,.mt,Europe,Southern Europe,Maltese,Europe/Malta,35.83333333,14.58333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-136,Man (Isle of),IMN,IM,833,-1580,"Douglas, Isle of Man",GBP,.im,Europe,Northern Europe,Manx,Europe/Isle_of_Man,54.25,-4.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-137,Marshall Islands,MHL,MH,584,692,Majuro,USD,.mh,Oceania,Micronesia,Marshallese,Pacific/Kwajalein,9,168,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-138,Martinique,MTQ,MQ,474,596,Fort-de-France,EUR,.mq,Americas,Caribbean,"Martiniquais, Martinican",America/Martinique,14.666667,-61,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-139,Mauritania,MRT,MR,478,222,Nouakchott,MRO,.mr,Africa,Western Africa,Mauritanian,Africa/Nouakchott,20,-12,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-140,Mauritius,MUS,MU,480,230,Port Louis,MUR,.mu,Africa,Eastern Africa,Mauritian,Indian/Mauritius,-20.28333333,57.55,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-141,Mayotte,MYT,YT,175,262,Mamoudzou,EUR,.yt,Africa,Eastern Africa,Mahoran,Indian/Mayotte,-12.83333333,45.16666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-142,Mexico,MEX,MX,484,52,Ciudad de MÃƒÂ©xico,MXN,.mx,Americas,Central America,Mexican,America/Bahia_Banderas,23,-102,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-143,Micronesia,FSM,FM,583,691,Palikir,USD,.fm,Oceania,Micronesia,Micronesian,Pacific/Chuuk,6.91666666,158.25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-144,Moldova,MDA,MD,498,373,Chisinau,MDL,.md,Europe,Eastern Europe,Moldovan,Europe/Chisinau,47,29,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-145,Monaco,MCO,MC,492,377,Monaco,EUR,.mc,Europe,Western Europe,"Monegasque, Monacan",Europe/Monaco,43.73333333,7.4,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-146,Mongolia,MNG,MN,496,976,Ulan Bator,MNT,.mn,Asia,Eastern Asia,Mongolian,Asia/Choibalsan,46,105,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-147,Montenegro,MNE,ME,499,382,Podgorica,EUR,.me,Europe,Southern Europe,Montenegrin,Europe/Podgorica,42.5,19.3,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-148,Montserrat,MSR,MS,500,-663,Plymouth,XCD,.ms,Americas,Caribbean,Montserratian,America/Montserrat,16.75,-62.2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-149,Morocco,MAR,MA,504,212,Rabat,MAD,.ma,Africa,Northern Africa,Moroccan,Africa/Casablanca,32,-5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-150,Mozambique,MOZ,MZ,508,258,Maputo,MZN,.mz,Africa,Eastern Africa,Mozambican,Africa/Maputo,-18.25,35,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-151,Myanmar,MMR,MM,104,95,Nay Pyi Taw,MMK,.mm,Asia,South-Eastern Asia,Burmese,Asia/Yangon,22,98,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-152,Namibia,NAM,NA,516,264,Windhoek,NAD,.na,Africa,Southern Africa,Namibian,Africa/Windhoek,-22,17,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-153,Nauru,NRU,NR,520,674,Yaren,AUD,.nr,Oceania,Micronesia,Nauruan,Pacific/Nauru,-0.53333333,166.9166667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-154,Nepal,NPL,NP,524,977,Kathmandu,NPR,.np,Asia,Southern Asia,"Nepali, Nepalese",Asia/Kathmandu,28,84,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-156,Netherlands,NLD,NL,528,31,Amsterdam,EUR,.nl,Europe,Western Europe,"Dutch, Netherlandic",Europe/Amsterdam,52.5,5.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-157,New Caledonia,NCL,NC,540,687,Noumea,XPF,.nc,Oceania,Melanesia,New Caledonian,Pacific/Noumea,-21.5,165.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-158,New Zealand,NZL,NZ,554,64,Wellington,NZD,.nz,Oceania,Australia and New Zealand,"New Zealand, NZ",Pacific/Auckland,-41,174,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-159,Nicaragua,NIC,NI,558,505,Managua,NIO,.ni,Americas,Central America,Nicaraguan,America/Managua,13,-85,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-160,Niger,NER,NE,562,227,Niamey,XOF,.ne,Africa,Western Africa,Nigerien,Africa/Niamey,16,8,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-161,Nigeria,NGA,NG,566,234,Abuja,NGN,.ng,Africa,Western Africa,Nigerian,Africa/Lagos,10,8,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-162,Niue,NIU,NU,570,683,Alofi,NZD,.nu,Oceania,Polynesia,Niuean,Pacific/Niue,-19.03333333,-169.8666667,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-163,Norfolk Island,NFK,NF,574,672,Kingston,AUD,.nf,Oceania,Australia and New Zealand,Norfolk Island,Pacific/Norfolk,-29.03333333,167.95,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-115,North Korea,PRK,KP,408,850,Pyongyang,KPW,.kp,Asia,Eastern Asia,North Korean,Asia/Pyongyang,40,127,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-129,North Macedonia,MKD,MK,807,389,Skopje,MKD,.mk,Europe,Southern Europe,Macedonian,Europe/Skopje,41.83333333,22,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-164,Northern Mariana Islands,MNP,MP,580,-669,Saipan,USD,.mp,Oceania,Micronesia,Northern Marianan,Pacific/Saipan,15.2,145.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-165,Norway,NOR,NO,578,47,Oslo,NOK,.no,Europe,Northern Europe,Norwegian,Europe/Oslo,62,10,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-166,Oman,OMN,OM,512,968,Muscat,OMR,.om,Asia,Western Asia,Omani,Asia/Muscat,21,57,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-167,Pakistan,PAK,PK,586,92,Islamabad,PKR,.pk,Asia,Southern Asia,Pakistani,Asia/Karachi,30,70,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-168,Palau,PLW,PW,585,680,Melekeok,USD,.pw,Oceania,Micronesia,Palauan,Pacific/Palau,7.5,134.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-169,Palestinian Territory Occupied,PSE,PS,275,970,East Jerusalem,ILS,.ps,Asia,Western Asia,Palestinian,Asia/Gaza,31.9,35.2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-170,Panama,PAN,PA,591,507,Panama City,PAB,.pa,Americas,Central America,Panamanian,America/Panama,9,-80,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-171,Papua new Guinea,PNG,PG,598,675,Port Moresby,PGK,.pg,Oceania,Melanesia,"Papua New Guinean, Papuan",Pacific/Bougainville,-6,147,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-172,Paraguay,PRY,PY,600,595,Asuncion,PYG,.py,Americas,South America,Paraguayan,America/Asuncion,-23,-58,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-173,Peru,PER,PE,604,51,Lima,PEN,.pe,Americas,South America,Peruvian,America/Lima,-10,-76,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-174,Philippines,PHL,PH,608,63,Manila,PHP,.ph,Asia,South-Eastern Asia,"Philippine, Filipino",Asia/Manila,13,122,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-175,Pitcairn Island,PCN,PN,612,870,Adamstown,NZD,.pn,Oceania,Polynesia,Pitcairn Island,Pacific/Pitcairn,-25.06666666,-130.1,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-176,Poland,POL,PL,616,48,Warsaw,PLN,.pl,Europe,Eastern Europe,Polish,Europe/Warsaw,52,20,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-177,Portugal,PRT,PT,620,351,Lisbon,EUR,.pt,Europe,Southern Europe,Portuguese,Atlantic/Azores,39.5,-8,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-178,Puerto Rico,PRI,PR,630,+1-787 and 1-939,San Juan,USD,.pr,Americas,Caribbean,Puerto Rican,America/Puerto_Rico,18.25,-66.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-179,Qatar,QAT,QA,634,974,Doha,QAR,.qa,Asia,Western Asia,Qatari,Asia/Qatar,25.5,51.25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-180,Reunion,REU,RE,638,262,Saint-Denis,EUR,.re,Africa,Eastern Africa,"Reunionese, Reunionnais",Indian/Reunion,-21.15,55.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-181,Romania,ROU,RO,642,40,Bucharest,RON,.ro,Europe,Eastern Europe,Romanian,Europe/Bucharest,46,25,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-182,Russia,RUS,RU,643,7,Moscow,RUB,.ru,Europe,Eastern Europe,Russian,Asia/Anadyr,60,100,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-183,Rwanda,RWA,RW,646,250,Kigali,RWF,.rw,Africa,Eastern Africa,Rwandan,Africa/Kigali,-2,30,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-184,Saint Helena,SHN,SH,654,290,Jamestown,SHP,.sh,Africa,Western Africa,Saint Helenian,Atlantic/St_Helena,-15.95,-5.7,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-185,Saint Kitts And Nevis,KNA,KN,659,-868,Basseterre,XCD,.kn,Americas,Caribbean,Kittitian or Nevisian,America/St_Kitts,17.33333333,-62.75,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-186,Saint Lucia,LCA,LC,662,-757,Castries,XCD,.lc,Americas,Caribbean,Saint Lucian,America/St_Lucia,13.88333333,-60.96666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-187,Saint Pierre and Miquelon,SPM,PM,666,508,Saint-Pierre,EUR,.pm,Americas,Northern America,Saint-Pierrais or Miquelonnais,America/Miquelon,46.83333333,-56.33333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-188,Saint Vincent And The Grenadines,VCT,VC,670,-783,Kingstown,XCD,.vc,Americas,Caribbean,"Saint Vincentian, Vincentian",America/St_Vincent,13.25,-61.2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-189,Saint-Barthelemy,BLM,BL,652,590,Gustavia,EUR,.bl,Americas,Caribbean,Barthelemois,America/St_Barthelemy,18.5,-63.41666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-190,Saint-Martin (French part),MAF,MF,663,590,Marigot,EUR,.mf,Americas,Caribbean,Saint-Martinoise,America/Marigot,18.08333333,-63.95,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-191,Samoa,WSM,WS,882,685,Apia,WST,.ws,Oceania,Polynesia,Samoan,Pacific/Apia,-13.58333333,-172.3333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-192,San Marino,SMR,SM,674,378,San Marino,EUR,.sm,Europe,Southern Europe,Sammarinese,Europe/San_Marino,43.76666666,12.41666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-193,Sao Tome and Principe,STP,ST,678,239,Sao Tome,STD,.st,Africa,Middle Africa,Sao Tomean,Africa/Sao_Tome,1,7,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-194,Saudi Arabia,SAU,SA,682,966,Riyadh,SAR,.sa,Asia,Western Asia,"Saudi, Saudi Arabian",Asia/Riyadh,25,45,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-195,Senegal,SEN,SN,686,221,Dakar,XOF,.sn,Africa,Western Africa,Senegalese,Africa/Dakar,14,-14,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-196,Serbia,SRB,RS,688,381,Belgrade,RSD,.rs,Europe,Southern Europe,Serbian,Europe/Belgrade,44,21,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-197,Seychelles,SYC,SC,690,248,Victoria,SCR,.sc,Africa,Eastern Africa,Seychellois,Indian/Mahe,-4.58333333,55.66666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-198,Sierra Leone,SLE,SL,694,232,Freetown,SLL,.sl,Africa,Western Africa,Sierra Leonean,Africa/Freetown,8.5,-11.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-199,Singapore,SGP,SG,702,65,Singapur,SGD,.sg,Asia,South-Eastern Asia,Singaporean,Asia/Singapore,1.36666666,103.8,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-250,Sint Maarten (Dutch part),SXM,SX,534,1721,Philipsburg,ANG,.sx,Americas,Caribbean,Sint Maarten,America/Lower_Princes,18.033333,-63.05,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-200,Slovakia,SVK,SK,703,421,Bratislava,EUR,.sk,Europe,Eastern Europe,Slovak,Europe/Bratislava,48.66666666,19.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-201,Slovenia,SVN,SI,705,386,Ljubljana,EUR,.si,Europe,Southern Europe,"Slovenian, Slovene",Europe/Ljubljana,46.11666666,14.81666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-202,Solomon Islands,SLB,SB,90,677,Honiara,SBD,.sb,Oceania,Melanesia,Solomon Island,Pacific/Guadalcanal,-8,159,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-203,Somalia,SOM,SO,706,252,Mogadishu,SOS,.so,Africa,Eastern Africa,"Somali, Somalian",Africa/Mogadishu,10,49,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-204,South Africa,ZAF,ZA,710,27,Pretoria,ZAR,.za,Africa,Southern Africa,South African,Africa/Johannesburg,-29,24,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-205,South Georgia,SGS,GS,239,500,Grytviken,GBP,.gs,Americas,South America,South Georgia or South Sandwich Islands,Atlantic/South_Georgia,-54.5,-37,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-116,South Korea,KOR,KR,410,82,Seoul,KRW,.kr,Asia,Eastern Asia,South Korean,Asia/Seoul,37,127.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-206,South Sudan,SSD,SS,728,211,Juba,SSP,.ss,Africa,Middle Africa,South Sudanese,Africa/Juba,7,30,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-207,Spain,ESP,ES,724,34,Madrid,EUR,.es,Europe,Southern Europe,Spanish,Africa/Ceuta,40,-4,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-208,Sri Lanka,LKA,LK,144,94,Colombo,LKR,.lk,Asia,Southern Asia,Sri Lankan,Asia/Colombo,7,81,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-209,Sudan,SDN,SD,729,249,Khartoum,SDG,.sd,Africa,Northern Africa,Sudanese,Africa/Khartoum,15,30,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-210,Suriname,SUR,SR,740,597,Paramaribo,SRD,.sr,Americas,South America,Surinamese,America/Paramaribo,4,-56,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-211,Svalbard And Jan Mayen Islands,SJM,SJ,744,47,Longyearbyen,NOK,.sj,Europe,Northern Europe,Svalbard,Arctic/Longyearbyen,78,20,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-212,Swaziland,SWZ,SZ,748,268,Mbabane,SZL,.sz,Africa,Southern Africa,Swazi,Africa/Mbabane,-26.5,31.5,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-213,Sweden,SWE,SE,752,46,Stockholm,SEK,.se,Europe,Northern Europe,Swedish,Europe/Stockholm,62,15,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-214,Switzerland,CHE,CH,756,41,Bern,CHF,.ch,Europe,Western Europe,Swiss,Europe/Zurich,47,8,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-215,Syria,SYR,SY,760,963,Damascus,SYP,.sy,Asia,Western Asia,Syrian,Asia/Damascus,35,38,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-216,Taiwan,TWN,TW,158,886,Taipei,TWD,.tw,Asia,Eastern Asia,"Chinese, Taiwanese",Asia/Taipei,23.5,121,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-217,Tajikistan,TJK,TJ,762,992,Dushanbe,TJS,.tj,Asia,Central Asia,Tajikistani,Asia/Dushanbe,39,71,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-218,Tanzania,TZA,TZ,834,255,Dodoma,TZS,.tz,Africa,Eastern Africa,Tanzanian,Africa/Dar_es_Salaam,-6,35,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-219,Thailand,THA,TH,764,66,Bangkok,THB,.th,Asia,South-Eastern Asia,Thai,Asia/Bangkok,15,100,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-17,The Bahamas,BHS,BS,44,-241,Nassau,BSD,.bs,Americas,Caribbean,Bahamian,America/Nassau,24.25,-76,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-220,Togo,TGO,TG,768,228,Lome,XOF,.tg,Africa,Western Africa,Togolese,Africa/Lome,8,1.16666666,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-221,Tokelau,TKL,TK,772,690,,NZD,.tk,Oceania,Polynesia,Tokelauan,Pacific/Fakaofo,-9,-172,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-222,Tonga,TON,TO,776,676,Nuku'alofa,TOP,.to,Oceania,Polynesia,Tongan,Pacific/Tongatapu,-20,-175,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-223,Trinidad And Tobago,TTO,TT,780,-867,Port of Spain,TTD,.tt,Americas,Caribbean,Trinidadian or Tobagonian,America/Port_of_Spain,11,-61,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-224,Tunisia,TUN,TN,788,216,Tunis,TND,.tn,Africa,Northern Africa,Tunisian,Africa/Tunis,34,9,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-225,Turkey,TUR,TR,792,90,Ankara,TRY,.tr,Asia,Western Asia,Turkish,Europe/Istanbul,39,35,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-226,Turkmenistan,TKM,TM,795,993,Ashgabat,TMT,.tm,Asia,Central Asia,Turkmen,Asia/Ashgabat,40,60,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-227,Turks And Caicos Islands,TCA,TC,796,-648,Cockburn Town,USD,.tc,Americas,Caribbean,Turks and Caicos Island,America/Grand_Turk,21.75,-71.58333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-228,Tuvalu,TUV,TV,798,688,Funafuti,AUD,.tv,Oceania,Polynesia,Tuvaluan,Pacific/Funafuti,-8,178,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-229,Uganda,UGA,UG,800,256,Kampala,UGX,.ug,Africa,Eastern Africa,Ugandan,Africa/Kampala,1,32,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-230,Ukraine,UKR,UA,804,380,Kyiv,UAH,.ua,Europe,Eastern Europe,Ukrainian,Europe/Kyiv,49,32,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-231,United Arab Emirates,ARE,AE,784,971,Abu Dhabi,AED,.ae,Asia,Western Asia,"Emirati, Emirian, Emiri",Asia/Dubai,24,54,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-232,United Kingdom,GBR,GB,826,44,London,GBP,.uk,Europe,Northern Europe,"British, UK",Europe/London,54,-2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-233,United States,USA,US,840,1,Washington,USD,.us,Americas,Northern America,American,America/Adak,38,-97,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-234,United States Minor Outlying Islands,UMI,UM,581,1,,USD,.us,Americas,Northern America,American,Pacific/Midway,0,0,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-235,Uruguay,URY,UY,858,598,Montevideo,UYU,.uy,Americas,South America,Uruguayan,America/Montevideo,-33,-56,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-236,Uzbekistan,UZB,UZ,860,998,Tashkent,UZS,.uz,Asia,Central Asia,"Uzbekistani, Uzbek",Asia/Samarkand,41,64,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-237,Vanuatu,VUT,VU,548,678,Port Vila,VUV,.vu,Oceania,Melanesia,"Ni-Vanuatu, Vanuatuan",Pacific/Efate,-16,167,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-238,Vatican City State (Holy See),VAT,VA,336,379,Vatican City,EUR,.va,Europe,Southern Europe,Vatican,Europe/Vatican,41.9,12.45,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-239,Venezuela,VEN,VE,862,58,Caracas,VES,.ve,Americas,South America,Venezuelan,America/Caracas,8,-66,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-240,Vietnam,VNM,VN,704,84,Hanoi,VND,.vn,Asia,South-Eastern Asia,Vietnamese,Asia/Ho_Chi_Minh,16.16666666,107.8333333,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-241,Virgin Islands (British),VGB,VG,92,-283,Road Town,USD,.vg,Americas,Caribbean,British Virgin Island,America/Tortola,18.431383,-64.62305,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-242,Virgin Islands (US),VIR,VI,850,-339,Charlotte Amalie,USD,.vi,Americas,Caribbean,U.S. Virgin Island,America/St_Thomas,18.34,-64.93,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-243,Wallis And Futuna Islands,WLF,WF,876,681,Mata Utu,XPF,.wf,Oceania,Polynesia,"Wallis and Futuna, Wallisian or Futunan",Pacific/Wallis,-13.3,-176.2,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-244,Western Sahara,ESH,EH,732,212,El-Aaiun,MAD,.eh,Africa,Northern Africa,"Sahrawi, Sahrawian, Sahraouian",#N/A,24.5,-13,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-245,Yemen,YEM,YE,887,967,Sanaa,YER,.ye,Asia,Western Asia,Yemeni,Asia/Aden,15,48,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-246,Zambia,ZMB,ZM,894,260,Lusaka,ZMW,.zm,Africa,Eastern Africa,Zambian,Africa/Lusaka,-15,30,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
-247,Zimbabwe,ZWE,ZW,716,263,Harare,ZWL,.zw,Africa,Eastern Africa,Zimbabwean,Africa/Harare,-20,30,0,01/01/2023 00:00,2309150001,01/01/2023 00:00,2309150001
+1,Afghanistan,AFG,AF,4,93,Kabul,AFN,.af,Asia,Southern Asia,Afghan,Asia/Kabul,33,65,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+2,Aland Islands,ALA,AX,248,340,Mariehamn,EUR,.ax,Europe,Northern Europe,Aland Island,Europe/Mariehamn,60.116667,19.9,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+3,Albania,ALB,AL,8,355,Tirana,ALL,.al,Europe,Southern Europe,Albanian ,Europe/Tirane,41,20,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+4,Algeria,DZA,DZ,12,213,Algiers,DZD,.dz,Africa,Northern Africa,Algerian,Africa/Algiers,28,3,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+5,American Samoa,ASM,AS,16,-683,Pago Pago,USD,.as,Oceania,Polynesia,American Samoan,Pacific/Pago_Pago,-14.33333333,-170,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+6,Andorra,AND,AD,20,376,Andorra la Vella,EUR,.ad,Europe,Southern Europe,Andorran,Europe/Andorra,42.5,1.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+7,Angola,AGO,AO,24,244,Luanda,AOA,.ao,Africa,Middle Africa,Angolan,Africa/Luanda,-12.5,18.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+8,Anguilla,AIA,AI,660,-263,The Valley,XCD,.ai,Americas,Caribbean,Anguillan,America/Anguilla,18.25,-63.16666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+9,Antarctica,ATA,AQ,10,672,,AAD,.aq,Polar,Antarctica,Antarctic,Antarctica/Casey,-74.65,4.48,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+10,Antigua And Barbuda,ATG,AG,28,-267,St. John's,XCD,.ag,Americas,Caribbean,Antiguan or Barbudan,America/Antigua,17.05,-61.8,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+11,Argentina,ARG,AR,32,54,Buenos Aires,ARS,.ar,Americas,South America,Argentine,America/Argentina/Buenos_Aires,-34,-64,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+12,Armenia,ARM,AM,51,374,Yerevan,AMD,.am,Asia,Western Asia,Armenian,Asia/Yerevan,40,45,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+13,Aruba,ABW,AW,533,297,Oranjestad,AWG,.aw,Americas,Caribbean,Aruban,America/Aruba,12.5,-69.96666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+14,Australia,AUS,AU,36,61,Canberra,AUD,.au,Oceania,Australia and New Zealand,Australian,Antarctica/Macquarie,-27,133,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+15,Austria,AUT,AT,40,43,Vienna,EUR,.at,Europe,Western Europe,Austrian,Europe/Vienna,47.33333333,13.33333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+16,Azerbaijan,AZE,AZ,31,994,Baku,AZN,.az,Asia,Western Asia,"Azerbaijani, Azeri",Asia/Baku,40.5,47.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+18,Bahrain,BHR,BH,48,973,Manama,BHD,.bh,Asia,Western Asia,Bahraini,Asia/Bahrain,26,50.55,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+19,Bangladesh,BGD,BD,50,880,Dhaka,BDT,.bd,Asia,Southern Asia,Bangladeshi,Asia/Dhaka,24,90,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+20,Barbados,BRB,BB,52,-245,Bridgetown,BBD,.bb,Americas,Caribbean,Barbadian,America/Barbados,13.16666666,-59.53333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+21,Belarus,BLR,BY,112,375,Minsk,BYN,.by,Europe,Eastern Europe,Belarusian,Europe/Minsk,53,28,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+22,Belgium,BEL,BE,56,32,Brussels,EUR,.be,Europe,Western Europe,Belgian,Europe/Brussels,50.83333333,4,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+23,Belize,BLZ,BZ,84,501,Belmopan,BZD,.bz,Americas,Central America,Belizean,America/Belize,17.25,-88.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+24,Benin,BEN,BJ,204,229,Porto-Novo,XOF,.bj,Africa,Western Africa,"Beninese, Beninois",Africa/Porto-Novo,9.5,2.25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+25,Bermuda,BMU,BM,60,-440,Hamilton,BMD,.bm,Americas,Northern America,"Bermudian, Bermudan",Atlantic/Bermuda,32.33333333,-64.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+26,Bhutan,BTN,BT,64,975,Thimphu,BTN,.bt,Asia,Southern Asia,Bhutanese,Asia/Thimphu,27.5,90.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+27,Bolivia,BOL,BO,68,591,Sucre,BOB,.bo,Americas,South America,Bolivian,America/La_Paz,-17,-65,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+155,"Bonaire, Sint Eustatius and Saba",BES,BQ,535,599,Kralendijk,USD,.an,Americas,Caribbean,Bonaire,America/Kralendijk,12.15,-68.266667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+28,Bosnia and Herzegovina,BIH,BA,70,387,Sarajevo,BAM,.ba,Europe,Southern Europe,Bosnian or Herzegovinian,Europe/Sarajevo,44,18,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+29,Botswana,BWA,BW,72,267,Gaborone,BWP,.bw,Africa,Southern Africa,"Motswana, Botswanan",Africa/Gaborone,-22,24,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+30,Bouvet Island,BVT,BV,74,55,,NOK,.bv,,,Bouvet Island,#N/A,-54.43333333,3.4,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+31,Brazil,BRA,BR,76,55,Brasilia,BRL,.br,Americas,South America,Brazilian,America/Araguaina,-10,-55,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+32,British Indian Ocean Territory,IOT,IO,86,246,Diego Garcia,USD,.io,Africa,Eastern Africa,BIOT,Indian/Chagos,-6,71.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+33,Brunei,BRN,BN,96,673,Bandar Seri Begawan,BND,.bn,Asia,South-Eastern Asia,Bruneian,Asia/Brunei,4.5,114.6666667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+34,Bulgaria,BGR,BG,100,359,Sofia,BGN,.bg,Europe,Eastern Europe,Bulgarian,Europe/Sofia,43,25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+35,Burkina Faso,BFA,BF,854,226,Ouagadougou,XOF,.bf,Africa,Western Africa,Burkinabe,Africa/Ouagadougou,13,-2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+36,Burundi,BDI,BI,108,257,Bujumbura,BIF,.bi,Africa,Eastern Africa,Burundian,Africa/Bujumbura,-3.5,30,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+37,Cambodia,KHM,KH,116,855,Phnom Penh,KHR,.kh,Asia,South-Eastern Asia,Cambodian,Asia/Phnom_Penh,13,105,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+38,Cameroon,CMR,CM,120,237,Yaounde,XAF,.cm,Africa,Middle Africa,Cameroonian,Africa/Douala,6,12,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+39,Canada,CAN,CA,124,1,Ottawa,CAD,.ca,Americas,Northern America,Canadian,America/Atikokan,60,-95,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+40,Cape Verde,CPV,CV,132,238,Praia,CVE,.cv,Africa,Western Africa,Verdean,Atlantic/Cape_Verde,16,-24,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+41,Cayman Islands,CYM,KY,136,-344,George Town,KYD,.ky,Americas,Caribbean,Caymanian,America/Cayman,19.5,-80.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+42,Central African Republic,CAF,CF,140,236,Bangui,XAF,.cf,Africa,Middle Africa,Central African,Africa/Bangui,7,21,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+43,Chad,TCD,TD,148,235,N'Djamena,XAF,.td,Africa,Middle Africa,Chadian,Africa/Ndjamena,15,19,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+44,Chile,CHL,CL,152,56,Santiago,CLP,.cl,Americas,South America,Chilean,America/Punta_Arenas,-30,-71,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+45,China,CHN,CN,156,86,Beijing,CNY,.cn,Asia,Eastern Asia,Chinese,Asia/Shanghai,35,105,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+46,Christmas Island,CXR,CX,162,61,Flying Fish Cove,AUD,.cx,Oceania,Australia and New Zealand,Christmas Island,Indian/Christmas,-10.5,105.6666667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+47,Cocos (Keeling) Islands,CCK,CC,166,61,West Island,AUD,.cc,Oceania,Australia and New Zealand,Cocos Island,Indian/Cocos,-12.5,96.83333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+48,Colombia,COL,CO,170,57,BogotÃƒÂ¡,COP,.co,Americas,South America,Colombian,America/Bogota,4,-72,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+49,Comoros,COM,KM,174,269,Moroni,KMF,.km,Africa,Eastern Africa,"Comoran, Comorian",Indian/Comoro,-12.16666666,44.25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+50,Congo,COG,CG,178,242,Brazzaville,XAF,.cg,Africa,Middle Africa,Congolese,Africa/Brazzaville,-1,15,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+52,Cook Islands,COK,CK,184,682,Avarua,NZD,.ck,Oceania,Polynesia,Cook Island,Pacific/Rarotonga,-21.23333333,-159.7666667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+53,Costa Rica,CRI,CR,188,506,San Jose,CRC,.cr,Americas,Central America,Costa Rican,America/Costa_Rica,10,-84,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+54,Cote D'Ivoire (Ivory Coast),CIV,CI,384,225,Yamoussoukro,XOF,.ci,Africa,Western Africa,Ivorian,Africa/Abidjan,8,-5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+55,Croatia,HRV,HR,191,385,Zagreb,HRK,.hr,Europe,Southern Europe,Croatian,Europe/Zagreb,45.16666666,15.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+56,Cuba,CUB,CU,192,53,Havana,CUP,.cu,Americas,Caribbean,Cuban,America/Havana,21.5,-80,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+249,CuraÃƒÂ§ao,CUW,CW,531,599,Willemstad,ANG,.cw,Americas,Caribbean,Curacaoan,America/Curacao,12.116667,-68.933333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+57,Cyprus,CYP,CY,196,357,Nicosia,EUR,.cy,Europe,Southern Europe,Cypriot,Asia/Famagusta,35,33,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+58,Czech Republic,CZE,CZ,203,420,Prague,CZK,.cz,Europe,Eastern Europe,Czech,Europe/Prague,49.75,15.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+51,Democratic Republic of the Congo,COD,CD,180,243,Kinshasa,CDF,.cd,Africa,Middle Africa,Congolese,Africa/Kinshasa,0,25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+59,Denmark,DNK,DK,208,45,Copenhagen,DKK,.dk,Europe,Northern Europe,Danish,Europe/Copenhagen,56,10,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+60,Djibouti,DJI,DJ,262,253,Djibouti,DJF,.dj,Africa,Eastern Africa,Djiboutian,Africa/Djibouti,11.5,43,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+61,Dominica,DMA,DM,212,-766,Roseau,XCD,.dm,Americas,Caribbean,Dominican,America/Dominica,15.41666666,-61.33333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+62,Dominican Republic,DOM,DO,214,+1-809 and 1-829,Santo Domingo,DOP,.do,Americas,Caribbean,Dominican,America/Santo_Domingo,19,-70.66666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+63,East Timor,TLS,TL,626,670,Dili,USD,.tl,Asia,South-Eastern Asia,Timorese,Asia/Dili,-8.83333333,125.9166667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+64,Ecuador,ECU,EC,218,593,Quito,USD,.ec,Americas,South America,Ecuadorian,America/Guayaquil,-2,-77.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+65,Egypt,EGY,EG,818,20,Cairo,EGP,.eg,Africa,Northern Africa,Egyptian,Africa/Cairo,27,30,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+66,El Salvador,SLV,SV,222,503,San Salvador,USD,.sv,Americas,Central America,Salvadoran,America/El_Salvador,13.83333333,-88.91666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+67,Equatorial Guinea,GNQ,GQ,226,240,Malabo,XAF,.gq,Africa,Middle Africa,"Equatorial Guinean, Equatoguinean",Africa/Malabo,2,10,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+68,Eritrea,ERI,ER,232,291,Asmara,ERN,.er,Africa,Eastern Africa,Eritrean,Africa/Asmara,15,39,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+69,Estonia,EST,EE,233,372,Tallinn,EUR,.ee,Europe,Northern Europe,Estonian,Europe/Tallinn,59,26,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+70,Ethiopia,ETH,ET,231,251,Addis Ababa,ETB,.et,Africa,Eastern Africa,Ethiopian,Africa/Addis_Ababa,8,38,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+71,Falkland Islands,FLK,FK,238,500,Stanley,FKP,.fk,Americas,South America,Falkland Island,Atlantic/Stanley,-51.75,-59,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+72,Faroe Islands,FRO,FO,234,298,Torshavn,DKK,.fo,Europe,Northern Europe,Faroese,Atlantic/Faroe,62,-7,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+73,Fiji Islands,FJI,FJ,242,679,Suva,FJD,.fj,Oceania,Melanesia,Fijian,Pacific/Fiji,-18,175,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+74,Finland,FIN,FI,246,358,Helsinki,EUR,.fi,Europe,Northern Europe,Finnish,Europe/Helsinki,64,26,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+75,France,FRA,FR,250,33,Paris,EUR,.fr,Europe,Western Europe,French,Europe/Paris,46,2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+76,French Guiana,GUF,GF,254,594,Cayenne,EUR,.gf,Americas,South America,French Guianese,America/Cayenne,4,-53,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+77,French Polynesia,PYF,PF,258,689,Papeete,XPF,.pf,Oceania,Polynesia,French Polynesia,Pacific/Gambier,-15,-140,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+78,French Southern Territories,ATF,TF,260,262,Port-aux-Francais,EUR,.tf,Africa,Southern Africa,French Southern Territories,Indian/Kerguelen,-49.25,69.167,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+79,Gabon,GAB,GA,266,241,Libreville,XAF,.ga,Africa,Middle Africa,Gabonese,Africa/Libreville,-1,11.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+80,Gambia The,GMB,GM,270,220,Banjul,GMD,.gm,Africa,Western Africa,Gambian,Africa/Banjul,13.46666666,-16.56666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+81,Georgia,GEO,GE,268,995,Tbilisi,GEL,.ge,Asia,Western Asia,Georgian,Asia/Tbilisi,42,43.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+82,Germany,DEU,DE,276,49,Berlin,EUR,.de,Europe,Western Europe,German,Europe/Berlin,51,9,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+83,Ghana,GHA,GH,288,233,Accra,GHS,.gh,Africa,Western Africa,Ghanaian,Africa/Accra,8,-2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+84,Gibraltar,GIB,GI,292,350,Gibraltar,GIP,.gi,Europe,Southern Europe,Gibraltar,Europe/Gibraltar,36.13333333,-5.35,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+85,Greece,GRC,GR,300,30,Athens,EUR,.gr,Europe,Southern Europe,"Greek, Hellenic",Europe/Athens,39,22,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+86,Greenland,GRL,GL,304,299,Nuuk,DKK,.gl,Americas,Northern America,Greenlandic,America/Danmarkshavn,72,-40,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+87,Grenada,GRD,GD,308,-472,St. George's,XCD,.gd,Americas,Caribbean,Grenadian,America/Grenada,12.11666666,-61.66666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+88,Guadeloupe,GLP,GP,312,590,Basse-Terre,EUR,.gp,Americas,Caribbean,Guadeloupe,America/Guadeloupe,16.25,-61.583333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+89,Guam,GUM,GU,316,-670,Hagatna,USD,.gu,Oceania,Micronesia,"Guamanian, Guambat",Pacific/Guam,13.46666666,144.7833333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+90,Guatemala,GTM,GT,320,502,Guatemala City,GTQ,.gt,Americas,Central America,Guatemalan,America/Guatemala,15.5,-90.25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+91,Guernsey and Alderney,GGY,GG,831,-1437,St Peter Port,GBP,.gg,Europe,Northern Europe,Channel Island,Europe/Guernsey,49.46666666,-2.58333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+92,Guinea,GIN,GN,324,224,Conakry,GNF,.gn,Africa,Western Africa,Guinean,Africa/Conakry,11,-10,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+93,Guinea-Bissau,GNB,GW,624,245,Bissau,XOF,.gw,Africa,Western Africa,Bissau-Guinean,Africa/Bissau,12,-15,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+94,Guyana,GUY,GY,328,592,Georgetown,GYD,.gy,Americas,South America,Guyanese,America/Guyana,5,-59,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+95,Haiti,HTI,HT,332,509,Port-au-Prince,HTG,.ht,Americas,Caribbean,Haitian,America/Port-au-Prince,19,-72.41666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+96,Heard Island and McDonald Islands,HMD,HM,334,672,,AUD,.hm,,,Heard Island or McDonald Islands,#N/A,-53.1,72.51666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+97,Honduras,HND,HN,340,504,Tegucigalpa,HNL,.hn,Americas,Central America,Honduran,America/Tegucigalpa,15,-86.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+98,Hong Kong S.A.R.,HKG,HK,344,852,Hong Kong,HKD,.hk,Asia,Eastern Asia,"Hong Kong, Hong Kongese",Asia/Hong_Kong,22.25,114.1666667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+99,Hungary,HUN,HU,348,36,Budapest,HUF,.hu,Europe,Eastern Europe,"Hungarian, Magyar",Europe/Budapest,47,20,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+100,Iceland,ISL,IS,352,354,Reykjavik,ISK,.is,Europe,Northern Europe,Icelandic,Atlantic/Reykjavik,65,-18,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+101,India,IND,IN,356,91,New Delhi,INR,.in,Asia,Southern Asia,Indian,Asia/Kolkata,20,77,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+102,Indonesia,IDN,ID,360,62,Jakarta,IDR,.id,Asia,South-Eastern Asia,Indonesian,Asia/Jakarta,-5,120,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+103,Iran,IRN,IR,364,98,Tehran,IRR,.ir,Asia,Southern Asia,"Iranian, Persian",Asia/Tehran,32,53,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+104,Iraq,IRQ,IQ,368,964,Baghdad,IQD,.iq,Asia,Western Asia,Iraqi,Asia/Baghdad,33,44,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+105,Ireland,IRL,IE,372,353,Dublin,EUR,.ie,Europe,Northern Europe,Irish,Europe/Dublin,53,-8,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+106,Israel,ISR,IL,376,972,Jerusalem,ILS,.il,Asia,Western Asia,Israeli,Asia/Jerusalem,31.5,34.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+107,Italy,ITA,IT,380,39,Rome,EUR,.it,Europe,Southern Europe,Italian,Europe/Rome,42.83333333,12.83333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+108,Jamaica,JAM,JM,388,-875,Kingston,JMD,.jm,Americas,Caribbean,Jamaican,America/Jamaica,18.25,-77.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+109,Japan,JPN,JP,392,81,Tokyo,JPY,.jp,Asia,Eastern Asia,Japanese,Asia/Tokyo,36,138,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+110,Jersey,JEY,JE,832,-1490,Saint Helier,GBP,.je,Europe,Northern Europe,Channel Island,Europe/Jersey,49.25,-2.16666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+111,Jordan,JOR,JO,400,962,Amman,JOD,.jo,Asia,Western Asia,Jordanian,Asia/Amman,31,36,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+112,Kazakhstan,KAZ,KZ,398,7,Astana,KZT,.kz,Asia,Central Asia,"Kazakhstani, Kazakh",Asia/Almaty,48,68,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+113,Kenya,KEN,KE,404,254,Nairobi,KES,.ke,Africa,Eastern Africa,Kenyan,Africa/Nairobi,1,38,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+114,Kiribati,KIR,KI,296,686,Tarawa,AUD,.ki,Oceania,Micronesia,I-Kiribati,Pacific/Kanton,1.41666666,173,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+248,Kosovo,XKX,XK,926,383,Pristina,EUR,.xk,Europe,Eastern Europe,"Kosovar, Kosovan",#N/A,42.5612909,20.3403035,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+117,Kuwait,KWT,KW,414,965,Kuwait City,KWD,.kw,Asia,Western Asia,Kuwaiti,Asia/Kuwait,29.5,45.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+118,Kyrgyzstan,KGZ,KG,417,996,Bishkek,KGS,.kg,Asia,Central Asia,"Kyrgyzstani, Kyrgyz, Kirgiz, Kirghiz",Asia/Bishkek,41,75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+119,Laos,LAO,LA,418,856,Vientiane,LAK,.la,Asia,South-Eastern Asia,"Lao, Laotian",Asia/Vientiane,18,105,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+120,Latvia,LVA,LV,428,371,Riga,EUR,.lv,Europe,Northern Europe,Latvian,Europe/Riga,57,25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+121,Lebanon,LBN,LB,422,961,Beirut,LBP,.lb,Asia,Western Asia,Lebanese,Asia/Beirut,33.83333333,35.83333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+122,Lesotho,LSO,LS,426,266,Maseru,LSL,.ls,Africa,Southern Africa,Basotho,Africa/Maseru,-29.5,28.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+123,Liberia,LBR,LR,430,231,Monrovia,LRD,.lr,Africa,Western Africa,Liberian,Africa/Monrovia,6.5,-9.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+124,Libya,LBY,LY,434,218,Tripolis,LYD,.ly,Africa,Northern Africa,Libyan,Africa/Tripoli,25,17,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+125,Liechtenstein,LIE,LI,438,423,Vaduz,CHF,.li,Europe,Western Europe,Liechtenstein,Europe/Vaduz,47.26666666,9.53333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+126,Lithuania,LTU,LT,440,370,Vilnius,EUR,.lt,Europe,Northern Europe,Lithuanian,Europe/Vilnius,56,24,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+127,Luxembourg,LUX,LU,442,352,Luxembourg,EUR,.lu,Europe,Western Europe,"Luxembourg, Luxembourgish",Europe/Luxembourg,49.75,6.16666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+128,Macau S.A.R.,MAC,MO,446,853,Macao,MOP,.mo,Asia,Eastern Asia,"Macanese, Chinese",Asia/Macau,22.16666666,113.55,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+130,Madagascar,MDG,MG,450,261,Antananarivo,MGA,.mg,Africa,Eastern Africa,Malagasy,Indian/Antananarivo,-20,47,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+131,Malawi,MWI,MW,454,265,Lilongwe,MWK,.mw,Africa,Eastern Africa,Malawian,Africa/Blantyre,-13.5,34,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+132,Malaysia,MYS,MY,458,60,Kuala Lumpur,MYR,.my,Asia,South-Eastern Asia,Malaysian,Asia/Kuala_Lumpur,2.5,112.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+133,Maldives,MDV,MV,462,960,Male,MVR,.mv,Asia,Southern Asia,Maldivian,Indian/Maldives,3.25,73,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+134,Mali,MLI,ML,466,223,Bamako,XOF,.ml,Africa,Western Africa,"Malian, Malinese",Africa/Bamako,17,-4,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+135,Malta,MLT,MT,470,356,Valletta,EUR,.mt,Europe,Southern Europe,Maltese,Europe/Malta,35.83333333,14.58333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+136,Man (Isle of),IMN,IM,833,-1580,"Douglas, Isle of Man",GBP,.im,Europe,Northern Europe,Manx,Europe/Isle_of_Man,54.25,-4.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+137,Marshall Islands,MHL,MH,584,692,Majuro,USD,.mh,Oceania,Micronesia,Marshallese,Pacific/Kwajalein,9,168,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+138,Martinique,MTQ,MQ,474,596,Fort-de-France,EUR,.mq,Americas,Caribbean,"Martiniquais, Martinican",America/Martinique,14.666667,-61,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+139,Mauritania,MRT,MR,478,222,Nouakchott,MRO,.mr,Africa,Western Africa,Mauritanian,Africa/Nouakchott,20,-12,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+140,Mauritius,MUS,MU,480,230,Port Louis,MUR,.mu,Africa,Eastern Africa,Mauritian,Indian/Mauritius,-20.28333333,57.55,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+141,Mayotte,MYT,YT,175,262,Mamoudzou,EUR,.yt,Africa,Eastern Africa,Mahoran,Indian/Mayotte,-12.83333333,45.16666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+142,Mexico,MEX,MX,484,52,Ciudad de MÃƒÂ©xico,MXN,.mx,Americas,Central America,Mexican,America/Bahia_Banderas,23,-102,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+143,Micronesia,FSM,FM,583,691,Palikir,USD,.fm,Oceania,Micronesia,Micronesian,Pacific/Chuuk,6.91666666,158.25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+144,Moldova,MDA,MD,498,373,Chisinau,MDL,.md,Europe,Eastern Europe,Moldovan,Europe/Chisinau,47,29,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+145,Monaco,MCO,MC,492,377,Monaco,EUR,.mc,Europe,Western Europe,"Monegasque, Monacan",Europe/Monaco,43.73333333,7.4,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+146,Mongolia,MNG,MN,496,976,Ulan Bator,MNT,.mn,Asia,Eastern Asia,Mongolian,Asia/Choibalsan,46,105,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+147,Montenegro,MNE,ME,499,382,Podgorica,EUR,.me,Europe,Southern Europe,Montenegrin,Europe/Podgorica,42.5,19.3,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+148,Montserrat,MSR,MS,500,-663,Plymouth,XCD,.ms,Americas,Caribbean,Montserratian,America/Montserrat,16.75,-62.2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+149,Morocco,MAR,MA,504,212,Rabat,MAD,.ma,Africa,Northern Africa,Moroccan,Africa/Casablanca,32,-5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+150,Mozambique,MOZ,MZ,508,258,Maputo,MZN,.mz,Africa,Eastern Africa,Mozambican,Africa/Maputo,-18.25,35,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+151,Myanmar,MMR,MM,104,95,Nay Pyi Taw,MMK,.mm,Asia,South-Eastern Asia,Burmese,Asia/Yangon,22,98,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+152,Namibia,NAM,NA,516,264,Windhoek,NAD,.na,Africa,Southern Africa,Namibian,Africa/Windhoek,-22,17,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+153,Nauru,NRU,NR,520,674,Yaren,AUD,.nr,Oceania,Micronesia,Nauruan,Pacific/Nauru,-0.53333333,166.9166667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+154,Nepal,NPL,NP,524,977,Kathmandu,NPR,.np,Asia,Southern Asia,"Nepali, Nepalese",Asia/Kathmandu,28,84,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+156,Netherlands,NLD,NL,528,31,Amsterdam,EUR,.nl,Europe,Western Europe,"Dutch, Netherlandic",Europe/Amsterdam,52.5,5.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+157,New Caledonia,NCL,NC,540,687,Noumea,XPF,.nc,Oceania,Melanesia,New Caledonian,Pacific/Noumea,-21.5,165.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+158,New Zealand,NZL,NZ,554,64,Wellington,NZD,.nz,Oceania,Australia and New Zealand,"New Zealand, NZ",Pacific/Auckland,-41,174,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+159,Nicaragua,NIC,NI,558,505,Managua,NIO,.ni,Americas,Central America,Nicaraguan,America/Managua,13,-85,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+160,Niger,NER,NE,562,227,Niamey,XOF,.ne,Africa,Western Africa,Nigerien,Africa/Niamey,16,8,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+161,Nigeria,NGA,NG,566,234,Abuja,NGN,.ng,Africa,Western Africa,Nigerian,Africa/Lagos,10,8,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+162,Niue,NIU,NU,570,683,Alofi,NZD,.nu,Oceania,Polynesia,Niuean,Pacific/Niue,-19.03333333,-169.8666667,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+163,Norfolk Island,NFK,NF,574,672,Kingston,AUD,.nf,Oceania,Australia and New Zealand,Norfolk Island,Pacific/Norfolk,-29.03333333,167.95,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+115,North Korea,PRK,KP,408,850,Pyongyang,KPW,.kp,Asia,Eastern Asia,North Korean,Asia/Pyongyang,40,127,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+129,North Macedonia,MKD,MK,807,389,Skopje,MKD,.mk,Europe,Southern Europe,Macedonian,Europe/Skopje,41.83333333,22,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+164,Northern Mariana Islands,MNP,MP,580,-669,Saipan,USD,.mp,Oceania,Micronesia,Northern Marianan,Pacific/Saipan,15.2,145.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+165,Norway,NOR,NO,578,47,Oslo,NOK,.no,Europe,Northern Europe,Norwegian,Europe/Oslo,62,10,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+166,Oman,OMN,OM,512,968,Muscat,OMR,.om,Asia,Western Asia,Omani,Asia/Muscat,21,57,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+167,Pakistan,PAK,PK,586,92,Islamabad,PKR,.pk,Asia,Southern Asia,Pakistani,Asia/Karachi,30,70,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+168,Palau,PLW,PW,585,680,Melekeok,USD,.pw,Oceania,Micronesia,Palauan,Pacific/Palau,7.5,134.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+169,Palestinian Territory Occupied,PSE,PS,275,970,East Jerusalem,ILS,.ps,Asia,Western Asia,Palestinian,Asia/Gaza,31.9,35.2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+170,Panama,PAN,PA,591,507,Panama City,PAB,.pa,Americas,Central America,Panamanian,America/Panama,9,-80,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+171,Papua new Guinea,PNG,PG,598,675,Port Moresby,PGK,.pg,Oceania,Melanesia,"Papua New Guinean, Papuan",Pacific/Bougainville,-6,147,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+172,Paraguay,PRY,PY,600,595,Asuncion,PYG,.py,Americas,South America,Paraguayan,America/Asuncion,-23,-58,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+173,Peru,PER,PE,604,51,Lima,PEN,.pe,Americas,South America,Peruvian,America/Lima,-10,-76,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+174,Philippines,PHL,PH,608,63,Manila,PHP,.ph,Asia,South-Eastern Asia,"Philippine, Filipino",Asia/Manila,13,122,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+175,Pitcairn Island,PCN,PN,612,870,Adamstown,NZD,.pn,Oceania,Polynesia,Pitcairn Island,Pacific/Pitcairn,-25.06666666,-130.1,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+176,Poland,POL,PL,616,48,Warsaw,PLN,.pl,Europe,Eastern Europe,Polish,Europe/Warsaw,52,20,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+177,Portugal,PRT,PT,620,351,Lisbon,EUR,.pt,Europe,Southern Europe,Portuguese,Atlantic/Azores,39.5,-8,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+178,Puerto Rico,PRI,PR,630,+1-787 and 1-939,San Juan,USD,.pr,Americas,Caribbean,Puerto Rican,America/Puerto_Rico,18.25,-66.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+179,Qatar,QAT,QA,634,974,Doha,QAR,.qa,Asia,Western Asia,Qatari,Asia/Qatar,25.5,51.25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+180,Reunion,REU,RE,638,262,Saint-Denis,EUR,.re,Africa,Eastern Africa,"Reunionese, Reunionnais",Indian/Reunion,-21.15,55.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+181,Romania,ROU,RO,642,40,Bucharest,RON,.ro,Europe,Eastern Europe,Romanian,Europe/Bucharest,46,25,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+182,Russia,RUS,RU,643,7,Moscow,RUB,.ru,Europe,Eastern Europe,Russian,Asia/Anadyr,60,100,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+183,Rwanda,RWA,RW,646,250,Kigali,RWF,.rw,Africa,Eastern Africa,Rwandan,Africa/Kigali,-2,30,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+184,Saint Helena,SHN,SH,654,290,Jamestown,SHP,.sh,Africa,Western Africa,Saint Helenian,Atlantic/St_Helena,-15.95,-5.7,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+185,Saint Kitts And Nevis,KNA,KN,659,-868,Basseterre,XCD,.kn,Americas,Caribbean,Kittitian or Nevisian,America/St_Kitts,17.33333333,-62.75,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+186,Saint Lucia,LCA,LC,662,-757,Castries,XCD,.lc,Americas,Caribbean,Saint Lucian,America/St_Lucia,13.88333333,-60.96666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+187,Saint Pierre and Miquelon,SPM,PM,666,508,Saint-Pierre,EUR,.pm,Americas,Northern America,Saint-Pierrais or Miquelonnais,America/Miquelon,46.83333333,-56.33333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+188,Saint Vincent And The Grenadines,VCT,VC,670,-783,Kingstown,XCD,.vc,Americas,Caribbean,"Saint Vincentian, Vincentian",America/St_Vincent,13.25,-61.2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+189,Saint-Barthelemy,BLM,BL,652,590,Gustavia,EUR,.bl,Americas,Caribbean,Barthelemois,America/St_Barthelemy,18.5,-63.41666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+190,Saint-Martin (French part),MAF,MF,663,590,Marigot,EUR,.mf,Americas,Caribbean,Saint-Martinoise,America/Marigot,18.08333333,-63.95,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+191,Samoa,WSM,WS,882,685,Apia,WST,.ws,Oceania,Polynesia,Samoan,Pacific/Apia,-13.58333333,-172.3333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+192,San Marino,SMR,SM,674,378,San Marino,EUR,.sm,Europe,Southern Europe,Sammarinese,Europe/San_Marino,43.76666666,12.41666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+193,Sao Tome and Principe,STP,ST,678,239,Sao Tome,STD,.st,Africa,Middle Africa,Sao Tomean,Africa/Sao_Tome,1,7,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+194,Saudi Arabia,SAU,SA,682,966,Riyadh,SAR,.sa,Asia,Western Asia,"Saudi, Saudi Arabian",Asia/Riyadh,25,45,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+195,Senegal,SEN,SN,686,221,Dakar,XOF,.sn,Africa,Western Africa,Senegalese,Africa/Dakar,14,-14,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+196,Serbia,SRB,RS,688,381,Belgrade,RSD,.rs,Europe,Southern Europe,Serbian,Europe/Belgrade,44,21,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+197,Seychelles,SYC,SC,690,248,Victoria,SCR,.sc,Africa,Eastern Africa,Seychellois,Indian/Mahe,-4.58333333,55.66666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+198,Sierra Leone,SLE,SL,694,232,Freetown,SLL,.sl,Africa,Western Africa,Sierra Leonean,Africa/Freetown,8.5,-11.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+199,Singapore,SGP,SG,702,65,Singapur,SGD,.sg,Asia,South-Eastern Asia,Singaporean,Asia/Singapore,1.36666666,103.8,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+250,Sint Maarten (Dutch part),SXM,SX,534,1721,Philipsburg,ANG,.sx,Americas,Caribbean,Sint Maarten,America/Lower_Princes,18.033333,-63.05,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+200,Slovakia,SVK,SK,703,421,Bratislava,EUR,.sk,Europe,Eastern Europe,Slovak,Europe/Bratislava,48.66666666,19.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+201,Slovenia,SVN,SI,705,386,Ljubljana,EUR,.si,Europe,Southern Europe,"Slovenian, Slovene",Europe/Ljubljana,46.11666666,14.81666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+202,Solomon Islands,SLB,SB,90,677,Honiara,SBD,.sb,Oceania,Melanesia,Solomon Island,Pacific/Guadalcanal,-8,159,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+203,Somalia,SOM,SO,706,252,Mogadishu,SOS,.so,Africa,Eastern Africa,"Somali, Somalian",Africa/Mogadishu,10,49,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+204,South Africa,ZAF,ZA,710,27,Pretoria,ZAR,.za,Africa,Southern Africa,South African,Africa/Johannesburg,-29,24,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+205,South Georgia,SGS,GS,239,500,Grytviken,GBP,.gs,Americas,South America,South Georgia or South Sandwich Islands,Atlantic/South_Georgia,-54.5,-37,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+116,South Korea,KOR,KR,410,82,Seoul,KRW,.kr,Asia,Eastern Asia,South Korean,Asia/Seoul,37,127.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+206,South Sudan,SSD,SS,728,211,Juba,SSP,.ss,Africa,Middle Africa,South Sudanese,Africa/Juba,7,30,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+207,Spain,ESP,ES,724,34,Madrid,EUR,.es,Europe,Southern Europe,Spanish,Africa/Ceuta,40,-4,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+208,Sri Lanka,LKA,LK,144,94,Colombo,LKR,.lk,Asia,Southern Asia,Sri Lankan,Asia/Colombo,7,81,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+209,Sudan,SDN,SD,729,249,Khartoum,SDG,.sd,Africa,Northern Africa,Sudanese,Africa/Khartoum,15,30,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+210,Suriname,SUR,SR,740,597,Paramaribo,SRD,.sr,Americas,South America,Surinamese,America/Paramaribo,4,-56,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+211,Svalbard And Jan Mayen Islands,SJM,SJ,744,47,Longyearbyen,NOK,.sj,Europe,Northern Europe,Svalbard,Arctic/Longyearbyen,78,20,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+212,Swaziland,SWZ,SZ,748,268,Mbabane,SZL,.sz,Africa,Southern Africa,Swazi,Africa/Mbabane,-26.5,31.5,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+213,Sweden,SWE,SE,752,46,Stockholm,SEK,.se,Europe,Northern Europe,Swedish,Europe/Stockholm,62,15,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+214,Switzerland,CHE,CH,756,41,Bern,CHF,.ch,Europe,Western Europe,Swiss,Europe/Zurich,47,8,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+215,Syria,SYR,SY,760,963,Damascus,SYP,.sy,Asia,Western Asia,Syrian,Asia/Damascus,35,38,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+216,Taiwan,TWN,TW,158,886,Taipei,TWD,.tw,Asia,Eastern Asia,"Chinese, Taiwanese",Asia/Taipei,23.5,121,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+217,Tajikistan,TJK,TJ,762,992,Dushanbe,TJS,.tj,Asia,Central Asia,Tajikistani,Asia/Dushanbe,39,71,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+218,Tanzania,TZA,TZ,834,255,Dodoma,TZS,.tz,Africa,Eastern Africa,Tanzanian,Africa/Dar_es_Salaam,-6,35,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+219,Thailand,THA,TH,764,66,Bangkok,THB,.th,Asia,South-Eastern Asia,Thai,Asia/Bangkok,15,100,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+17,The Bahamas,BHS,BS,44,-241,Nassau,BSD,.bs,Americas,Caribbean,Bahamian,America/Nassau,24.25,-76,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+220,Togo,TGO,TG,768,228,Lome,XOF,.tg,Africa,Western Africa,Togolese,Africa/Lome,8,1.16666666,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+221,Tokelau,TKL,TK,772,690,,NZD,.tk,Oceania,Polynesia,Tokelauan,Pacific/Fakaofo,-9,-172,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+222,Tonga,TON,TO,776,676,Nuku'alofa,TOP,.to,Oceania,Polynesia,Tongan,Pacific/Tongatapu,-20,-175,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+223,Trinidad And Tobago,TTO,TT,780,-867,Port of Spain,TTD,.tt,Americas,Caribbean,Trinidadian or Tobagonian,America/Port_of_Spain,11,-61,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+224,Tunisia,TUN,TN,788,216,Tunis,TND,.tn,Africa,Northern Africa,Tunisian,Africa/Tunis,34,9,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+225,Turkey,TUR,TR,792,90,Ankara,TRY,.tr,Asia,Western Asia,Turkish,Europe/Istanbul,39,35,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+226,Turkmenistan,TKM,TM,795,993,Ashgabat,TMT,.tm,Asia,Central Asia,Turkmen,Asia/Ashgabat,40,60,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+227,Turks And Caicos Islands,TCA,TC,796,-648,Cockburn Town,USD,.tc,Americas,Caribbean,Turks and Caicos Island,America/Grand_Turk,21.75,-71.58333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+228,Tuvalu,TUV,TV,798,688,Funafuti,AUD,.tv,Oceania,Polynesia,Tuvaluan,Pacific/Funafuti,-8,178,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+229,Uganda,UGA,UG,800,256,Kampala,UGX,.ug,Africa,Eastern Africa,Ugandan,Africa/Kampala,1,32,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+230,Ukraine,UKR,UA,804,380,Kyiv,UAH,.ua,Europe,Eastern Europe,Ukrainian,Europe/Kyiv,49,32,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+231,United Arab Emirates,ARE,AE,784,971,Abu Dhabi,AED,.ae,Asia,Western Asia,"Emirati, Emirian, Emiri",Asia/Dubai,24,54,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+232,United Kingdom,GBR,GB,826,44,London,GBP,.uk,Europe,Northern Europe,"British, UK",Europe/London,54,-2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+233,United States,USA,US,840,1,Washington,USD,.us,Americas,Northern America,American,America/Adak,38,-97,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+234,United States Minor Outlying Islands,UMI,UM,581,1,,USD,.us,Americas,Northern America,American,Pacific/Midway,0,0,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+235,Uruguay,URY,UY,858,598,Montevideo,UYU,.uy,Americas,South America,Uruguayan,America/Montevideo,-33,-56,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+236,Uzbekistan,UZB,UZ,860,998,Tashkent,UZS,.uz,Asia,Central Asia,"Uzbekistani, Uzbek",Asia/Samarkand,41,64,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+237,Vanuatu,VUT,VU,548,678,Port Vila,VUV,.vu,Oceania,Melanesia,"Ni-Vanuatu, Vanuatuan",Pacific/Efate,-16,167,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+238,Vatican City State (Holy See),VAT,VA,336,379,Vatican City,EUR,.va,Europe,Southern Europe,Vatican,Europe/Vatican,41.9,12.45,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+239,Venezuela,VEN,VE,862,58,Caracas,VES,.ve,Americas,South America,Venezuelan,America/Caracas,8,-66,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+240,Vietnam,VNM,VN,704,84,Hanoi,VND,.vn,Asia,South-Eastern Asia,Vietnamese,Asia/Ho_Chi_Minh,16.16666666,107.8333333,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+241,Virgin Islands (British),VGB,VG,92,-283,Road Town,USD,.vg,Americas,Caribbean,British Virgin Island,America/Tortola,18.431383,-64.62305,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+242,Virgin Islands (US),VIR,VI,850,-339,Charlotte Amalie,USD,.vi,Americas,Caribbean,U.S. Virgin Island,America/St_Thomas,18.34,-64.93,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+243,Wallis And Futuna Islands,WLF,WF,876,681,Mata Utu,XPF,.wf,Oceania,Polynesia,"Wallis and Futuna, Wallisian or Futunan",Pacific/Wallis,-13.3,-176.2,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+244,Western Sahara,ESH,EH,732,212,El-Aaiun,MAD,.eh,Africa,Northern Africa,"Sahrawi, Sahrawian, Sahraouian",#N/A,24.5,-13,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+245,Yemen,YEM,YE,887,967,Sanaa,YER,.ye,Asia,Western Asia,Yemeni,Asia/Aden,15,48,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+246,Zambia,ZMB,ZM,894,260,Lusaka,ZMW,.zm,Africa,Eastern Africa,Zambian,Africa/Lusaka,-15,30,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+247,Zimbabwe,ZWE,ZW,716,263,Harare,ZWL,.zw,Africa,Eastern Africa,Zimbabwean,Africa/Harare,-20,30,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
