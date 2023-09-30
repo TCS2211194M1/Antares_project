@@ -1,3 +1,4 @@
 ﻿t_storage,short_description,device_name,intance_attachment_point,volume_size,volume_type,IOPS,encrypted,delete_on_termination,instance,entry_status,create_date,create_by,update_date,update_by
-1,vol-03cfcb0f889d9807a,sda,/dev/sda1,8,gp2,100,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
-2,vol-0b999fbc3da97c35b,sdb,/dev/sdb,8,gp3,3000,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+1,vol-026bc4a4d9373f565,/dev/sda1,/dev/sda1,8,gp2,100,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+2,vol-02b704c2167e56bfd,/dev/sdb,/dev/sdb,100,gp3,3000,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
+3,vol-09b38cd9b71460c5e,/dev/sdc,/dev/sdb,50,gp3,3000,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
