@@ -1,4 +1,4 @@
-﻿t_storage,short_description,device_name,intance_attachment_point,volume_size,comitted_size,volume_type,IOPS,encrypted,delete_on_termination,instance,entry_status,create_date,create_by,update_date,update_by
+﻿t_storage,short_description,device_name,intance_attachment_point,volume_size,committed_size,volume_type,IOPS,encrypted,delete_on_termination,instance,entry_status,create_date,create_by,update_date,update_by
 1,vol-026bc4a4d9373f565,xvda,/dev/sda1,8,8,gp2,100,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 2,vol-02b704c2167e56bfd,xvdb,/dev/sdb,100,0,gp3,3000,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
 3,vol-09b38cd9b71460c5e,xvdc,/dev/sdc,50,0,gp3,3000,No,Yes, i-092d4d734970aa2ce,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001
