@@ -15,65 +15,82 @@ function cargarInterfaz(opc, acc, param){
     sol.send(datos);
 }
 
-function addClient(){
+//Login
+
+function addLogin(){
     var datos = new FormData();
     var sol = new XMLHttpRequest();
-    var f = document.querySelector("#form-add-client");
+    var f = document.querySelector("#form-add-login");
 
-    datos.append("opc", "client");
+    datos.append("opc", "login");
     datos.append("acc", "add");
-    datos.append("name", f.name.value);
-    datos.append("lastName", f.lastName.value);
-    datos.append("genere", f.genere.value);
-    datos.append("birthdate", f.birthdate.value);
-    datos.append("email", f.email.value);
-    datos.append("emailOp", f.emailOp.value);
-    datos.append("phone", f.phone.value);
-    datos.append("phoneOp", f.phoneOp.value);
-    datos.append("country", f.country.value);
-    
+    datos.append("T_LOGIN", f.T_LOGIN.value);
+    datos.append("LOGIN_ROLE", f.LOGIN_ROLE.value);
 
     sol.addEventListener("load", function(e){
         if (e.target.responseText > 0) {
-            alert("Success");
-        } else{
-            alert("Error");
+            alert("Login registrado con éxito");
+            cargarInterfaz("login", "list", null);
+        } else {
+            alert("Ocurrió un error al registrar los datos :(");
         }
     });
 
-    sol.open("POST", "php/procesos.php");
+    sol.open("POST", "php/process.php");
     sol.send(datos);
 }
 
-function eliminarAlumno(username){
+//Pendiente por resolver
+function prueba(opc, id){
     var datos = new FormData();
     var sol = new XMLHttpRequest();
-    var name = document.getElementById("name").value;
+    var contenido = document.getElementById("form");
 
-    datos.append("opc", "client");
+    datos.append("opc", opc);
+    datos.append("acc", "mod");
+    datos.append("id", id);
+    datos.append("param", null);
+
+    sol.addEventListener("load", function(e){
+        contenido.innerHTML = e.target.responseText;
+        alert(contenido.innerHTML);
+    });
+
+    sol.open("POST", "php/interfaz.php");
+    sol.send(datos);
+}
+
+function delete_row(opc, id){
+    var datos = new FormData();
+    var sol = new XMLHttpRequest();
+
+    datos.append("opc", opc);
     datos.append("acc", "delete");
-    datos.append("username", username);
+    datos.append("id", id);
 
-    if (confirm("Estás seguro de eliminar al cliente: " + name + "?")) {
+    if (confirm("Estás seguro de eliminar el registro: " + id + "?")) {
         sol.addEventListener("load", function(e){
             if (e.target.responseText > 0) {
-                alert("Client eliminado con éxito");
-                cargarInterfaz("client", "list", null);
+                alert("Registro eliminado con éxito");
+                cargarInterfaz(opc, "list", null);
             } else{
-                alert("Error al eliminar al client");
+                alert("Error al eliminar el registro" + e.target.responseText);
             }
         });
         
-        sol.open("POST", "php/procesos.php");
+        sol.open("POST", "php/process.php");
         sol.send(datos);
     }
 }
 
-function listState(){
-    var country = document.getElementById("country");
-    var id = country.value;
-}
+//Product
 
+//Role
+
+//Work Order
+
+
+//Functions
 function activarCajas() {
     document.getElementById('name').disabled=false;
     document.getElementById('lastName').disabled=false;
