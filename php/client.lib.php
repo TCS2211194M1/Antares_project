@@ -11,49 +11,26 @@ class Client extends Connection
 
     function add($request)
     {
-        $ejec = $this->execute("INSERT INTO client VALUES('$request[a]', '1', NOW(), NOW())");
+        $ejec = $this->execute("");
         return $ejec;
     }
 
-    function list($opc)
+    function list($request)
     {
-        if ($opc == null) {
-            $consult = $this->execute("SELECT * FROM t_login");
-        } else {
-            $consult = $this->execute("SELECT * FROM t_login where status_log= '1' and id='$opc'");
-        }
-        return $consult;
+        $ejec = $this->execute("SELECT * FROM t_client WHERE entry_status='0'");
+        return $ejec;
     }
 
     function update($request)
-    {
-        $ejec = $this->execute("MOD");
-        return $ejec;
-    }
-
-    function delete($request)
     {
         $ejec = $this->execute("");
         return $ejec;
     }
 
-    function listCountry($opc)
+    function delete($request)
     {
-        if ($opc == null) {
-            $consult = $this->execute("SELECT * FROM country");
-        } else {
-            $consult = $this->execute("SELECT * FROM country where entry_status= '1'");
-        }
-        return $consult;
+        $ejec = $this->execute("UPDATE t_client SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE T_CLIENT = '$request[id]'");
+        return $ejec;
     }
 
-    function listState($opc)
-    {
-        if ($opc == 142) {
-            $consult = $this->execute("SELECT * FROM estado WHERE entry_status= '1'");
-        } else {
-            $consult = $this->execute("SELECT * FROM estado WHERE entry_status= '0'");
-        }
-        return $consult;
-    }
 }

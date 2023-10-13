@@ -18,22 +18,25 @@
     <div class="container w-25 p-5 border rounded-4 position-absolute top-50 start-50 translate-middle bg-white shadow-lg mb-5 bg-body rounded">
         <h1 class="mb-5 text-center text-success">Login</h1>
 
-        <i class="bi bi-person-circle d-inline fs-3 me-2"></i>
-        <h4 class="h4 d-inline">Username</h4>
-        <input type="text" class="form-control mb-3" required>
+        <form action="" id='form-login'>
+            <i class="bi bi-person-circle d-inline fs-3 me-2"></i>
+            <h4 class="h4 d-inline">Username</h4>
+            <input type="text" class="form-control mb-3" id='username' required>
 
-        <i class="bi bi-key d-inline fs-3 me-2"></i>
-        <h4 class="h4 d-inline">Password</h4>
-        <input type="text" class="form-control" required>
-        <p class="text-end"><a href="" class="text-decoration-none text-danger">Forgot password?</a></p>
+            <i class="bi bi-key d-inline fs-3 me-2"></i>
+            <h4 class="h4 d-inline">Password</h4>
+            <input type="password" class="form-control" id='password' required>
 
-        <div class="text-center mt-4">
-            <button class="btn btn-outline-success w-50 fw-bold">Sign up</button>
-        </div>
+            <p class="text-end"><a href="" class="text-decoration-none text-danger">Forgot password?</a></p>
 
-        <div class=" bg-secondary bg-opacity-25 mt-4 rounded-4 p-1 text-center">
-            <p class="my-2">Don't have an account? <a href="" class="text-decoration-none text-success">Create account</a></p>
-        </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-success w-50 fw-bold" onclick="javascript:login();">Sign up</button>
+            </div>
+
+            <div class=" bg-secondary bg-opacity-25 mt-4 rounded-4 p-1 text-center">
+                <p class="my-2">Don't have an account? <a href="" class="text-decoration-none text-success">Create account</a></p>
+            </div>
+        </form>
     </div>
 </body>
 

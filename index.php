@@ -13,10 +13,11 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous'>
     <script src="js/functions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Samava</title>
 </head>
 
-<body onload="javascript:cargarInterfaz('client', 'list', null);">
+<body onload="javascript:cargarInterfaz('login', 'list', null);">
     <nav class="navbar bg-body-tertiary fixed-top">
         <div class="container-fluid">
             <h3 class="navbar-brand"> Antares Project Samava</h3>
@@ -30,22 +31,38 @@
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="nav" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Options</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Options of System</h5>
+                    <button type="button" class="btn-close text-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <input type="button" value="Client" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('client', 'list', null);">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
+                        <li class="nav-item dropdown text-center mb-3">
+                            <a class='nav-link dropdown-toggle text-success' href="#" role='button' data-bs-toggle='dropdown'>Users</a>
+                            <ul class='dropdown-menu text-center border border-0'>
+                                <li><button class='btn btn-outline-success mb-3 w-75' onclick="javascript:cargarInterfaz('login', 'list', null);" data-bs-dismiss="offcanvas">Login</button></li>
+                                <li><button class='btn btn-outline-success mb-3 w-75' onclick="javascript:cargarInterfaz('client', 'list', null);" data-bs-dismiss="offcanvas">Client</button></li>
+                                <li><button class='btn btn-outline-success mb-3 w-75' onclick="javascript:cargarInterfaz('taxid', 'list', null);" data-bs-dismiss="offcanvas">Taxid</button></li>
+                                <li><button class='btn btn-outline-success mb-3 w-75' onclick="javascript:cargarInterfaz('role', 'list', null);" data-bs-dismiss="offcanvas">Role</button></li>
+                                <li><button class='btn btn-outline-success mb-3 w-75' onclick="javascript:cargarInterfaz('privilege', 'list', null);" data-bs-dismiss="offcanvas">Privilege</button></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <input type="button" value="OTHER" class="btn btn-outline-secondary my-3 w-100" onclick="javascript:cargarInterfaz('', '', null);">
+                        <li class="nav-item dropdown text-center mb-3">
+                            <a class='nav-link dropdown-toggle text-danger' href="#" role='button' data-bs-toggle='dropdown'>Product</a>
+                            <ul class='dropdown-menu text-center border border-0'>
+                                <li><button class='btn btn-outline-danger mb-3 w-75' onclick="javascript:cargarInterfaz('product', 'list', null);" data-bs-dismiss="offcanvas">Product</button></li>
+                                <li><button class='btn btn-outline-danger mb-3 w-75' onclick="javascript:cargarInterfaz('service', 'list', null);" data-bs-dismiss="offcanvas">Service</button></li>
+                                <li><button class='btn btn-outline-danger mb-3 w-75' onclick="javascript:cargarInterfaz('storage', 'list', null);" data-bs-dismiss="offcanvas">Storage</button></li>
+                                <li><button class='btn btn-outline-danger mb-3 w-75' onclick="javascript:cargarInterfaz('partition', 'list', null);" data-bs-dismiss="offcanvas">Partition</button></li>
+                            </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <input type="button" value="OTHER" class="btn btn-outline-secondary mb-3 w-100" onclick="javascript:cargarInterfaz('', '', null);">
-                        </li>
-                        <li class="nav-item dropdown">
-                            <input type="button" value="OTHER" class="btn btn-outline-secondary mb-3 w-100" onclick="javascript:cargarInterfaz('', '', null);">
+                        <li class="nav-item dropdown text-center mb-3">
+                            <a class='nav-link dropdown-toggle text-primary' href="#" role='button' data-bs-toggle='dropdown'>Locations</a>
+                            <ul class='dropdown-menu text-center border border-0'>
+                                <li><button class='btn btn-outline-primary mb-3 w-75' onclick="javascript:cargarInterfaz('subregion', 'list', null);" data-bs-dismiss="offcanvas">Subregion</button></li>
+                                <li><button class='btn btn-outline-primary mb-3 w-75' onclick="javascript:cargarInterfaz('country', 'list', null);" data-bs-dismiss="offcanvas">Country</button></li>
+                                <li><button class='btn btn-outline-primary mb-3 w-75' onclick="javascript:cargarInterfaz('state', 'list', null);" data-bs-dismiss="offcanvas">State</button></li>
+                                <li><button class='btn btn-outline-primary mb-3 w-75' onclick="javascript:cargarInterfaz('city', 'list', null);" data-bs-dismiss="offcanvas">City</button></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +70,7 @@
         </div>
     </nav>
     <br><br><br>
-    <div class="container" id="container"></div>
+    <div class="p-3" id="container"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
 </body>

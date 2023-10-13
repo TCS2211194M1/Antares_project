@@ -5,6 +5,27 @@ spl_autoload_register(function ($class) {
 });
 
 switch ($_POST["opc"]) {
+    case 'login':
+        $login = new Login();
+        switch ($_POST["acc"]) {
+            case 'add':
+                echo $login->add($_POST);
+                break;
+
+            case 'mod':
+
+                break;
+
+            case 'delete':
+                echo $login->delete($_POST);
+                break;
+
+            default:
+                echo "Error, no seleccionaste una acción para login";
+                break;
+        }
+        break;
+
     case 'client':
         $client = new Client();
         switch ($_POST["acc"]) {
@@ -12,25 +33,19 @@ switch ($_POST["opc"]) {
                 echo $client->add($_POST);
                 break;
 
-            case 'update':
-
+            case 'mod':
                 break;
 
             case 'delete':
                 echo $client->delete($_POST);
                 break;
-
             default:
-                echo "Error, no seleccionaste una opción para clientes";
+                echo "Error, no seleccionaste una acción para client";
                 break;
         }
         break;
 
-    case 'user':
-        # code...
-        break;
-
     default:
-        # code...
+        echo "Error (Process): No seleccionaste ninguna opción";
         break;
 }
