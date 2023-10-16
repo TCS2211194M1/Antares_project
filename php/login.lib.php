@@ -8,7 +8,7 @@ class Login extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_login VALUES('$request[T_LOGIN]', '$request[LOGIN_ROLE]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_login VALUES('$request[t_login]', '$request[login_role]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -17,12 +17,18 @@ class Login extends Connection {
         return $ejec;
     }
 
+    function mod($request)
+    {
+        $ejec = $this->execute("UPDATE t_login SET LOGIN_ROLE='$request[login_role]', ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_LOGIN = '$request[t_login]'");
+        return $ejec;
+    }
+
     function delete($request){
         $ejec = $this->execute("UPDATE t_login SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE T_LOGIN = '$request[id]'");
         return $ejec;
     }
 
-    //Obtener los Selects para los registros
+    //Consultas para los campos que requieren de otras tablas
     function roles(){
         $ejec = $this->execute("SELECT * FROM t_role");
         return $ejec;

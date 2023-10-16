@@ -17,7 +17,7 @@
     <title>Samava</title>
 </head>
 
-<body onload="javascript:cargarInterfaz('login', 'list', null);">
+<body onload="javascript:cargarInterfaz('product', 'list', null);">
     <nav class="navbar bg-body-tertiary fixed-top">
         <div class="container-fluid">
             <h3 class="navbar-brand"> Antares Project Samava</h3>
@@ -71,6 +71,36 @@
     </nav>
     <br><br><br>
     <div class="p-3" id="container"></div>
+
+    <div class="bg-dark p-3">
+        <footer class='pt-5'>
+            <div class='row text-white'>
+                <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>
+                    <div>
+                        <img src="../Project_samava/image/Logo Samava.png" alt="" class='mb-4 w-75'>
+                        <h5 class=' px-5 text-center'>Tecnología Comercial y Servicios Integrales Samava Sas de CV</h5>
+                    </div>
+                </div>
+                <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-5'>
+                    <div>
+                        <i class="bi bi-geo-alt fs-3 me-3"></i>
+                        <h5 class='d-inline'>Castiilo de Chapultepec #61, San Juan del Río, Querétaro, México</h5>
+                    </div>
+                    <div>
+                        <i class="bi bi-telephone fs-3 me-3"></i>
+                        <h5 class='d-inline'>4465465465</h5>
+                    </div>
+                    <div>
+                        <i class="bi bi-envelope fs-3 me-3"></i>
+                        <h5 class='d-inline text-info'>samava@creativeering.com</h5>
+                    </div>
+                </div>
+                <div class='col-lg-4 col-md-6 col-sm-12 text-center'>
+                    <h5>Todos los derechos son reservados</h5>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
 </body>
