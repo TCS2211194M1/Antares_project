@@ -11,13 +11,13 @@ class Client extends Connection
 
     function add($request)
     {
-        $ejec = $this->execute("INSERT INTO t_client VALUES('$request[t_client]', '$request[short_description]', '$request[login_name]', '$request[login_last_name]', '$request[email]',
+        $ejec = $this->execute("INSERT INTO t_client VALUES('999', '$request[short_description]', '$request[login_name]', '$request[login_last_name]', '$request[email]',
         '$request[cellphone]', '$request[phone]', '2309150004', '$request[t_taxid]', '$request[t_workorder]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
     function consult($id){
-        $ejec = $this->execute("SELECT * FROM t_client WHERE T_CLIENT = $id");
+        $ejec = $this->execute("SELECT * FROM t_client WHERE T_CLIENT = $id AND ENTRY_STATUS='0'");
         return $ejec;
     }
 

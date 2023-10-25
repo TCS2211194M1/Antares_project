@@ -8,13 +8,13 @@ class Privilege extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_privilege VALUES('$request[t_privilege]', '$request[short_description]', '$request[grant_table_column]', '$request[context]',
+        $ejec = $this->execute("INSERT INTO t_privilege VALUES('999', '$request[short_description]', '$request[grant_table_column]', '$request[context]',
         '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
     function consult($id){
-        $ejec = $this->execute("SELECT * FROM t_privilege WHERE t_privilege = $id");
+        $ejec = $this->execute("SELECT * FROM t_privilege WHERE t_privilege = $id AND ENTRY_STATUS='0'");
         return $ejec;
     }
 

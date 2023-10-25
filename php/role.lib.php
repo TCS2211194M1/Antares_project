@@ -9,13 +9,13 @@ class Role extends Connection{
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_role VALUES('$request[t_role]', '$request[short_description]', '$request[long_description]', '$request[t_privilege]', '0', NOW(), 
+        $ejec = $this->execute("INSERT INTO t_role VALUES('999', '$request[short_description]', '$request[long_description]', '$request[t_privilege]', '0', NOW(), 
         '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
     function consult($id){
-        $ejec = $this->execute("SELECT * FROM t_role WHERE t_role = $id");
+        $ejec = $this->execute("SELECT * FROM t_role WHERE t_role = $id AND ENTRY_STATUS='0'");
         return $ejec;
     }
 

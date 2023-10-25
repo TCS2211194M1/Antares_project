@@ -8,12 +8,12 @@ class Login extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_login VALUES('$request[t_login]', '$request[login_role]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_login VALUES('999', '$request[login_role]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
     function consult($id){
-        $ejec = $this->execute("SELECT * FROM t_login WHERE T_LOGIN = $id");
+        $ejec = $this->execute("SELECT * FROM t_login WHERE T_LOGIN = $id AND ENTRY_STATUS='0'");
         return $ejec;
     }
 
