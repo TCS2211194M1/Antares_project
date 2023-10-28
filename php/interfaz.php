@@ -752,22 +752,89 @@ switch ($_POST["opc"]) {
             break;
     //Interfaces de Work Order                
     case  'workorder':
-        //$workorder = new WorkOrder();
+        $workorder = new WorkOrder();
         switch ($_POST["acc"]) {
             case 'add':
-                echo "En construcción";
+                $consultProduct = $workorder->product();
+                $consultPartition = $workorder->partition();
+                echo "<h3 class='text-center text-secondary m-3'>Alta Role</h3>
+                <form id='form-add-role'>
+                    <div class='row'>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='DESCRIPTION' placeholder='DESCRIPTION' required/>
+                                <label for='floatingInput'>DESCRIPTION</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <select class='form-select' id='T_PRODUCT'>";
+                                while ($ren = $consultProduct->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<option value='$ren[T_PRODUCT]'>$ren[SHORT_DESCRIPTION]</option>";
+                                }
+                                echo "</select>
+                                <label for='floatingInput'>Product</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='REGISTERED_DOMAIN' placeholder='REGISTERED_DOMAIN' required/>
+                                <label for='floatingInput'>REGISTERED_DOMAIN</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <select class='form-select' id='T_PARTITION'>";
+                                while ($ren = $consultPartition->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<option value='$ren[T_PARTITION]'>$ren[SHORT_DESCRIPTION]</option>";
+                                }
+                                echo "</select>
+                                <label for='floatingInput'>Partition</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FECHA_INICIO' placeholder='FECHA_INICIO' required/>
+                                <label for='floatingInput'>FECHA_INICIO</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FECHA_FIN' placeholder='FECHA_FIN' required/>
+                                <label for='floatingInput'>FECHA_FIN</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class='row text-center mt-4'>
+                    <div class='col-lg-3'></div>    
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addWorkOrder();'>Add</button>
+                    </div>
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"workorder\",\"list\",\"null\");'>Return</button>
+                    </div>
+                    <div class='col-lg-3'></div>  
+                </div>"; 
                 break;
             case 'list':
                 $functions->createTable($_POST["opc"], "t_workorder");
                 break;
-
+            case 'mod':
+                $functions->createForm("t_workorder", $_POST["id"]);
+                break;
+            case 'delete':
+                $functions->createForm("t_workorder", $_POST["id"]);
+                break;   
             default:
                 echo "Error, You did not select any operation (Add, List, Modify or Delete)";
                 break;
         }
         break;
     case  'workorderflag':
-        //$workorder = new WorkOrder();
+        //$workorderflag = new WorkOrderFlag();
         switch ($_POST["acc"]) {
             case 'add':
                 echo "En construcción";
@@ -775,7 +842,12 @@ switch ($_POST["opc"]) {
             case 'list':
                 $functions->createTable($_POST["opc"], "t_workorderflag");
                 break;
-
+            case 'mod':
+                $functions->createForm("t_workorderflag", $_POST["id"]);
+                break;
+            case 'delete':
+                $functions->createForm("t_workorderflag", $_POST["id"]);
+                break;   
             default:
                 echo "Error, You did not select any operation (Add, List, Modify or Delete)";
                 break;
@@ -938,7 +1010,8 @@ switch ($_POST["opc"]) {
                 echo "Error, You did not select any operation (Add, List, Modify or Delete)";
                 break;
         }
-        break;                
+        break;
+    
     default:
         echo "Error, You did not select any option (Login, Client, Role, Product, Service, Storage, Country)";
         break;

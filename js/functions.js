@@ -218,7 +218,6 @@ function addPartition() {
     sol.send(datos);
 }
 
-//Locations
 //Función para agregar un registro a la tabla region
 function addRegion(){
     var datos = new FormData();
@@ -268,8 +267,36 @@ function addSubregion(){
     sol.send(datos);
 }
 
-
 //Work Order
+function addWorkOrder() {
+    var datos = new FormData();
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-workorder");
+
+    datos.append("opc", "workorder");
+    datos.append("acc", "add");
+    datos.append("description", f.DESCRIPTION.value);
+    datos.append("t_product", f.T_PRODUCT.value);
+    datos.append("registered_domain", f.REGISTERED_DOMAIN.value);
+    datos.append("t_partition", f.T_PARTITION.value);
+    datos.append("fecha_inicio", f.FECHA_INICIO.value);
+    datos.append("fecha_fin", f.FECHA_FIN.value);
+    datos.append("workorder_flag", f.WORKORDER_FLAG.value);
+
+    sol.addEventListener("load", function(e){
+
+        if (e.target.responseText > 0) {
+            alert("Workorder registrado con éxito");
+            cargarInterfaz("workorder", "list", null);
+        } else {
+            alert("Ocurrió un error al registrar los datos :(" + e.target.responseText);
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
 
 //Locations
 
@@ -543,4 +570,21 @@ function activarCajas() {
     document.getElementById('save').hidden=false;
     document.getElementById('cancel').hidden=false;
 
+}
+
+//Tienda Samava
+function cargarCatalog(acc, id){
+    var datos = new FormData();
+    var sol = new XMLHttpRequest();
+    var contenido = document.getElementById("container");
+
+    datos.append("acc", acc);
+    datos.append("id", id);
+
+    sol.addEventListener("load", function(e){
+        contenido.innerHTML = e.target.responseText;
+    });
+
+    sol.open("POST", "../shop/product.php");
+    sol.send(datos);
 }

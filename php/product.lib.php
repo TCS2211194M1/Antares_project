@@ -8,8 +8,13 @@ class Product extends Connection{
         $this->open();
     }
 
-    function consult($id){
-        $ejec = $this->execute("SELECT * FROM t_product WHERE T_PRODUCT=$id");
+    function consult(){
+        $ejec = $this->execute("SELECT * FROM t_product WHERE ENTRY_STATUS='0'");
+        return $ejec;
+    }
+
+    function consultProduct($id){
+        $ejec = $this->execute("SELECT * FROM t_product WHERE T_PRODUCT = $id AND ENTRY_STATUS='0'");
         return $ejec;
     }
 

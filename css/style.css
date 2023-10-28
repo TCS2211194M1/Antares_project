@@ -1,0 +1,38 @@
+#container_nav{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main > .container{
+    padding: 30px;
+}
+
+#img_product{
+    width: 70%;
+    height: 30%;
+}
+
+#img_datails{
+    width: 30%;
+    height: 30%;
+}
+
+body{
+    background: rgba(99, 191, 237, 0.692);
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#card{
+    background: rgba(214, 228, 85, 0.418);
+}
+
+#btn_cart{
+    background: rgba(1, 196, 1, 0.63);
+}
+
+#card-details{
+    background: rgba(214, 247, 255, 0.896);
+}
+
+#row-details{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
