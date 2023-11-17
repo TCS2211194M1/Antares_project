@@ -64,18 +64,19 @@ class Functions extends Connection
         $consult = $this->list($table);
         $opc = substr($table, 2);
 
-        echo "<h3 class='text-center mb-3'>". strtoupper($table)."</h3>
+        echo "<div class='mt-5'> <button class='btn btn-danger' onclick='javascript:loadPage()'><i class='bi bi-arrow-left-square me-2'></i>Regresar</button>
+            <center>
+                <h3 class='mb-3 shadow rounded-pill bg-dark text-white w-25 p-2 mt-3'>". strtoupper($table)."
+            </center>
         <div class='text-end'>
-            <button class='btn btn-sm btn-success rounded-pill d-inline text-end' onclick='javascript:cargarInterfaz(\"$opc\", \"add\", \"null\");'><i class='bi bi-plus-circle'></i> Add new $opc</button>
+            <button class='btn btn-sm btn-success rounded d-inline text-end' onclick='javascript:cargarInterfaz(\"$opc\", \"add\");'><i class='bi bi-plus-circle me-1'></i> Agregar nuevo</button>
         </div>
-        <div class='mb-3'>
-            <input type='text' class='form-control me-3 shadow-lg d-inline w-50' placeholder='Buscar por id, descripción, fecha de creación'/>
-            <button class='btn btn-sm btn-primary rounded-pill d-inline' onclick='javascript:prueba(\"Hola\");'><i class='bi bi-search'></i></button>
-        </div>";
 
-        //Div del formulairo para modificar datos
-        echo "<div id='form'></div>
-        
+        <div class='mb-3'>
+            <input type='text' class='form-control me-3 shadow-lg d-inline w-25' placeholder='Buscar por id, descripción, fecha de creación'/>
+            <button class='btn btn-sm btn-primary rounded-pill d-inline' onclick='javascript:prueba(\"Hola\");'><i class='bi bi-search'></i></button>
+        </div>
+
         <div class='table-responsive'>
             <table class='table table-striped-columns text-center rounded-pill'>
                 <tr>";
@@ -96,13 +97,13 @@ class Functions extends Connection
                             }
                         }
                         echo "<td>
-                            <button class='btn btn-info my-2' id='".$ren[$columns[0]]."' onclick='javascript:interfaceMod(\"$opc\", ".$ren[$columns[0]].");'><i class='bi bi-pencil-square'></i></button>
-                            <button class='btn btn-danger' id='".$ren[$columns[0]]."' onclick='javascript:delete_row(\"$opc\", ". $ren[$columns[0]] .");'><i class='bi bi-trash'></i></button>
+                            <button class='btn btn-info mb-2 d-inline' onclick='javascript:interfaceMod(\"$opc\", ".$ren[$columns[0]].");'><i class='bi bi-pencil-square'></i></button>
+                            <button class='btn btn-danger d-inline' id='".$ren[$columns[0]]."' onclick='javascript:deleteRow(\"$opc\", ". $ren[$columns[0]] .");'><i class='bi bi-trash'></i></button>
                         </td>
                     </tr>";
                 }
             echo "</table>
-        </div>";
+        </div></div>";
     }
 
     //Función para generar un formulario para modificar los datos de los registros de una tabla cualquiera
@@ -118,7 +119,7 @@ class Functions extends Connection
 
         if ($consult->num_rows > 0) {
             $row = $consult->fetch_array(MYSQLI_ASSOC);
-            echo "<center><div class='p-1 mb-5 w-50 border border-4 rounded'><form id='form-mod-$opc' class='my-5'>";
+            echo "<center id='form-mod mt-5'><div class='p-1 mb-5 w-50 border border-4 rounded'><form id='form-mod-$opc' class='my-5'>";
             while ($ren = $encabezado->fetch_array(MYSQLI_ASSOC)) {
                 echo "<div class='row mb-4'>
                     <div class='col-lg-5 col-sm-12 text-center'>
@@ -131,8 +132,8 @@ class Functions extends Connection
             }
             echo "
             <div class='text-center mt-5'>
-                <button class='btn bg-success bg-gradient text-white rounded-pill w-25 p-2 m-3' onclick='javascript:mod(\"$opc\");'>Modify <i class='bi bi-arrow-up-square me-2'></i></button>
-                <button class='btn bg-danger bg-gradient text-white rounded-pill w-25 p-2 m-3' onclick='javascript:cargarInterfaz(\"$opc\", \"list\", \"null\");'>Cancel <i class='bi bi-x-square me-2'></i></button>
+                <button class='btn bg-success bg-gradient text-white rounded-pill w-25 p-2 m-3' onclick='javascript:mod(\"$opc\");'>Modificar <i class='bi bi-arrow-up-square me-2'></i></button>
+                <button class='btn bg-danger bg-gradient text-white rounded-pill w-25 p-2 m-3' onclick='javascript:cargarInterfaz(\"$opc\", \"list\");'>Cancelar <i class='bi bi-x-square me-2'></i></button>
             </div></form></div></center>";
         } else {
             echo "ocurrió un error";

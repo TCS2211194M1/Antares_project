@@ -30,7 +30,7 @@ class Subregion extends Connection {
 
     //Consultas para los campos que requieren de otras tablas
     function region(){
-        $ejec = $this->execute("SELECT * FROM t_region");
+        $ejec = $this->execute("SELECT * FROM t_region WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 }

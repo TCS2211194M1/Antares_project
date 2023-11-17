@@ -14,7 +14,7 @@
     <title>Samava Tienda</title>
 </head>
 
-<body onload="javascript:cargarCatalog('details', 1);">
+<body onload="javascript:cargarCatalog('list', 1);">
     <header data-bs-theme="dark">
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id='menu_nav'>
             <div class="container-fluid">
@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navBarItems">
                     <div class="navbar-nav text-center">
                         <a class="nav-link active" aria-current="page" href="#">Cátalogo</a>
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#contacto">Contacto</a>
                         <a class="nav-link" href="#">User</a>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
         <div class='container' id='container'></div>    
     </main>
 
-    <div class="bg-dark p-3">
+    <div class="bg-dark p-3" id='contacto'>
         <footer class='pt-5'>
             <div class='row text-white'>
                 <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>

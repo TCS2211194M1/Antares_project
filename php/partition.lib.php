@@ -1,34 +1,32 @@
 <?php
 require_once("connection.lib.php");
 
-class Storage extends Connection {
+class Partition extends Connection {
     
     function __construct(){
         $this->open();
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_storage VALUES('99', '$request[short_description]', '$request[device_name]', '$request[intance_attachment]', '$request[volumen_size]',
-        '$request[volumen_type]', '$request[iops]', '$request[encrypted]', '$request[delete_on_termination]', '$request[instance]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_partition VALUES('99', '$request[short_description]', '$request[device_name]', '$request[attachment_point]', '$request[partition_size]',
+        '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
     function consult($id){
-        $ejec = $this->execute("SELECT * FROM t_storage WHERE T_STORAGE = $id AND ENTRY_STATUS='0'");
+        $ejec = $this->execute("SELECT * FROM t_partition WHERE T_PARTITION = $id AND ENTRY_STATUS='0'");
         return $ejec;
     }
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_storage SET SHORT_DESCRIPTION='$request[short_description]', DEVICE_NAME='$request[device_name]', 
-        INTANCE_ATTACHMENT_POINT='$request[intance_attachment]', VOLUME_SIZE='$request[volume_size]', VOLUME_TYPE='$request[volume_type]', IOPS='$request[iops]', 
-        ENCRYPTED='$request[encrypted]', DELETE_ON_TERMINATION='$request[delete_on_termination]', INSTANCE='$request[instance]', ENTRY_STATUS='0', UPDATE_DATE=NOW()
-        WHERE T_STORAGE = '$request[t_storage]'");
+        $ejec = $this->execute("UPDATE t_partition SET SHORT_DESCRIPTION='$request[short_description]', DEVICE_NAME='$request[device_name]', 
+        ATTACHMENT_POINT='$request[attachment_point]', PARTITION_SIZE='$request[partition_size]', ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_PARTITION = '$request[t_partition]'");
         return $ejec;
     }
 
     function delete($request){
-        $ejec = $this->execute("UPDATE t_storage SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE T_STORAGE = '$request[id]'");
+        $ejec = $this->execute("UPDATE t_partition SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE T_PARTITION = '$request[id]'");
         return $ejec;
     }
 }

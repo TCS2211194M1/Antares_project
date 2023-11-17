@@ -21,7 +21,8 @@ class WorkOrder extends Connection{
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_workorder SET SHORT_DESCRIPTION='$request[short_description]', LONG_DESCRIPTION='$request[long_description]', T_PRIVILEGE='$request[t_privilege]',
+        $ejec = $this->execute("UPDATE t_workorder SET DESCRIPTION='$request[description]', T_PRODUCT='$request[t_product]', REGISTERED_DOMAIN='$request[registered_domain]', 
+        T_PARTITION='$request[t_partition]', FECHA_INICIO_DE_VIGENCIA='$request[fecha_inicio]', FECHA_FIN_DE_VIGENCIA='$request[fecha_fin]', WORKORDER_FLAG='$request[workorder_flag]', 
         ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[t_workorder]'");
         return $ejec;
         
@@ -34,12 +35,17 @@ class WorkOrder extends Connection{
 
     //Consultas para los campos que requieren de otras tablas
     function product(){
-        $ejec = $this->execute("SELECT * FROM t_product");
+        $ejec = $this->execute("SELECT * FROM t_product WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 
     function partition(){
-        $ejec = $this->execute("SELECT * FROM t_partition");
+        $ejec = $this->execute("SELECT * FROM t_partition WHERE ENTRY_STATUS='0'");
+        return $ejec;
+    }
+
+    function workorderFlag(){
+        $ejec = $this->execute("SELECT * FROM t_workorder_flag WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 }

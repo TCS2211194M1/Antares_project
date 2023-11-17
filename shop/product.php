@@ -15,8 +15,8 @@
                             <p class='card-text'>$ren[LONG_DESCRIPTION]</p>
                             <p class='card-text text-start fs-5'>Precio: $$ren[PRODUCT_VALUE]</p>
                             <div>
-                                <button class='btn btn-outline-primary btn-sm me-3 shadow' onclick='javascript:cargarCatalog(\"details\", $ren[T_PRODUCT]);'><i class='bi bi-card-text me-2'></i>Detalles</button>
-                                <button class='btn btn-outline-danger shadow'><i class='bi bi-bag me-2'></i>Comprar</button>
+                                <button class='btn btn-outline-primary btn-sm me-3 shadow' onclick='javascript:cargarCatalog(\"details\", $ren[T_PRODUCT]);'><i class='bi bi-card-text me-2'></i>Details</button>
+                                <button class='btn btn-outline-danger shadow' onclick='javascript:cargarCatalog(\"buy\", $ren[T_PRODUCT]);'><i class='bi bi-bag me-2'></i>Buy</button>
                             </div>
                         </div>
                     </div>
@@ -27,33 +27,162 @@
         case 'details':
             $consultProduct = $product->consultProduct($_POST["id"]);
             $ren = $consultProduct->fetch_array(MYSQLI_ASSOC);
-            echo "<div class='row' id='row-details'>
+            echo "<div class='row'>
                 <div class='col-lg-6 text-center'>
                     <img src='../image/cloud.png' style='width: 60%;'>
+                    <div class='mb-3'><button class='btn btn-danger btn-sm' onclick='javascript:cargarCatalog(\"list\", null);'><i class='bi bi-arrow-left-square me-2'></i>Return Catalog</button></div>
                 </div>
                 <div class='col-lg-6 p-4 rounded-4 shadow' id='card-details'>
                     <h2 class='text-center bg-info-subtle bg-gradient rounded-4 mb-3 shadow p-3'>$ren[NOMBRE]: $ren[SHORT_DESCRIPTION]</h2>
                     <p class='fs-5'>$ren[LONG_DESCRIPTION]</p>
-                    <h3 class='text-primary'>Precio: $$ren[PRODUCT_VALUE] $ren[C_MONEDA]</h3>
-                    <hr class='border border-primary border-2'>
+                    <h3 class='text-primary'>$$ren[PRODUCT_VALUE] $ren[C_MONEDA]</h3>
                     <p class='fs-5'>Periodicidad: $ren[PERIODICIDAD]</p>
+                    <hr class='border border-primary border-2'>
                     <p class='fs-5'>Hosted Domains: $ren[HOSTED_DOMAINS]</p>
                     <p class='fs-5'>Size Required: $ren[REQUIRED_SIZE]</p>
-                    <hr class='border border-primary border-2'>
                     <div class='row'>
-                        <div class='col-lg-6'>
-                            <h5 text-center>Fecha de Inicio de Vigencia: $ren[FECHA_DE_INICIO_DE_VIGENCIA]</h5>
+                        <div class='col-lg-6 col-md-6 col-sm-12'>
+                            <p text-center>Inicio de Vigencia: $ren[FECHA_DE_INICIO_DE_VIGENCIA]</p>
                         </div>
-                        <div class='col-lg-6 text-end'>
-                            <h5 class='text-center'>Fecha de Fin de Vigencia: $ren[FECHA_DE_FIN_DE_VIGENCIA]</h5>
+                        <div class='col-lg-6 col-md-6 col-sm-12'>
+                            <p class=''>Fin de Vigencia: $ren[FECHA_DE_FIN_DE_VIGENCIA]</p>
                         </div>
                     </div>
                     <br>
                     <div class='text-center'>
-                        <button class='btn btn-lg btn-outline-success shadow'><i class='bi bi-bag me-2'></i>Comprar</button>
+                        <button class='btn btn-lg btn-outline-success shadow'  onclick='javascript:cargarCatalog(\"buy\", $ren[T_PRODUCT]);'><i class='bi bi-bag me-2'></i>Buy</button>
                     </div>
                 </div>
             </div>";
+            break;
+        case 'buy':
+            $consultProduct = $product->consultProduct($_POST["id"]);
+            $consultFormaPago = $product->formaPago();
+            $ren = $consultProduct->fetch_array(MYSQLI_ASSOC);
+
+            echo "<div class='row'>
+                <div class='col-lg-6 text-center'>
+                    <img src='../image/cloud.png' style='width: 60%;'>
+                    <div class='mb-3'><button class='btn btn-danger btn-sm' onclick='javascript:cargarCatalog(\"list\", null);'><i class='bi bi-arrow-left-square me-2'></i>Return Catalog</button></div>
+                </div>
+                <div class='col-lg-6 p-4 rounded-4 shadow' id='card-details'>
+                    <h2 class='text-center bg-info-subtle bg-gradient rounded-4 mb-3 shadow p-3'>$ren[NOMBRE]: $ren[SHORT_DESCRIPTION]</h2>
+                    <p class='fs-5'>$ren[LONG_DESCRIPTION]</p>
+                    <h3 class='text-primary'>$$ren[PRODUCT_VALUE] $ren[C_MONEDA]</h3>
+                    <p class='fs-5'>Periodicidad: $ren[PERIODICIDAD]</p>
+                    <hr class='border border-primary border-2'>
+                    <p class='fs-5'>Hosted Domains: $ren[HOSTED_DOMAINS]</p>
+                    <p class='fs-5'>Size Required: $ren[REQUIRED_SIZE]</p>
+                    <div class='row'>
+                        <div class='col-lg-6 col-md-6 col-sm-12'>
+                            <p text-center>Inicio de Vigencia: $ren[FECHA_DE_INICIO_DE_VIGENCIA]</p>
+                        </div>
+                        <div class='col-lg-6 col-md-6 col-sm-12'>
+                            <p class=''>Fin de Vigencia: $ren[FECHA_DE_FIN_DE_VIGENCIA]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>";
+            $importe=$ren["PRODUCT_VALUE"];
+            echo "<h3>Datos Generales</h3>
+            <div class='shadow rounded p-3' id='data-general'>
+                <div class='row'>
+                    <div class='col-lg-2 col-md-2 col-sm-12'>
+                        <div class='form-floating m-2 shadow'>
+                            <input type='text' class='form-control' id='PAIS' placeholder='PAIS' required/>
+                            <label for='floatingInput'>PAIS</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-2 col-md-2 col-sm-12'>
+                        <div class='form-floating m-2 shadow'>
+                            <input type='text' class='form-control' id='ESTADO' placeholder='ESTADO' required/>
+                            <label for='floatingInput'>ESTADO</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-2 col-md-2 col-sm-12'>
+                        <div class='form-floating m-2 shadow'>
+                            <input type='text' class='form-control' id='CP' placeholder='C.P' required/>
+                            <label for='floatingInput'>C.P</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-3 col-md-3 col-sm-12'>
+                        <div class='form-floating m-2 shadow'>
+                            <input type='text' class='form-control' id='CIUDAD' placeholder='CIUDAD' required/>
+                            <label for='floatingInput'>CIUDAD</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-3 col-md-3 col-sm-12'>
+                        <div class='form-floating m-2 shadow'>
+                            <input type='text' class='form-control' id='CALLE' placeholder='CALLE' required/>
+                            <label for='floatingInput'>CALLE Y NÚMERO EXT</label>
+                        </div>
+                    </div> 
+                </div>
+                <div class='row'>
+                    <div class='col-lg-3 col-md-3 col-sm-12'>
+                        <div class='form-floating m-2 shadow'>
+                            <input type='text' class='form-control' id='EMAIL' placeholder='EMAIL' required/>
+                            <label for='floatingInput'>EMAIL</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-3 col-md-3 col-sm-12'>
+                        <div class='form-floating m-2 shadow'>
+                            <input type='text' class='form-control' id='TELÉFONO' placeholder='TELÉFONO' required/>
+                            <label for='floatingInput'>TELÉFONO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h3>Métodos de Pago</h3>
+            <div class='row'>
+                <div class='shadow rounded p-3 col-lg-3 me-3' id='data-general'>";
+                    while ($ren = $consultFormaPago->fetch_array(MYSQLI_ASSOC)) {
+                        if ($ren["DESCRIPCION"] == "PayPal") {
+                            echo "<div class='row mb-2'>
+                                <div class='col-lg-6'>
+                                    <div class='form-check'>
+                                        <input class='form-check-input' type='radio' name='radioFormaPago' id='C_FORMAPAGO$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                        <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
+                                    </div>
+                                </div>
+                                <div class='col-lg-6 text-end'>
+                                    <img src='../image/paypal.png' alt='' id='cards'>
+                                </div>
+                            </div>";
+                        } else if($ren["DESCRIPCION"] == 'Tarjeta de credito' or $ren["DESCRIPCION"] == 'Tarjeta de debito'){
+                            echo "<div class='row mb-2'>
+                            <div class='col-lg-8'>
+                                <div class='form-check'>
+                                    <input class='form-check-input' type='radio' name='radioFormaPago' id='C_FORMAPAGO$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                    <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-4 text-end'>
+                                <img src='../image/visa.png' alt='' id='cards'>
+                                <img src='../image/master.png' alt='' id='cards'>
+                            </div>
+                        </div>";
+                        } else{
+                            echo "<div class='form-check'>
+                                <input class='form-check-input' type='radio' name='radioFormaPago' id='C_FORMAPAGO$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
+                            </div>";
+                        }
+                    }
+
+                echo "</div>
+                <br>
+            
+                <div class='shadow rounded p-3 col-lg-6' id='data-pay'></div>
+            </div>
+            
+            <div class='text-center mt-5' id='botones-pago'>
+                <button class='btn btn-success p-2 me-5'>Confirmar Compra</button>
+                <button class='btn btn-danger p-2'><i class='bi bi-x-circle-fill me-2'></i> Cancelar Compra</button> 
+            </div>";
+            
             break;
         default:
             echo "Error en productos";

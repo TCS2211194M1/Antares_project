@@ -34,7 +34,7 @@ class Role extends Connection{
 
     //Consultas para los campos que requieren de otras tablas
     function privilege(){
-        $ejec = $this->execute("SELECT * FROM t_privilege");
+        $ejec = $this->execute("SELECT * FROM t_privilege WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 }

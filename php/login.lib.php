@@ -28,9 +28,18 @@ class Login extends Connection {
         return $ejec;
     }
 
+    function login($request){
+        $ejec = $this->execute("SELECT * FROM t_client where SHORT_DESCRIPTION='$request[username]' AND ENTRY_STATUS='0'");
+        if ($ejec->num_rows > 0) {
+            return 1;
+        } else{
+            return "Error, el usuario o la contraseña no son correctos";
+        }
+    }
+
     //Consultas para los campos que requieren de otras tablas
     function roles(){
-        $ejec = $this->execute("SELECT * FROM t_role");
+        $ejec = $this->execute("SELECT * FROM t_role WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 }

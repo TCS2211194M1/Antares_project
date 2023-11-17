@@ -5,7 +5,6 @@ spl_autoload_register(function ($class) {
 });
 
 switch ($_POST["opc"]) {
-    //Procesos de los Clientes
     case 'login':
         $login = new Login();
         switch ($_POST["acc"]) {
@@ -18,8 +17,11 @@ switch ($_POST["opc"]) {
             case 'delete':
                 echo $login->delete($_POST);
                 break;
+            case 'login':
+                echo $login->login($_POST);
+                break;
             default:
-                echo "Error, no seleccionaste una acción para login";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para login</div>";
                 break;
         }
         break;
@@ -33,12 +35,11 @@ switch ($_POST["opc"]) {
             case 'mod':
                 echo $client->mod($_POST);
                 break;
-
             case 'delete':
                 echo $client->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para client";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para clientes</div>";
                 break;
         }
         break;
@@ -56,7 +57,7 @@ switch ($_POST["opc"]) {
                 echo $taxid->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para taxid";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para taxid</div>";
                 break;
         }
         break;
@@ -73,7 +74,7 @@ switch ($_POST["opc"]) {
                 echo $role->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para role";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para roles</div>";
                 break;
         }
         break;
@@ -90,7 +91,7 @@ switch ($_POST["opc"]) {
                 echo $privilege->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para privilege";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para privilegios</div>";
                 break;
         }
         break;
@@ -109,7 +110,7 @@ switch ($_POST["opc"]) {
                 echo $product->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para product";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para productos</div>";
                 break;
         }
         break;
@@ -126,7 +127,7 @@ switch ($_POST["opc"]) {
                 echo $service->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para service";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para servicios</div>";
                 break;
         }
         break;
@@ -144,7 +145,7 @@ switch ($_POST["opc"]) {
                 echo $storage->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para storage";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para almacenamiento</div>";
                 break;
         }
         break;
@@ -161,7 +162,7 @@ switch ($_POST["opc"]) {
                 echo $partition->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para partition";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para particiones</div>";
                 break;
         }
         break;    
@@ -179,7 +180,7 @@ switch ($_POST["opc"]) {
                 echo $workorder->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para workorder";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para órdenes de trabajo</div>";
                 break;
         }
         break;
@@ -196,7 +197,7 @@ switch ($_POST["opc"]) {
                 echo $workorderflag->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para workorderflag";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para bandera de órdenes de trabajo</div>";
                 break;
         }
         break;           
@@ -214,7 +215,7 @@ switch ($_POST["opc"]) {
                 echo $region->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para region";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para regiones</div>";
                 break;
         }
         break;
@@ -231,7 +232,7 @@ switch ($_POST["opc"]) {
                 echo $subregion->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para subregion";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para subregiones</div>";
                 break;
         }
         break;
@@ -248,7 +249,7 @@ switch ($_POST["opc"]) {
                 echo $country->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para country";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para países</div>";
                 break;
         }
         break;
@@ -265,7 +266,7 @@ switch ($_POST["opc"]) {
                 echo $state->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para state";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para estados</div>";
                 break;
         }
         break;
@@ -282,12 +283,12 @@ switch ($_POST["opc"]) {
                 echo $city->delete($_POST);
                 break;
             default:
-                echo "Error, no seleccionaste una acción para city";
+                echo "<div class='alert alert-danger' role='alert'>No seleccionaste una acción para ciudades</div>";
                 break;
         }
         break;            
     
     default:
-        echo "Error (Process): No seleccionaste ninguna opción";
+        echo "<div class='alert alert-danger' role='alert'>Error (Process): No seleccionaste una opción</div>";
         break;
 }

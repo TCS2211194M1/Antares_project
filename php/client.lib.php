@@ -38,17 +38,17 @@ class Client extends Connection
 
     //Consultas para los campos que requieren de otras tablas
     function login(){
-        $ejec = $this->execute("SELECT * FROM t_login");
+        $ejec = $this->execute("SELECT * FROM t_login WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 
     function taxid(){
-        $ejec = $this->execute("SELECT * FROM t_taxid");
+        $ejec = $this->execute("SELECT * FROM t_taxid WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 
     function workorder(){
-        $ejec = $this->execute("SELECT * FROM t_workorder");
+        $ejec = $this->execute("SELECT * FROM t_workorder WHERE ENTRY_STATUS='0'");
         return $ejec;
     }
 

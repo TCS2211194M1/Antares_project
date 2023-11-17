@@ -29,12 +29,7 @@ class Taxid extends Connection{
     }
 
     function pais(){
-        $ejec = $this->execute("SELECT * FROM c_pais");
-        return $ejec;
-    }
-
-    function estado(){
-        $ejec = $this->execute("SELECT * FROM c_estado");
+        $ejec = $this->execute("SELECT * FROM c_pais WHERE CODE='MEX' AND ENTRY_STATUS='0'");
         return $ejec;
     }
 

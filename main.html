@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Project_Samava/bsp/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/Logo Samava.png">
+    <title>Samava</title>
+</head>
+
+<body id="body-main">
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white">Antares Project</a>
+            <div class="d-flex">
+                <a href="profile.php" class="btn btn-warning me-2"><i class="bi bi-gear me-2"></i>Configuración</a>
+                <a href="login.php" class="btn btn-danger"><i class="bi bi-box-arrow-in-left me-2"></i>Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="container">
+        <div class="row mt-3">
+            <div class="d-flex justify-content-center">
+                <h3 class="w-25 text-center rounded-pill shadow" id="row-card">Usuarios</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/login.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-person-circle me-2"></i>Login</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('login', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/client.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-person-circle me-2"></i>Cliente</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('client', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/taxid.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-person-circle me-2"></i>Taxid</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('taxid', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/role.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-person-circle me-2"></i>Roles</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('role', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/privilegio.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-person-circle me-2"></i>Privilegios</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('privilege', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="border border-white border-2 opacity-50 my-5" id="">
+        
+        <div class="row mt-3">
+            <div class="d-flex justify-content-center">
+                <h3 class="w-25 text-center rounded-pill shadow" id="row-card">Productos</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/product.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-cloud-arrow-up me-2"></i>Productos</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('product', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/service.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-device-ssd me-2"></i>Servicios</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('service', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/storage.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-sd-card me-2"></i>Almacenamiento</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('storage', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/partition.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-layers-half me-2"></i>Particiones</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('partition', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="border border-white border-2 opacity-50 my-5">
+
+        <div class="row mt-3">
+            <div class="d-flex justify-content-center">
+                <h3 class="w-25 text-center rounded-pill shadow" id="row-card">Orden de Trabajo</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/workorder.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-cloud-arrow-up me-2"></i>Orden de Trabajo</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('workorder', 'list', null)"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/workorderflag.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-device-ssd me-2"></i>Bandera de Orden de Trabajo</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('workorderflag', 'list', null)"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="border border-white border-2 opacity-50 my-5">
+
+        <div class="row mt-3">
+            <div class="d-flex justify-content-center">
+                <h3 class="w-25 text-center rounded-pill shadow" id="row-card">Localizaciones</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/region.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-compass me-2"></i>Región</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('region', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/subregiones.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-globe me-2"></i>Subregión</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('subregion', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/pais.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-globe-americas me-2"></i>País</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('country', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/estados.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-map me-2"></i>Estado</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('state', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/ciudad.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-mailbox me-2"></i>Ciudad</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('city', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/ciudad.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-mailbox-flag me-2"></i>Código Postal</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('city', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="border border-white border-2 opacity-50 my-5">
+
+        <div class="row mt-3">
+            <div class="d-flex justify-content-center">
+                <h3 class="w-50 p-2 text-center rounded-4 shadow" id="row-card">Interfaces Secundarias</h3>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow" onclick="javascript:cargarInterfaz('pais', 'list')"><i class="bi bi-flag-fill me-2"></i>Pais</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow" onclick="javascript:cargarInterfaz('estado', 'list')"><i class="bi bi-buildings-fill me-2"></i>Estado</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow-lg" onclick="javascript:cargarInterfaz('municipio', 'list')"><i class="bi bi-building me-2"></i>Municipio</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow" onclick="javascript:cargarInterfaz('localidad', 'list')"><i class="bi bi-geo-alt-fill me-2"></i>Localidad</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow-lg" onclick="javascript:cargarInterfaz('colonia', 'list')"><i class="bi bi-house-door me-2"></i>Colonia</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow-lg" onclick="javascript:cargarInterfaz('meses', 'list')"><i class="bi bi-calendar-month me-2"></i>Meses</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow" onclick="javascript:cargarInterfaz('moneda', 'list')"><i class="bi bi-flag-fill me-2"></i>Moneda</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow" onclick="javascript:cargarInterfaz('metodoPago', 'list')"><i class="bi bi-buildings-fill me-2"></i>Metodo de Pago</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow-lg" onclick="javascript:cargarInterfaz('formaPago', 'list')"><i class="bi bi-building me-2"></i>Forma de Pago</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow" onclick="javascript:cargarInterfaz('impuesto', 'list')"><i class="bi bi-geo-alt-fill me-2"></i>Impuesto</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 mt-3">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark btn-lg rounded-3 shadow-lg" onclick="javascript:cargarInterfaz('objetoImpuesto', 'list')"><i class="bi bi-house-door me-2"></i>Objeto Impuesto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border border-white border-2 opacity-50 my-5">
+
+
+    <footer class='bg-dark p-3'>
+        <div class='row text-white pt-4'>
+            <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>
+                <div>
+                    <img src="../Project_samava/image/Logo Samava.png" alt="" class='mb-4 w-50'>
+                    <h5 class=' px-5 text-center'>Tecnología Comercial y Servicios Integrales Samava Sas de CV</h5>
+                </div>
+            </div>
+            <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-5'>
+                <div>
+                    <i class="bi bi-geo-alt fs-3 me-3"></i>
+                    <h5 class='d-inline'>Castiilo de Chapultepec #61, San Juan del Río, Querétaro, México</h5>
+                </div>
+                <div>
+                    <i class="bi bi-telephone fs-3 me-3"></i>
+                    <h5 class='d-inline'>4465465465</h5>
+                </div>
+                <div>
+                    <i class="bi bi-envelope fs-3 me-3"></i>
+                    <h5 class='d-inline text-info'>samava@creativeering.com</h5>
+                </div>
+            </div>
+            <div class='col-lg-4 col-md-6 col-sm-12 text-center'>
+                <h5>Todos los derechos son reservados</h5>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/functions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
