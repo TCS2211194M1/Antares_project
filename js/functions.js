@@ -1,7 +1,9 @@
+const datos = new FormData();
+
 function cargarInterfaz(opc, acc){
 
-    var datos = new FormData();
-    var sol = new XMLHttpRequest();
+    
+    
     var contenido = document.getElementById("container");
 
     datos.append("opc", opc);
@@ -15,17 +17,13 @@ function cargarInterfaz(opc, acc){
     sol.send(datos);
 }
 
-function cargarState(country) {
-    
-}
 
-//Clientes
+// -------------------- Clientes -------------------- \\
 //Función para agregar un registro de la tabla Login
 function addLogin(){
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-login");
-
+    
     datos.append("opc", "login");
     datos.append("acc", "add");
     datos.append("login_role", f.LOGIN_ROLE.value);
@@ -45,7 +43,6 @@ function addLogin(){
 
 //Función para agregar un registro de la tabla Client
 function addClient(){
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-client");
 
@@ -81,7 +78,6 @@ function addTaxid() {
 
 //Función para agregar un registro a la tabla Role
 function addRole() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-role");
 
@@ -106,7 +102,6 @@ function addRole() {
 
 //Función para agregar un registro a la tabla Privilege
 function addPrivilege() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-privilege");
 
@@ -129,10 +124,9 @@ function addPrivilege() {
     sol.send(datos);
 }
 
-//Productos
+// -------------------- Productos -------------------- \\
 //Función para  agregar un registro a la tabla producto
 function addProduct() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-product");
 
@@ -173,7 +167,6 @@ function addProduct() {
 
 //Función para agregar un registro a la tabla Service
 function addService() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-service");
 
@@ -197,7 +190,6 @@ function addService() {
 
 //Función para agregar un registro a la tabla Storage
 function addStorage() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-storage");
 
@@ -230,7 +222,6 @@ function addStorage() {
 
 //Función para agregar un registro a la tabla Partition
 function addPartition() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-partition");
 
@@ -254,10 +245,9 @@ function addPartition() {
     sol.send(datos);
 }
 
-//Work Order
+// -------------------- Work Order -------------------- \\
 //Función para agregar un registro a la tabla workorder
 function addWorkOrder() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-workorder");
 
@@ -285,7 +275,6 @@ function addWorkOrder() {
 }
 
 function addWorkOrderFlag() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-workorderflag");
 
@@ -313,10 +302,9 @@ function addWorkOrderFlag() {
 }
 
 
-//Locations
+// -------------------- Locations -------------------- \\
 //Función para agregar un registro a la tabla region
 function addRegion(){
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-region");
 
@@ -340,7 +328,6 @@ function addRegion(){
 
 //Función para agregar un registro a la tabla subregion
 function addSubregion(){
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-subregion");
 
@@ -364,7 +351,6 @@ function addSubregion(){
 
 //Función para agregar un registro a la tabla country
 function addCountry() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-country");
 
@@ -400,11 +386,32 @@ function addCountry() {
 }
 
 
+// -------------------- Tablas C_Tablas -------------------- \\
+//Función para agregar un registro a la tabla pais
+function addPais() {
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-pais");
 
-//Tablas C_Tablas
+    datos.append("opc", "currency");
+    datos.append("acc", "add");
+    datos.append("short_description", f.SHORT_DESCRIPTION.value);
+    datos.append("long_description", f.LONG_DESCRIPTION.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Éxito", "El país se ha registrado con éxito", "success");
+            cargarInterfaz("pais", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
 //Función para agregar un registro a la tabla moneda
-function addCurrency() {
-    var datos = new FormData();
+function addMoneda() {
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-currency");
 
@@ -427,9 +434,9 @@ function addCurrency() {
 }
 
 
+// -------------------- Funciones -------------------- \\
 //Función para cargar interfaz para modificar
 function interfaceMod(opc, id){
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var contenido = document.getElementById("container");
 
@@ -449,7 +456,6 @@ function interfaceMod(opc, id){
 
 //Función para modificar cualquier registro de una tabla
 function mod(opc) {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f =  document.querySelector("#form-mod-"+opc);
     
@@ -799,9 +805,7 @@ function mod(opc) {
 
 //Función para eliminar cualquier registro de una tabla
 function deleteRow(opc, id){
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
-
     datos.append("opc", opc);
     datos.append("acc", "delete");
     datos.append("id", id);
@@ -832,9 +836,9 @@ function deleteRow(opc, id){
 
 }
 
+// -------------------- Login -------------------- \\
 //Función para login del sistema
 function login() {
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-login");
 
@@ -858,9 +862,8 @@ function login() {
     sol.send(datos);
 }
 
-//Tienda Samava
+// -------------------- Tienda Samava -------------------- \\
 function cargarCatalog(acc, id){
-    var datos = new FormData();
     var sol = new XMLHttpRequest();
     var contenido = document.getElementById("container");
 
@@ -903,7 +906,6 @@ function loadPage() {
 }
 
 function ajax(opc) {
-    var datos = new FormData();
     const http = new XMLHttpRequest();
     const url = 'http://localhost/Project_Samava/ajax.php';
 
