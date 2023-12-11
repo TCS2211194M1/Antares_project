@@ -8,7 +8,7 @@ class Subregion extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_subregion VALUES('999', '$request[short_description]', '$request[t_region]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_subregion VALUES(NULL, '$request[short_description]', '$request[t_region]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -19,7 +19,8 @@ class Subregion extends Connection {
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_subregion SET SHORT_DESCRIPTION='$request[short_description]', T_REGION='$request[t_region]', ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_SUBREGION = '$request[t_subregion]'");
+        $ejec = $this->execute("UPDATE t_subregion SET SHORT_DESCRIPTION='$request[short_description]', T_REGION='$request[t_region]', UPDATE_DATE=NOW() 
+        WHERE T_SUBREGION = '$request[t_subregion]'");
         return $ejec;
     }
 

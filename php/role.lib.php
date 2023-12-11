@@ -9,7 +9,7 @@ class Role extends Connection{
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_role VALUES('999', '$request[short_description]', '$request[long_description]', '$request[t_privilege]', '0', NOW(), 
+        $ejec = $this->execute("INSERT INTO t_role VALUES(NULL, '$request[short_description]', '$request[long_description]', '$request[t_privilege]', '0', NOW(), 
         '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
@@ -22,7 +22,7 @@ class Role extends Connection{
     function mod($request)
     {
         $ejec = $this->execute("UPDATE t_role SET SHORT_DESCRIPTION='$request[short_description]', LONG_DESCRIPTION='$request[long_description]', T_PRIVILEGE='$request[t_privilege]',
-        ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE t_role = '$request[t_role]'");
+        UPDATE_DATE=NOW() WHERE t_role = '$request[t_role]'");
         return $ejec;
         
     }

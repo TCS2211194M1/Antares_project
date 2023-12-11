@@ -2,7 +2,7 @@
 
 require_once("connection.lib.php");
 
-class WorkOrder extends Connection{
+class Dominio extends Connection{
 
     function __construct(){
         $this->open();
@@ -28,24 +28,12 @@ class WorkOrder extends Connection{
         
     }
 
-    function delete($request){
-        $ejec = $this->execute("UPDATE t_workorder SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[id]'");
-        return $ejec;
-    }
-
-    //Consultas para los campos que requieren de otras tablas
-    function product(){
-        $ejec = $this->execute("SELECT * FROM t_product WHERE ENTRY_STATUS='0'");
-        return $ejec;
-    }
-
-    function partition(){
-        $ejec = $this->execute("SELECT * FROM t_partition WHERE ENTRY_STATUS='0'");
-        return $ejec;
-    }
-
-    function workorderFlag(){
-        $ejec = $this->execute("SELECT * FROM t_workorder_flag WHERE ENTRY_STATUS='0'");
-        return $ejec;
+    function valida($request){
+        $ejec = $this->execute("SELECT * FROM t_workorder WHERE REGISTERED_DOMAIN = '$request[name_domain]$request[com]' AND ENTRY_STATUS='0'");
+        if ($ejec->num_rows>0) {
+            return 0;
+        } else{
+            return 1;
+        }
     }
 }

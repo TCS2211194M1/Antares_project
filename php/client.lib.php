@@ -11,8 +11,8 @@ class Client extends Connection
 
     function add($request)
     {
-        $ejec = $this->execute("INSERT INTO t_client VALUES('999', '$request[short_description]', '$request[login_name]', '$request[login_last_name]', '$request[email]',
-        '$request[cellphone]', '$request[phone]', '2309150004', '$request[t_taxid]', '$request[t_workorder]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_client VALUES(NULL, '$request[username]', '$request[login_name]', '$request[login_last_name]', '$request[email]', '$request[password]',
+        '$request[cellphone]', '$request[phone]', '2309150005', '$request[t_taxid]', '$request[t_workorder]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -23,9 +23,9 @@ class Client extends Connection
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_client SET SHORT_DESCRIPTION='$request[short_description]', LOGIN_NAME='$request[login_name]', LOGIN_LAST_NAME='$request[login_last_name]',
-        EMAIL='$request[email]', CELLPHONE='$request[cellphone]', PHONE='$request[phone]', T_LOGIN='$request[t_login]', T_TAXID='$request[t_taxid]', T_WORKORDER='$request[t_workorder]',
-        ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_CLIENT='$request[t_client]'");
+        $ejec = $this->execute("UPDATE t_client SET USERNAME='$request[username]', LOGIN_NAME='$request[login_name]', LOGIN_LAST_NAME='$request[login_last_name]',
+        EMAIL='$request[email]', PASSWORD='$request[password]', CELLPHONE='$request[cellphone]', PHONE='$request[phone]', T_LOGIN='$request[t_login]', T_TAXID='$request[t_taxid]', 
+        T_WORKORDER='$request[t_workorder]', UPDATE_DATE=NOW() WHERE T_CLIENT='$request[t_client]'");
         return $ejec;
     }
 

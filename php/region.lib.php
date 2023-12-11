@@ -8,7 +8,7 @@ class Region extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_region VALUES('999', '$request[region_name]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_region VALUES(NULL, '$request[region_name]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -19,7 +19,7 @@ class Region extends Connection {
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_region SET REGION_NAME='$request[region_name]', ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_REGION = '$request[t_region]'");
+        $ejec = $this->execute("UPDATE t_region SET REGION_NAME='$request[region_name]', UPDATE_DATE=NOW() WHERE T_REGION = '$request[t_region]'");
         return $ejec;
     }
 

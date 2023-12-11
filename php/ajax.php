@@ -1,6 +1,6 @@
 <?php
-    require_once("php/connection.lib.php");
-    require_once("php/functions.php");
+    require_once("connection.lib.php");
+    require_once("functions.php");
 
     Class Ajax extends Connection{
 
@@ -8,22 +8,25 @@
             $this->open();
         }
 
+        //Consulta para filtrar al mostrar la lista de estados
         function consultEstado($id){
             $ejec = $this->execute("SELECT * FROM c_estado WHERE C_PAIS = '$id' AND ENTRY_STATUS='0'");
             return $ejec;
         }
 
+        //Consulta para filtrar al mostrar la lista de municipios
         function consultMunicipio($id){
             $ejec = $this->execute("SELECT * FROM c_municipio WHERE C_ESTADO = '$id' AND ENTRY_STATUS='0'");
             return $ejec;
         }
 
+        //Consulta para filtrar al mostrar la lista de localidades
         function consultLocalidad($id){
             $ejec = $this->execute("SELECT * FROM c_localidad WHERE C_ESTADO = '$id' AND ENTRY_STATUS='0'");
             return $ejec;
         }
 
-        //Consulta para filtrar al mostrar la lista de estados
+        //Consulta para filtrar al mostrar la lista de estados para agregar un...
         function consultState($id){
             $ejec = $this->execute("SELECT * FROM t_state WHERE COUNTRY_ID = '$id' AND ENTRY_STATUS='0'");
             return $ejec;
@@ -36,7 +39,7 @@
         case $_POST["opc"] == 'estado':
             $id = $_POST["id"];
             $consult = $ajax->consultEstado($id);
-            echo "<select class='form-select' id='C_ESTADO' onchange='javascript:ajax(\"municipio\");'>
+            echo "<select class='form-select' id='C_ESTADO' onchange='javascript:ajax(\"municipio\", \"null\");'>
                 <option>Selecciona una opción</option>";
                 while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
                     echo "<option value='$ren[DESCRIPCION]'>$ren[NOMBRE_DEL_ESTADO]</option>";
@@ -48,7 +51,7 @@
         case $_POST["opc"] == 'municipio':
             $id = $_POST["id"];
             $consult = $ajax->consultMunicipio($id);
-            echo "<select class='form-select' id='C_MUNICIPIO' onchange='javascript:ajax(\"localidad\");'>
+            echo "<select class='form-select' id='C_MUNICIPIO' onchange='javascript:ajax(\"localidad\", \"null\");'>
                 <option>Selecciona una opción</option>";
                 while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
                     echo "<option value='$ren[C_ESTADO]'>$ren[DESCRIPCION]</option>";
@@ -60,7 +63,7 @@
         case $_POST["opc"] == 'localidad':
             $id = $_POST["id"];
             $consult = $ajax->consultLocalidad($id);
-            echo "<select class='form-select' id='C_LOCALIDAD' onchange='javascript:ajax(\"codigopostal\");'>
+            echo "<select class='form-select' id='C_LOCALIDAD' onchange='javascript:ajax(\"codigopostal\", \"null\");'>
                 <option>Selecciona una opción</option>";
                 while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
                     echo "<option value='$ren[C_LOCALIDAD]'>$ren[DESCRIPCION]</option>";
@@ -121,6 +124,85 @@
                 </div>
             </div>";
         break; 
+
+        case $_POST["opc"] == 'comprar':
+            switch ($_POST["pago"] != 0) {
+                case $_POST["pago"] == 'Efectivo':
+                    echo "En construcción efectivo";
+                    break;
+                case $_POST["pago"] == 'paypal':
+                    echo "En construcción paypal";
+                    break;
+                case $_POST["pago"] == 'Transferencia':
+                    echo "<div class='container my-5 p-5 text-center border border-3' id='transferencia'>
+                    <div>
+                        <img src='../image/dominio.png' alt='' style='height: 200px;'>
+                        <h5 class='my-3'>DATOS DE LA COMPRA</h5>
+                        <div class='d-flex justify-content-center'>
+                            <h4 class='border-bottom border-3 border-black w-50 p-1'>Cantidad a pagar:</h4>
+                        </div>
+                        <div class='mt-3 d-flex justify-content-center'>
+                            <h4 class='border-bottom border-3 border-black w-50 p-1'>Fecha límite de pago:</h4>
+                        </div>
+                        <p class='fw-bold'>Instrucciones de Pago</p>
+                    </div>
+                    <div class='text-start p-2 border border-2 my-2'>
+                        <h5 class='text-primary'>Desde BBVA</h5>
+                        <p>En el menú 'Pagar' selecciona la opción 'De servicios' e ingrea el siguiente 'Número de convenio CIE'</p>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>Número de convenio CIE: <p>123456</p></p>
+                        </div>
+                        <p>Ingresa los siguientes datos cuando te los soliciten:</p>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>Referencia: <p>123456</p></p>
+                        </div>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>Importe:<p>USD 4</p></p>
+                        </div>
+                    </div>
+                    <div class='text-start p-2 border border-2'>
+                        <h5 class='text-primary'>Desde cualquier otro banco</h5>
+                        <p>Ingresa a la sección de transferencias o pagos a otros bancos y proporciona los siguientes datos</p>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>Banco destino: <p>BBVA Bancomer</p></p>
+                        </div>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>CLABE: <p>454545</p></p>
+                        </div>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>Concepto de Pago: <p>132456</p></p>
+                        </div>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>Referencia: <p>123456</p></p>
+                        </div>
+                        <div class='d-flex'>
+                            <p class='fw-bold'>Importe: <p>USD 4</p></p>
+                        </div>
+                    </div>
+            
+                    <div class='text-start p-2'>
+                        <span>1. Una vez que hayas completado el pago, haz clic en 'Continuar' y serás redirigido al panel de control.</span>
+                        <br>
+                        <span>2. Tus servicios se activarán una vez que se valide el pago</span>
+                        <br>
+                        <span>3. Si tienes alguna pregunta sobre tu pago o necesitas ayuda, visita nuestro centro de ayuda</span>
+                    </div>
+                    <br>
+                    <div class='mb-3'>
+                        <button class='btn btn-success w-50'>Completado</button>
+                    </div>
+            
+                    <a href=''>Imprimir información de pago</a>
+                </div>";
+                    break;
+                case $_POST["pago"] == 'Tarjeta de credito':
+                    echo "En construcción tarjeta";
+                    break;
+                default:
+                    echo "Error: No seleccionaste ninguna forma de pago";
+                    break;
+            }
+        break;
 
         default:
             echo "Error: No se seleccionaste ninguna opción";

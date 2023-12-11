@@ -19,7 +19,9 @@ class Taxid extends Connection{
     }
 
     function mod($request){
-        $ejec = $this->execute();
+        $ejec = $this->execute("UPDATE t_taxid SET RFC='$request[RFC]', ADDRESS='$request[address]', C_PAIS='$request[c_pais]', C_ESTADO='$request[c_estado]', 
+        C_MUNICIPIO='$request[c_municipio]', C_LOCALIDAD='$request[c_localidad]', C_CODIGOPOSTAL='$request[c_codigopostal]', C_COLONIA='$request[c_colonia]', 
+        C_REGIMENFISCAL='$request[c_regimenfiscal]', C_USOCFDI='$request[c_usocfdi]', UPDATE_DATE=NOW() WHERE T_TAXID='$request[t_taxid]'");
         return $ejec;
     }
 
@@ -28,10 +30,11 @@ class Taxid extends Connection{
         return $ejec;
     }
 
-    function pais(){
-        $ejec = $this->execute("SELECT * FROM c_pais WHERE CODE='MEX' AND ENTRY_STATUS='0'");
+    function consultPais(){
+        $ejec = $this->execute("SELECT * FROM c_pais WHERE ENTRY_STATUS=0");
         return $ejec;
     }
+    
 
 }
 

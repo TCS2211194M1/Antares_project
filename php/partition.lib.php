@@ -8,7 +8,7 @@ class Partition extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_partition VALUES('99', '$request[short_description]', '$request[device_name]', '$request[attachment_point]', '$request[partition_size]',
+        $ejec = $this->execute("INSERT INTO t_partition VALUES(NULL, '$request[short_description]', '$request[device_name]', '$request[attachment_point]', '$request[partition_size]',
         '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
@@ -20,8 +20,8 @@ class Partition extends Connection {
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_partition SET SHORT_DESCRIPTION='$request[short_description]', DEVICE_NAME='$request[device_name]', 
-        ATTACHMENT_POINT='$request[attachment_point]', PARTITION_SIZE='$request[partition_size]', ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_PARTITION = '$request[t_partition]'");
+        $ejec = $this->execute("UPDATE t_partition SET SHORT_DESCRIPTION='$request[short_description]', DEVICE_NAME='$request[device_name]',
+        ATTACHMENT_POINT='$request[attachment_point]', PARTITION_SIZE='$request[partition_size]', UPDATE_DATE=NOW() WHERE T_PARTITION = '$request[t_partition]'");
         return $ejec;
     }
 

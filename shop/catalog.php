@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../bsp/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'>
     <script src="../js/functions.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="icon" href="../image/Logo Samava.png">
+    <link rel="icon" href="../image/cloudshop.png">
     <link rel="stylesheet" href="../css/style.css">
     <title>Samava Tienda</title>
 </head>
@@ -26,7 +27,7 @@
                     <div class="navbar-nav text-center">
                         <a class="nav-link active" aria-current="page" href="#">Cátalogo</a>
                         <a class="nav-link" href="#contacto">Contacto</a>
-                        <a class="nav-link" href="#">User</a>
+                        <a class="nav-link" href="../html/viewuser.html">User</a>
                     </div>
                 </div>
             </div>

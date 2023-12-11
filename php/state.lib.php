@@ -8,7 +8,7 @@ class Country extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_country VALUES('999', '$request[name]', '$request[iso3]', '$request[iso2]', '$request[numeric_code]', '$request[phone_code]', 
+        $ejec = $this->execute("INSERT INTO t_country VALUES(NULL, '$request[name]', '$request[iso3]', '$request[iso2]', '$request[numeric_code]', '$request[phone_code]', 
         '$request[capital]', '$request[c_moneda]', '$request[tld]', '$request[region_name]', '$request[subregion]', '$request[nationality]', '$request[time_zone_name]', 
         '$request[latitude]', '$request[longitude]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
@@ -29,7 +29,7 @@ class Country extends Connection {
         $ejec = $this->execute("UPDATE t_country SET NAME='$request[name]', ISO3='$request[iso3]', ISO2='$request[iso2]', NUMERIC_CODE='$request[numeric_code]', 
         PHONE_CODE='$request[phone_code]', CAPITAL='$request[capital]', C_MONEDA='$request[c_moneda]', TLD='$request[tld]', REGION_NAME='$request[region_name]', 
         SUBREGION='$request[subregion]', NATIONALITY='$request[nationality]', TIME_ZONE_NAME='$request[time_zone_name]', LATITUDE='$request[latitude]', LONGITUDE='$request[longitude]',
-        ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_COUNTRY = '$request[t_country]'");
+        UPDATE_DATE=NOW() WHERE T_COUNTRY = '$request[t_country]'");
         return $ejec;
     }
 

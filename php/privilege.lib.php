@@ -8,8 +8,8 @@ class Privilege extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_privilege VALUES('999', '$request[short_description]', '$request[grant_table_column]', '$request[context]',
-        '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_privilege VALUES(NULL, '$request[short_description]', '$request[grant_table_column]', '$request[context]', '0', NOW(), '2309150001',
+        NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -21,7 +21,7 @@ class Privilege extends Connection {
     function mod($request)
     {
         $ejec = $this->execute("UPDATE t_privilege SET SHORT_DESCRIPTION='$request[short_description]', GRANT_TABLE_COLUMN='$request[grant_table_column]', CONTEXT='$request[context]',
-        ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE t_privilege = '$request[t_privilege]'");
+        UPDATE_DATE=NOW() WHERE t_privilege = '$request[t_privilege]'");
         return $ejec;
     }
 

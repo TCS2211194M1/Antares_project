@@ -1,12 +1,54 @@
 /* Diseño del LOGIN.PHP*/
 #body-login{
-    background: rgb(177, 174, 174);
+    background: rgb(14, 103, 199)
 }
 
 #container-login{
-    background-image: radial-gradient(rgb(248, 248, 248), rgb(150, 150, 150));
+    max-width: 400px;
+    margin: auto;
+    margin-top: 60px;
+    background: linear-gradient(rgb(213, 237, 255), rgb(180, 219, 255));
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#create_account, #forget_pass{
+    text-decoration: none;
+}
+
+#create_account:hover{
+    font-size: 18px;
+    color: green;
+    text-decoration: underline;
+}
+
+#forget_pass:hover{
+    font-size: 17px;
+    color: red;
+    text-decoration: underline;
+}
+
+/* Diseño del account.html*/
+#body-account{
+    background: linear-gradient(to right, rgb(15, 90, 170), rgb(75, 150, 240));
+}
+
+#container-image{
+    background-image: url(/Project_Samava/image/clouda.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+img{
+    transition: 1.5s;
+    object-fit: cover;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
 
 /* Diseño del MAIN.HTML*/
 #body-main{
@@ -59,6 +101,10 @@ body{
     background: rgba(238, 255, 255, 0.942);
 }
 
+#data-dominio{
+    background: rgba(197, 232, 232, 0.859);
+}
+
 #data-general{
     background: rgba(197, 232, 232, 0.859);
 }
@@ -71,4 +117,20 @@ body{
 #cards{
     width: 36px;
     height: 30px;
+}
+
+
+/* PDF */
+#transferencia{
+    background: rgba(246, 252, 252, 0.748);
+}
+
+/* INTERFAZ DEL USUARIO */
+
+li:hover{
+    background: gray;
+}
+
+#container-view{
+    background: linear-gradient(to top, rgb(177, 210, 255), rgb(219, 235, 255));
 }

@@ -19,7 +19,7 @@ class Login extends Connection {
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_login SET LOGIN_ROLE='$request[login_role]', ENTRY_STATUS='0', UPDATE_DATE=NOW() WHERE T_LOGIN = '$request[t_login]'");
+        $ejec = $this->execute("UPDATE t_login SET LOGIN_ROLE='$request[login_role]', UPDATE_DATE=NOW() WHERE T_LOGIN = '$request[t_login]'");
         return $ejec;
     }
 
@@ -29,9 +29,14 @@ class Login extends Connection {
     }
 
     function login($request){
-        $ejec = $this->execute("SELECT * FROM t_client where SHORT_DESCRIPTION='$request[username]' AND ENTRY_STATUS='0'");
+        $ejec = $this->execute("SELECT * FROM t_client WHERE USERNAME='$request[username]' AND PASSWORD='$request[password]' AND ENTRY_STATUS='0'");
         if ($ejec->num_rows > 0) {
-            return 1;
+            $ren = $ejec->fetch_array(MYSQLI_ASSOC);
+            if ($ren["T_LOGIN"] == '2309150001') {
+                return 1;
+            } else{
+                return 2;
+            }
         } else{
             return "Error, el usuario o la contraseña no son correctos";
         }

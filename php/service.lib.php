@@ -8,7 +8,7 @@ class Service extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_service VALUES('99', '$request[short_description]', '$request[long_description]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_service VALUES(NULL, '$request[short_description]', '$request[long_description]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -19,8 +19,8 @@ class Service extends Connection {
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_service SET SHORT_DESCRIPTION='$request[short_description]', LONG_DESCRIPTION='$request[long_description]', ENTRY_STATUS='0', 
-        UPDATE_DATE=NOW() WHERE T_SERVICE = '$request[t_service]'");
+        $ejec = $this->execute("UPDATE t_service SET SHORT_DESCRIPTION='$request[short_description]', LONG_DESCRIPTION='$request[long_description]', UPDATE_DATE=NOW() 
+        WHERE T_SERVICE = '$request[t_service]'");
         return $ejec;
     }
 
