@@ -95,7 +95,7 @@
                     <button class='btn btn-sm btn-primary rounded-pill d-inline' onclick='javascript:prueba(\"Hola\");'><i class='bi bi-search'></i></button>
                 </div>
 
-                <div class='table-responsive'>
+                <div class='table-responsive' style='height: 500px;'>
                     <table class='table table-striped-columns text-center rounded-pill'>
                         <tr>";
                             while ($ren = $encabezado->fetch_array(MYSQLI_ASSOC)) {
@@ -135,65 +135,65 @@
                     break;
                 case $_POST["pago"] == 'Transferencia':
                     echo "<div class='container my-5 p-5 text-center border border-3' id='transferencia'>
-                    <div>
-                        <img src='../image/dominio.png' alt='' style='height: 200px;'>
-                        <h5 class='my-3'>DATOS DE LA COMPRA</h5>
-                        <div class='d-flex justify-content-center'>
-                            <h4 class='border-bottom border-3 border-black w-50 p-1'>Cantidad a pagar:</h4>
+                        <div>
+                            <img src='../image/dominio.png' alt='' style='height: 200px;'>
+                            <h5 class='my-3'>DATOS DE LA COMPRA</h5>
+                            <div class='d-flex justify-content-center'>
+                                <h4 class='border-bottom border-3 border-black w-50 p-1'>Cantidad a pagar:</h4>
+                            </div>
+                            <div class='mt-3 d-flex justify-content-center'>
+                                <h4 class='border-bottom border-3 border-black w-50 p-1'>Fecha límite de pago:</h4>
+                            </div>
+                            <p class='fw-bold'>Instrucciones de Pago</p>
                         </div>
-                        <div class='mt-3 d-flex justify-content-center'>
-                            <h4 class='border-bottom border-3 border-black w-50 p-1'>Fecha límite de pago:</h4>
+                        <div class='text-start p-2 border border-2 my-2'>
+                            <h5 class='text-primary'>Desde BBVA</h5>
+                            <p>En el menú 'Pagar' selecciona la opción 'De servicios' e ingrea el siguiente 'Número de convenio CIE'</p>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>Número de convenio CIE: <p>123456</p></p>
+                            </div>
+                            <p>Ingresa los siguientes datos cuando te los soliciten:</p>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>Referencia: <p>123456</p></p>
+                            </div>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>Importe:<p>USD 4</p></p>
+                            </div>
                         </div>
-                        <p class='fw-bold'>Instrucciones de Pago</p>
-                    </div>
-                    <div class='text-start p-2 border border-2 my-2'>
-                        <h5 class='text-primary'>Desde BBVA</h5>
-                        <p>En el menú 'Pagar' selecciona la opción 'De servicios' e ingrea el siguiente 'Número de convenio CIE'</p>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>Número de convenio CIE: <p>123456</p></p>
+                        <div class='text-start p-2 border border-2'>
+                            <h5 class='text-primary'>Desde cualquier otro banco</h5>
+                            <p>Ingresa a la sección de transferencias o pagos a otros bancos y proporciona los siguientes datos</p>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>Banco destino: <p>BBVA Bancomer</p></p>
+                            </div>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>CLABE: <p>454545</p></p>
+                            </div>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>Concepto de Pago: <p>132456</p></p>
+                            </div>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>Referencia: <p>123456</p></p>
+                            </div>
+                            <div class='d-flex'>
+                                <p class='fw-bold'>Importe: <p>USD 4</p></p>
+                            </div>
                         </div>
-                        <p>Ingresa los siguientes datos cuando te los soliciten:</p>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>Referencia: <p>123456</p></p>
-                        </div>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>Importe:<p>USD 4</p></p>
-                        </div>
-                    </div>
-                    <div class='text-start p-2 border border-2'>
-                        <h5 class='text-primary'>Desde cualquier otro banco</h5>
-                        <p>Ingresa a la sección de transferencias o pagos a otros bancos y proporciona los siguientes datos</p>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>Banco destino: <p>BBVA Bancomer</p></p>
-                        </div>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>CLABE: <p>454545</p></p>
-                        </div>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>Concepto de Pago: <p>132456</p></p>
-                        </div>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>Referencia: <p>123456</p></p>
-                        </div>
-                        <div class='d-flex'>
-                            <p class='fw-bold'>Importe: <p>USD 4</p></p>
-                        </div>
-                    </div>
             
-                    <div class='text-start p-2'>
-                        <span>1. Una vez que hayas completado el pago, haz clic en 'Continuar' y serás redirigido al panel de control.</span>
+                        <div class='text-start p-2'>
+                            <span>1. Una vez que hayas completado el pago, haz clic en 'Continuar' y serás redirigido al panel de control.</span>
+                            <br>
+                            <span>2. Tus servicios se activarán una vez que se valide el pago</span>
+                            <br>
+                            <span>3. Si tienes alguna pregunta sobre tu pago o necesitas ayuda, visita nuestro centro de ayuda</span>
+                        </div>
                         <br>
-                        <span>2. Tus servicios se activarán una vez que se valide el pago</span>
-                        <br>
-                        <span>3. Si tienes alguna pregunta sobre tu pago o necesitas ayuda, visita nuestro centro de ayuda</span>
-                    </div>
-                    <br>
-                    <div class='mb-3'>
-                        <button class='btn btn-success w-50'>Completado</button>
-                    </div>
-            
-                    <a href=''>Imprimir información de pago</a>
-                </div>";
+                        <div class='mb-3'>
+                            <button class='btn btn-success w-50'>Completado</button>
+                        </div>
+
+                        <a href='#' onclick='javascript:pdf();'>Imprimir información de pago</a>
+                    </div>";
                     break;
                 case $_POST["pago"] == 'Tarjeta de credito':
                     echo "En construcción tarjeta";

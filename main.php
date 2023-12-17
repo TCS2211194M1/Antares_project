@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    $username = $_SESSION["username"];
+    $account = $_SESSION["account"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +26,8 @@
         <div class="container-fluid">
             <a class="navbar-brand text-white">Antares Project</a>
             <div class="d-flex">
-                <a href="profile.php" class="btn btn-outline-warning me-2"><i class="bi bi-gear me-2"></i>Configuración</a>
-                <a href="login.html" class="btn btn-outline-danger"><i class="bi bi-box-arrow-in-left me-2"></i>Cerrar Sesión</a>
+                <a href="../Project_Samava/shop/catalog.php" class="btn btn-outline-warning me-2"><i class="bi bi-gear me-2"></i>Vista Cliente</a>
+                <a href="login.php" class="btn btn-outline-danger"><i class="bi bi-box-arrow-in-left me-2"></i><?php echo $username ?> Cerrar Sesión</a>
             </div>
         </div>
     </nav>

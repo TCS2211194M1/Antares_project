@@ -15,8 +15,8 @@
                             <p class='card-text'>$ren[LONG_DESCRIPTION]</p>
                             <p class='card-text text-start fs-5'>Precio: $$ren[PRODUCT_VALUE]</p>
                             <div>
-                                <button class='btn btn-outline-primary btn-sm me-3 shadow' onclick='javascript:cargarCatalog(\"details\", $ren[T_PRODUCT]);'><i class='bi bi-card-text me-2'></i>Details</button>
-                                <button class='btn btn-outline-danger shadow' onclick='javascript:cargarCatalog(\"buy\", $ren[T_PRODUCT]);'><i class='bi bi-bag me-2'></i>Buy</button>
+                                <button class='btn btn-outline-primary btn-sm me-3 shadow' onclick='javascript:cargarCatalog(\"details\", $ren[T_PRODUCT]);'><i class='bi bi-card-text me-2'></i>Detalles</button>
+                                <button class='btn btn-outline-danger shadow' onclick='javascript:cargarCatalog(\"buy\", $ren[T_PRODUCT]);'><i class='bi bi-bag me-2'></i>Comprar</button>
                             </div>
                         </div>
                     </div>
@@ -64,11 +64,11 @@
                     <div class='col-lg-6 text-center'>
                         <img src='../image/cloud.png' style='width: 60%;'>
                         <div class='mb-3'>
-                            <button class='btn btn-danger btn-sm' onclick='javascript:cargarCatalog(\"list\", null);'><i class='bi bi-arrow-left-square me-2'></i>Return Catalog</button>
+                            <button class='btn btn-danger btn-sm' onclick='javascript:cargarCatalog(\"list\", null);'><i class='bi bi-arrow-left-square me-2'></i>Regresar al Catálogo</button>
                         </div>
                     </div>
-                    <div class='col-lg-6 p-4 rounded-4 shadow' id='card-details'>
-                        <h2 class='text-center bg-info-subtle bg-gradient rounded-4 mb-3 shadow p-3'>$ren[NOMBRE]: $ren[SHORT_DESCRIPTION]</h2>
+                    <div class='col-lg-6 p-4 rounded-4 shadow' id='card'>
+                        <h2 class='text-center bg-primary-subtle bg-gradient rounded-4 mb-3 shadow p-3'>$ren[NOMBRE]: $ren[SHORT_DESCRIPTION]</h2>
                         <p class='fs-5'>$ren[LONG_DESCRIPTION]</p>
                         <h3 class='text-primary'>$$ren[PRODUCT_VALUE] $ren[C_MONEDA]</h3>
                         <p class='fs-5'>Periodicidad: $ren[PERIODICIDAD]</p>
@@ -109,8 +109,10 @@
                 <br>
 
             <form id='form-comprar'>
-                <input type='hidden' value='$ren[NOMBRE]' id='NOMBRE'/>
+                <input type='hidden' value='$_POST[id]' id='ID'/>
+                <input type='hidden' value='$importe' id='IMPORTE'/>
                 <h3>Datos Generales</h3>
+
                 <div class='shadow rounded p-3' id='data-general'>
                     <div class='row'>
                         <div class='col-lg-2 col-md-2 col-sm-12'>
@@ -164,44 +166,43 @@
 
                 <h3>Métodos de Pago</h3>
             
-                <div class='row'>
-                    <div class='shadow rounded p-3 col-lg-3 me-3' id='data-general'>";
-                        while ($ren = $consultFormaPago->fetch_array(MYSQLI_ASSOC)) {
-                            if ($ren["DESCRIPCION"] == "PayPal") {
-                            echo "<div class='row mb-2'>
-                                <div class='col-lg-6'>
-                                    <div class='form-check'>
+                <div class='p-3'>
+                    <div class='row'>
+                        <div class='shadow rounded p-3 col-lg-3 me-3' id='data-general'>";
+                            while ($ren = $consultFormaPago->fetch_array(MYSQLI_ASSOC)) {
+                                if ($ren["DESCRIPCION"] == "PayPal") {
+                                echo "<div class='row mb-2'>
+                                    <div class='col-lg-7'>
+                                        <div class='form-check'>
+                                            <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                            <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]
+                                                <img src='../image/paypal.png' class='img-fluid ms-5' style='width: 32px; height: 32px;'>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>";
+                                } else if($ren["DESCRIPCION"] == 'Tarjeta de credito' or $ren["DESCRIPCION"] == 'Tarjeta de debito'){
+                                echo "<div class='row mb-2'>
+                                    <div class='col-lg-9'>
+                                        <div class='form-check'>
+                                            <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                            <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]
+                                                <img src='../image/visa.png' class='img-fluid' style='width: 32px; height: 32px;'>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>";
+                                } else{
+                                    echo "<div class='form-check'>
                                         <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
                                         <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
-                                    </div>
-                                </div>
-                                <div class='col-lg-6 text-end'>
-                                    <img src='../image/paypal.png' alt='' id='cards'>
-                                </div>
-                            </div>";
-                            } else if($ren["DESCRIPCION"] == 'Tarjeta de credito' or $ren["DESCRIPCION"] == 'Tarjeta de debito'){
-                            echo "<div class='row mb-2'>
-                            <div class='col-lg-8'>
-                                <div class='form-check'>
-                                    <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
-                                    <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
-                                </div>
-                            </div>
-                            <div class='col-lg-4 text-end'>
-                                <img src='../image/visa.png' alt='' id='cards'>
-                                <img src='../image/master.png' alt='' id='cards'>
-                            </div>
-                            </div>";
-                            } else{
-                                echo "<div class='form-check'>
-                                    <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
-                                    <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
-                                </div>";
+                                    </div>";
+                                }
                             }
-                        }
-                    echo "</div>
-                    <br>
-                    <div class='shadow rounded p-3 col-lg-6' id='data-pay'></div>
+                        echo "</div>
+                        <br>
+                        <div class='shadow rounded p-3 col-lg-6' id='data-pay'></div>
+                    </div>
                 </div>
             </form>
             <div class='text-center mt-5' id='buttons-pay'></div>";

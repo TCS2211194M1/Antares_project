@@ -35,6 +35,18 @@ class Client extends Connection
         return $ejec;
     }
 
+    function addClient($request)
+    {
+        $ejec = $this->execute("SELECT * FROM t_client WHERE USERNAME = '$request[username]'");
+        if ($ejec->num_rows > 0) {
+            return 0;
+        } else{
+            $ejec = $this->execute("INSERT INTO t_client VALUES(NULL, '$request[username]', '$request[name]', '$request[last_name]', '$request[email]', '$request[password]',
+            '$request[cellphone]', 'null', '2309150005', 'XAXX010101000', '0', '0', NOW(), '2309150001', NOW(), '2309150001')");
+            return $ejec;
+        }
+    }
+
 
     //Consultas para los campos que requieren de otras tablas
     function login(){

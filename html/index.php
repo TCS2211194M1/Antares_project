@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+$username = $_SESSION['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bsp/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/functions.js"></script>
+    <title>Samava - PDF</title>
 </head>
 
 <body>
-
+    <button class='btn btn-primary' id='btn-pago' onclick="javascript:pdf();">Imprimir información de pago</button>
     <div class="container my-5 p-5 text-center border border-3" id="transferencia">
         <div class="">
             <img src="../image/dominio.png" alt="" style="height: 200px;">
-            <h5 class="my-3">DATOS DE LA COMPRA</h5>
+            <h5 class="my-3">DATOS DE LA COMPRA: <?php echo $username ?></h5>
             <div class="d-flex justify-content-center">
                 <h4 class="border-bottom border-3 border-black w-50 p-1">Cantidad a pagar:</h4>
             </div>
@@ -66,14 +75,11 @@
         </div>
         <br>
         <div class="mb-3">
-            <button class="btn btn-success w-25">Completado</button>
+            <a href="../html/viewuser.php" class='btn btn-outline-primary'>Ir al menú</a>
         </div>
-
-        <a href="">Imprimir información de pago</a>
     </div>
 
     <script src="../bsp/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../js/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

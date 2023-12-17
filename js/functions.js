@@ -1,4 +1,5 @@
 const datos = new FormData();
+var username = "";
 
 function cargarInterfaz(opc, acc){
     var sol = new XMLHttpRequest();
@@ -755,6 +756,35 @@ function addRegimenFiscal() {
     sol.send(datos);
 }
 
+//Función para agregar un registro a la tabla ClaveProdServ
+function addClaveProdServ() {
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-claveprodserv");
+
+    datos.append("opc", "claveprodserv");
+    datos.append("acc", "add");
+    datos.append("descripcion", f.DESCRIPCION.value);
+    datos.append("iit", f.IIT.value);
+    datos.append("iiet", f.IIET.value);
+    datos.append("palabras_similares", f.PALABRAS_SIMILARES.value);
+    datos.append("fiv", f.FIV.value);
+    datos.append("ffv", f.FFV.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Éxito", "La claveprodserv se ha registrado con éxito", "success");
+            cargarInterfaz("claveprodserv", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+            cargarInterfaz("claveprodserv", "list");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+//Función para agregar un registro a la tabla ClaveUnidad
 function addClaveUnidad() {
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-claveunidad");
@@ -783,6 +813,7 @@ function addClaveUnidad() {
     sol.send(datos);
 }
 
+//Función para agregar un registro a la tabla Periocidad
 function addPeriodicidad() {
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-periodicidad");
@@ -1477,6 +1508,35 @@ function mod(opc) {
             sol.send(datos);
             break;
 
+        case opc == 'claveprodserv':
+            datos.append("c_claveprodserv", f.C_CLAVEPRODSERV.value);
+            datos.append("descripcion", f.DESCRIPCION.value);
+            datos.append("iit", f.INCLUIR_IVA_TRASLADADO.value);
+            datos.append("iiet", f.INCLUIR_IEPS_TRASLADADO.value);
+            datos.append("palabras_similares", f.PALABRAS_SIMILARES.value);
+            datos.append("fiv", f.FECHA_INICIO_DE_VIGENCIA.value);
+            datos.append("ffv", f.FECHA_FIN_DE_VIGENCIA.value);
+            datos.append("eff", f.ESTIMULO_FRANJA_FRONTERIZA.value);
+            datos.append("tipo", f.TIPO.value);
+            datos.append("subtipo", f.SUBTIPO.value);
+            datos.append("division", f.DIVISION.value);
+            datos.append("grupo", f.GRUPO.value);
+            datos.append("clase", f.CLASE.value);
+
+            sol.addEventListener("load", function(e){
+                if (e.target.responseText > 0) {
+                    swal("Éxito", "La claveprodserv se ha modificado con éxito", "success");
+                    cargarInterfaz("claveprodserv", "list");
+                } else{
+                    swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+                    cargarInterfaz("claveprodserv", "list");
+                }
+            });
+
+            sol.open("POST", "php/process.php");
+            sol.send(datos);
+        break;
+
         case opc == 'claveunidad':
             datos.append("c_claveunidad", f.C_CLAVEUNIDAD.value);
             datos.append("short_description", f.SHORT_DESCRIPTION.value);
@@ -1496,7 +1556,11 @@ function mod(opc) {
                     cargarInterfaz("claveunidad", "list");
                 }
             });
-            
+
+            sol.open("POST", "php/process.php");
+            sol.send(datos);
+            break;
+
         case opc == 'periodicidad':
             datos.append("c_periodicidad", f.C_PERIODICIDAD.value);
             datos.append("descripcion", f.DESCRIPCION.value);
@@ -1568,50 +1632,18 @@ function deleteRow(opc, id){
 
 }
 
-// -------------------- Login -------------------- \\
-//Función para login del sistema
-function login() {
-    var sol = new XMLHttpRequest();
-    var f = document.querySelector("#form-login");
-
-    datos.append("opc", "login");
-    datos.append("acc", "login");
-
-    var username=f.USERNAME.value;
-    var password=f.PASSWORD.value;
-    
-    if (username!='' && password!='') {
-        datos.append("username", username);
-        datos.append("password", password);
-    } else{
-        swal("Error", "Usuario o contraseña vacíos", "error");
-    }
-
-    sol.addEventListener("load", function(e){
-        if (e.target.responseText == 1) {
-            window.location.href = "/Project_Samava/main.html"
-        } else if(e.target.responseText == 2){
-            window.location.href = "/Project_Samava/shop/catalog.php";
-        }else{
-            swal("Error", "Usuario o contraseña incorrectos", "error");
-        }
-    });
-
-    sol.open("POST", "php/process.php");
-    sol.send(datos);
-}
-
 // -------------------- Tienda Samava -------------------- \\
 function cargarCatalog(acc, id){
     var sol = new XMLHttpRequest();
     var contenido = document.getElementById("container");
-
-
+    
     datos.append("acc", acc);
     datos.append("id", id);
 
     sol.addEventListener("load", function(e){
         contenido.innerHTML = e.target.responseText;
+        var form = document.getElementById("form-comprar");
+        form.style.display = "none";
     });
 
     sol.open("POST", "../shop/product.php");
@@ -1627,22 +1659,23 @@ function formaPago(formaPago, importe) {
         datos.innerHTML += "<div class='row'><div class='col-lg-12'><label class='mb-1 fw-bold'>Banco Destino: BBVA Bancomer</label></div>"+
         "<div class='col-lg-12'><label class='mb-1'>CLABE: XXXXXXXXXXXX</label></div>"+
         "<div class='col-lg-12'><label class='mb-1'>Referencia: " + referencia + "</label></div>"+
-        "<div class='col-lg-12'><label class='mb-1'>Importe: USD " + importe + "</label></div></div>";
+        "<div class='col-lg-12'><label class='mb-1'>Importe: USD " + importe + "</label></div></div>"+
+        "<input type='hidden' value='"+referencia+"' id='REFERENCIA'>";
     }else if(formaPago == 1){
         datos.style.display = "block";
         let referencia = parseInt(Math.random() * 10000000); 
         datos.innerHTML += "<div class='row'><div class='col-lg-12'><label class='mb-1 fw-bold'>Favor de realizar su pago en:</label></div>"+
-        "<div class='col-lg-12'><label class='mb-1'>Domicilio: San Juan del Río #00, colonia 'San juan'</label></div>"+
+        "<div class='col-lg-12'><label class='mb-1'>Domicilio: Castillo de Chapultepec #61, San Juan del Río, Querétaro, México'</label></div>"+
         "<div class='col-lg-12'><label class='mb-1'>Referencia: " + referencia + "</label></div>"+
-        "<div class='col-lg-12'><label class='mb-1'>Importe a pagar: USD " + importe + "</label></div></div>";
+        "<div class='col-lg-12'><label class='mb-1'>Importe a pagar: USD " + importe + "</label></div></div>"+
+        "<input type='hidden' value='"+referencia+"' id='REFERENCIA'>";
     } else if (formaPago == 4 || formaPago == 28){
         datos.style.display="block";
-        datos.innerHTML += "<div class='row'><div class='col-lg-6'><label class='mb-1'>Número de la tarjeta</label>" +
-        "<input type='number' class='form-control' placeholder='Número de la Tarjeta'/></div></div>" +
-        "<div class='row mt-3'><div class='col-lg-6'><label class='mb-1'>Fecha de Expiración</label><input type='number' class='form-control' placeholder='MM/YY'/></div>"+
-        "<div class='col-lg-6'><label class='mb-1'>CVV/CVC</label><input type='number' class='form-control' placeholder='CVV/CVC'/></div></div>"+
-        "<div class='row mt-3'><div class='col-lg-6'><label class='mb-1'>Nombre para esta tarjeta</label>"+
-        "<input type='number' class='form-control' placeholder='Nombre para esta Tarjeta'/></div></div>";
+        datos.innerHTML += "<div class='row'><div class='col-lg-6'>"+
+        "<label class='mb-1'>Número de la tarjeta</label><input type='number' class='form-control' placeholder='Número de la Tarjeta'/></div>"+
+        "<div class='col-lg-6'><label class='mb-1'>Nombre para esta tarjeta</label><input type='text' class='form-control' placeholder='Nombre para esta Tarjeta'/></div>"+
+        "<div class='row mt-3'><div class='col-lg-4'><label class='mb-1'>Fecha de Expiración</label><input type='text' class='form-control text-end' placeholder='MM/YY'/></div>"+
+        "<div class='col-lg-3'><label class='mb-1'>CVV/CVC</label><input type='number' class='form-control' placeholder='CVV/CVC'/></div></div>";
     } else{
         swal("Error", "No seleccionaste una forma de pago", "error");
     }
@@ -1659,17 +1692,21 @@ function validar() {
     datos.append("name_domain", f.NAME_DOMAIN.value);
     datos.append("com", f.DOMAIN_NAME.value);
     dominio=f.NAME_DOMAIN.value+f.DOMAIN_NAME.value;
+    var form = document.getElementById("form-comprar");
+
 
     if (f.NAME_DOMAIN.value != '') {
         sol.addEventListener("load", function(e){
             var buttons = document.getElementById("buttons-pay");
             if (e.target.responseText == 1) {
                 swal("Validado", "El nombre del dominio ingresado es correcto", "success");
+                form.style.display = "block"
                 buttons.style.display = "block";
-                buttons.innerHTML="<button class='btn btn-success p-2 me-5' onclick='javascript:ajax(\"comprar\")'>Confirmar Compra</button>" +
+                buttons.innerHTML="<button class='btn btn-success p-2 me-5' onclick='javascript:comprar()'>Confirmar Compra</button>" +
                 "<button class='btn btn-danger p-2' onclick='javascript:cargarCatalog(\"list\", null);'><i class='bi bi-x-circle-fill me-2'></i>Cancelar Compra</button>";
             } else {
                 buttons.style.display = "none";
+                form.style.display = "none";
                 swal("Error", "Ingresa un nombre diferente", "error");
             }
         });
@@ -1681,9 +1718,57 @@ function validar() {
     sol.send(datos);
 }
 
+function comprar(){
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-comprar");
+    var username = document.getElementById("USERNAME").value;
+    var formaPago = '';
+        
+    datos.append("opc", "dominio");
+    datos.append("acc", "add");
+    datos.append("id", f.ID.value);
+    datos.append("username", username);
+    datos.append("domain", dominio);
+    datos.append("importe", f.IMPORTE.value);
+    datos.append("referencia", f.REFERENCIA.value);
+
+    if (document.getElementById('1').checked) {
+        formaPago = 'Efectivo';
+    } else if(document.getElementById('3').checked){
+        formaPago = 'Transferencia';
+    } else if(document.getElementById('4').checked || document.getElementById('28').checked){
+        formaPago = 'Tarjeta de credito';
+    }
+
+    if (formaPago!='') {
+        datos.append("pago", formaPago);
+
+        if (username == '' || username == null) {
+            location.href = "../login.php";
+        } else{
+            sol.addEventListener("load", function(e){
+                if (e.target.responseText > 0) {
+                    swal("Success", "La compra se ha realizado con éxito", "success");
+                    location.href = "../html/index.php";
+                } else{
+                    swal("Error", "Ocurrió un error al realizar tu compra", "error");
+                    location.href = "../shop/catalog.php";
+                }
+            });
+        
+            sol.open("POST", "../php/process.php");
+            sol.send(datos);
+        }
+    } else{
+        swal("Error", "Selecciona una forma de pago", "error");
+    }
+
+ 
+}
+
 // ------------------- Peticiones Ajax -------------------- \\
 function loadPage() {
-    location.href="main.html";
+    location.href="main.php";
 }
 
 function ajax(opc) {
@@ -1755,38 +1840,6 @@ function ajax(opc) {
                 }
             }
             break;
-        
-        case opc == "comprar":
-            var f = document.querySelector("#form-comprar");
-            var formaPago = '';
-                
-            datos.append("opc", opc);
-            console.log(f.NOMBRE.value);
-            //datos.append("forma_pago", f.FORMA_PAGO.value);
-
-            if (document.getElementById('1').checked) {
-                formaPago = 'Efectivo';
-            } else if(document.getElementById('3').checked){
-                formaPago = 'Transferencia';
-            } else if(document.getElementById('4').checked || document.getElementById('28').checked){
-                formaPago = 'Tarjeta de credito';
-            }
-
-            if (formaPago!='') {
-                datos.append("pago", formaPago);
-        
-                http.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("container").innerHTML = this.responseText;
-                    }
-                }
-            
-                http.open("POST", url);
-                http.send(datos);
-            } else{
-                swal("Error", "Selecciona una forma de pago", "error");
-            }
-            break;
 
         default:
             swal("Error", "No seleccionaste ninguna opción", "error");
@@ -1805,6 +1858,7 @@ function cargarModulo(opc, acc){
 
     datos.append("opc", opc);
     datos.append("acc", acc);
+    datos.append("username", username);
 
     sol.addEventListener("load", function(e){
         contenido.innerHTML = e.target.responseText;
@@ -1812,4 +1866,31 @@ function cargarModulo(opc, acc){
 
     sol.open("POST", "../php/viewuser.php");
     sol.send(datos);
+}
+
+function pdf() {
+    var btn = document.getElementById("btn-pago");
+    btn.style.display='none';
+
+    const $pdf = document.body;
+    html2pdf().set({
+        margin: 5,
+        filename: 'pago-client.pdf',
+        image:{
+            type: 'png',
+            quality: '1'
+        },
+        html2canvas:{
+            scale: 3,
+        },
+        jsPDF: {
+            unit: "mm",
+            format: "a3",
+            orientation: 'portrait',
+            format: 'letter'
+        }
+    })
+    .from($pdf)
+    .save()
+    .catch(err => console.log(err));
 }

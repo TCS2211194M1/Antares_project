@@ -1,13 +1,13 @@
 /* Diseño del LOGIN.PHP*/
 #body-login{
-    background: rgb(14, 103, 199)
+    background: radial-gradient(rgb(255, 255, 255), rgb(105, 167, 255));
 }
 
 #container-login{
     max-width: 400px;
     margin: auto;
     margin-top: 60px;
-    background: linear-gradient(rgb(213, 237, 255), rgb(180, 219, 255));
+    background: linear-gradient( rgb(158, 208, 255), rgb(235, 245, 252));
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,8 +67,14 @@ img:hover{
     height: 220px;
 }
 
+#btn-sesion{
+    transition: 1.0s;
+    object-fit: cover;
+}
 
-
+#btn-sesion:hover{
+    transform: scale(1.1);
+}
 
 /* Diseño del INDEX.HTML*/
 #container_nav{
@@ -90,11 +96,11 @@ main > .container{
 }
 
 body{
-    background: rgba(99, 191, 237, 0.692);
+    background: linear-gradient(to left, rgb(220, 233, 255), rgb(117, 175, 255));
 }
 
 #card{
-    background: rgba(230, 255, 252, 0.926);
+    background: linear-gradient( rgb(158, 208, 255), rgb(219, 240, 255));
 }
 
 #card-details{
@@ -102,19 +108,19 @@ body{
 }
 
 #data-dominio{
-    background: rgba(197, 232, 232, 0.859);
+    background: linear-gradient( rgb(181, 219, 255), rgb(207, 235, 255));
 }
 
 #data-general{
-    background: rgba(197, 232, 232, 0.859);
+    background: linear-gradient( rgb(181, 219, 255), rgb(207, 235, 255));
 }
 
 #data-pay{
-    background: rgba(197, 232, 232, 0.859);
+    background: linear-gradient( rgb(181, 219, 255), rgb(207, 235, 255));
     display: none;
 }
 
-#cards{
+#cards{ 
     width: 36px;
     height: 30px;
 }
@@ -133,4 +139,8 @@ li:hover{
 
 #container-view{
     background: linear-gradient(to top, rgb(177, 210, 255), rgb(219, 235, 255));
+}
+
+#body-user{
+    background: linear-gradient(rgb(131, 203, 255), rgb(188, 230, 254));
 }

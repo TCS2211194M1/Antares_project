@@ -68,8 +68,8 @@ switch ($_POST["opc"]) {
                     <div class='row'>
                         <div class='col-lg-4 col-md-4 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='SHORT_DESCRIPTION' placeholder='SHORT_DESCRIPTION' required/>
-                                <label for='floatingInput'>SHORT_DESCRIPTION</label>
+                                <input type='text' class='form-control' id='USERNAME' placeholder='USERNAME' required/>
+                                <label for='floatingInput'>USERNAME</label>
                             </div>
                         </div>
                         <div class='col-lg-4 col-md-4 col-sm-12'>
@@ -87,19 +87,25 @@ switch ($_POST["opc"]) {
                     </div>
 
                     <div class='row'>
-                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
                                 <input type='email' class='form-control' id='EMAIL' placeholder='EMAIL' required/>
                                 <label for='floatingInput'>EMAIL</label>
                             </div>
                         </div>
-                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='number' class='form-control' id='PASSWORD' placeholder='PASSWORD' required/>
+                                <label for='floatingInput'>PASSWORD</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
                                 <input type='number' class='form-control' id='CELLPHONE' placeholder='CELLPHONE' required/>
                                 <label for='floatingInput'>CELLPHONE</label>
                             </div>
                         </div>
-                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
                                 <input type='number' class='form-control' id='PHONE' placeholder='PHONE' required/>
                                 <label for='floatingInput'>PHONE</label>
@@ -755,7 +761,7 @@ switch ($_POST["opc"]) {
         }
         break;
         //Interfaces DE ORDEN DE TRABAJO              
-    case  'workorder':
+    case 'workorder':
         $workorder = new WorkOrder();
         switch ($_POST["acc"]) {
             case 'add':
@@ -848,7 +854,7 @@ switch ($_POST["opc"]) {
                 break;
         }
         break;
-    case  'workorder_flag':
+    case 'workorder_flag':
         switch ($_POST["acc"]) {
             case 'add':
                 echo "<h3 class='text-center text-secondary m-3'>Alta WorkOrder Flag</h3>
@@ -1115,13 +1121,118 @@ switch ($_POST["opc"]) {
                 break;
         }
         break;
-        //PENDIENTE POR HACER
+    //PENDIENTE POR HACER
     case 'state':
         $country = new Country();
-        //$state = new State();
         switch ($_POST["acc"]) {
             case 'add':
-
+                    echo "<h3 class='text-center text-secondary m-3'>Alta State</h3>
+                    <form id='form-add-state'>
+                        <div class='row'>
+                            <div class='col-lg-3 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='NAME' placeholder='NAME' required/>
+                                    <label for='floatingInput'>NAME</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-1 col-md-1 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='COUNTRY_ID' placeholder='ISO3' required/>
+                                    <label for='floatingInput'>ISO3</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-1 col-md-1 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='COUNTRY_CODE' placeholder='ISO2' required/>
+                                    <label for='floatingInput'>ISO2</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='REGION_NAME' placeholder='NUMERIC_CODE' required/>
+                                    <label for='floatingInput'>NUMERIC_CODE</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='STATE_CODE' placeholder='PHONE_CODE' required/>
+                                    <label for='floatingInput'>PHONE_CODE</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='TYPE, LATITUDE, LONGITUDE' placeholder='CAPITAL' required/>
+                                    <label for='floatingInput'>CAPITAL</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <select class='form-select' id='C_MONEDA'>";
+                                    while ($ren = $consultMoneda->fetch_array(MYSQLI_ASSOC)) {
+                                        echo "<option value='$ren[C_MONEDA]'>$ren[LONG_DESCRIPTION]</option>";
+                                    }
+                                    echo "</select>
+                                    <label for='floatingInput'>MONEDA</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-1 col-md-1 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='TLD' placeholder='TLD' required/>
+                                    <label for='floatingInput'>TLD</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='REGION_NAME' placeholder='REGION_NAME' required/>
+                                    <label for='floatingInput'>REGION_NAME</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-3 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='SUBREGION' placeholder='SUBREGION' required/>
+                                    <label for='floatingInput'>SUBREGION</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-3 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='NATIONALITY' placeholder='NATIONALITY' required/>
+                                    <label for='floatingInput'>NATIONALITY</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-lg-3 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='TIME_ZONE_NAME' placeholder='TIME_ZONE_NAME' required/>
+                                    <label for='floatingInput'>TIME_ZONE_NAME</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='LATITUDE' placeholder='LATITUDE' required/>
+                                    <label for='floatingInput'>LATITUDE</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='LONGITUDE' placeholder='LONGITUDE' required/>
+                                    <label for='floatingInput'>LONGITUDE</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class='row text-center my-5'>
+                        <div class='col-lg-3'></div>    
+                        <div class='col-lg-3 mt-3'>
+                            <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addCountry();'>Add</button>
+                        </div>
+                        <div class='col-lg-3 mt-3'>
+                            <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"country\",\"list\",\"null\");'>Return</button>
+                        </div>
+                        <div class='col-lg-3'></div>  
+                    </div>";
                 break;
 
             case 'list':
@@ -2101,8 +2212,60 @@ switch ($_POST["opc"]) {
     //Pendiente
     case 'claveprodserv':
         switch ($_POST["acc"]) {
-            case 'add':
-                echo "En construcción";
+            case 'add':   
+                echo "<h3 class='text-center text-secondary m-3'>Alta ClaveProdServ</h3>
+                <form id='form-add-claveprodserv'>
+                    <div class='row'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='DESCRIPCION' placeholder='DESCRIPCION' required/>
+                                <label for='floatingInput'>DESCRIPCION</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='IIT' placeholder='IIT' required/>
+                                <label for='floatingInput'>IIT</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='IIET' placeholder='IIET' required/>
+                                <label for='floatingInput'>IIET</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='PALABRAS_SIMILARES' placeholder='PALABRAS_SIMILARES' required/>
+                                <label for='floatingInput'>PALABRAS_SIMILARES</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FIV' placeholder='FIV' required/>
+                                <label for='floatingInput'>Fecha Inicio de Vigencia</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FFV' placeholder='FFV' required/>
+                                <label for='floatingInput'>Fecha Fin de Vigencia</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class='row text-center my-5'>
+                    <div class='col-lg-3'></div>    
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addClaveProdServ();'>Agregar</button>
+                    </div>
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"claveprodserv\",\"list\");'>Regresar</button>
+                    </div>
+                    <div class='col-lg-3'></div>  
+                </div>";
                 break;
             case 'list':
                 $functions->createTable($_POST["opc"], "c_claveprodserv");

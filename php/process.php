@@ -39,6 +39,9 @@ switch ($_POST["opc"]) {
             case 'delete':
                 echo $client->delete($_POST);
                 break;
+            case 'addClient':
+                echo $client->addClient($_POST);
+                break;    
             default:
                 echo "No seleccionaste una acción para clientes";
                 break;
@@ -596,9 +599,14 @@ switch ($_POST["opc"]) {
                 break;
         }
         break;
+        
+    //Procesos para SHOP
     case 'dominio':
         $dominio = new Dominio();
         switch ($_POST["acc"]) {
+            case 'add':
+                echo $dominio->add($_POST);
+                break;
             case 'valida':
                 echo $dominio->valida($_POST);
                 break;

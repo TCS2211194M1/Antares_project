@@ -8,9 +8,8 @@ class Claveprodserv extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO c_claveprodserv VALUES(NULL, '$request[descripcion]', '$request[incluir_iva_traslado]', '$request[incluir_ieps_traslado]',
-        '$request[fiv]', '$request[ffv]', '$request[eff]', '$request[palabras_similares]', '$request[tipo]', '$request[subtipo]',
-        '$request[division]', '$request[grupo]', '$request[clase]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO c_claveprodserv VALUES(NULL, '$request[descripcion]', '$request[iit]', '$request[iiet]',
+        '$request[fiv]', '$request[ffv]', 0, '$request[palabras_similares]', 0, 0, 0, 0, 0, '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -21,8 +20,8 @@ class Claveprodserv extends Connection {
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE c_claveprodserv SET DESCRIPCION='$request[descripcion]', INCLUIR_IVA_TRASLADO='$request[incluir_iva_traslado]', 
-        INCLUIR_IEPS_TRASLADO='$request[incluir_ieps_traslado]', FECHA_INICIO_DE_VIGENCIA='$request[fiv]', FECHA_FIN_DE_VIGENCIA='$request[ffv]',
+        $ejec = $this->execute("UPDATE c_claveprodserv SET DESCRIPCION='$request[descripcion]', INCLUIR_IVA_TRASLADADO='$request[iit]', 
+        INCLUIR_IEPS_TRASLADADO='$request[iiet]', FECHA_INICIO_DE_VIGENCIA='$request[fiv]', FECHA_FIN_DE_VIGENCIA='$request[ffv]',
         ESTIMULO_FRANJA_FRONTERIZA='$request[eff]', PALABRAS_SIMILARES='$request[palabras_similares]', TIPO='$request[tipo]', SUBTIPO='$request[subtipo]', 
         DIVISION='$request[division]', GRUPO='$request[grupo]', CLASE='$request[clase]', UPDATE_DATE=NOW() WHERE C_CLAVEPRODSERV = '$request[c_claveprodserv]'");
         return $ejec;

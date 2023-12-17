@@ -1,3 +1,33 @@
+<?php
+    require_once("../Project_Samava/php/login.lib.php");
+
+    if (isset($_POST["login"])) {
+        session_start();
+        $login = new Login();
+        $consult = $login->login($_POST);
+        if ($consult == 1) {
+            $_SESSION["username"] = htmlentities($_POST["username"]);
+            $_SESSION["password"] = htmlentities($_POST["password"]);
+            $_SESSION["account"] = 3;
+
+            header("Location: main.php");
+        } else if ($consult == 2) {
+            $_SESSION["username"] = htmlentities($_POST["username"]);
+            $_SESSION["password"] = htmlentities($_POST["password"]);
+            $_SESSION["account"] = 2;
+
+            header("Location: ../Project_Samava/shop/catalog.php");
+        } else{
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Error: </strong>Usuario o Contraseña incorrectos
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+        }
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,28 +51,28 @@
                         <img src="image/login2.png" alt="" height="150px">
                     </div>
                     <h2 class="text-center mb-4">Iniciar Sesión</h2>
-                    <form id="form-login">
+                    <form method="POST">
                         <div class="mb-3">
                             <label for="username" class="form-label">Nombre de usuario</label>
                             <div class="input-group">
                                 <span class="input-group-text shadow" id="username"><i class="bi bi-person-circle"></i></span>
-                                <input type="text" class="form-control shadow" id="USERNAME" placeholder="Ingrese su nombre de usuario">
+                                <input type="text" class="form-control shadow" id="username" name="username" placeholder="Ingrese su nombre de usuario">
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
                             <div class="input-group">
                                 <span class="input-group-text shadow" id="password"><i class="bi bi-key"></i></span>
-                                <input type="password" class="form-control shadow" id="PASSWORD" placeholder="Ingrese su contraseña">
+                                <input type="password" class="form-control shadow" id="password" name="password" placeholder="Ingrese su contraseña">
                             </div>
                             <label class="form-label d-flex justify-content-end text-danger"><a href="" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
                         </div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-outline-primary my-3" name="login">Iniciar Sesión</button>
+                        </div>
                     </form>
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-outline-primary my-3" onclick="javascript:login();">Iniciar Sesión</button>
-                    </div>
                     <div class="my-3 text-center">
-                        <span>¿No tienes cuenta? <a href="account.html" id="create_account">Crea tu cuenta</a></span>
+                        <span>¿No tienes cuenta? <a href="account.php" id="create_account">Crea tu cuenta</a></span>
                     </div>
                 </div>
             </div>

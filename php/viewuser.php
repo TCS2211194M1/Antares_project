@@ -1,4 +1,10 @@
 <?php
+
+session_start();
+
+$username = $_SESSION['username'];
+$ip = $_SERVER['REMOTE_ADDR'];
+
 spl_autoload_register(function ($class) {
     require_once($class . ".lib.php");
 });
@@ -6,25 +12,54 @@ spl_autoload_register(function ($class) {
 switch ($_POST["opc"]) {
     //INTERFACES DE DOMINIOS
     case 'dominios':
+        $dominio = new Dominio();
         switch ($_POST["acc"]) {
-            case 'add':
-                echo "En construcción add domain";
-                break;
-
             case 'list':
+                $consult = $dominio->consultActivos($username);
+                $consult2 = $dominio->consultInactivos($username);
+                if ($consult->num_rows > 0 || $consult2->num_rows > 0) {
+                    if ($consult->num_rows > 0) {
+                        echo "<h1>Dominios Activos:</h1>";
+                        while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
+                            echo "<div class='p-3 shadow rounded-3'>
+                                <div>
+                                    <h4 class='d-flex'>Nombre del Dominio:<p class='d-flex ms-2'>$ren[REGISTERED_DOMAIN]</p></h4>
+                                </div>
+                                <div class='d-flex'>
+                                    <p>Fecha de Inicio: $ren[FECHA_INICIO_DE_VIGENCIA]</p>
+                                    <p class='ms-3'>Fecha de Vigencia: $ren[FECHA_FIN_DE_VIGENCIA]</p>
+                                </div>
+                                <button class='btn btn-danger'>No renovar suscripción</button>
+                            </div>";
+                        }
+                    } else{
+                        echo "<h1>No tienes dominios activos</h1>";
+                    }
+                    if ($consult2->num_rows > 0) {
+                        echo "<h1 class='mt-5'>Dominios Inactivos:</h1>";
+                        while ($ren = $consult2->fetch_array(MYSQLI_ASSOC)) {
+                            echo "<div class='p-3 shadow rounded-3'>
+                            <div>
+                                <h4 class='d-flex'>Nombre del Dominio:<p class='d-flex ms-2'>$ren[REGISTERED_DOMAIN]</p></h4>
+                            </div>
+                            <div class='d-flex'>
+                                <p>Fecha de Inicio: Pendiente</p>
+                                <p class='ms-3'>Fecha de Vigencia: Pendiente</p>
+                            </div>
+                        </div>";
+                        }
+                    } else{
+                        echo "<h1>No tienes dominios pendientes</h1>";
+                    }
+                } else{
                     echo "<div class='container mt-4 p-3 text-center shadow rounded-5' id='container-view'>
-                        <div class='m-5 p-3'>
-                            <img src='../image/dominio.png' class='rounded' style='height: 250px;'>
-                            <h3 class='mt-5 mb-3'>No tienes ningún dominio</h3>
-                            <button class='btn btn-primary' onclick='javascript:cargarModulo(\"dominios\",\"add\");'>Adquirir Dominio</button>
-                        </div>
-                    </div>";
-                break;
-            case 'mod':
-                echo "En construcción mod";
-                break;
-            case 'delete':
-                echo "En construcción del";
+                    <div class='m-5 p-3'>
+                        <img src='../image/dominio.png' class='rounded' style='height: 250px;'>
+                        <h3 class='mt-5 mb-3'>No tienes ningún dominio</h3>
+                        <a class='btn btn-primary' href='../shop/catalog.php'>Adquirir Dominio</a>
+                    </div>
+                </div>";
+                }
                 break;
             default:
                 echo "Error: No seleccionaste alguna operación (Agregar, Listar, Modificar, Eliminar)";
@@ -33,6 +68,7 @@ switch ($_POST["opc"]) {
         break;    
 
     case 'tickets':
+        $ticket = new Ticket();
         switch ($_POST["acc"]) {
             case 'add':
                 echo "<h2 class='text-center'>Abrir Nuevo Ticket</h2>
@@ -116,68 +152,70 @@ switch ($_POST["opc"]) {
                 </div>";
                 break;
             case 'list':
-                $ticket = 1;
-                if ($ticket == 0) {
-                    echo "<div class='container mt-5 p-3 text-center shadow rounded-5' id='container-view'>
-                        <div class='m-5 p-5'>
-                            <label>Imagen</label>
-                            <h3 class='mt-5 mb-4'>No tienes tickets pendietes</h3>
-                            <button class='btn btn-primary' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Agregar ticket</button>
-                        </div>
-                    </div>";
-                } else{
-                    echo "<div class='px-5'>
-                        <button class='btn btn-primary mb-3 p-2' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Añadir otro ticket</button>
-                        <h5>Información del Ticket: #123456</h5>
+                $consult = $ticket->consult($username);
+                if ($consult->num_rows > 0) {
+                    echo "<button class='btn btn-primary mb-3 p-2' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Añadir otro ticket</button>";
+                    while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
+                        echo "<div class='px-5'>
+                        <h5>Información del Ticket: $ren[id_tic]</h5>
                         <div class='row'>
                             <div class='col-lg-3 me-5 p-2 mb-1'>
                                 <div class='row rounded-4 shadow' id='container-view'>
                                     <div class='col-lg-12 p-3 border-bottom'>
                                         <label for=''>Solicitante</label>
-                                        <h5>Luis Jimenez</h5>
+                                        <h5>$username</h5>
                                     </div>
                                     <div class='col-lg-12 p-3 border-bottom'>
                                         <label for=''>Departamento</label>
-                                        <h5>Soporte Técnico</h5>
+                                        <h5>$ren[dpto_tic]</h5>
                                     </div>
                                     <div class='col-lg-12 p-3 border-bottom'>
                                         <label for=''>Reportado</label>
-                                        <h5>30 de Noviembre del 2023</h5>
+                                        <h5>$ren[create_date]</h5>
                                     </div>
                                     <div class='col-lg-12 p-3 border-bottom'>
                                         <label for=''>Prioridad</label>
-                                        <h5 class='text-danger'>Alta</h5>
+                                        <h5 class='text-danger'>$ren[prioridad_tic]</h5>
                                     </div>
-
+    
                                     <div class='col-lg-12 p-3'>
-                                        <label for=''>Estatus</label>
-                                        <h5 class='text-danger'>Pendiente</h5>
-                                    </div>
+                                        <label for=''>Estatus</label>";
+                                        if ($ren["entry_status"] == 0) {
+                                            echo "<h5 class='text-danger'>Pendiente</h5>";
+                                        } else{
+                                            echo "<h5 class='text-danger'>Resuelto</h5>";
+                                        }
+                                    echo "</div>
                                 </div>
                             </div>
-
+    
                             <div class='col-lg-8 p-2'>
                                 <div class='row shadow rounded-4' id='container-view''>
                                     <div class='col-lg-12 p-3 border-bottom'>
-                                        <h5>Luis Jiménez</h5>
-                                        <p class='text-end' for=''>Fecha: 17/07/2023</p>
+                                        <h5>$username</h5>
+                                        <p class='text-end' for=''>Fecha: $ren[create_date]</p>
                                     </div>
                                     <div class='col-lg-12 p-3 border-bottom'>
-                                        <p class='mb-3'>Mensaje que se escribió</p>
-                                        <p>IP: 192.168.1.1</p>
-                                    </div>
-                                    <div class='col-lg-12 p-3'>
-                                        <lable for=''>Evidencias</lable>
-                                        <p class='text-primary'>Image.png</p>
+                                        <div class='d-flex'>
+                                            <p class='fw-bold'> Asunto: <p class='ms-1'> $ren[asunto_tic]</p></p>
+                                        </div>
+                                        <p class='mb-3'>$ren[mensaje_tic]</p>
+                                        <p>IP: $ip</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>";
+                        </div>";
+                    }
+                } else{
+                    echo "<div class='container mt-5 p-3 text-center shadow rounded-5' id='container-view'>
+                    <div class='m-5 p-5'>
+                        <img src='../image/cloud.png' alt='' style='width: 64px; height: 64px;'>
+                        <h3 class='mt-5 mb-4'>No tienes tickets pendietes</h3>
+                        <button class='btn btn-primary' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Agregar ticket</button>
+                    </div>
+                </div>";
                 }
-                break;
-            case 'mod':
-                echo "En construcción mod";
                 break;
             case 'delete':
                 echo "En construcción del";
