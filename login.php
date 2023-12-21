@@ -42,37 +42,37 @@
     <title>Login</title>
 </head>
 
-<body id="body-login">
+<body>
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12 mx-auto">
                 <div id="container-login">
                     <div class="d-flex justify-content-center mb-3 rounded-5">
-                        <img src="image/login2.png" alt="" height="150px">
+                        <img src="image/loginIcon.png" alt="" height="150px">
                     </div>
-                    <h2 class="text-center mb-4">Iniciar Sesión</h2>
+                    <h2 class="text-center mb-4 text-white">Iniciar Sesión</h2>
                     <form method="POST">
                         <div class="mb-3">
-                            <label for="username" class="form-label">Nombre de usuario</label>
+                            <label for="username" class="form-label fw-semibold">Nombre de usuario</label>
                             <div class="input-group">
                                 <span class="input-group-text shadow" id="username"><i class="bi bi-person-circle"></i></span>
                                 <input type="text" class="form-control shadow" id="username" name="username" placeholder="Ingrese su nombre de usuario">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
+                            <label for="password" class="form-label fw-semibold">Contraseña</label>
                             <div class="input-group">
                                 <span class="input-group-text shadow" id="password"><i class="bi bi-key"></i></span>
                                 <input type="password" class="form-control shadow" id="password" name="password" placeholder="Ingrese su contraseña">
                             </div>
-                            <label class="form-label d-flex justify-content-end text-danger"><a href="" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
+                            <label class="form-label d-flex justify-content-end text-danger fw-semibold"><a href="" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-primary my-3" name="login">Iniciar Sesión</button>
+                            <button class="btn btn-outline-primary my-3 fw-semibold" name="login">Iniciar Sesión</button>
                         </div>
                     </form>
                     <div class="my-3 text-center">
-                        <span>¿No tienes cuenta? <a href="account.php" id="create_account">Crea tu cuenta</a></span>
+                        <span>¿No tienes cuenta? <a href="account.php" class='fw-semibold' id="create_account">Crea tu cuenta</a></span>
                     </div>
                 </div>
             </div>

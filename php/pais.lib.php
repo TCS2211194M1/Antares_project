@@ -26,7 +26,7 @@ class Pais extends Connection {
     function mod($request)
     {
         $ejec = $this->execute("UPDATE c_pais SET DESCRIPCION='$request[descripcion]', CODE='$request[code]', FORMATO_DE_CODIGO_POSTAL='$request[fcp]', 
-        FORMATO _DE_REGISTRO_DE_IDENTIDAD_TRIBUTARIA='$request[frit]', VALIDACION_DEL_REGISTRO_DE_IDENTIDAD_TRIBUTARIA='$request[vritr]', AGRUPACIONES='$request[agrupaciones]', 
+        FORMATO_DE_REGISTRO_DE_IDENTIDAD_TRIBUTARIA='$request[frit]', VALIDACION_DEL_REGISTRO_DE_IDENTIDAD_TRIBUTARIA='$request[vritr]', AGRUPACIONES='$request[agrupaciones]', 
         UPDATE_DATE=NOW() WHERE C_PAIS = '$request[c_pais]'");
         return $ejec;
     }

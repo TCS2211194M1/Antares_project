@@ -47,7 +47,7 @@
             </div>
             <div class="col bg-white p-3 rounded-end">
                 <div class="text-end">
-                    <img src="image/Logo Samava.png" width="100px" class="rounded-3" id="logo-samava">
+                    <img src="image/A113.png" width="90px" class="rounded-3" id="logo-samava">
                 </div>
 
                 <h2 class="fw-bold text-center py-3">Bienvenido</h2>

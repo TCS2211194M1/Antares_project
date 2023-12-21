@@ -19,6 +19,7 @@
         }
     }
 
+
     if (isset($_POST["close"])) {
         session_destroy();
         header("Location: ../login.php");
@@ -42,16 +43,16 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="icon" href="../image/cloudshop.png">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Samava Tienda</title>
+    <link rel="icon" href="../image/A113.png">
+    <title>Web Hosting Shop</title>
 </head>
 
 <body onload="javascript:cargarCatalog('list', 1);">
     <header data-bs-theme="dark" id='header'>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id='menu_nav'>
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Shop Samava</a>
+                <a class="navbar-brand" href="#">Shop Web Hosting</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarItems" aria-controls="navBarItems" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,17 +60,16 @@
                     <div class="navbar-nav text-center">
                         <a href="../shop/catalog.php" class="nav-link active" aria-current="page" >Catálogo</a>
                         <a href="#contacto" class="nav-link" >Contacto</a>
-                        <a href="../html/viewuser.php" class="nav-link">Usuario</a>
-                        <form method="POST">
+                        <form method="POST" class='d-flex'>
                             <?php  if ($login==null || $login=='') {
-                                echo "<button name='logueo' class='nav-link text-success'>Iniciar Sesión</button>";
+                               echo "<button name='logueo' class='nav-link text-success'>Iniciar Sesión</button>";
                             } else if ($login==3){
                                 echo "<button name='main' class='nav-link'>Main</button>";
                                 echo "<button name='close' class='nav-link text-danger' id='btn-sesion'><i class='bi bi-box-arrow-in-left'></i>Cerrar Sesión</button>";
                             } else if ($login == 1 || $login == 2 || $login == 3) {
-                               echo "<button name='close' class='nav-link text-danger' id='btn-sesion'><i class='bi bi-box-arrow-in-left'></i>Cerrar Sesión</button>";
+                                echo "<a href='../html/viewuser.php' class='nav-link'>Usuario</a>
+                                <button name='close' class='nav-link text-danger d-flex' id='btn-sesion'><i class='bi bi-box-arrow-in-left'></i>Cerrar Sesión</button>";
                             }?>
-                            
                         </form>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
             <div class='row text-white'>
                 <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>
                     <div>
-                        <img src="../image/Logo Samava.png" alt="" class='mb-4 w-75'>
+                        <img src="../image/A113.png" alt="" class='mb-4 rounded-5' style='width:30%; height:25%;'>
                         <h5 class=' px-5 text-center'>Tecnología Comercial y Servicios Integrales Samava Sas de CV</h5>
                     </div>
                 </div>

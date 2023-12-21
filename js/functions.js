@@ -72,7 +72,34 @@ function addClient(){
 
 //Pendiente por hacer
 function addTaxid() {
-    
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-taxid");
+
+    datos.append("opc", "taxid");
+    datos.append("acc", "add");
+    datos.append("rfc", f.RFC.value);
+    datos.append("direccion", f.DIRECCION.value);
+    datos.append("pais", f.PAIS.value);
+    datos.append("estado", f.ESTADO.value);
+    datos.append("municipio", f.MUNICIPIO.value);
+    datos.append("localidad", f.LOCALIDAD.value);
+    datos.append("codigopostal", f.CODIGOPOSTAL.value);
+    datos.append("colonia", f.COLONIA.value);
+    datos.append("regimenfiscal", f.REGIMENFISCAL.value);
+    datos.append("usocfdi", f.USOCFDI.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Éxito", "El taxid se ha registrado con éxito", "success");
+            cargarInterfaz("taxid", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+            cargarInterfaz("taxid", "list");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
 }
 
 //Función para agregar un registro a la tabla Role
@@ -252,7 +279,7 @@ function addWorkOrder() {
 
     datos.append("opc", "workorder");
     datos.append("acc", "add");
-    datos.append("description", f.DESCRIPTION.value);
+    datos.append("username", f.USERNAME.value);
     datos.append("t_product", f.T_PRODUCT.value);
     datos.append("registered_domain", f.REGISTERED_DOMAIN.value);
     datos.append("t_partition", f.T_PARTITION.value);
@@ -378,6 +405,35 @@ function addCountry() {
     sol.send(datos);
 }
 
+function addState() {
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-state");
+
+    datos.append("opc", "state");
+    datos.append("acc", "add");
+    datos.append("state_name", f.STATE_NAME.value);
+    datos.append("ci", f.COUNTRY_ID.value);
+    datos.append("cc", f.COUNTRY_CODE.value);
+    datos.append("cn", f.COUNTRY_NAME.value);
+    datos.append("region_name", f.REGION_NAME.value);
+    datos.append("state_code", f.STATE_CODE.value);
+    datos.append("type", f.TYPE.value);
+    datos.append("latitude", f.LATITUDE.value);
+    datos.append("longitude", f.LONGITUDE.value);
+
+    sol.addEventListener("load", function(e){
+
+        if (e.target.responseText > 0) {
+            swal("Éxito", "El estado se ha registrado con éxito", "success");
+            cargarInterfaz("state", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
 
 // -------------------- Tablas C_Tablas -------------------- \\
 //Función para agregar un registro a la tabla pais
@@ -848,6 +904,93 @@ function addPeriodicidad() {
     sol.send(datos);
 }
 
+//Función para activar un dominio
+function activarDominio(id) {
+    var sol = new XMLHttpRequest();
+
+    datos.append("opc", "dominio");
+    datos.append("acc", "activar");
+    datos.append("id", id);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Éxito", "El dominio se ha activado con éxito", "success");
+            cargarInterfaz("domain", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+            cargarInterfaz("domain", "list");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+//Función para desactivar un dominio
+function desactivarDominio(id) {
+    var sol = new XMLHttpRequest();
+
+    datos.append("opc", "dominio");
+    datos.append("acc", "desactivar");
+    datos.append("id", id);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Éxito", "El dominio se ha desactivado con éxito", "success");
+            cargarInterfaz("domain", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+            cargarInterfaz("domain", "list");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+function activarTicket(id) {
+    var sol = new XMLHttpRequest();
+
+    datos.append("opc", "ticket");
+    datos.append("acc", "activar");
+    datos.append("id", id);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Atención", "El ticket ha vuelto a estar pendiente", "info");
+            cargarInterfaz("ticket", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+            cargarInterfaz("ticket", "list");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+//Función para desactivar un dominio
+function desactivarTicket(id) {
+    var sol = new XMLHttpRequest();
+
+    datos.append("opc", "ticket");
+    datos.append("acc", "desactivar");
+    datos.append("id", id);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Success", "El ticket se ha atendido", "success");
+            cargarInterfaz("ticket", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+            cargarInterfaz("ticket", "list");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
 // -------------------- Funciones -------------------- \\
 //Función para cargar interfaz para modificar
 function interfaceMod(opc, id){
@@ -1098,7 +1241,7 @@ function mod(opc) {
         //WORKORDER
         case opc == 'workorder':
             datos.append("t_workorder", f.T_WORKORDER.value);
-            datos.append("description", f.DESCRIPTION.value);
+            datos.append("username", f.T_CLIENT.value);
             datos.append("t_product", f.T_PRODUCT.value);
             datos.append("registered_domain", f.REGISTERED_DOMAIN.value);
             datos.append("t_partition", f.T_PARTITION.value);
@@ -1209,20 +1352,15 @@ function mod(opc) {
         
         case opc == 'state':
             datos.append("t_state", f.T_STATE.value);
-            datos.append("name", f.NAME.value);
-            datos.append("iso3", f.ISO3.value);
-            datos.append("iso2", f.ISO2.value);
-            datos.append("numeric_code", f.NUMERIC_CODE.value);
-            datos.append("phone_code", f.PHONE_CODE.value);
-            datos.append("capital", f.CAPITAL.value);
-            datos.append("c_moneda", f.C_MONEDA.value);
-            datos.append("tld", f.TLD.value);
+            datos.append("state_name", f.STATE_NAME.value);
+            datos.append("ci", f.COUNTRY_ID.value);
+            datos.append("cc", f.COUNTRY_CODE.value);
+            datos.append("cn", f.COUNTRY_NAME.value);
             datos.append("region_name", f.REGION_NAME.value);
-            datos.append("subregion", f.SUBREGION.value);
-            datos.append("nationality", f.NATIONALITY.value);
-            datos.append("time_zone_name", f.TIME_ZONE_NAME.value);
+            datos.append("state_code", f.STATE_CODE.value);
+            datos.append("type", f.TYPE.value);
             datos.append("latitude", f.LATITUDE.value);
-            datos.append("longitude", f.LONGITUDE.value);;
+            datos.append("longitude", f.LONGITUDE.value);
 
             sol.addEventListener("load", function(e){
                 if (e.target.responseText > 0) {
@@ -1240,6 +1378,7 @@ function mod(opc) {
         
         //TABLAS SECUNDARIAS
         case opc == 'pais':
+            datos.append("c_pais", f.C_PAIS.value);
             datos.append("descripcion", f.DESCRIPCION.value);
             datos.append("code", f.CODE.value);
             datos.append("fcp", f.FORMATO_DE_CODIGO_POSTAL.value);
@@ -1262,7 +1401,25 @@ function mod(opc) {
             break;    
         
         case opc == 'estado':
-            console.log("hola");
+            datos.append("c_estado", f.C_ESTADO.value);
+            datos.append("descripcion", f.DESCRIPCION.value);
+            datos.append("nombreEstado", f.NOMBRE_DEL_ESTADO.value);
+            datos.append("pais", f.C_PAIS.value);
+            datos.append("fiv", f.FECHA_INICIO_DE_VIGENCIA.value);
+            datos.append("ffv", f.FECHA_FIN_DE_VIGENCIA.value);
+
+            sol.addEventListener("load", function(e){
+                if (e.target.responseText > 0) {
+                    swal("Éxito", "El estado se ha modificado con éxito", "success");
+                    cargarInterfaz("estado", "list");
+                } else{
+                    swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+                    cargarInterfaz("estado", "list");
+                }
+            });
+            
+            sol.open("POST", "php/process.php");
+            sol.send(datos);
             break;    
         
         case opc == 'meses':
@@ -1642,8 +1799,6 @@ function cargarCatalog(acc, id){
 
     sol.addEventListener("load", function(e){
         contenido.innerHTML = e.target.responseText;
-        var form = document.getElementById("form-comprar");
-        form.style.display = "none";
     });
 
     sol.open("POST", "../shop/product.php");
@@ -1657,9 +1812,10 @@ function formaPago(formaPago, importe) {
         datos.style.display="block";
         let referencia = parseInt(Math.random() * 10000000); 
         datos.innerHTML += "<div class='row'><div class='col-lg-12'><label class='mb-1 fw-bold'>Banco Destino: BBVA Bancomer</label></div>"+
-        "<div class='col-lg-12'><label class='mb-1'>CLABE: XXXXXXXXXXXX</label></div>"+
+        "<div class='col-lg-12'><label class='mb-1'>CLABE: 012180015374160294</label></div>"+
+        "<div class='col-lg-12'><label class='mb-1'>Titular: ALONDRA MARTINEZ</label></div>"+
         "<div class='col-lg-12'><label class='mb-1'>Referencia: " + referencia + "</label></div>"+
-        "<div class='col-lg-12'><label class='mb-1'>Importe: USD " + importe + "</label></div></div>"+
+        "<div class='col-lg-12'><label class='mb-1'>Importe:" + importe +  "MXN</label></div></div>"+
         "<input type='hidden' value='"+referencia+"' id='REFERENCIA'>";
     }else if(formaPago == 1){
         datos.style.display = "block";
@@ -1667,7 +1823,7 @@ function formaPago(formaPago, importe) {
         datos.innerHTML += "<div class='row'><div class='col-lg-12'><label class='mb-1 fw-bold'>Favor de realizar su pago en:</label></div>"+
         "<div class='col-lg-12'><label class='mb-1'>Domicilio: Castillo de Chapultepec #61, San Juan del Río, Querétaro, México'</label></div>"+
         "<div class='col-lg-12'><label class='mb-1'>Referencia: " + referencia + "</label></div>"+
-        "<div class='col-lg-12'><label class='mb-1'>Importe a pagar: USD " + importe + "</label></div></div>"+
+        "<div class='col-lg-12'><label class='mb-1'>Importe a pagar: " + importe + "MXN</label></div></div>"+
         "<input type='hidden' value='"+referencia+"' id='REFERENCIA'>";
     } else if (formaPago == 4 || formaPago == 28){
         datos.style.display="block";
@@ -1690,12 +1846,12 @@ function validar() {
     datos.append("opc", "dominio");
     datos.append("acc", "valida");
     datos.append("name_domain", f.NAME_DOMAIN.value);
-    datos.append("com", f.DOMAIN_NAME.value);
-    dominio=f.NAME_DOMAIN.value+f.DOMAIN_NAME.value;
+    datos.append("dns", f.DNS.value);
+    dominio=f.NAME_DOMAIN.value+f.DNS.value;
     var form = document.getElementById("form-comprar");
 
 
-    if (f.NAME_DOMAIN.value != '') {
+    if (f.NAME_DOMAIN.value != '' && f.DNS.value != '') {
         sol.addEventListener("load", function(e){
             var buttons = document.getElementById("buttons-pay");
             if (e.target.responseText == 1) {
@@ -1748,8 +1904,13 @@ function comprar(){
         } else{
             sol.addEventListener("load", function(e){
                 if (e.target.responseText > 0) {
-                    swal("Success", "La compra se ha realizado con éxito", "success");
-                    location.href = "../html/index.php";
+                    if (formaPago == 'Transferencia') {
+                        swal("Success", "La compra se ha realizado con éxito", "success");
+                        location.href = "../html/indexT.php";
+                    } else if (formaPago == 'Efectivo'){
+                        swal("Success", "Se ha generado su hoja de pago", "success");
+                        location.href = "../html/indexE.php";
+                    }
                 } else{
                     swal("Error", "Ocurrió un error al realizar tu compra", "error");
                     location.href = "../shop/catalog.php";
@@ -1868,6 +2029,34 @@ function cargarModulo(opc, acc){
     sol.send(datos);
 }
 
+function addTicket(){
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-ticket");
+        
+    datos.append("opc", "ticket");
+    datos.append("acc", "add");
+    datos.append("username", f.USERNAME.value);
+    datos.append("email", f.EMAIL.value);
+    datos.append("depto", f.DEPARTAMENT.value);
+    datos.append("dominio", f.DOMAIN.value);
+    datos.append("prioridad", f.PRIORITY.value);
+    datos.append("asunto", f.SUBJECT.value);
+    datos.append("mensaje", f.MESSAGE.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Success", "El ticket se ha registrado con éxito", "success");
+            cargarModulo("tickets", "list");
+        } else{
+            swal("Error", "Ocurrió un error al registrar el ticket", "error");
+            cargarModulo("tickets", "list");
+        }
+    });
+        
+    sol.open("POST", "../php/process.php");
+    sol.send(datos);
+}
+
 function pdf() {
     var btn = document.getElementById("btn-pago");
     btn.style.display='none';
@@ -1875,7 +2064,7 @@ function pdf() {
     const $pdf = document.body;
     html2pdf().set({
         margin: 5,
-        filename: 'pago-client.pdf',
+        filename: 'Compra-Cliente.pdf',
         image:{
             type: 'png',
             quality: '1'

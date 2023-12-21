@@ -23,15 +23,14 @@ class Estado extends Connection {
         return $ejec;
     }
 
-    function mod($request)
-    {
-        $ejec = $this->execute("UPDATE c_estado SET DESCRIPCION='$request[descripcion]', NOMBRE_DEL_ESTADO='$request[code]', FECHA_INICIO_VIGENCIA='$request[fcp]', 
-        FECHA_FIN_VIGENCIA='$request[frit]', UPDATE_DATE=NOW() WHERE C_ESTADO = '$request[c_estado]'");
+    function mod($request){
+        $ejec = $this->execute("UPDATE c_estado SET DESCRIPCION='$request[descripcion]', NOMBRE_DEL_ESTADO='$request[nombreEstado]', C_PAIS='$request[pais]',
+        FECHA_INICIO_DE_VIGENCIA='$request[fiv]', FECHA_FIN_DE_VIGENCIA='$request[ffv]', UPDATE_DATE=NOW() WHERE C_ESTADO = '$request[c_estado]'");
         return $ejec;
     }
 
     function delete($request){
-        $ejec = $this->execute("UPDATE c_estado SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE C_PAIS = '$request[id]'");
+        $ejec = $this->execute("UPDATE c_estado SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE C_ESTADO = '$request[id]'");
         return $ejec;
     }
 

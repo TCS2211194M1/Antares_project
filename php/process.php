@@ -610,12 +610,34 @@ switch ($_POST["opc"]) {
             case 'valida':
                 echo $dominio->valida($_POST);
                 break;
-            
+            case 'activar':
+                echo $dominio->activar($_POST);    
+                break;
+            case 'desactivar':
+                echo $dominio->desactivar($_POST);
+                break;    
             default:
                 echo "No seleccionaste una acción para dominios";
                 break;
         }
         break;
+    case 'ticket':
+        $ticket = new Ticket();
+        switch ($_POST["acc"]) {
+            case 'add':
+                echo $ticket->add($_POST);
+                break;
+            case 'activar':
+                echo $ticket->activar($_POST);
+                break;
+            case 'desactivar':
+                echo $ticket->desactivar($_POST);
+                break;
+            default:
+                echo "No seleccionaste una acción para tickets";
+                break;
+        }
+        break;    
     //Default
     default:
         echo "Error: No seleccionaste una opción";

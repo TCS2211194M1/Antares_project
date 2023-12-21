@@ -1,16 +1,15 @@
 <?php
 require_once("connection.lib.php");
 
-class Country extends Connection {
+class State extends Connection {
     
     function __construct(){
         $this->open();
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_country VALUES(NULL, '$request[name]', '$request[iso3]', '$request[iso2]', '$request[numeric_code]', '$request[phone_code]', 
-        '$request[capital]', '$request[c_moneda]', '$request[tld]', '$request[region_name]', '$request[subregion]', '$request[nationality]', '$request[time_zone_name]', 
-        '$request[latitude]', '$request[longitude]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_state VALUES(null, '$request[state_name]', '$request[ci]', '$request[cc]', '$request[cn]', '$request[region_name]', 
+        '$request[state_code]', '$request[type]', '$request[latitude]', '$request[longitude]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 
@@ -20,27 +19,20 @@ class Country extends Connection {
     }
 
     function consult($id){
-        $ejec = $this->execute("SELECT * FROM t_country WHERE T_COUNTRY = $id AND ENTRY_STATUS='0'");
+        $ejec = $this->execute("SELECT * FROM t_state WHERE T_STATE = $id AND ENTRY_STATUS='0'");
         return $ejec;
     }
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_country SET NAME='$request[name]', ISO3='$request[iso3]', ISO2='$request[iso2]', NUMERIC_CODE='$request[numeric_code]', 
-        PHONE_CODE='$request[phone_code]', CAPITAL='$request[capital]', C_MONEDA='$request[c_moneda]', TLD='$request[tld]', REGION_NAME='$request[region_name]', 
-        SUBREGION='$request[subregion]', NATIONALITY='$request[nationality]', TIME_ZONE_NAME='$request[time_zone_name]', LATITUDE='$request[latitude]', LONGITUDE='$request[longitude]',
-        UPDATE_DATE=NOW() WHERE T_COUNTRY = '$request[t_country]'");
+        $ejec = $this->execute("UPDATE t_state SET STATE_NAME='$request[state_name]', COUNTRY_ID='$request[ci]', COUNTRY_CODE='$request[cc]', COUNTRY_NAME='$request[cn]', 
+        REGION_NAME='$request[region_name]', STATE_CODE='$request[state_code]', TYPE='$request[type]', LATITUDE='$request[latitude]', LONGITUDE='$request[longitude]',
+        UPDATE_DATE=NOW() WHERE T_STATE = '$request[t_state]'");
         return $ejec;
     }
 
     function delete($request){
-        $ejec = $this->execute("UPDATE t_country SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE T_COUNTRY = '$request[id]'");
-        return $ejec;
-    }
-
-    //Consultas para los campos que requieren de otras tablas
-    function moneda(){
-        $ejec = $this->execute("SELECT * FROM c_moneda WHERE ENTRY_STATUS='0'");
+        $ejec = $this->execute("UPDATE t_state SET ENTRY_STATUS='1', UPDATE_DATE=NOW() WHERE T_STATE = '$request[id]'");
         return $ejec;
     }
 }

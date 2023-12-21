@@ -1,9 +1,12 @@
 <?php
     session_start();
 
-    $username = $_SESSION["username"];
-    $account = $_SESSION["account"];
-
+    if ($_SESSION["username"] == '' || $_SESSION == null) {
+        header("Location: ../Project_Samava/login.php");
+    } else{
+        $username = $_SESSION["username"];
+        $account = $_SESSION["account"];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +38,40 @@
     <div class="container" id="container">
         <div class="row mt-3">
             <div class="d-flex justify-content-center">
-                <h3 class="text-center p-2 rounded-pill shadow" id="row-card">Usuarios</h3>
+                <h3 class="text-center p-2">Clientes</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/clientesCloud.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-cloud me-2"></i>Dominios</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('domain', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
+                <div class="card shadow rounded-4" style="width: 18rem;">
+                    <img src="image/tickets.png" class="card-img-top" id="img-card">
+                    <div class="card-body text-center rounded-bottom-4" id="card-body">
+                        <h5 class="card-title"><i class="bi bi-file-font me-2"></i>Tickets</h5>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('ticket', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border border-white border-2 opacity-50 my-5">
+        
+        <div class="row mt-3">
+            <div class="d-flex justify-content-center">
+                <h3 class="text-center p-2">Usuarios</h3>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
                 <div class="card shadow rounded-4" style="width: 18rem;">
                     <img src="image/login.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-person-circle me-2"></i>Login</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('login', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('login', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -51,7 +80,7 @@
                     <img src="image/client.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-person-badge me-2"></i>Cliente</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('client', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('client', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +89,7 @@
                     <img src="image/Taxid.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-person-vcard me-2"></i>Taxid</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('taxid', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('taxid', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +98,7 @@
                     <img src="image/role.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-person-lines-fill me-2"></i>Roles</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('role', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('role', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -78,24 +107,24 @@
                     <img src="image/privilegio.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-person-video3 me-2"></i>Privilegios</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('privilege', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('privilege', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <hr class="border border-white border-2 opacity-50 my-5" id="">
+        <hr class="border border-white border-2 opacity-50 mb-5">
         
         <div class="row mt-3">
             <div class="d-flex justify-content-center">
-                <h3 class="p-2 text-center rounded-pill shadow" id="row-card">Productos</h3>
+                <h3 class="p-2 text-center">Productos</h3>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
                 <div class="card shadow rounded-4" style="width: 18rem;">
                     <img src="image/product.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-cloud-arrow-up me-2"></i>Productos</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('product', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('product', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +133,7 @@
                     <img src="image/service.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-device-ssd me-2"></i>Servicios</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('service', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('service', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +142,7 @@
                     <img src="image/storage.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-sd-card me-2"></i>Almacenamiento</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('storage', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('storage', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -122,17 +151,17 @@
                     <img src="image/partition.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-layers-half me-2"></i>Particiones</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('partition', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('partition', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <hr class="border border-white border-2 opacity-50 my-5">
+        <hr class="border border-white border-2 opacity-50 mb-5">
 
         <div class="row mt-3">
             <div class="d-flex justify-content-center">
-                <h3 class="p-2 text-center rounded-pill shadow" id="row-card">Orden de Trabajo</h3>
+                <h3 class="p-2 text-center">Orden de Trabajo</h3>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
                 <div class="card shadow rounded-4" style="width: 18rem;">
@@ -154,11 +183,11 @@
             </div>
         </div>
         
-        <hr class="border border-white border-2 opacity-50 my-5">
+        <hr class="border border-white border-2 opacity-50 mb-5">
 
         <div class="row mt-3">
             <div class="d-flex justify-content-center">
-                <h3 class="p-2 text-center rounded-pill shadow" id="row-card">Localizaciones</h3>
+                <h3 class="p-2 text-center">Localizaciones</h3>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
                 <div class="card shadow rounded-4" style="width: 18rem;">
@@ -174,7 +203,7 @@
                     <img src="image/subregiones.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-globe me-2"></i>Subregión</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('subregion', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('subregion', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -183,7 +212,7 @@
                     <img src="image/pais.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-globe-americas me-2"></i>País</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('country', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('country', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -192,7 +221,7 @@
                     <img src="image/estados.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-map me-2"></i>Estado</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('state', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('state', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -201,7 +230,7 @@
                     <img src="image/ciudad.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-mailbox me-2"></i>Ciudad</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('city', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('city', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
@@ -210,16 +239,16 @@
                     <img src="image/cp.png" class="card-img-top" id="img-card">
                     <div class="card-body text-center rounded-bottom-4" id="card-body">
                         <h5 class="card-title"><i class="bi bi-mailbox-flag me-2"></i>Código Postal</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" onclick="javascript:cargarInterfaz('city', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
+                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('city', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <hr class="border border-white border-2 opacity-50 my-5">
+        <hr class="border border-white border-2 opacity-50 mb-5">
 
         <div class="d-flex justify-content-center mb-3">
-            <h3 class="p-2 text-center rounded-pill shadow p-1" id="row-card">Tablas Secundarias</h3>
+            <h3 class="p-2 text-center">Tablas Secundarias</h3>
         </div>
 
         <div class="table-responsive">
@@ -299,7 +328,7 @@
         <div class='row text-white pt-4'>
             <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>
                 <div>
-                    <img src="../Project_samava/image/Logo Samava.png" class='mb-4 w-50 rounded-4'>
+                    <img src="../Project_samava/image/A113.png" class='mb-4 rounded w-25'>
                     <h5 class=' px-5 text-center'>Tecnología Comercial y Servicios Integrales Samava Sas de CV</h5>
                 </div>
             </div>

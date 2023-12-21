@@ -11,7 +11,7 @@ class Client extends Connection
 
     function add($request)
     {
-        $ejec = $this->execute("INSERT INTO t_client VALUES(NULL, '$request[username]', '$request[login_name]', '$request[login_last_name]', '$request[email]', '$request[password]',
+        $ejec = $this->execute("INSERT INTO t_client VALUES(7, '$request[username]', '$request[login_name]', '$request[login_last_name]', '$request[email]', '$request[password]',
         '$request[cellphone]', '$request[phone]', '2309150005', '$request[t_taxid]', '$request[t_workorder]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }

@@ -52,7 +52,7 @@ class Functions extends Connection
 
     //Función para consultar los datos de cualquier tabla
     function list($table){
-        $ejec = $this->execute("SELECT * FROM " . $table ." WHERE ENTRY_STATUS='0' LIMIT 100");
+        $ejec = $this->execute("SELECT * FROM " . $table ." WHERE ENTRY_STATUS='0' LIMIT 1000");
         return $ejec;
     }
 
@@ -74,7 +74,7 @@ class Functions extends Connection
         </div>
 
         <div class='mb-3'>
-            <input type='text' class='form-control me-3 shadow-lg d-inline w-25' id='consulta' placeholder='Pendiente...'/>
+            <input type='text' class='form-control me-3 shadow-lg d-inline w-25' id='consulta' placeholder='Buscar registro'/>
             <button class='btn btn-sm btn-primary rounded-pill d-inline' onclick='javascript:ajax(\"consult\", \"$table\");'><i class='bi bi-search'></i></button>
         </div>
 
@@ -116,7 +116,6 @@ class Functions extends Connection
         $columns = array();
         $cont = 0;
         $consult = $clase->consult($id);
-        
         if ($consult->num_rows > 0) {
             $row = $consult->fetch_array(MYSQLI_ASSOC);
             echo "<center id='form-mod' class='my-5'><div class='p-1 w-50 border border-4 rounded'><form id='form-mod-$opc' class='my-5'>";

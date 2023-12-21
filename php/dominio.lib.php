@@ -9,43 +9,78 @@ class Dominio extends Connection{
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_workorder VALUES(6, '$request[username]', '$request[id]', '$request[domain]', 'xvda1', 
-        NOW(), NOW(), 1, '1', NOW(), '2309150001', NOW(), '2309150001')");
-        if ($ejec !== false) {
-            $consult = $this->execute("SELECT MAX(T_WORKORDER) as id FROM T_WORKORDER");
-            $ren = $consult->fetch_array(MYSQLI_ASSOC);
-            $ejec2 = $this->execute("INSERT INTO t_compra VALUES(6, '$ren[id]', '$request[pago]', '$request[importe]', 1, '$request[referencia]', 0, NOW(), NOW())");
-            return $ejec2;
+        $consult = $this->execute("SELECT PERIODICIDAD as per FROM t_product where T_PRODUCT='$request[id]'");
+        $fechaActual = date("Y-m-d");
+        $fechaLimite = date("Y-m-d");
+        $fechaPago = date("Y-m-d", strtotime($fechaLimite . " +5 days"));
+        if ($consult->num_rows>0) {
+            $periodo = $consult->fetch_array(MYSQLI_ASSOC);
+            if ($periodo['per'] == 'Mensual') {
+                $fechaFin = date('Y-m-d', strtotime($fechaActual . " +1 month"));
+            } else if ($periodo['per'] == 'Cuatrimestral') {
+                $fechaFin = date('Y-m-d', strtotime($fechaActual . " +4 month"));
+            } else if ($periodo['per'] == 'Semestral') {
+                $fechaFin = date('Y-m-d', strtotime($fechaActual . " +6 month"));
+            } else if ($periodo['per'] == 'Anual'){
+                $fechaFin = date('Y-m-d', strtotime($fechaActual . " +12 month"));
+            }
+            $ejec = $this->execute("INSERT INTO t_workorder VALUES(10, '$request[username]', '$request[id]', '$request[domain]', 'xvda1', 
+            NOW(), '$fechaFin', 1, '1', NOW(), '2309150001', NOW(), '2309150001')");
+            if ($ejec !== false) {
+                $consult = $this->execute("SELECT MAX(T_WORKORDER) as id FROM T_WORKORDER");
+                $ren = $consult->fetch_array(MYSQLI_ASSOC);
+                $ejec2 = $this->execute("INSERT INTO t_compra VALUES(10, '$ren[id]', '$request[pago]', '$request[importe]', 1, '$request[referencia]', 0, NOW(), NOW(), '$fechaPago')");
+                return $ejec2;
+            } else{
+                return 0;
+            }
+            
         } else{
             return 0;
         }
     }
 
-    function consultActivos($request){
-        $ejec = $this->execute("SELECT * FROM t_workorder WHERE T_CLIENT = '$request' AND ENTRY_STATUS='0'");
+    function consultPdf($client){
+        $consult = $this->execute("SELECT MAX(t_workorder.T_WORKORDER) as id FROM t_workorder"); 
+        $ren = $consult->fetch_array(MYSQLI_ASSOC);
+        $ejec = $this->execute("SELECT * FROM t_workorder INNER JOIN t_product on t_workorder.t_product = t_product.t_product 
+        INNER JOIN t_compra on t_workorder.t_workorder = t_compra.t_workorder WHERE T_CLIENT = '$client' AND t_compra.T_WORKORDER='$ren[id]' ");
         return $ejec;
     }
 
-    function consultInactivos($request){
-        $ejec = $this->execute("SELECT * FROM t_workorder WHERE T_CLIENT = '$request' AND ENTRY_STATUS='1'");
+    function consultActivos($client){
+        $ejec = $this->execute("SELECT * FROM t_workorder INNER JOIN t_product on t_workorder.t_product = t_product.t_product 
+        INNER JOIN t_compra on t_workorder.t_workorder = t_compra.t_workorder WHERE T_CLIENT = '$client' AND t_workorder.ENTRY_STATUS='0'");
         return $ejec;
     }
 
-    function mod($request)
-    {
-        $ejec = $this->execute("UPDATE t_workorder SET DESCRIPTION='$request[description]', T_PRODUCT='$request[t_product]', REGISTERED_DOMAIN='$request[registered_domain]', 
-        T_PARTITION='$request[t_partition]', FECHA_INICIO_DE_VIGENCIA='$request[fecha_inicio]', FECHA_FIN_DE_VIGENCIA='$request[fecha_fin]', WORKORDER_FLAG='$request[workorder_flag]', 
-        UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[t_workorder]'");
+    function consultInactivos($client){
+        $ejec = $this->execute("SELECT * FROM t_workorder INNER JOIN t_product on t_workorder.t_product = t_product.t_product 
+         INNER JOIN t_compra on t_workorder.t_workorder = t_compra.t_workorder WHERE T_CLIENT = '$client' AND t_workorder.ENTRY_STATUS='1'");
         return $ejec;
-        
+    }
+
+    function consultClient($client){
+        $ejec = $this->execute("SELECT * FROM t_client WHERE USERNAME = '$client'");
+        return $ejec;
     }
 
     function valida($request){
-        $ejec = $this->execute("SELECT * FROM t_workorder WHERE REGISTERED_DOMAIN = '$request[name_domain]$request[com]'");
+        $ejec = $this->execute("SELECT * FROM t_workorder WHERE REGISTERED_DOMAIN = '$request[name_domain]$request[dns]'");
         if ($ejec->num_rows>0) {
             return 0;
         } else{
             return 1;
         }
+    }
+
+    function activar($request){
+        $ejec = $this->execute("UPDATE t_workorder SET ENTRY_STATUS=0, UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[id]'");
+        return $ejec;
+    }
+
+    function desactivar($request){
+        $ejec = $this->execute("UPDATE t_workorder SET ENTRY_STATUS=1, UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[id]'");
+        return $ejec;
     }
 }

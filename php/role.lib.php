@@ -9,7 +9,7 @@ class Role extends Connection{
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_role VALUES(NULL, '$request[short_description]', '$request[long_description]', '$request[t_privilege]', '0', NOW(), 
+        $ejec = $this->execute("INSERT INTO t_role VALUES(null, '$request[short_description]', '$request[long_description]', '$request[t_privilege]', '0', NOW(), 
         '2309150001', NOW(), '2309150001')");
         return $ejec;
     }

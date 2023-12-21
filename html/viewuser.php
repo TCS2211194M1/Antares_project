@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="/Project_Samava/bsp/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="image/cloud.png">
-    <title>Profile</title>
+    <link rel="icon" href="../image/A113.png">
+    <title>Web Hosting</title>
 </head>
 
 <body id="body-user" onload="cargarModulo('dominios', 'list');">
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <!-- NAV CONTAINER -->
         <div class="container-fluid">
-            <a href="" class="navbar-brand text-info fw-semibold">Samava</a>
+            <a href="" class="navbar-brand text-info fw-semibold">Web Hosting</a>
         
         <!-- BUTTON OF ICON -->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
@@ -53,7 +53,7 @@
                     <li class="nav-item p-3 py-md-1"><a href="../shop/catalog.php" class="nav-link btn"><i class="bi bi-house me-2"></i>Tienda</a></li>
                     <li class="nav-item p-3 py-md-1"><a href="#domains" data-bs-dismiss="offcanvas" class="nav-link btn" onclick="javascript:cargarModulo('dominios', 'list');"><i class="bi bi-globe me-2"></i>Dominios</a></li>
                     <li class="nav-item p-3 py-md-1"><a href="#tickets" data-bs-dismiss="offcanvas" class="nav-link btn" onclick="javascript:cargarModulo('tickets', 'list');"><i class="bi bi-info-circle-fill me-2"></i>Tickets</a></li>
-                    <li class="nav-item p-3 py-md-1"><a href="#usuario" data-bs-dismiss="offcanvas" class="nav-link btn"><i onclick="javascript:cargarModulo('users, details');" class="bi bi-person-vcard me-2"></i>Usuario</a></li>
+                    <li class="nav-item p-3 py-md-1"><a href="#usuario" data-bs-dismiss="offcanvas" class="nav-link btn" onclick="javascript:cargarModulo('usuario', 'details');"><i class="bi bi-person-vcard me-2"></i>Usuario</a></li>
                 </ul>
             </div>
         </section>
@@ -74,7 +74,7 @@
             <div class='row text-white'>
                 <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>
                     <div>
-                        <img src="../image/Logo Samava.png" alt="" class='mb-4 w-75'>
+                        <img src="../image/A113.png" alt="" class='mb-4 rounded w-25'>
                         <h5 class=' px-5 text-center'>Tecnología Comercial y Servicios Integrales Samava Sas de CV</h5>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     </div>
                     <div>
                         <i class="bi bi-telephone fs-3 me-3"></i>
-                        <h5 class='d-inline'>4465465465</h5>
+                        <h5 class='d-inline'>4271196134</h5>
                     </div>
                     <div>
                         <i class="bi bi-envelope fs-3 me-3"></i>

@@ -9,13 +9,13 @@ class Ticket extends Connection{
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_workorder VALUES(NULL, '$request[username]', '$request[id]', '$request[domain]', 'xvda1', 
-        NOW(), '$request[fecha_fin]', 1, '1', NOW(), '2309150001', NOW(), '2309150001')");
+        $ejec = $this->execute("INSERT INTO t_ticket VALUES(null, '$request[username]', '$request[email]', '$request[depto]', '$request[dominio]', 
+        '$request[prioridad]', '$request[asunto]', '$request[mensaje]', 0, NOW(), NOW())");
         return $ejec;
     }
 
     function consult($request){
-        $ejec = $this->execute("SELECT * FROM t_ticket WHERE T_CLIENT='$request' AND ENTRY_STATUS='0'");
+        $ejec = $this->execute("SELECT * FROM t_ticket WHERE T_CLIENT='$request'");
         return $ejec;
     }
 
@@ -36,4 +36,36 @@ class Ticket extends Connection{
             return 1;
         }
     }
+
+    function consultClient($client){
+        $ejec = $this->execute("SELECT * FROM t_client WHERE USERNAME = '$client'");
+        return $ejec;
+    }
+
+    function consultDominios($client){
+        $ejec = $this->execute("SELECT * FROM t_workorder WHERE T_CLIENT = '$client'");
+        return $ejec;
+    }
+
+    function consultActivos(){
+        $ejec = $this->execute("SELECT * FROM t_ticket INNER JOIN t_workorder on t_ticket.t_workorder = t_workorder.t_workorder WHERE t_ticket.ENTRY_STATUS='1'");
+        return $ejec;
+    }
+
+    function consultInactivos(){
+        $ejec = $this->execute("SELECT * FROM t_ticket INNER JOIN t_workorder on t_ticket.t_workorder = t_workorder.t_workorder WHERE t_ticket.ENTRY_STATUS='0'");
+        return $ejec;
+    }
+
+    function activar($request){
+        $ejec = $this->execute("UPDATE t_ticket SET ENTRY_STATUS=1, UPDATE_DATE=NOW() WHERE id_tic = '$request[id]'");
+        return $ejec;
+    }
+
+    function desactivar($request){
+        $ejec = $this->execute("UPDATE t_ticket SET ENTRY_STATUS=0, UPDATE_DATE=NOW() WHERE id_tic = '$request[id]'");
+        return $ejec;
+    }
 }
+
+

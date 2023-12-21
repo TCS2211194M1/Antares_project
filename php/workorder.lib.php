@@ -9,7 +9,7 @@ class WorkOrder extends Connection{
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_workorder VALUES(NULL, '$request[description]', '$request[t_product]', '$request[registered_domain]', '$request[t_partition]', 
+        $ejec = $this->execute("INSERT INTO t_workorder VALUES(null, '$request[username]', '$request[t_product]', '$request[registered_domain]', '$request[t_partition]', 
         '$request[fecha_inicio]', '$request[fecha_fin]', '$request[workorder_flag]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
@@ -21,7 +21,7 @@ class WorkOrder extends Connection{
 
     function mod($request)
     {
-        $ejec = $this->execute("UPDATE t_workorder SET DESCRIPTION='$request[description]', T_PRODUCT='$request[t_product]', REGISTERED_DOMAIN='$request[registered_domain]', 
+        $ejec = $this->execute("UPDATE t_workorder SET T_CLIENT='$request[username]', T_PRODUCT='$request[t_product]', REGISTERED_DOMAIN='$request[registered_domain]', 
         T_PARTITION='$request[t_partition]', FECHA_INICIO_DE_VIGENCIA='$request[fecha_inicio]', FECHA_FIN_DE_VIGENCIA='$request[fecha_fin]', WORKORDER_FLAG='$request[workorder_flag]', 
         UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[t_workorder]'");
         return $ejec;

@@ -8,7 +8,10 @@ class Login extends Connection {
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_login VALUES('999', '$request[login_role]', '0', NOW(), '2309150001', NOW(), '2309150001')");
+        $consult = $this->execute("SELECT MAX(T_LOGIN) as id FROM T_LOGIN");
+        $ren = $consult->fetch_array(MYSQLI_ASSOC);
+        $ren['id'] = $ren['id']+1;
+        $ejec = $this->execute("INSERT INTO t_login VALUES('$ren[id]', '$request[login_role]', '0', NOW(), '2309150001', NOW(), '2309150001')");
         return $ejec;
     }
 

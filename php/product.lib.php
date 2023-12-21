@@ -9,7 +9,7 @@ class Product extends Connection{
     }
 
     function add($request){
-        $ejec = $this->execute("INSERT INTO t_product VALUES(NULL, '$request[short_description]', '$request[long_description]', '$request[t_service]', '$request[hosted_domains]', 
+        $ejec = $this->execute("INSERT INTO t_product VALUES(null, '$request[short_description]', '$request[long_description]', '$request[t_service]', '$request[hosted_domains]', 
         '$request[required_size]', '$request[c_claveunidad]', '$request[nombre]', '$request[product_value]', '$request[c_moneda]', '$request[periodicidad]', '$request[c_objetoimp]', 
         '$request[c_impuesto]', '$request[c_tipofactor]', '$request[c_tasa]', '$request[retencion]', '$request[product_tax]', '$request[contract_fee]', '$request[inicio_vigencia]',
         '$request[fin_vigencia]', '0', NOW(), '2309150001', NOW(), '2309150001')");

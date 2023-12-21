@@ -7,10 +7,10 @@
     max-width: 400px;
     margin: auto;
     margin-top: 60px;
-    background: linear-gradient( rgb(158, 208, 255), rgb(235, 245, 252));
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: cambiarColor 5s infinite alternate;
 }
 
 #create_account, #forget_pass{
@@ -96,11 +96,30 @@ main > .container{
 }
 
 body{
-    background: linear-gradient(to left, rgb(220, 233, 255), rgb(117, 175, 255));
+    background: radial-gradient(rgb(211, 227, 255), rgb(87, 150, 202));
+}
+
+
+@keyframes cambiarColor {
+    0% {
+      background-color: #cae7ff; /* Color inicial */
+    }
+    100% {
+      background-color: #86bee8; /* Color final */
+    }
+  }
+
+@keyframes cambiaProductos {
+    0% {
+        background-color: #86bee8; /* Color inicial */
+      }
+      100% {
+        background-color: #cae7ff;/* Color final */
+      }
 }
 
 #card{
-    background: linear-gradient( rgb(158, 208, 255), rgb(219, 240, 255));
+    animation: cambiaProductos 4s infinite alternate-reverse;
 }
 
 #card-details{
@@ -143,4 +162,8 @@ li:hover{
 
 #body-user{
     background: linear-gradient(rgb(131, 203, 255), rgb(188, 230, 254));
+}
+
+#table-data{
+    background: linear-gradient(rgb(195, 230, 255), rgb(225, 244, 255));
 }

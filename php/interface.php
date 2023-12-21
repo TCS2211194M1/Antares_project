@@ -8,7 +8,165 @@ require_once("../php/functions.php");
 $functions = new Functions();
 
 switch ($_POST["opc"]) {
-        //INTERFACES DE CLIENTES
+    
+    //INTERFACES DE CLIENTES
+    case 'domain':
+        $domains = new Domain();
+        $consultActivos = $domains->consultActivos();
+        $consultInactivos = $domains->consultInactivos();
+        switch ($_POST["acc"]) {
+            case 'list':
+                echo "<div class='mt-3'> <button class='btn btn-danger' onclick='javascript:loadPage()'><i class='bi bi-arrow-left-square me-2'></i>Regresar</button>
+                    <h3 class='my-3 text-center'>Dominios activos</h3>
+                    <div class='table-responsive' style='height: 350px;'>
+                        <table class='table table-hover' >
+                            <thead class='table-dark'>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Dominio</th>
+                                    <th>Producto</th>
+                                    <th>No. Referencia</th>
+                                    <th>Fecha de Compra</th>
+                                    <th>Fecha de Vigencia</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                                while ($ren = $consultActivos->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<tr>
+                                        <td>$ren[T_CLIENT]</td>
+                                        <td>$ren[REGISTERED_DOMAIN]</td>
+                                        <td>$ren[SHORT_DESCRIPTION]</td>
+                                        <td>$ren[referencia_com]</td>
+                                        <td>$ren[create_date]</td>
+                                        <td>$ren[FECHA_FIN_DE_VIGENCIA]</td>
+                                        <td>
+                                            <button class='btn btn-outline-danger' onclick='javascript:desactivarDominio(\"$ren[T_WORKORDER]\");'>Desactivar</button>
+                                        </td>
+                                    </tr>";
+                                }
+                            echo "</tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class='my-3 text-center'>Dominios Inactivos</h3>
+                    <div class='table-responsive mb-5' style='height: 350px;'>
+                        <table class='table table-hover' >
+                            <thead class='table-dark'>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Dominio</th>
+                                    <th>Producto</th>
+                                    <th>No. Referencia</th>
+                                    <th>Fecha de Compra</th>
+                                    <th>Fecha Límite de Pago</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                                while ($ren2 = $consultInactivos->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<tr>
+                                        <td>$ren2[T_CLIENT]</td>
+                                        <td>$ren2[REGISTERED_DOMAIN]</td>
+                                        <td>$ren2[SHORT_DESCRIPTION]</td>
+                                        <td>$ren2[referencia_com]</td>
+                                        <td>$ren2[create_date]</td>
+                                        <td>$ren2[fechaLimite_com]</td>
+                                        <td>
+                                            <button class='btn btn-outline-success' onclick='javascript:activarDominio(\"$ren2[T_WORKORDER]\");'>Activar</button>
+                                        </td>
+                                    </tr>";
+                                }
+                            echo "</tbody>
+                        </table>
+                    </div>";
+                break;
+            default:
+                echo "Error: No seleccionaste alguna operación (Agregar, Listar, Modificar, Eliminar)";
+                break;
+        }
+        break;
+    case 'ticket':
+        $ticket = new Ticket();
+        $consultActivos = $ticket->consultActivos();
+        $consultInactivos = $ticket->consultInactivos();
+        switch ($_POST["acc"]) {
+            case 'list':
+                echo "<div class='mt-3'> <button class='btn btn-danger' onclick='javascript:loadPage()'><i class='bi bi-arrow-left-square me-2'></i>Regresar</button>
+                    <h3 class='my-3 text-center'>Tickets activos</h3>
+                    <div class='table-responsive' style='height: 350px;'>
+                        <table class='table table-hover' >
+                            <thead class='table-dark'>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Email</th>
+                                    <th>Dominio</th>
+                                    <th>Prioridad</th>
+                                    <th>Asunto</th>
+                                    <th>Mensaje</th>
+                                    <th>Fecha de Reporte</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                                while ($ren = $consultActivos->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<tr>
+                                        <td>$ren[t_client]</td>
+                                        <td>$ren[email_tic]</td>
+                                        <td>$ren[REGISTERED_DOMAIN]</td>
+                                        <td>$ren[prioridad_tic]</td>
+                                        <td>$ren[asunto_tic]</td>
+                                        <td>$ren[mensaje_tic]</td>
+                                        <td>$ren[create_date]</td>
+                                        <td>
+                                            <button class='btn btn-outline-success' onclick='javascript:desactivarTicket(\"$ren[id_tic]\");'>Atendido</button>
+                                        </td>
+                                    </tr>";
+                                }
+                            echo "</tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class='my-3 text-center'>Tickets Inactivos</h3>
+                    <div class='table-responsive mb-5' style='height: 350px;'>
+                        <table class='table table-hover' >
+                            <thead class='table-dark'>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Email</th>
+                                    <th>Dominio</th>
+                                    <th>Prioridad</th>
+                                    <th>Asunto</th>
+                                    <th>Mensaje</th>
+                                    <th>Fecha de Reporte</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                                while ($ren2 = $consultInactivos->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<tr>
+                                        <td>$ren2[t_client]</td>
+                                        <td>$ren2[email_tic]</td>
+                                        <td>$ren2[REGISTERED_DOMAIN]</td>
+                                        <td>$ren2[prioridad_tic]</td>
+                                        <td>$ren2[asunto_tic]</td>
+                                        <td>$ren2[mensaje_tic]</td>
+                                        <td>$ren2[create_date]</td>
+                                        <td>
+                                            <button class='btn btn-outline-danger' onclick='javascript:activarTicket(\"$ren2[id_tic]\");'>Activar</button>
+                                        </td>
+                                    </tr>";
+                                }
+                            echo "</tbody>
+                        </table>
+                    </div>";
+                break;
+            default:
+                echo "Error: No seleccionaste alguna operación (Agregar, Listar, Modificar, Eliminar)";
+                break;
+        }
+        break;    
+    //INTERFACES DE USUARIOS
     case 'login':
         $login = new Login();
         switch ($_POST["acc"]) {
@@ -95,7 +253,7 @@ switch ($_POST["opc"]) {
                         </div>
                         <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <input type='number' class='form-control' id='PASSWORD' placeholder='PASSWORD' required/>
+                                <input type='text' class='form-control' id='PASSWORD' placeholder='PASSWORD' required/>
                                 <label for='floatingInput'>PASSWORD</label>
                             </div>
                         </div>
@@ -118,7 +276,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='T_LOGIN'>";
                 while ($ren = $consultLogin->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[T_LOGIN]'>$ren[LOGIN_ROLE]</option>";
+                    echo "<option value='$ren[LOGIN_ROLE]'>$ren[LOGIN_ROLE]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Login</label>
@@ -128,7 +286,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='T_TAXID'>";
                 while ($ren = $consultTaxid->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[T_TAXID]'>$ren[RFC]</option>";
+                    echo "<option value='$ren[RFC]'>$ren[RFC]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Taxid</label>
@@ -173,47 +331,73 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'taxid':
-        $taxid = new Taxid();
         switch ($_POST["acc"]) {
             case 'add':
-                $consultPais = $taxid->consultPais();
                 echo "<h3 class='text-center text-secondary m-3'>Alta Taxid</h3>
                 <form id='form-add-taxid'>
                     <div class='row'>
-                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
                                 <input type='text' class='form-control' id='RFC' placeholder='RFC' required/>
                                 <label for='floatingInput'>RFC</label>
                             </div>
                         </div>
-                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='DIRECCION' placeholder='Dirección' required/>
-                                <label for='floatingInput'>Dirección</label>
+                                <input type='text' class='form-control' id='DIRECCION' placeholder='DIRECCIÓN' required/>
+                                <label for='floatingInput'>DIRECCIÓN</label>
                             </div>
                         </div>
-                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <select class='form-select' id='C_PAIS' onchange='javascript:ajax(\"estado\", \"null\");'>
-                                    <option>Selecciona una opción</option>";
-                while ($ren = $consultPais->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[CODE]'>$ren[DESCRIPCION]</option>";
-                }
-                echo "</select>
-                                <label for='floatingInput'>Pais</label>
+                                <input type='text' class='form-control' id='PAIS' placeholder='PAIS' required/>
+                                <label for='floatingInput'>PAIS</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='ESTADO' placeholder='ESTADO' required/>
+                                <label for='floatingInput'>ESTADO</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='LOCALIDAD' placeholder='LOCALIDAD' required/>
+                                <label for='floatingInput'>LOCALIDAD</label>
                             </div>
                         </div>
                     </div>
                     <div class='row'>
-                        <div class='col-lg-3 col-md-3 col-sm-12'>
-                            <div class='form-floating m-2 shadow' id='selectEstado'></div>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='MUNICIPIO' placeholder='MUNICIPIO' required/>
+                                <label for='floatingInput'>MUNICIPIO</label>
+                            </div>
                         </div>
-                        <div class='col-lg-3 col-md-3 col-sm-12'>
-                            <div class='form-floating m-2 shadow' id='selectMunicipio'></div>
+                        <div class='col-lg-4 col-md-4 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='CODIGOPOSTAL' placeholder='CODIGO POSTAL' required/>
+                                <label for='floatingInput'>CODIGO POSTAL</label>
+                            </div>
                         </div>
-                        <div class='col-lg-3 col-md-3 col-sm-12'>
-                            <div class='form-floating m-2 shadow' id='selectLocalidad'></div>
-                        </div>   
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='COLONIA' placeholder='COLONIA|' required/>
+                                <label for='floatingInput'>COLONIA</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='REGIMENFISCAL' placeholder='REGIMEN FISCAL' required/>
+                                <label for='floatingInput'>REGIMEN FISCAL</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='USOCFDI' placeholder='USOCFDI' required/>
+                                <label for='floatingInput'>USOCFDI</label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class='text-center my-5'>
@@ -260,7 +444,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='T_PRIVILEGE'>";
                 while ($ren = $consultPrivilege->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[T_PRIVILEGE]'>$ren[SHORT_DESCRIPTION]</option>";
+                    echo "<option value='$ren[SHORT_DESCRIPTION]'>$ren[SHORT_DESCRIPTION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Privilege</label>
@@ -380,7 +564,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='T_SERVICE'>";
                 while ($ren = $consultService->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[T_SERVICE]'>$ren[SHORT_DESCRIPTION]</option>";
+                    echo "<option value='$ren[SHORT_DESCRIPTION]'>$ren[SHORT_DESCRIPTION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Service</label>
@@ -405,7 +589,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='C_CLAVEUNIDAD'>";
                 while ($ren = $consultClaveUnidad->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_CLAVEUNIDAD]'>$ren[LONG_DESCRIPTION]</option>";
+                    echo "<option value='$ren[LONG_DESCRIPTION]'>$ren[LONG_DESCRIPTION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Clave Unidad</label>
@@ -430,7 +614,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='C_MONEDA'>";
                 while ($ren = $consultMoneda->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_MONEDA]'>$ren[LONG_DESCRIPTION]</option>";
+                    echo "<option value='$ren[LONG_DESCRIPTION]'>$ren[LONG_DESCRIPTION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Moneda</label>
@@ -446,7 +630,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='PERIODICIDAD'>";
                 while ($ren = $consultPeriodicidad->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_PERIODICIDAD]'>$ren[DESCRIPCION]</option>";
+                    echo "<option value='$ren[DESCRIPCION]'>$ren[DESCRIPCION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Periodicidad</label>
@@ -456,7 +640,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='C_OBJETOIMP'>";
                 while ($ren = $consultObjetoImp->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_OBJETOIMP]'>$ren[DESCRIPCION]</option>";
+                    echo "<option value='$ren[DESCRIPCION]'>$ren[DESCRIPCION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Objeto Impuesto</label>
@@ -466,7 +650,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='C_IMPUESTO'>";
                 while ($ren = $consultImpuesto->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_IMPUESTO]'>$ren[DESCRIPCION]</option>";
+                    echo "<option value='$ren[DESCRIPCION]'>$ren[DESCRIPCION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Impuesto</label>
@@ -476,7 +660,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='C_TIPOFACTOR'>";
                 while ($ren = $consultTipoFactor->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_TIPOFACTOR]'>$ren[DESCRIPCION]</option>";
+                    echo "<option value='$ren[DESCRIPCION]'>$ren[DESCRIPCION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Tipo Factor</label>
@@ -489,7 +673,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='C_TASA'>";
                 while ($ren = $consultTasa->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_IMPUESTO]'>$ren[C_TASA]</option>";
+                    echo "<option value='$ren[C_TASA]'>$ren[C_TASA]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Tasa</label>
@@ -773,8 +957,8 @@ switch ($_POST["opc"]) {
                     <div class='row'>
                         <div class='col-lg-4 col-md-4 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='DESCRIPTION' placeholder='DESCRIPTION' required/>
-                                <label for='floatingInput'>DESCRIPTION</label>
+                                <input type='text' class='form-control' id='USERNAME' placeholder='USERNAME' required/>
+                                <label for='floatingInput'>USERNAME</label>
                             </div>
                         </div>
                         <div class='col-lg-4 col-md-4 col-sm-12'>
@@ -799,7 +983,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='T_PARTITION'>";
                 while ($ren = $consultPartition->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[T_PARTITION]'>$ren[SHORT_DESCRIPTION]</option>";
+                    echo "<option value='$ren[SHORT_DESCRIPTION]'>$ren[SHORT_DESCRIPTION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>Partition</label>
@@ -959,7 +1143,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='T_REGION'>";
                 while ($ren = $consultRegion->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[T_REGION]'>$ren[REGION_NAME]</option>";
+                    echo "<option value='$ren[REGION_NAME]'>$ren[REGION_NAME]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>REGION</label>
@@ -1043,7 +1227,7 @@ switch ($_POST["opc"]) {
                             <div class='form-floating m-2 shadow'>
                                 <select class='form-select' id='C_MONEDA'>";
                 while ($ren = $consultMoneda->fetch_array(MYSQLI_ASSOC)) {
-                    echo "<option value='$ren[C_MONEDA]'>$ren[LONG_DESCRIPTION]</option>";
+                    echo "<option value='$ren[LONG_DESCRIPTION]'>$ren[LONG_DESCRIPTION]</option>";
                 }
                 echo "</select>
                                 <label for='floatingInput'>MONEDA</label>
@@ -1121,7 +1305,6 @@ switch ($_POST["opc"]) {
                 break;
         }
         break;
-    //PENDIENTE POR HACER
     case 'state':
         $country = new Country();
         switch ($_POST["acc"]) {
@@ -1131,94 +1314,58 @@ switch ($_POST["opc"]) {
                         <div class='row'>
                             <div class='col-lg-3 col-md-2 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='NAME' placeholder='NAME' required/>
-                                    <label for='floatingInput'>NAME</label>
+                                    <input type='text' class='form-control' id='STATE_NAME' placeholder='STATE_NAME' required/>
+                                    <label for='floatingInput'>STATE_NAME</label>
                                 </div>
                             </div>
-                            <div class='col-lg-1 col-md-1 col-sm-12'>
+                            <div class='col-lg-2 col-md-1 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='COUNTRY_ID' placeholder='ISO3' required/>
-                                    <label for='floatingInput'>ISO3</label>
+                                    <input type='text' class='form-control' id='COUNTRY_ID' placeholder='COUNTRY_ID' required/>
+                                    <label for='floatingInput'>COUNTRY_ID</label>
                                 </div>
                             </div>
-                            <div class='col-lg-1 col-md-1 col-sm-12'>
+                            <div class='col-lg-2 col-md-1 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='COUNTRY_CODE' placeholder='ISO2' required/>
-                                    <label for='floatingInput'>ISO2</label>
+                                    <input type='text' class='form-control' id='COUNTRY_CODE' placeholder='COUNTRY_CODE' required/>
+                                    <label for='floatingInput'>COUNTRY_CODE</label>
                                 </div>
                             </div>
-                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='col-lg-2 col-md-1 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='REGION_NAME' placeholder='NUMERIC_CODE' required/>
-                                    <label for='floatingInput'>NUMERIC_CODE</label>
-                                </div>
-                            </div>
-                            <div class='col-lg-2 col-md-2 col-sm-12'>
-                                <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='STATE_CODE' placeholder='PHONE_CODE' required/>
-                                    <label for='floatingInput'>PHONE_CODE</label>
+                                    <input type='text' class='form-control' id='COUNTRY_NAME' placeholder='COUNTRY_NAME' required/>
+                                    <label for='floatingInput'>COUNTRY_NAME</label>
                                 </div>
                             </div>
                             <div class='col-lg-3 col-md-2 col-sm-12'>
-                                <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='TYPE, LATITUDE, LONGITUDE' placeholder='CAPITAL' required/>
-                                    <label for='floatingInput'>CAPITAL</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div class='col-lg-2 col-md-2 col-sm-12'>
-                                <div class='form-floating m-2 shadow'>
-                                    <select class='form-select' id='C_MONEDA'>";
-                                    while ($ren = $consultMoneda->fetch_array(MYSQLI_ASSOC)) {
-                                        echo "<option value='$ren[C_MONEDA]'>$ren[LONG_DESCRIPTION]</option>";
-                                    }
-                                    echo "</select>
-                                    <label for='floatingInput'>MONEDA</label>
-                                </div>
-                            </div>
-                            <div class='col-lg-1 col-md-1 col-sm-12'>
-                                <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='TLD' placeholder='TLD' required/>
-                                    <label for='floatingInput'>TLD</label>
-                                </div>
-                            </div>
-                            <div class='col-lg-2 col-md-2 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
                                     <input type='text' class='form-control' id='REGION_NAME' placeholder='REGION_NAME' required/>
                                     <label for='floatingInput'>REGION_NAME</label>
                                 </div>
                             </div>
-                            <div class='col-lg-3 col-md-3 col-sm-12'>
-                                <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='SUBREGION' placeholder='SUBREGION' required/>
-                                    <label for='floatingInput'>SUBREGION</label>
-                                </div>
-                            </div>
-                            <div class='col-lg-3 col-md-3 col-sm-12'>
-                                <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='NATIONALITY' placeholder='NATIONALITY' required/>
-                                    <label for='floatingInput'>NATIONALITY</label>
-                                </div>
-                            </div>
                         </div>
-                        <div class='row'>
+                        <div class='row'>    
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='STATE_CODE' placeholder='STATE_CODE' required/>
+                                    <label for='floatingInput'>STATE_CODE</label>
+                                </div>
+                            </div>
                             <div class='col-lg-3 col-md-2 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='TIME_ZONE_NAME' placeholder='TIME_ZONE_NAME' required/>
-                                    <label for='floatingInput'>TIME_ZONE_NAME</label>
+                                    <input type='text' class='form-control' id='TYPE' placeholder='TYPE' required/>
+                                    <label for='floatingInput'>TYPE</label>
                                 </div>
                             </div>
-                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='col-lg-3 col-md-2 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
                                     <input type='text' class='form-control' id='LATITUDE' placeholder='LATITUDE' required/>
                                     <label for='floatingInput'>LATITUDE</label>
                                 </div>
                             </div>
-                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='col-lg-3 col-md-2 col-sm-12'>
                                 <div class='form-floating m-2 shadow'>
-                                    <input type='text' class='form-control' id='LONGITUDE' placeholder='LONGITUDE' required/>
-                                    <label for='floatingInput'>LONGITUDE</label>
+                                    <input type='text' class='form-control' id='LONGITUDE' placeholder='CLONGITUDE' required/>
+                                    <label for='floatingInput'>LONGITUDEL</label>
                                 </div>
                             </div>
                         </div>
@@ -1226,10 +1373,10 @@ switch ($_POST["opc"]) {
                     <div class='row text-center my-5'>
                         <div class='col-lg-3'></div>    
                         <div class='col-lg-3 mt-3'>
-                            <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addCountry();'>Add</button>
+                            <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addState();'>Add</button>
                         </div>
                         <div class='col-lg-3 mt-3'>
-                            <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"country\",\"list\",\"null\");'>Return</button>
+                            <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"state\",\"list\",\"null\");'>Return</button>
                         </div>
                         <div class='col-lg-3'></div>  
                     </div>";
@@ -1255,10 +1402,10 @@ switch ($_POST["opc"]) {
                 }
                 break;
             case 'mod':
-                $functions->createForm("t_subregion", $_POST["id"]);
+                $functions->createForm("t_state", $_POST["id"]);
                 break;
             case 'delete':
-                $functions->createForm("t_subregion", $_POST["id"]);
+                $functions->createForm("t_state", $_POST["id"]);
                 break;
             default:
                 echo "Error: No seleccionaste alguna operación (Agregar, Listar, Modificar, Eliminar)";
@@ -1361,39 +1508,38 @@ switch ($_POST["opc"]) {
         break;
 
     case 'estado':
-        $estado = new Estado();
         switch ($_POST["acc"]) {
             case 'add':
                 echo "<h3 class='text-center text-secondary m-3'>Alta Estado</h3>
                 <form id='form-add-estado'>
                     <div class='row'>
-                        <div class='col-lg-3 col-md-2 col-sm-12'>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='DESCRIPTION' placeholder='DESCRIPTION' required/>
+                                <input type='text' class='form-control' id='DESCRIPCION' placeholder='DESCRIPCION' required/>
                                 <label for='floatingInput'>DESCRIPCION</label>
                             </div>
                         </div>
-                        <div class='col-lg-1 col-md-1 col-sm-12'>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
                                 <input type='text' class='form-control' id='NOMBRE_DEL_ESTADO' placeholder='NOMBRE_DEL_ESTADO' required/>
                                 <label for='floatingInput'>NOMBRE DEL ESTADO</label>
                             </div>
                         </div>
-                        <div class='col-lg-1 col-md-1 col-sm-12'>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
                                 <input type='text' class='form-control' id='C_PAIS' placeholder='PAIS' required/>
                                 <label for='floatingInput'>PAIS</label>
                             </div>
                         </div>
-                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='FIV' placeholder='FIV' required/>
+                                <input type='date' class='form-control' id='FIV' placeholder='FIV' required/>
                                 <label for='floatingInput'>FECHA INICIO VIGENCIA</label>
                             </div>
                         </div>
-                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
                             <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='FFV' placeholder='FFV' required/>
+                                <input type='date' class='form-control' id='FFV' placeholder='FFV' required/>
                                 <label for='floatingInput'>FECHA FIN VIGENCIA</label>
                             </div>
                     </div>
@@ -1425,7 +1571,6 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'municipio':
-        //$role = new Role();
         switch ($_POST["acc"]) {
             case 'add':
                 echo "En construcción";
@@ -1445,7 +1590,6 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'localidad':
-        //$role = new Role();
         switch ($_POST["acc"]) {
             case 'add':
                 echo "En construcción";
@@ -1465,7 +1609,6 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'colonia':
-        //$role = new Role();
         switch ($_POST["acc"]) {
             case 'add':
                 echo "En construcción";
