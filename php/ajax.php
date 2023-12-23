@@ -27,8 +27,8 @@
         }
 
         //Consulta para filtrar al mostrar la lista de estados para agregar un...
-        function consultState($id){
-            $ejec = $this->execute("SELECT * FROM t_state WHERE COUNTRY_ID = '$id' AND ENTRY_STATUS='0'");
+        function consultCity($id){
+            $ejec = $this->execute("SELECT * FROM t_city WHERE COUNTRY_ID = '$id' AND ENTRY_STATUS='0' LIMIT 1000");
             return $ejec;
         }
     }
@@ -124,83 +124,132 @@
                 </div>
             </div>";
         break; 
+ 
+        case $_POST["opc"] == 'city':
+            $functions = new Functions();
+            $id = $_POST["id"];
+            $consult = $ajax->consultCity($id);
+            $table = 't_city';
+            $encabezado = $functions->descTable("t_city");
+            $columns = array();
+            $cont = 0;
+            $opc = substr($table, 2);
 
-        case $_POST["opc"] == 'comprar':
-            switch ($_POST["pago"] != 0) {
-                case $_POST["pago"] == 'Efectivo':
-                    echo "En construcción efectivo";
-                    break;
-                case $_POST["pago"] == 'paypal':
-                    echo "En construcción paypal";
-                    break;
-                case $_POST["pago"] == 'Transferencia':
-                    echo "<div class='container my-5 p-5 text-center border border-3' id='transferencia'>
-                        <div>
-                            <img src='../image/dominio.png' alt='' style='height: 200px;'>
-                            <h5 class='my-3'>DATOS DE LA COMPRA</h5>
-                            <div class='d-flex justify-content-center'>
-                                <h4 class='border-bottom border-3 border-black w-50 p-1'>Cantidad a pagar:</h4>
-                            </div>
-                            <div class='mt-3 d-flex justify-content-center'>
-                                <h4 class='border-bottom border-3 border-black w-50 p-1'>Fecha límite de pago:</h4>
-                            </div>
-                            <p class='fw-bold'>Instrucciones de Pago</p>
-                        </div>
-                        <div class='text-start p-2 border border-2 my-2'>
-                            <h5 class='text-primary'>Desde BBVA</h5>
-                            <p>En el menú 'Pagar' selecciona la opción 'De servicios' e ingrea el siguiente 'Número de convenio CIE'</p>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>Número de convenio CIE: <p>123456</p></p>
-                            </div>
-                            <p>Ingresa los siguientes datos cuando te los soliciten:</p>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>Referencia: <p>123456</p></p>
-                            </div>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>Importe:<p>USD 4</p></p>
-                            </div>
-                        </div>
-                        <div class='text-start p-2 border border-2'>
-                            <h5 class='text-primary'>Desde cualquier otro banco</h5>
-                            <p>Ingresa a la sección de transferencias o pagos a otros bancos y proporciona los siguientes datos</p>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>Banco destino: <p>BBVA Bancomer</p></p>
-                            </div>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>CLABE: <p>454545</p></p>
-                            </div>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>Concepto de Pago: <p>132456</p></p>
-                            </div>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>Referencia: <p>123456</p></p>
-                            </div>
-                            <div class='d-flex'>
-                                <p class='fw-bold'>Importe: <p>USD 4</p></p>
-                            </div>
-                        </div>
-            
-                        <div class='text-start p-2'>
-                            <span>1. Una vez que hayas completado el pago, haz clic en 'Continuar' y serás redirigido al panel de control.</span>
-                            <br>
-                            <span>2. Tus servicios se activarán una vez que se valide el pago</span>
-                            <br>
-                            <span>3. Si tienes alguna pregunta sobre tu pago o necesitas ayuda, visita nuestro centro de ayuda</span>
-                        </div>
-                        <br>
-                        <div class='mb-3'>
-                            <button class='btn btn-success w-50'>Completado</button>
-                        </div>
+            echo "<div class='mt-5'> <button class='btn btn-danger' onclick='javascript:loadPage()'><i class='bi bi-arrow-left-square me-2'></i>Regresar</button>
+                <center>
+                    <h3 class='mb-3 shadow rounded-pill bg-dark text-white w-25 p-2 mt-3'>". strtoupper($table)."
+                </center>
+                <div class='text-end'>
+                    <button class='btn btn-sm btn-success rounded d-inline text-end' onclick='javascript:cargarInterfaz(\"$opc\", \"add\");'><i class='bi bi-plus-circle me-1'></i> Agregar nuevo</button>
+                </div>
 
-                        <a href='#' onclick='javascript:pdf();'>Imprimir información de pago</a>
-                    </div>";
-                    break;
-                case $_POST["pago"] == 'Tarjeta de credito':
-                    echo "En construcción tarjeta";
-                    break;
-                default:
-                    echo "Error: No seleccionaste ninguna forma de pago";
-                    break;
+                <div class='mb-3'>
+                    <input type='text' class='form-control me-3 shadow-lg d-inline w-25' placeholder='Buscar por id, descripción, fecha de creación'/>
+                    <button class='btn btn-sm btn-primary rounded-pill d-inline' onclick='javascript:prueba(\"Hola\");'><i class='bi bi-search'></i></button>
+                </div>
+
+                <div class='table-responsive' style='height: 500px;'>
+                    <table class='table table-striped-columns text-center rounded-pill'>
+                        <tr>";
+                            while ($ren = $encabezado->fetch_array(MYSQLI_ASSOC)) {
+                                echo "<td class='table-dark'>$ren[Field]</td>";
+                                $columns[$cont] = $ren['Field'];
+                                $cont++;
+                            }
+                            echo "<td class='table-dark'>Actions</td>
+                        </tr>";
+                        while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
+                            echo "<tr>";
+                                foreach ($columns as $pos => $value){
+                                    if ($pos == 0) {
+                                        echo "<td onclick='javascirpt:prueba(\"$ren[$value]\");'>$ren[$value]</td>";
+                                    } else{
+                                        echo "<td>$ren[$value]</td>";
+                                    }
+                                }
+                                echo "<td>
+                                    <button class='btn btn-info mb-2 d-inline' onclick='javascript:interfaceMod(\"$opc\", ".$ren[$columns[0]].");'><i class='bi bi-pencil-square'></i></button>
+                                    <button class='btn btn-danger d-inline' id='".$ren[$columns[0]]."' onclick='javascript:deleteRow(\"$opc\", ". $ren[$columns[0]] .");'><i class='bi bi-trash'></i></button>
+                                </td>
+                            </tr>";
+                        }
+                    echo "</table>
+                </div>
+            </div>";
+        break;         
+
+        case $_POST["opc"] == 'consult':
+            $columns = array();
+            $cont = 0;
+            $opc = substr($_POST["table"], 2);
+
+
+            $columnas = $ajax->execute("DESC " . $_POST["table"]);
+            while($colFiltro = $columnas->fetch_array(MYSQLI_ASSOC)){
+                $columns[$cont] = $colFiltro['Field'];
+                $cont++;
+            }
+            $columnas2 = $ajax->execute("DESC " . $_POST["table"]);
+            if ($_POST["table"] != '' || $_POST["table"] != null) {
+                $consult1 = $ajax->execute("SELECT * FROM ". $_POST['table'] ." WHERE ". $columns[0] ." LIKE '$_POST[cadena]%'" );
+                $consult2 = $ajax->execute("SELECT * FROM ". $_POST['table'] ." WHERE ". $columns[1] ." LIKE '$_POST[cadena]%'" );
+                echo "<div class='mt-3'> <button class='btn btn-danger' onclick='javascript:cargarInterfaz(\"$opc\",\"list\")'><i class='bi bi-arrow-left-square me-2'></i>Regresar</button>
+                <h5 class='text-center mt-5'>". strtoupper($opc) ."</h5>";
+                if ($consult1->num_rows > 0) {
+                    echo "<div class='table-responsive my-2' style='height: 500px;'>
+                            <table class='table table-striped-columns text-center rounded-pill'>
+                                <tr>";
+                                    while ($ren = $columnas2->fetch_array(MYSQLI_ASSOC)) {
+                                        echo "<td class='table-dark'>$ren[Field]</td>";
+                                    }
+                                    echo "<td class='table-dark'>Actions</td>";
+                                echo "</tr>";
+                                while ($ren = $consult1->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<tr>";
+                                        foreach ($columns as $pos => $value){
+                                            if ($pos == 0) {
+                                                echo "<td style='cursor:pointer;' ondblclick='javascirpt:interfaceMod(\"$opc\", \"$ren[$value]\");'>$ren[$value]</td>";
+                                            } else{
+                                            echo "<td>$ren[$value]</td>";
+                                        }
+                                }
+                                echo "<td>
+                                    <button class='btn btn-info mb-2 d-inline' onclick='javascript:interfaceMod(\"$opc\", ".$ren[$columns[0]].");'><i class='bi bi-pencil-square'></i></button>
+                                    <button class='btn btn-danger d-inline' id='".$ren[$columns[0]]."' onclick='javascript:deleteRow(\"$opc\", ". $ren[$columns[0]] .");'><i class='bi bi-trash'></i></button>
+                                </td>
+                            </tr>";
+                        }   
+                    echo"</table></div>"; 
+                } elseif ($consult2->num_rows > 0) {
+                    echo "<div class='table-responsive my-5' style='height: 500px;'>
+                            <table class='table table-striped-columns my-5 text-center rounded-pill'>
+                                <tr>";
+                                    while ($ren = $columnas2->fetch_array(MYSQLI_ASSOC)) {
+                                        echo "<td class='table-dark'>$ren[Field]</td>";
+                                    }
+                                    echo "<td class='table-dark'>Actions</td>";
+                                echo "</tr>";
+                                while ($ren = $consult2->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<tr>";
+                                        foreach ($columns as $pos => $value){
+                                            if ($pos == 0) {
+                                                echo "<td style='cursor:pointer;' ondblclick='javascirpt:interfaceMod(\"$opc\", \"$ren[$value]\");'>$ren[$value]</td>";
+                                            } else{
+                                            echo "<td>$ren[$value]</td>";
+                                            }
+                                        }
+                                        echo "<td>
+                                            <button class='btn btn-info mb-2 d-inline' onclick='javascript:interfaceMod(\"$opc\", ".$ren[$columns[0]].");'><i class='bi bi-pencil-square'></i></button>
+                                            <button class='btn btn-danger d-inline' id='".$ren[$columns[0]]."' onclick='javascript:deleteRow(\"$opc\", ". $ren[$columns[0]] .");'><i class='bi bi-trash'></i></button>
+                                        </td>
+                                    </tr>";
+                                }   
+                    echo"</table></div>";
+                } else{
+                    echo "Error: Se desconoce esa columna";
+                }
+            } else {
+                echo "Error: No existe la tabla";
             }
         break;
 

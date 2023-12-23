@@ -7,6 +7,11 @@
         $username = $_SESSION["username"];
         $account = $_SESSION["account"];
     }
+
+    if (isset($_POST["close"])) {
+        session_destroy();
+        header("Location: /Project_Samava/login.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -24,13 +29,15 @@
     <title>Admin Samava</title>
 </head>
 
-<body id="body-main">
+<body id="body-main" onload="actualizar();">
     <nav class="navbar bg-dark" id="nav-bar">
         <div class="container-fluid">
             <a class="navbar-brand text-white">Antares Project</a>
             <div class="d-flex">
                 <a href="../Project_Samava/shop/catalog.php" class="btn btn-outline-warning me-2"><i class="bi bi-gear me-2"></i>Vista Cliente</a>
-                <a href="login.php" class="btn btn-outline-danger"><i class="bi bi-box-arrow-in-left me-2"></i><?php echo $username ?> Cerrar Sesión</a>
+                <form method="post">
+                    <button class="btn btn-outline-danger" name='close'><i class="bi bi-box-arrow-in-left me-2"></i><?php echo $username ?> Cerrar Sesión</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -234,15 +241,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 d-flex justify-content-center">
-                <div class="card shadow rounded-4" style="width: 18rem;">
-                    <img src="image/cp.png" class="card-img-top" id="img-card">
-                    <div class="card-body text-center rounded-bottom-4" id="card-body">
-                        <h5 class="card-title"><i class="bi bi-mailbox-flag me-2"></i>Código Postal</h5>
-                        <a class="btn btn-outline-dark d-flex justify-content-center" href="#nav-bar" onclick="javascript:cargarInterfaz('city', 'list')"><i class="bi bi-card-text me-2"></i>Gestionar</a>
-                    </div>
-                </div>
-            </div>
         </div>
         
         <hr class="border border-white border-2 opacity-50 mb-5">
@@ -343,11 +341,12 @@
                 </div>
                 <div>
                     <i class="bi bi-envelope fs-3 me-3"></i>
-                    <h5 class='d-inline text-info'>samava@creativeering.com</h5>
+                    <h5 class='d-inline text-info'>samavaservicios@gmail.com</h5>
                 </div>
             </div>
             <div class='col-lg-4 col-md-6 col-sm-12 text-center'>
                 <h5>Todos los derechos son reservados</h5>
+                <p class='fs-5'>Copyright © 2023</p>
             </div>
         </div>
     </footer>

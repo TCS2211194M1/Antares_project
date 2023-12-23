@@ -249,11 +249,8 @@ switch ($_POST["opc"]) {
                 </div>";
                 }
                 break;
-            case 'delete':
-                echo "En construcción del";
-                break;
             default:
-                echo "Error: No seleccionaste alguna operación (Agregar, Listar, Modificar, Eliminar)";
+                echo "Error: No seleccionaste alguna operación (Agregar, Listar)";
                 break;
         }
         break;
@@ -288,12 +285,16 @@ switch ($_POST["opc"]) {
                                         <th class='fw-normal'>$ren[EMAIL]</th>
                                     </tr>
                                     <tr>
+                                        <th>Contraseña:</th>
+                                        <th class='fw-normal'>$ren[PASSWORD]</th>
+                                    </tr>
+                                    <tr>
                                         <th>Celular:</th>
                                         <th class='fw-normal'>$ren[CELLPHONE]</th>
                                     </tr>
                                     <tr>
                                         <th class='text-center table-borderless'>
-                                            <button class='btn btn-outline-primary'><i class='bi bi-pencil-square me-2'></i>Modificar Datos</button>
+                                            <button class='btn btn-outline-primary' onclick='javascript:cargarModulo(\"usuario\", \"mod\");'><i class='bi bi-pencil-square me-2'></i>Modificar Datos</button>
                                         </th>
                                         <th class='text-center table-borderless'>
                                             <form method='POST'>
@@ -336,14 +337,69 @@ switch ($_POST["opc"]) {
                 break;
 
             case 'mod':
-                echo "En construcción";
+                $consult = $dominio->consultClient($username);
+                $ren = $consult->fetch_array(MYSQLI_ASSOC);
+                echo "<div class='container shadow rounded-5 p-5' id='mod-user'>
+                <form id='form-mod'>
+                    <input type='hidden' value='$ren[T_CLIENT]' id='T_CLIENT'></input>
+                    <div class='d-flex justify-content-center mb-4'>
+                        <div class='col-lg-1 col-md-2 col-sm-2'>
+                            <h5>Nombre</h5>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-5'>
+                            <input type='text' class='form-control ms-3' id='NAME' value='$ren[LOGIN_NAME]'></input>
+                        </div>
+                    </div>
+                    <div class='d-flex justify-content-center mb-4'>
+                        <div class='col-lg-1 col-md-2 col-sm-2'>
+                            <h5>Apellido</h5>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-5'>
+                            <input type='text' class='form-control ms-3' id='LAST_NAME' value='$ren[LOGIN_LAST_NAME]'></input>
+                        </div>
+                    </div>
+                    <div class='d-flex justify-content-center mb-4'>
+                        <div class='col-lg-1 col-md-2 col-sm-2'>
+                            <h5>Email</h5>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-5'>
+                            <input type='text' class='form-control ms-3' id='EMAIL' value='$ren[EMAIL]'></input>
+                        </div>
+                    </div>
+                    <div class='d-flex justify-content-center mb-4'>
+                        <div class='col-lg-1 col-md-2 col-sm-2'>
+                            <h5>Contraseña</h5>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-5'>
+                            <input type='text' class='form-control ms-3' id='PASSWORD' value='$ren[PASSWORD]'></input>
+                        </div>
+                    </div>
+                    <div class='d-flex justify-content-center mb-4'>
+                        <div class='col-lg-1 col-md-2 col-sm-2'>
+                            <h5>Teléfono</h5>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-5'>
+                            <input type='text' class='form-control ms-3' id='CELLPHONE' value='$ren[CELLPHONE]'></input>
+                        </div>
+                    </div>
+                    </form>
+                    <div class='d-flex justify-content-center mb-4'>
+                        <div class='col-lg-1 col-md-1 col-sm-1'></div>
+                        <div class='col-lg-2'>
+                            <button class='btn btn-outline-success' onclick='javascript:modUser();'>Modificar Datos</button>
+                        </div>
+                        <div class='col-lg-2'>
+                            <button class='btn btn-outline-danger ms-2' onclick='javascript:cargarModulo(\"usuario\", \"details\");'>Cancelar</button>
+                        </div>
+                    </div>
+                </div>";
                 break;    
             default:
-                echo "Error: No seleccionaste alguna operación (Agregar, Listar, Modificar, Eliminar)";
+                echo "Error: No seleccionaste alguna operación (Listar, Modificar)";
                 break;
         }
         break; 
     default:
-        echo "Error, No seleccionaste ninguna opción";
+        echo "Error, No seleccionaste ninguna opción parael cliente";
         break;
 }

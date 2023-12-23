@@ -8,7 +8,7 @@ require_once("../php/functions.php");
 $functions = new Functions();
 
 switch ($_POST["opc"]) {
-    
+
     //INTERFACES DE CLIENTES
     case 'domain':
         $domains = new Domain();
@@ -26,6 +26,7 @@ switch ($_POST["opc"]) {
                                     <th>Dominio</th>
                                     <th>Producto</th>
                                     <th>No. Referencia</th>
+                                    <th>Estatus</th>
                                     <th>Fecha de Compra</th>
                                     <th>Fecha de Vigencia</th>
                                     <th>Acciones</th>
@@ -38,6 +39,7 @@ switch ($_POST["opc"]) {
                                         <td>$ren[REGISTERED_DOMAIN]</td>
                                         <td>$ren[SHORT_DESCRIPTION]</td>
                                         <td>$ren[referencia_com]</td>
+                                        <td>$ren[DESCRIPTION]</td>
                                         <td>$ren[create_date]</td>
                                         <td>$ren[FECHA_FIN_DE_VIGENCIA]</td>
                                         <td>
@@ -58,6 +60,7 @@ switch ($_POST["opc"]) {
                                     <th>Dominio</th>
                                     <th>Producto</th>
                                     <th>No. Referencia</th>
+                                    <th>Estatus</th>
                                     <th>Fecha de Compra</th>
                                     <th>Fecha Límite de Pago</th>
                                     <th>Acciones</th>
@@ -70,6 +73,7 @@ switch ($_POST["opc"]) {
                                         <td>$ren2[REGISTERED_DOMAIN]</td>
                                         <td>$ren2[SHORT_DESCRIPTION]</td>
                                         <td>$ren2[referencia_com]</td>
+                                        <td>$ren2[DESCRIPTION]</td>
                                         <td>$ren2[create_date]</td>
                                         <td>$ren2[fechaLimite_com]</td>
                                         <td>
@@ -1282,10 +1286,10 @@ switch ($_POST["opc"]) {
                 <div class='row text-center my-5'>
                     <div class='col-lg-3'></div>    
                     <div class='col-lg-3 mt-3'>
-                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addCountry();'>Add</button>
+                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addCountry();'>Agregar</button>
                     </div>
                     <div class='col-lg-3 mt-3'>
-                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"country\",\"list\",\"null\");'>Return</button>
+                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"country\",\"list\");'>Regresar</button>
                     </div>
                     <div class='col-lg-3'></div>  
                 </div>";
@@ -1376,7 +1380,7 @@ switch ($_POST["opc"]) {
                             <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addState();'>Add</button>
                         </div>
                         <div class='col-lg-3 mt-3'>
-                            <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"state\",\"list\",\"null\");'>Return</button>
+                            <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"state\",\"list\");'>Regresar</button>
                         </div>
                         <div class='col-lg-3'></div>  
                     </div>";
@@ -1386,8 +1390,8 @@ switch ($_POST["opc"]) {
                 $consult = $country->list();
                 if ($consult->num_rows > 0) {
                     echo "<div class='mt-5'>
-                    <h3>Escoge el país para agregar el estado</h3>
-                    <div class='form-floating m-2 shadow w-25 text-center mt-3'>
+                    <h3>Escoge el país para mostrar los estados</h3>
+                    <div class='form-floating m-2 w-25 text-center mt-3' style='height:500px'>
                         <select class='form-select' id='T_COUNTRY' onchange='javascript:ajax(\"state\", null);'>
                             <option>Selecciona una opción</option>";
                     while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
@@ -1413,13 +1417,107 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'city':
-        switch ($_POST["acc"]) {
+        $country = new Country();
+        switch ($_POST["acc"]) {       
             case 'add':
-
+                 echo "<h3 class='text-center text-secondary m-3'>Alta City</h3>
+                    <form id='form-add-city'>
+                        <div class='row'>
+                            <div class='col-lg-3 col-md-3 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='NAME' placeholder='NAME' required/>
+                                    <label for='floatingInput'>NAME</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-3 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='STATE_ID' placeholder='STATE_ID' required/>
+                                    <label for='floatingInput'>STATE_ID</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-3 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='STATE_CODE' placeholder='STATE_CODE' required/>
+                                    <label for='floatingInput'>STATE_CODE</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-3 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='STATE_NAME' placeholder='STATE_NAME' required/>
+                                    <label for='floatingInput'>STATE_NAME</label>
+                                </div>
+                            </div>
+                        </div>
+                        < class='row'>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='COUNTRY_ID' placeholder='COUNTRY_ID' required/>
+                                    <label for='floatingInput'>COUNTRY_ID</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='COUNTRY_CODE' placeholder='COUNTRY_CODE' required/>
+                                    <label for='floatingInput'>COUNTRY_CODE</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-3 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='COUNTRY_NAME' placeholder='COUNTRY_NAME' required/>
+                                    <label for='floatingInput'>COUNTRY_NAME</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='LATITUDE' placeholder='LATITUDE' required/>
+                                    <label for='floatingInput'>LATITUDE</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-2 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='LONGITUDE' placeholder='LONGITUDE' required/>
+                                    <label for='floatingInput'>LONGITUDE</label>
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-2 col-sm-12'>
+                                <div class='form-floating m-2 shadow'>
+                                    <input type='text' class='form-control' id='WIKIDATA' placeholder='WIKIDATA' required/>
+                                    <label for='floatingInput'>WIKIDATA</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class='row text-center my-5'>
+                        <div class='col-lg-3'></div>    
+                        <div class='col-lg-3 mt-3'>
+                            <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addCity();'>Agregar</button>
+                        </div>
+                        <div class='col-lg-3 mt-3'>
+                            <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"city\",\"list\");'>Regresar</button>
+                        </div>
+                        <div class='col-lg-3'></div>  
+                    </div>";
                 break;
 
             case 'list':
-                $functions->createTable($_POST["opc"], "t_city");
+                $consult = $country->list();
+                if ($consult->num_rows > 0) {
+                    echo "<div class='mt-5'>
+                    <h3>Escoge el país</h3>
+                    <div class='form-floating m-2 w-25 text-center mt-3' style='height:200px'>
+                        <select class='form-select' id='T_COUNTRY' onchange='javascript:ajax(\"city\", null);'>
+                            <option>Selecciona una opción</option>";
+                            while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
+                                echo "<option value='$ren[T_COUNTRY]'>$ren[NAME]</option>";
+                            }
+                        echo "</select>
+                        <label for='floatingInput'>PAÍS</label>
+                    </div>
+                </div>
+                <div id='container-estado'></div>";
+                } else {
+                    echo "Error, no hay países";
+                }
                 break;
             case 'mod':
                 $functions->createForm("t_subregion", $_POST["id"]);
@@ -1433,7 +1531,7 @@ switch ($_POST["opc"]) {
         }
         break;
 
-        //INTERFACES DE Tablas C_
+    //INTERFACES DE Tablas C_
     case 'pais':
         switch ($_POST["acc"]) {
             case 'add':
@@ -1547,10 +1645,10 @@ switch ($_POST["opc"]) {
                 <div class='row text-center my-5'>
                     <div class='col-lg-3'></div>    
                     <div class='col-lg-3 mt-3'>
-                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addEstado();'>Add</button>
+                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addEstado();'>Agregar</button>
                     </div>
                     <div class='col-lg-3 mt-3'>
-                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"estado\",\"list\",\"null\");'>Return</button>
+                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"estado\",\"list\",\"null\");'>Regresar</button>
                     </div>
                     <div class='col-lg-3'></div>  
                 </div>";
@@ -1571,9 +1669,53 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'municipio':
+        $estado = new Estado();
         switch ($_POST["acc"]) {
             case 'add':
-                echo "En construcción";
+                $consult = $estado->list();
+                echo "<h3 class='text-center text-secondary m-3'>Alta Municipio</h3>
+                <form id='form-add-municipio'>
+                    <div class='row'>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='DESCRIPCION' placeholder='DESCRIPCION' required/>
+                                <label for='floatingInput'>DESCRIPCION</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <select class='form-select' id='C_ESTADO'>";
+                                while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<option value='$ren[DESCRIPCION]'>$ren[NOMBRE_DEL_ESTADO]</option>";
+                                }
+                                echo "</select>
+                                <label for='floatingInput'>ESTADO</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FECHA_DE_INICIO_DE_VIGENCIA' placeholder='FECHA_DE_INICIO_DE_VIGENCIA' required/>
+                                <label for='floatingInput'>FECHA INICIO VIGENCIA</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FECHA_DE_FIN_DE_VIGENCIA' placeholder='FECHA_DE_FIN_DE_VIGENCIA' required/>
+                                <label for='floatingInput'>FECHA FIN VIGENCIA</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class='row text-center my-5'>
+                    <div class='col-lg-3'></div>    
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addMunicipio();'>Agregar</button>
+                    </div>
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"municipio\",\"list\");'>Regresar</button>
+                    </div>
+                    <div class='col-lg-3'></div>  
+                </div>";
                 break;
             case 'list':
                 $functions->createTable($_POST["opc"], "c_municipio");
@@ -1590,9 +1732,53 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'localidad':
+        $estado = new Estado();
         switch ($_POST["acc"]) {
             case 'add':
-                echo "En construcción";
+                $consult = $estado->list();
+                echo "<h3 class='text-center text-secondary m-3'>Alta Localidad</h3>
+                <form id='form-add-localidad'>
+                    <div class='row'>
+                        <div class='col-lg-2 col-md-2 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='DESCRIPCION' placeholder='DESCRIPCION' required/>
+                                <label for='floatingInput'>DESCRIPCION</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <select class='form-select' id='C_ESTADO'>";
+                                while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<option value='$ren[DESCRIPCION]'>$ren[NOMBRE_DEL_ESTADO]</option>";
+                                }
+                                echo "</select>
+                                <label for='floatingInput'>ESTADO</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FECHA_DE_INICIO_DE_VIGENCIA' placeholder='FECHA_DE_INICIO_DE_VIGENCIA' required/>
+                                <label for='floatingInput'>FECHA INICIO VIGENCIA</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='date' class='form-control' id='FECHA_DE_FIN_DE_VIGENCIA' placeholder='FECHA_DE_FIN_DE_VIGENCIA' required/>
+                                <label for='floatingInput'>FECHA FIN VIGENCIA</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class='row text-center my-5'>
+                    <div class='col-lg-3'></div>    
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addLocalidad();'>Agregar</button>
+                    </div>
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"localidad\",\"list\");'>Regresar</button>
+                    </div>
+                    <div class='col-lg-3'></div>  
+                </div>";
                 break;
             case 'list':
                 $functions->createTable($_POST["opc"], "c_localidad");
@@ -1611,7 +1797,33 @@ switch ($_POST["opc"]) {
     case 'colonia':
         switch ($_POST["acc"]) {
             case 'add':
-                echo "En construcción";
+                echo "<h3 class='text-center text-secondary m-3'>Alta Colonia</h3>
+                <form id='form-add-colonia'>
+                    <div class='row'>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='CODIGOPOSTAL' placeholder='CÓDIGO POSTAL' required/>
+                                <label for='floatingInput'>CÓDIGO POSTAL</label>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 col-sm-12'>
+                            <div class='form-floating m-2 shadow'>
+                                <input type='text' class='form-control' id='NOMBREASENTAMIENTO' placeholder='NOMBRE DEL ASENTAMIENTO' required/>
+                                <label for='floatingInput'>NOMBRE DEL ASENTAMIENTO</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class='row text-center my-5'>
+                    <div class='col-lg-3'></div>    
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-success bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:addColonia();'>Agregar</button>
+                    </div>
+                    <div class='col-lg-3 mt-3'>
+                        <button class='btn bg-danger bg-gradient text-white rounded-pill shadow w-50' onclick='javascript:cargarInterfaz(\"colonia\",\"list\");'>Regresar</button>
+                    </div>
+                    <div class='col-lg-3'></div>  
+                </div>";
                 break;
             case 'list':
                 $functions->createTable($_POST["opc"], "c_colonia");
@@ -2068,7 +2280,6 @@ switch ($_POST["opc"]) {
         }
         break;
     case 'exportacion':
-        //$role = new Role();
         switch ($_POST["acc"]) {
             case 'add':
                 echo "<h3 class='text-center text-secondary m-3'>Alta Exportación</h3>
@@ -2352,7 +2563,6 @@ switch ($_POST["opc"]) {
                 break;
         }
         break;
-    //Pendiente
     case 'claveprodserv':
         switch ($_POST["acc"]) {
             case 'add':   

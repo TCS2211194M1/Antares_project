@@ -360,6 +360,23 @@ switch ($_POST["opc"]) {
                 echo "No seleccionaste una acción para localidad";
                 break;
         }
+        break;  
+    case 'colonia':
+        $colonia = new Colonia();
+        switch ($_POST["acc"]) {
+            case 'add':
+                echo $colonia->add($_POST);
+                break;
+            case 'mod':
+                echo $colonia->mod($_POST);
+                break;
+            case 'delete':
+                echo $colonia->delete($_POST);
+                break;
+            default:
+                echo "No seleccionaste una acción para localidad";
+                break;
+        }
         break;    
     case 'meses':
         $meses = new Meses();
@@ -615,7 +632,10 @@ switch ($_POST["opc"]) {
                 break;
             case 'desactivar':
                 echo $dominio->desactivar($_POST);
-                break;    
+                break;  
+            case 'actualizar':
+                echo $dominio->actualizar($_POST);
+                break;      
             default:
                 echo "No seleccionaste una acción para dominios";
                 break;
@@ -637,7 +657,18 @@ switch ($_POST["opc"]) {
                 echo "No seleccionaste una acción para tickets";
                 break;
         }
-        break;    
+        break;   
+    case 'usuario':
+        $client = new Client();
+        switch ($_POST["acc"]) {
+            case 'mod':
+                echo $client->modUser($_POST);
+                break;
+            default:
+                echo "No seleccionaste una acción para usuario";
+                break;
+        }
+        break;          
     //Default
     default:
         echo "Error: No seleccionaste una opción";

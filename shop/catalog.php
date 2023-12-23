@@ -102,11 +102,12 @@
                     </div>
                     <div>
                         <i class="bi bi-envelope fs-3 me-3"></i>
-                        <h5 class='d-inline text-info'>samava@creativeering.com</h5>
+                        <h5 class='d-inline text-info'>samavaservicios@gmail.com</h5>
                     </div>
                 </div>
                 <div class='col-lg-4 col-md-6 col-sm-12 text-center'>
                     <h5>Todos los derechos son reservados</h5>
+                    <p class='fs-5'>Copyright © 2023</p>
                 </div>
             </div>
         </footer>

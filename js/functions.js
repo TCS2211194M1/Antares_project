@@ -405,6 +405,7 @@ function addCountry() {
     sol.send(datos);
 }
 
+//Función para agregar un registro a la tabla state
 function addState() {
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-add-state");
@@ -426,6 +427,38 @@ function addState() {
         if (e.target.responseText > 0) {
             swal("Éxito", "El estado se ha registrado con éxito", "success");
             cargarInterfaz("state", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+//Función para agregar un registro a la tabla city
+function addCity() {
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-city");
+
+    datos.append("opc", "city");
+    datos.append("acc", "add");
+    datos.append("name", f.NAME.value);
+    datos.append("state_id", f.STATE_ID.value);
+    datos.append("state_code", f.STATE_CODE.value);
+    datos.append("state_name", f.STATE_NAME.value);
+    datos.append("ci", f.COUNTRY_ID.value);
+    datos.append("cc", f.COUNTRY_CODE.value);
+    datos.append("cn", f.COUNTRY_NAME.value);
+    datos.append("latitude", f.LATITUDE.value);
+    datos.append("longitude", f.LONGITUDE.value);
+    datos.append("wikidata", f.WIKIDATA.value);
+
+    sol.addEventListener("load", function(e){
+
+        if (e.target.responseText > 0) {
+            swal("Éxito", "La ciudad se ha registrado con éxito", "success");
+            cargarInterfaz("city", "list");
         } else {
             swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
         }
@@ -505,6 +538,54 @@ function addMunicipio() {
         if (e.target.responseText > 0) {
             swal("Éxito", "El municipio se ha registrado con éxito", "success");
             cargarInterfaz("municipio", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+//Función para agregar un registro a la tabla localidad
+function addLocalidad() {
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-localidad");
+
+    datos.append("opc", "localidad");
+    datos.append("acc", "add");
+    datos.append("c_estado", f.C_ESTADO.value);
+    datos.append("descripcion", f.DESCRIPCION.value);
+    datos.append("fiv", f.FECHA_DE_INICIO_DE_VIGENCIA.value);
+    datos.append("ffv", f.FECHA_DE_FIN_DE_VIGENCIA.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Éxito", "La localidad se ha registrado con éxito", "success");
+            cargarInterfaz("localidad", "list");
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+//Función para agregar un registro a la tabla colonia
+function addColonia() {
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-add-colonia");
+
+    datos.append("opc", "colonia");
+    datos.append("acc", "add");
+    datos.append("cp", f.CODIGOPOSTAL.value);
+    datos.append("na", f.NOMBREASENTAMIENTO.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Éxito", "La colonia se ha registrado con éxito", "success");
+            cargarInterfaz("colonia", "list");
         } else {
             swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
         }
@@ -948,6 +1029,7 @@ function desactivarDominio(id) {
     sol.send(datos);
 }
 
+//Función para activar un ticket del lado del administrador
 function activarTicket(id) {
     var sol = new XMLHttpRequest();
 
@@ -969,7 +1051,7 @@ function activarTicket(id) {
     sol.send(datos);
 }
 
-//Función para desactivar un dominio
+//Función para desactivar un ticket del lado del administrador
 function desactivarTicket(id) {
     var sol = new XMLHttpRequest();
 
@@ -985,6 +1067,21 @@ function desactivarTicket(id) {
             swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
             cargarInterfaz("ticket", "list");
         }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
+//función sirve para actualizar los dominios que aún no se han pagado
+function actualizar() {
+    var sol = new XMLHttpRequest();
+
+    datos.append("opc", "dominio");
+    datos.append("acc", "actualizar");
+
+    sol.addEventListener("load", function(e){
+
     });
 
     sol.open("POST", "php/process.php");
@@ -1422,6 +1519,67 @@ function mod(opc) {
             sol.send(datos);
             break;    
         
+        case opc == 'municipio':
+            datos.append("c_municipio", f.C_MUNICIPIO.value);
+            datos.append("c_estado", f.C_ESTADO.value);
+            datos.append("descripcion", f.DESCRIPCION.value);
+            datos.append("fiv", f.FECHA_DE_INICIO_DE_VIGENCIA.value);
+            datos.append("ffv", f.FECHA_DE_FIN_DE_VIGENCIA.value);
+
+            sol.addEventListener("load", function(e){
+                if (e.target.responseText > 0) {
+                    swal("Éxito", "El municipio se ha modificado con éxito", "success");
+                    cargarInterfaz("municipio", "list");
+                } else{
+                    swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+                    cargarInterfaz("municipio", "list");
+                }
+            });
+            
+            sol.open("POST", "php/process.php");
+            sol.send(datos);
+            break;    
+
+        case opc == 'localidad':
+            datos.append("c_localidad", f.C_LOCALIDAD.value);
+            datos.append("c_estado", f.C_ESTADO.value);
+            datos.append("descripcion", f.DESCRIPCION.value);
+            datos.append("fiv", f.FECHA_DE_INICIO_DE_VIGENCIA.value);
+            datos.append("ffv", f.FECHA_DE_FIN_DE_VIGENCIA.value);
+
+            sol.addEventListener("load", function(e){
+                if (e.target.responseText > 0) {
+                    swal("Éxito", "La localidad se ha modificado con éxito", "success");
+                    cargarInterfaz("localidad", "list");
+                } else{
+                    swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+                    cargarInterfaz("localidad", "list");
+                }
+            });
+            
+            sol.open("POST", "php/process.php");
+            sol.send(datos);
+            break;
+
+        case opc == 'colonia':
+            datos.append("c_colonia", f.C_COLONIA.value);
+            datos.append("cp", f.C_CODIGOPOSTAL.value);
+            datos.append("na", f.NOMBRE_DEL_ASENTAMIENTO.value);
+
+            sol.addEventListener("load", function(e){
+                if (e.target.responseText > 0) {
+                    swal("Éxito", "La colonia se ha modificado con éxito", "success");
+                    cargarInterfaz("colonia", "list");
+                } else{
+                    swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+                    cargarInterfaz("colonia", "list");
+                }
+            });
+            
+            sol.open("POST", "php/process.php");
+            sol.send(datos);
+            break;
+
         case opc == 'meses':
             datos.append("c_meses", f.C_MESES.value);
             datos.append("descripcion", f.DESCRIPCION.value);
@@ -1747,7 +1905,6 @@ function mod(opc) {
             sol.open("POST", "php/process.php");
             sol.send(datos);
             break;
- 
 
         default:
             swal("Error", "No seleccionaste ninguna opción en js", "error");
@@ -1805,6 +1962,7 @@ function cargarCatalog(acc, id){
     sol.send(datos);
 }
 
+//Función para mostrar las formas de pago que el cliente puede seleccionar
 function formaPago(formaPago, importe) {
     let datos = document.getElementById("data-pay");
     datos.innerHTML = "<h3 class='text-center mb-3'>Detalles del Pago</h3>";
@@ -1839,6 +1997,7 @@ function formaPago(formaPago, importe) {
 
 let dominio = "";
 
+//función para validar el dominio que el cliente está registrando
 function validar() {
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-domain");
@@ -1874,6 +2033,7 @@ function validar() {
     sol.send(datos);
 }
 
+//Función para comprar un producto del lado del cliente
 function comprar(){
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-comprar");
@@ -1932,6 +2092,7 @@ function loadPage() {
     location.href="main.php";
 }
 
+//Peticiones ajax
 function ajax(opc) {
     const http = new XMLHttpRequest();
     const url = 'http://localhost/Project_Samava/php/ajax.php';
@@ -1984,6 +2145,19 @@ function ajax(opc) {
 
             http.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("container-estado").innerHTML = this.responseText;
+                }
+            }
+            break;
+        
+        case opc == "city":
+            var id = document.querySelector("#T_COUNTRY").value;
+
+            datos.append("id", id);
+            datos.append("opc", opc);
+
+            http.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("container").innerHTML = this.responseText;
                 }
             }
@@ -2001,6 +2175,34 @@ function ajax(opc) {
                 }
             }
             break;
+
+        default:
+            swal("Error", "No seleccionaste ninguna opción", "error");
+        break;
+    }
+
+    http.open("POST", url);
+    http.send(datos);
+}
+
+function ajax(opc, table) {
+    const http = new XMLHttpRequest();
+    const url = 'http://localhost/Project_Samava/php/ajax.php';
+
+    switch (true) {
+        case opc == "consult":
+            var cadena = document.getElementById("consulta").value;
+        
+            datos.append("opc", opc);
+            datos.append("table", table);
+            datos.append("cadena", cadena);
+
+            http.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("container").innerHTML = this.responseText;
+                }
+            }
+        break;
 
         default:
             swal("Error", "No seleccionaste ninguna opción", "error");
@@ -2029,6 +2231,33 @@ function cargarModulo(opc, acc){
     sol.send(datos);
 }
 
+function modUser(){
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-mod");
+        
+    datos.append("opc", "usuario");
+    datos.append("acc", "mod");
+    datos.append("t_client", f.T_CLIENT.value);
+    datos.append("name", f.NAME.value);
+    datos.append("last_name", f.LAST_NAME.value);
+    datos.append("email", f.EMAIL.value);
+    datos.append("password", f.PASSWORD.value);
+    datos.append("cellphone", f.CELLPHONE.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText > 0) {
+            swal("Success", "Se han actualizado los datos con éxito", "success");
+            cargarModulo("usuario", "details");
+        } else{
+            swal("Error", "Ocurrió un error al registrar el ticket", "error");
+            cargarModulo("usuario", "details");
+        }
+    });
+        
+    sol.open("POST", "../php/process.php");
+    sol.send(datos);
+}
+//Función para agregar un ticket
 function addTicket(){
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-ticket");
@@ -2057,6 +2286,7 @@ function addTicket(){
     sol.send(datos);
 }
 
+//Función que genera el pdf del pago del cliente
 function pdf() {
     var btn = document.getElementById("btn-pago");
     btn.style.display='none';

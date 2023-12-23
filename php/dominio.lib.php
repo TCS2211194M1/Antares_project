@@ -75,12 +75,23 @@ class Dominio extends Connection{
     }
 
     function activar($request){
-        $ejec = $this->execute("UPDATE t_workorder SET ENTRY_STATUS=0, UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[id]'");
+        $ejec = $this->execute("UPDATE t_workorder SET ENTRY_STATUS=0, WORKORDER_FLAG=2, UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[id]'");
         return $ejec;
     }
 
     function desactivar($request){
-        $ejec = $this->execute("UPDATE t_workorder SET ENTRY_STATUS=1, UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[id]'");
+        $ejec = $this->execute("UPDATE t_workorder SET ENTRY_STATUS=1, WORKORDER_FLAG=3, UPDATE_DATE=NOW() WHERE T_WORKORDER = '$request[id]'");
         return $ejec;
+    }
+
+    function actualizar(){
+        $today = date('Y-m-d');
+        $ejec = $this->execute("SELECT * FROM t_compra INNER JOIN t_workorder on t_compra.t_workorder = t_workorder.t_workorder WHERE t_workorder.workorder_flag = 1");
+        while ($ren = $ejec->fetch_array(MYSQLI_ASSOC)) {
+            if ($today > $ren['fechaLimite_com']) {
+                $this->execute("UPDATE t_workorder SET ENTRY_STATUS=1, WORKORDER_FLAG=3, UPDATE_DATE=NOW() WHERE T_WORKORDER = '$ren[t_workorder]'");
+                $this->execute("UPDATE t_compra SET UPDATE_DATE=NOW() WHERE id_com = '$ren[id_com]'");
+            }
+        }
     }
 }

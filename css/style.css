@@ -167,3 +167,7 @@ li:hover{
 #table-data{
     background: linear-gradient(rgb(195, 230, 255), rgb(225, 244, 255));
 }
+
+#mod-user{
+    animation: cambiaProductos 4s infinite alternate-reverse;
+}

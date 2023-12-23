@@ -47,6 +47,13 @@ class Client extends Connection
         }
     }
 
+    function modUser($request)
+    {
+        $ejec = $this->execute("UPDATE t_client SET LOGIN_NAME='$request[name]', LOGIN_LAST_NAME='$request[last_name]',
+        EMAIL='$request[email]', PASSWORD='$request[password]', CELLPHONE='$request[cellphone]', UPDATE_DATE=NOW() WHERE T_CLIENT='$request[t_client]'");
+        return $ejec;
+    }
+
 
     //Consultas para los campos que requieren de otras tablas
     function login(){

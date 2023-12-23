@@ -56,16 +56,16 @@
                             <label for="username" class="form-label fw-semibold">Nombre de usuario</label>
                             <div class="input-group">
                                 <span class="input-group-text shadow" id="username"><i class="bi bi-person-circle"></i></span>
-                                <input type="text" class="form-control shadow" id="username" name="username" placeholder="Ingrese su nombre de usuario">
+                                <input type="text" class="form-control shadow" id="username" name="username" placeholder="Ingrese su nombre de usuario" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label fw-semibold">Contraseña</label>
                             <div class="input-group">
                                 <span class="input-group-text shadow" id="password"><i class="bi bi-key"></i></span>
-                                <input type="password" class="form-control shadow" id="password" name="password" placeholder="Ingrese su contraseña">
+                                <input type="password" class="form-control shadow" id="password" name="password" placeholder="Ingrese su contraseña" required>
                             </div>
-                            <label class="form-label d-flex justify-content-end text-danger fw-semibold"><a href="" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
+                            <label class="form-label d-flex justify-content-end text-danger fw-semibold"><a href="../Project_Samava/password.php" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
                         </div>
                         <div class="d-flex justify-content-center">
                             <button class="btn btn-outline-primary my-3 fw-semibold" name="login">Iniciar Sesión</button>
