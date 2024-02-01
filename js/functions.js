@@ -16,6 +16,30 @@ function cargarInterfaz(opc, acc){
     sol.send(datos);
 }
 
+function recuperar(){
+    var sol = new XMLHttpRequest();
+    var f = document.querySelector("#form-password");
+    var container = document.getElementById('container-pass');
+    
+    datos.append("opc", "client");
+    datos.append("acc", "pass");
+    datos.append("email", f.EMAIL.value);
+    datos.append("phone", f.PHONE.value);
+
+    sol.addEventListener("load", function(e){
+        if (e.target.responseText != null || e.target.responseText != '') {
+            swal("Éxito", "Se ha verificado correctamente", "success");
+            container.innerHTML="<div class='m-3'><h5>Tu contraseña es:"+ e.target.responseText +"</h5> "+
+            "<p>Puedes cambiarla una vez que ingreses al sistema</p></div>";
+        } else {
+            swal("Error", "Ocurrió un error en: " + e.target.responseText, "error");
+        }
+    });
+
+    sol.open("POST", "php/process.php");
+    sol.send(datos);
+}
+
 // -------------------- Usuarios -------------------- \\
 //Función para agregar un registro de la tabla Login
 function addLogin(){

@@ -47,6 +47,19 @@ class Client extends Connection
         }
     }
 
+    function recuperar($request)
+    {
+        $consult = $this->execute("SELECT T_CLIENT as id FROM t_client WHERE EMAIL='$request[email]' AND CELLPHONE='$request[phone]'");
+        if ($consult->num_rows > 0) {
+            $ren = $consult->fetch_array(MYSQLI_ASSOC);
+            $ejec = $this->execute("SELECT PASSWORD AS pass FROM T_CLIENT WHERE T_CLIENT='$ren[id]'");
+            $res = $ejec->fetch_array(MYSQLI_ASSOC);
+            return $res["pass"];
+        } else{
+            return 0;
+        }
+    }
+
     function modUser($request)
     {
         $ejec = $this->execute("UPDATE t_client SET LOGIN_NAME='$request[name]', LOGIN_LAST_NAME='$request[last_name]',

@@ -1,2 +1,2 @@
-t_partition,short_description,DEVICE_NAME,ATTACHMENT_POINT,PARTITION_SIZE,entry_status,create_date,create_by,update_date,update_by
-0,xvda1,xvda,/,0,0,2023-10-01 20:42:49,antares,2023-10-01 20:42:49,antares
+﻿t_partition,short_description,DEVICE_NAME ,ATTACHMENT_POINT,entry_status,create_date,create_by,update_date,update_by
+1,nvme1n1p01,nvme1n1,/var/www/,0,2023-01-01 00:00:00,2309150001,2023-01-01 00:00:00,2309150001

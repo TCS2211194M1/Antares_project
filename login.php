@@ -23,7 +23,12 @@
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>";
         }
+    }
 
+    $password = '';
+
+    if (isset($_POST['btn-com'])) {
+        $password = 'hola';
     }
 
 ?>
@@ -44,6 +49,30 @@
 
 <body>
     <div class="container">
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="form-password">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Recupera tu contraseña</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" class="form-control mb-3" id="EMAIL" placeholder="Ingresa tu email">
+                            <input type="text" class="form-control" id="PHONE" placeholder="Ingresa tu número de teléfono">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-outline-primary" onclick="javascript:recuperar();">Comprobar</button>
+                        </div>
+                        <div id='container-pass'></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Fomulario -->
         <div class="row">
             <div class="col-md-6 col-sm-12 mx-auto">
                 <div id="container-login">
@@ -65,7 +94,9 @@
                                 <span class="input-group-text shadow" id="password"><i class="bi bi-key"></i></span>
                                 <input type="password" class="form-control shadow" id="password" name="password" placeholder="Ingrese su contraseña" required>
                             </div>
-                            <label class="form-label d-flex justify-content-end text-danger fw-semibold"><a href="../Project_Samava/password.php" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
+                            <label class="form-label d-flex justify-content-end text-danger fw-semibold">
+                                <a id="forget_pass" data-bs-toggle="modal" data-bs-target="#exampleModal">¿Olvidaste tu contraseña?</a>
+                            </label>
                         </div>
                         <div class="d-flex justify-content-center">
                             <button class="btn btn-outline-primary my-3 fw-semibold" name="login">Iniciar Sesión</button>

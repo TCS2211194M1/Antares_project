@@ -41,7 +41,10 @@ switch ($_POST["opc"]) {
                 break;
             case 'addClient':
                 echo $client->addClient($_POST);
-                break;    
+                break;
+            case 'pass':
+                echo $client->recuperar($_POST);
+                break; 
             default:
                 echo "No seleccionaste una acción para clientes";
                 break;
