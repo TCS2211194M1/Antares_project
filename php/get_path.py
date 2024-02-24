@@ -1,10 +1,14 @@
+# get_path.py
+# Este script en Python busca archivos PHP en el directorio actual y crea un directorio de logs si no existe.
+# También crea directorios para cada archivo PHP encontrado, con la estructura de nombre "logs_" seguido del nombre del archivo PHP.
+
 import os
 import sys
 import datetime
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
 log_dir = os.path.join(script_directory, "logs")
-log_file = os.path.join(log_dir, datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S') + '_log.txt')
+log_file = os.path.join(log_dir, datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S') + '_make_php_log_dirs_log.txt')
 
 # Función para crear el directorio de logs si no existe
 def crear_directorio_logs():
@@ -57,12 +61,15 @@ def buscar_y_guardar_archivos_php():
     
     registrar_evento(f"Archivos PHP guardados en php_control. Total encontrados: {len(archivos_php)}")
     
-    # Crear directorios para cada archivo PHP
+    # Crear directorios para cada archivo PHP si no existen
     for archivo_php in archivos_php:
-        nombre_directorio = "logs_" + os.path.splitext(archivo_php)[0]
-        directorio = os.path.join(script_directory, nombre_directorio)
-        os.makedirs(directorio)
-        registrar_evento(f"Directorio {nombre_directorio} creado para el archivo {archivo_php}")
+        nombre_directorio = "logs_" + os.path.splitext(archivo_php)[0]  # Obtener el nombre del archivo sin la extensión
+        directorio_php = os.path.join(script_directory, nombre_directorio)
+        if not os.path.exists(directorio_php):
+            os.makedirs(directorio_php)
+            registrar_evento(f"Directorio '{nombre_directorio}' creado para el archivo PHP '{archivo_php}'")
+        else:
+            registrar_evento(f"Directorio '{nombre_directorio}' para el archivo PHP '{archivo_php}' ya existe")
 
 # Función principal
 def main():
@@ -76,4 +83,6 @@ def main():
     # Buscar archivos PHP en el directorio del script y guardarlos en php_control
     buscar_y_guardar_archivos_php()
 
-main()
+# Llamar a la función principal
+if __name__ == "__main__":
+    main()
