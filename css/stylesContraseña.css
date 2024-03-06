@@ -1,0 +1,191 @@
+/*ESTILOS PARA TODAS LAS CLASES DE LAS CONTRASEÑAS*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, rgb(15, 90, 170), rgb(75, 150, 240)); 
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.6); /* Dos sombras con diferentes configuraciones */
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    max-width: 600px; /* Opcional: ajusta el ancho máximo del contenedor según tus necesidades */
+}
+
+.login-form {
+    padding: 20px;
+}
+
+.image-logo {
+    width: 200px; /* Ancho deseado de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    margin-bottom: 20px; /* Margen en la parte inferior de la imagen */
+}
+
+.login-form h5 {
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    margin-bottom: 20px;
+}
+
+.input-form {
+    margin-bottom: 20px; /* Separación entre el input y los botones */
+}
+
+.effect-1,
+.effect-2,
+.effect-3 {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.effect-1 ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3399ff;
+    transition: 0.4s;
+}
+
+.effect-1:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+}
+
+/*ESTILOS PARA BOTONES*/
+
+.btn {
+    margin-bottom: 20px; /* Separación entre los botones */
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 12px; /* Ajusta el padding para reducir el tamaño */
+    border: 1px solid #4f4f4f;
+    border-radius: 10px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #0174BE;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button:hover {
+    color: #ffffff;
+    border: 1px solid #0174BE;
+}
+
+.button:hover:before {
+    top: -35%;
+    background-color: #0174BE;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+    top: -45%;
+    background-color: #0174BE;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.green-button {
+    background-color: #4BC87F; /* Color verde */
+    border-color: #4BC87F; /* Color del borde */
+    color:white;
+}
+
+.green-button:hover {
+    background-color: #43A680; /* Color de fondo al pasar el mouse */
+}
+
+.green-button:before,
+.green-button:after {
+    background-color: #43A680; /* Color de efectos antes y después */
+}
+
+.green-button:hover {
+    background-color: #43A680; /* Color de fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto a blanco */
+    border-color: #43A680;
+}
+
+.green-button:hover:before,
+.green-button:hover:after {
+    background-color: #43A680; /* Color de efectos antes y después */
+    border-color: #43A680;
+}
+
+
+
+/*INPUTS dentro de Mail y Tel*/
+
+.input {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+
+.input:focus {
+    border: 2px solid var(--input-focus);
+}

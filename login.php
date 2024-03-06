@@ -1,5 +1,5 @@
 <?php
-    require_once("../Project_Samava/php/login.lib.php");
+    require_once("../Antares_project/php/login.lib.php");
 
     if (isset($_POST["login"])) {
         session_start();
@@ -10,13 +10,13 @@
             $_SESSION["password"] = htmlentities($_POST["password"]);
             $_SESSION["account"] = 3;
 
-            header("Location: main.php");
+            header("Location: principal.php");
         } else if ($consult == 2) {
             $_SESSION["username"] = htmlentities($_POST["username"]);
             $_SESSION["password"] = htmlentities($_POST["password"]);
             $_SESSION["account"] = 2;
 
-            header("Location: ../Project_Samava/shop/catalog.php");
+            header("Location: ../Antares_project/principal.php");
         } else{
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                 <strong>Error: </strong>Usuario o Contraseña incorrectos
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/Project_Samava/js/functions.js"></script>
+    <script src="/Antares_project/js/functions.js"></script>
     <link rel="icon" href="image/cloud.png">
     <title>Login</title>
 </head>
@@ -65,7 +65,7 @@
                                 <span class="input-group-text shadow" id="password"><i class="bi bi-key"></i></span>
                                 <input type="password" class="form-control shadow" id="password" name="password" placeholder="Ingrese su contraseña" required>
                             </div>
-                            <label class="form-label d-flex justify-content-end text-danger fw-semibold"><a href="../Project_Samava/password.php" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
+                            <label class="form-label d-flex justify-content-end text-danger fw-semibold"><a href="../Antares_project/recuperarContraseña.php" id="forget_pass">¿Olvidaste tu contraseña?</a></label>
                         </div>
                         <div class="d-flex justify-content-center">
                             <button class="btn btn-outline-primary my-3 fw-semibold" name="login">Iniciar Sesión</button>

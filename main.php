@@ -2,7 +2,7 @@
     session_start();
 
     if ($_SESSION["username"] == '' || $_SESSION == null) {
-        header("Location: ../Project_Samava/login.php");
+        header("Location: ../Antares_project/login.php");
     } else{
         $username = $_SESSION["username"];
         $account = $_SESSION["account"];
@@ -10,7 +10,7 @@
 
     if (isset($_POST["close"])) {
         session_destroy();
-        header("Location: /Project_Samava/login.php");
+        header("Location: /Antares_project/login.php");
     }
 ?>
 
@@ -22,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="../Project_Samava/bsp/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Antares_project/bsp/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="image/cloud.png">
@@ -34,7 +34,7 @@
         <div class="container-fluid">
             <a class="navbar-brand text-white">Antares Project</a>
             <div class="d-flex">
-                <a href="../Project_Samava/shop/catalog.php" class="btn btn-outline-warning me-2"><i class="bi bi-gear me-2"></i>Vista Cliente</a>
+                <a href="../Antares_project/shop/catalog.php" class="btn btn-outline-warning me-2"><i class="bi bi-gear me-2"></i>Vista Cliente</a>
                 <form method="post">
                     <button class="btn btn-outline-danger" name='close'><i class="bi bi-box-arrow-in-left me-2"></i><?php echo $username ?> Cerrar Sesión</button>
                 </form>
@@ -326,7 +326,7 @@
         <div class='row text-white pt-4'>
             <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>
                 <div>
-                    <img src="../Project_samava/image/A113.png" class='mb-4 rounded w-25'>
+                    <img src="../Antares_project/image/A113.png" class='mb-4 rounded w-25'>
                     <h5 class=' px-5 text-center'>Tecnología Comercial y Servicios Integrales Samava Sas de CV</h5>
                 </div>
             </div>

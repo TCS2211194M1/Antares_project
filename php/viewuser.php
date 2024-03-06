@@ -108,7 +108,7 @@ switch ($_POST["opc"]) {
                         <div class='row'>
                             <div class='col-lg-6 col-md-6 col-sm-12'>
                                 <div class='m-2'>
-                                    <label for='USERNAME'>Nombre</label>
+                                    <label for='USERNAME'>Usuario</label>
                                     <input type='text' class='form-control' id='USERNAME' value='$ren[USERNAME]' disabled/>
                                 </div>
                             </div>
@@ -315,7 +315,7 @@ switch ($_POST["opc"]) {
                                                 echo "<th class='fw-normal'>'$renA[REGISTERED_DOMAIN]'</th>";
                                             }
                                         } else{
-                                            echo "<th class='fw-normal'>0</th>";
+                                            echo "<th class='fw-normsal'>0</th>";
                                         }
                                     echo "</tr>
                                     <tr>

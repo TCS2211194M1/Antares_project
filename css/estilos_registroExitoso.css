@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(rgb(255, 255, 255), rgb(105, 167, 255)); /* Fondo con gradiente radial */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2{
+    font-size: 30px;
+
+}
+
+.container {
+    width: 50%;
+    height: 50%;
+    padding: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+}
+
+svg {
+    position: relative; /* Cambiado a relativo para alinear con el contenedor */
+    display: inline-block; /* Mostrar como bloque en línea */
+    height: 250px;
+    width: 100%;
+    height: 350px;
+}
+
+text {
+    font-size: 105px;
+    fill: rgba(1, 116, 190, 0.6);
+    stroke: black;
+    stroke-linejoin: round;
+    stroke-dasharray: 80;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        stroke-dashoffset: 160;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+  }
+  
+  .button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #0174BE;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button:hover {
+    color: #ffffff;
+    border: 1px solid #0174BE;
+  }
+  
+  .button:hover:before {
+    top: -35%;
+    background-color: #0174BE;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .button:hover:after {
+    top: -45%;
+    background-color: #0174BE;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  

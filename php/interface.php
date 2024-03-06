@@ -2830,4 +2830,5 @@ switch ($_POST["opc"]) {
     default:
         echo "Error, No seleccionaste ninguna opción";
         break;
-}
+    }
+        

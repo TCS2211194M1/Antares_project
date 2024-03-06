@@ -24,7 +24,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="../Antares_project/bsp/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'>
-    <link rel="stylesheet" href="../css/estiloP.css">
+    <link rel="stylesheet" href="../css/estilos_index.css">
     <link rel="icon" href="../image/A113.png">
     <title>Web Hosting</title>
 </head>

@@ -58,7 +58,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navBarItems">
                     <div class="navbar-nav text-center">
-                        <a href="../shop/catalog.php" class="nav-link active" aria-current="page" >Catálogo</a>
+                        <a href="../principal.php" class="nav-link active" aria-current="page" >Home</a>
                         <a href="#contacto" class="nav-link" >Contacto</a>
                         <form method="POST" class='d-flex'>
                             <?php  if ($login==null || $login=='') {
@@ -67,7 +67,7 @@
                                 echo "<button name='main' class='nav-link'>Main</button>";
                                 echo "<button name='close' class='nav-link text-danger' id='btn-sesion'><i class='bi bi-box-arrow-in-left'></i>Cerrar Sesión</button>";
                             } else if ($login == 1 || $login == 2 || $login == 3) {
-                                echo "<a href='../html/viewuser.php' class='nav-link'>Usuario</a>
+                                echo "<a href='../html/viewuserN.php' class='nav-link'>Usuario</a>
                                 <button name='close' class='nav-link text-danger d-flex' id='btn-sesion'><i class='bi bi-box-arrow-in-left'></i>Cerrar Sesión</button>";
                             }?>
                         </form>

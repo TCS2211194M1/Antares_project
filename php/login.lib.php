@@ -31,8 +31,10 @@ class Login extends Connection {
         return $ejec;
     }
 
+    //LOGIN_NAME
     function login($request){
-        $ejec = $this->execute("SELECT * FROM t_client WHERE USERNAME='$request[username]' AND PASSWORD='$request[password]' AND ENTRY_STATUS='0'");
+        $username = $request["username"];
+        $ejec = $this->execute("SELECT * FROM t_client WHERE LOGIN_NAME='$request[username]' AND PASSWORD='$request[password]' AND ENTRY_STATUS='0'");
         if ($ejec->num_rows > 0) {
             $ren = $ejec->fetch_array(MYSQLI_ASSOC);
             if ($ren["T_LOGIN"] == '2309150001') {

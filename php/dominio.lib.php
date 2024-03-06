@@ -49,17 +49,24 @@ class Dominio extends Connection{
     }
 
     function consultActivos($client){
-        $ejec = $this->execute("SELECT * FROM t_workorder INNER JOIN t_product on t_workorder.t_product = t_product.t_product 
-        INNER JOIN t_compra on t_workorder.t_workorder = t_compra.t_workorder WHERE T_CLIENT = '$client' AND t_workorder.ENTRY_STATUS='0'");
-        return $ejec;
+        $ejec = $this->execute("SELECT * 
+        FROM t_workorder 
+        INNER JOIN t_product ON t_workorder.T_PRODUCT = t_product.T_PRODUCT 
+        INNER JOIN t_compra ON t_workorder.T_WORKORDER = t_compra.T_WORKORDER 
+        WHERE t_workorder.T_CLIENT = '$client' AND t_workorder.ENTRY_STATUS = '0'");
+    return $ejec;
     }
 
     function consultInactivos($client){
-        $ejec = $this->execute("SELECT * FROM t_workorder INNER JOIN t_product on t_workorder.t_product = t_product.t_product 
-         INNER JOIN t_compra on t_workorder.t_workorder = t_compra.t_workorder WHERE T_CLIENT = '$client' AND t_workorder.ENTRY_STATUS='1'");
+        $ejec = $this->execute("SELECT * 
+        FROM t_workorder 
+        INNER JOIN t_product ON t_workorder.T_PRODUCT = t_product.T_PRODUCT 
+        INNER JOIN t_compra ON t_workorder.T_WORKORDER = t_compra.T_WORKORDER 
+        WHERE t_workorder.T_CLIENT = '$client' AND t_workorder.ENTRY_STATUS = '1'");
         return $ejec;
     }
 
+    // SE MODIFICO EL LOGIN_NAME = USERNAME
     function consultClient($client){
         $ejec = $this->execute("SELECT * FROM t_client WHERE USERNAME = '$client'");
         return $ejec;
