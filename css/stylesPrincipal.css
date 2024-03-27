@@ -12,8 +12,6 @@
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
     scroll-behavior: smooth;
-
-
 }
 
 * {
@@ -26,20 +24,15 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     transition: var(--hover-timing);
-
     background: var(--light-01);
-	
 	width: 100vw;
 	overflow-x: hidden;
-
 }
 
 header {
-    /*    width: 100%;*/
     height: auto;
     position: sticky;
     top: 0;
-    /*    border: 1px solid red;*/
     z-index: 100;
 }
 
@@ -53,7 +46,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 nav {
@@ -90,41 +82,16 @@ nav .navigation-menu > li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*    justify-items: center;*/
 }
 
 nav .navigation-menu > li > a {
     position: relative;
-    /*    border: 1px solid purple;*/
     padding: 0 20px;
     height: 64px;
     display: flex;
     align-items: center;
     justify-items: center;
 }
-
-nav .navigation-menu > li:hover ul.subnav {
-    visibility: visible;
-    opacity: 1;
-    top: 64px;
-
-}
-
-
-nav .navigation-menu > li > ul.subnav {
-    /*    border: 1px solid green;*/
-    visibility: hidden;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    top: 66px;
-    background: var(--light-01);
-    box-shadow: var(--card-hover);
-    border-radius: 12px;
-    opacity: 0;
-    transition: var(--hover-timing);
-}
-
 
 nav > #logo {
     display: flex;
@@ -138,36 +105,20 @@ nav > #logo > span {
     font-size: 32px;
 }
 
-nav > #utility {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    grid-gap: 16px;
-}
-
-.card-large,
-.card-med {
-    /*    border: 1px solid orange;*/
+.card-large{
     flex: 1;
-    /*    width: var(--nav-card-size);*/
-
     position: relative;
     display: flex;
     flex-direction: column;
-    /*    padding: 24px;*/
     transition: var(--hover-timing);
     cursor: pointer;
 }
-
 
 .card-large {
     box-shadow: var(--card-shadow);
     border-radius: 12px;
     overflow: hidden;
-    /*    padding-bottom: 32px;*/
 }
-
-
 
 .card-large:hover {
     box-shadow: var(--card-hover);
@@ -178,10 +129,8 @@ nav > #utility {
     transform: scale(1.01);
 }
 
-
 .card-image {
     width: 100%;
-    /*    height: 90%;*/
     aspect-ratio: 1/1;
     position: relative;
     border-radius: 12px;
@@ -201,9 +150,6 @@ nav > #utility {
     height: 100%;
     position: absolute;
     object-fit: contain;
-
-
-
 }
 
 .card-large a {
@@ -220,75 +166,27 @@ nav > #utility {
     line-height: 1.2;
 }
 
-
-
-
 .card-large > ul {
-    /*    padding: 16px 0 24px;*/
     display: flex;
     flex-direction: column;
     grid-gap: 8px;
     flex: 1;
-    /*    border: 1px solid blue;*/
-
     color: var(--text-01);
-
     padding: 0 40px 40px;
     font-size: 28px;
     font-weight: 600;
     line-height: 1.5;
 }
 
-
-
 .card-large > ul > li a {
     line-height: 32px;
     font-size: 14px;
-    /*    border: 1px solid red;*/
 }
-
-
-.card-large#sup-dog,
-.card-med#sup-dog > .card-image {
-    background: linear-gradient(45deg, #463631 0%, #976C5B 100%);
-}
-
-
-button.btn-outline {
-    color: var(--light-01);
-    border-color: var(--light-01);
-}
-
-
-.card-large#sup-cat,
-.card-med#sup-cat > .card-image {
-    background: linear-gradient(45deg, #F6AE6C 0%, #ECBD73 100%);
-}
-
-
-.card-large#sup-bird,
-.card-med#sup-bird > .card-image {
-    background: linear-gradient(45deg, #EFEFEF 0%, #F2F2F2 100%);
-}
-
-
-.card-large#sup-fish,
-.card-med#sup-fish > .card-image {
-    background: linear-gradient(45deg, #1E4782 0%, #709DDF 100%);
-}
-
 
 .card-large.card-dark a,
 .card-large.card-dark > ul {
     color: var(--text-01);
 }
-
-.card-large.card-light a,
-.card-large.card-light > ul {
-    color: var(--light-01);
-}
-
-
 
 button {
     font-size: 14px;
@@ -302,15 +200,6 @@ button {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-
-
-button.btn-outline-light {
-    color: var(--light-01);
-    background: none;
-    color: var(--light-01);
-    border: 2px solid var(--light-01);
 }
 
 button.btn-outline-dark {
@@ -332,13 +221,6 @@ button.btn-filled-dark {
     border: 2px solid var(--text-01);
 }
 
-.btn-outline-light:hover {
-    background: var(--light-01);
-    border: 2px solid var(--light-01);
-    color: var(--text-01);
-}
-
-
 button:hover,
 .btn-outline-dark.btn-hover-color:hover {
     color: var(--light-01);
@@ -348,22 +230,15 @@ button:hover,
     box-shadow: var(--card-hover);
 }
 
-
-section,
-footer {
+section{
     position: relative;
     width: 100%;
     padding: 0 var(--pg-margin);
 }
 
-
-
-
 section.hero {
-    /*    width: 100%;*/
     height: auto;
     background: var(--brand-02) url('../image/dominio3.png') no-repeat center right;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -373,12 +248,6 @@ section.hero {
 
 }
 
-.btn-group {
-    display: flex;
-    flex-direction: row;
-    grid-gap: 16px;
-}
-
 section.hero h1 {
     font-size: var(--hero-text);
     font-weight: 600;
@@ -386,50 +255,6 @@ section.hero h1 {
     width: 40%;
 
     color: var(--text-01);
-}
-
-.card-med {
-    width: var(--nav-card-size);
-    height: auto;
-    /*    border: 1px solid green;*/
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-.card-med > a {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 4px;
-    padding: 12px 16px 0px;
-}
-
-.card-med > a > span {
-    width: 100%;
-    /*    border: 1px solid blue;*/
-}
-
-.card-med > a > span:nth-of-type(1) {
-    width: 100%;
-    /*    border: 1px solid blue;*/
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-.card-med > a > span:nth-of-type(2) {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    grid-gap: 6px;
-}
-
-.card-med > a > span:nth-of-type(2) > span {
-    font-size: 18px;
 }
 
 #serv-groom > .card-image {
@@ -449,10 +274,9 @@ section.hero h1 {
     box-shadow: var(--card-shadow);
 }
 
-.card-med > .card-image > img {
+.card-image > img {
     width: 80%;
     height: 80%;
-    /*    border: 1px solid red;*/
 }
 
 section:not(.hero) {
@@ -466,9 +290,7 @@ section h2 {
     text-align: center;
     color: var(--text-01);
     margin-bottom: 32px;
-    /*    padding-bottom: 24px;*/
 }
-
 
 .card-wide {
     flex-direction: row;
@@ -498,12 +320,10 @@ section h2 {
     margin-bottom: 16px;
 }
 
-
 .card-wide .subtitle {
     font-size: 14px;
     line-height: 1.4;
     font-weight: 500;
-    /*    margin-top: 8px;*/
     margin-bottom: 24px;
 }
 
@@ -548,50 +368,11 @@ section h2 {
     text-align: center;
 }
 
-
 .btn-group {
     display: flex;
     flex-direction: row;
     grid-gap: 16px;
 }
-
-footer {
-    background: var(--text-01);
-    padding: 80px 80px 0px;
-    margin-top: 80px;
-    display: flex;
-}
-
-
-
-footer ul {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 24px;
-    box-shadow: none;
-    flex: 1;
-    color: var(--light-01);
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 80px;
-
-}
-
-
-footer ul li a {
-    color: var(--light-01);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-
-footer ul li {
-    color: var(--light-01);
-    padding: 0;
-
-}
-
-
 
 @media only screen and (max-width: 600px) {
     :root {
@@ -630,7 +411,6 @@ footer ul li {
 
     nav ul.navigation-menu li a {
         font-size: 16px;
-        /*        padding: 0 12px;*/
         white-space: nowrap;
     }
 
@@ -642,12 +422,10 @@ footer ul li {
         display: none;
     }
 
-
     .btn-group {
         flex-direction: column;
     }
 
-    .shop-pets,
     .services {
         display: flex;
         flex-direction: column;
@@ -672,13 +450,6 @@ footer ul li {
 
         width: 80%;
     }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-
 }
 
 @media only screen and (min-width: 600px) {
@@ -701,7 +472,6 @@ footer ul li {
 
     nav {
         position: relative;
-
     }
 
     nav ul.navigation-menu {
@@ -718,25 +488,9 @@ footer ul li {
         white-space: nowrap;
     }
 
-    nav ul.navigation-menu .subnav {
-        display: none;
-    }
-
-    nav ul.navigation-menu > li:hover .subnav {
-        display: none;
-    }
-
     .btn-group {
         display: flex;
         flex-direction: column;
-    }
-
-    .shop-pets {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row: auto auto;
-        grid-column-gap: 24px;
-        grid-row-gap: 24px;
     }
 
     .services {
@@ -752,11 +506,6 @@ footer ul li {
     #locate p {
 
         width: 60%;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
     }
 }
 
@@ -815,14 +564,6 @@ footer ul li {
 
         width: 40%;
     }
-
-    footer {
-
-
-        flex-direction: row;
-        text-align: left;
-
-    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -878,13 +619,92 @@ footer ul li {
 
         width: 40%;
     }
+}
 
-    footer {
+nav ul.navigation-menu li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px; /* Espaciado entre las opciones del menú */
+}
+
+nav ul.navigation-menu li:last-child {
+    margin-right: 0; /* Eliminar el margen derecho del último elemento */
+}
+
+nav ul.navigation-menu li a {
+    text-decoration: none;
+    color: var(--text-01);
+    font-size: 16px;
+    padding: 10px; /* Ajustar el espaciado interno */
+}
+
+nav ul.navigation-menu li form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul.navigation-menu li form button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-01);
+    padding: 10px; /* Ajustar el espaciado interno */
+    margin-top: 10px; /* Aumentar el margen superior para bajar más el botón */
+    transition: none; /* Eliminar la transición solo para este botón */
+}
 
 
-        flex-direction: row;
-        text-align: left;
+nav ul.navigation-menu li form button:hover {
+    background: transparent;
+    color: var(--text-01);
+}
 
+/* Estilos para el footer */
+#contacto {
+    background-color: #343a40; /* Color de fondo oscuro */
+    color: #ffffff; /* Color del texto blanco */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ajustar el ancho al 100% */
+}
+
+#contacto h5 {
+    margin-bottom: 15px; /* Espaciado inferior */
+    text-align: center; /* Centrar el texto */
+    font-size: 1.2em; /* Aumentar el tamaño del texto */
+}
+
+#contacto a {
+    color: #ffffff; /* Color del enlace blanco */
+}
+
+#contacto a:hover {
+    text-decoration: none; /* Quitar subrayado en hover */
+}
+
+#contacto img {
+    max-width: 150px; /* Ajustar el ancho máximo de la imagen */
+    display: block; /* Asegurar que la imagen se muestre como bloque */
+    margin: 0 auto 20px; /* Centrar la imagen y agregar margen inferior */
+    border-radius: 20px;
+}
+
+#contacto .row {
+    display: flex; /* Utilizar flexbox para alinear los elementos */
+    align-items: center; /* Alinear verticalmente los elementos */
+    justify-content: space-around; /* Espacio entre elementos */
+}
+
+#contacto .col-lg-4 {
+    flex: 1; /* Distribuir el espacio disponible de manera equitativa entre las columnas */
+    text-align: center; /* Centrar el texto */
+}
+
+@media (max-width: 768px) { /* Aplicar solo en dispositivos de hasta 768px de ancho */
+    #contacto .col-sm-12 {
+        text-align: center; /* Centrar el texto en dispositivos pequeños */
     }
-
 }

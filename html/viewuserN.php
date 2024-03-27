@@ -26,9 +26,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Hosting</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlace a Font Awesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/stylesViewuser.css">
+    <link rel="stylesheet" href="../css/styleViewuser.css"> <!-- Enlace estilos vista general -->
+    <link rel="stylesheet" href="../css/stylesViewuserContenedor.css"> <!-- Enlace diferentes opciones -->
     <link rel="icon" href="../image/A113.png">
 </head>
 <body>
@@ -44,12 +46,17 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav no-search">
+                <li class="nav-item"><a href="../principal.php"><i class="fas fa-home"></i> Home</a></li>
                 <li class="nav-item"><a href="../shop/catalog.php"><i class="fas fa-shopping-cart"></i> Tienda</a></li>
-                <li class="nav-item"><a href="#domains"><i class="fas fa-globe"></i> Dominios</a></li>
-                <li class="nav-item"><a href="#tickets"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
-                <li class="nav-item"><a href="#usuario"><i class="fas fa-user"></i> Usuario</a></li>
+                <li class="nav-item"><a href="#" onclick="cargarModulo('dominios', 'list')"><i class="fas fa-globe"></i> Dominios</a></li>
+                <li class="nav-item"><a href="#" onclick="cargarModulo('tickets', 'list')"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+                <li class="nav-item"><a href="#" onclick="cargarModulo('usuario', 'details')"><i class="fas fa-user"></i> Usuario</a></li>
             </ul>
         </nav>
+    </div>
+
+    <div class="mx-3 p-2 mt-3">
+        <div id="container-general"></div>
     </div>
 
     <!-- Footer -->
@@ -90,6 +97,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/functions.js"></script>
+    <script src="../js/validacionesTickets.js"></script>
 
 </body>
 </html>

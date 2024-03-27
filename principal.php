@@ -22,7 +22,7 @@ if (isset($_POST["close"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/estilosPrincipal.css">
+    <link rel="stylesheet" href="css/stylesPrincipal.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="icon" href="image/A113.png">
@@ -36,8 +36,9 @@ if (isset($_POST["close"])) {
                 Tecnología Comercial y Servicios <br> Integrales Samava SAS de CV
             </div>
             <ul class="navigation-menu">
+                <li><a href="principal.php">Home</a></li>
                 <li><a href="../Antares_project/shop/catalog.php">Catálogo</a></li>
-                <li><a href="#locate">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
                 <li><a href="../Antares_project/html/viewuserN.php">Usuario</a></li>
                 <li>
                     <form method="POST" class='d-flex'>
@@ -48,15 +49,14 @@ if (isset($_POST["close"])) {
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Haz brillar tus dominios en la nube con nosotros</h1>
+    <section class="hero" id="hero-section">
+        <h1 id="hero-message">Haz brillar tus dominios en la nube con nosotros</h1>
         <div class="btn-group">
             <a href="../Antares_project/shop/catalog.php" style="text-decoration: none;">
                 <button class="btn-filled-dark">
                     <span class="material-icons-outlined">shopping_cart</span>Explora Todos los Productos
                 </button>
             </a>
-
             <a href="#locate" style="text-decoration: none;">
                 <button class="btn-outline-dark btn-hover-color">
                     <span class="material-icons-outlined">info</span> Conócenos
@@ -102,10 +102,39 @@ if (isset($_POST["close"])) {
         </div>
     </section>
 
+    <!-- Footer -->
+    <div class="bg-dark p-3" id='contacto'>
+        <footer class='pt-5'>
+            <div class='row text-white'>
+                <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-4'>
+                    <div>
+                        <img src="image/A113.png" alt="" class='mb-4 rounded-circle' style='max-width: 100px;'>
+                        <h5 class='px-5 text-center'>Tecnología Comercial y Servicios Integrales Samava Sas de CV</h5>
+                    </div>
+                </div>
+                
+                <div class='col-lg-4 col-md-6 col-sm-12 text-center mb-5'>
+                    <div>
+                        <h5 class='d-inline'><i class="bi bi-geo-alt fs-3 me-1"></i> Castillo de Chapultepec #61, San Juan del Río, Querétaro, México</h5>
+                    </div>
+                    <div>
+                        <h5 class='d-inline'><i class="bi bi-telephone fs-3 me-1"></i> 4271196134</h5>
+                    </div>
+                    <div>
+                        <h5 class='d-inline text-blue'><i class="bi bi-envelope fs-3 me-1"></i> samavaservicios@gmail.com</h5>
+                    </div>
+                </div>
+
+                <div class='col-lg-4 col-md-6 col-sm-12 text-right'>
+                    <h5>Todos los derechos son reservados</h5>
+                    <p class='fs-5'>Copyright © 2023</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Fin del Footer -->
+
     <!-- Scripts al final del cuerpo -->
-    <script>
-        // Puedes mantener la función logout si quieres, pero no es necesaria aquí
-    </script>
+    <script src="js/carrusel.js"></script>
 </body>
 </html>
-

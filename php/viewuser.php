@@ -81,8 +81,8 @@ switch ($_POST["opc"]) {
                 } else{
                     echo "<div class='container mt-4 p-3 text-center shadow rounded-5' id='container-view'>
                         <div class='m-5 p-3'>
-                            <img src='../image/dominio.png' class='rounded' style='height: 250px;'>
-                            <h3 class='mt-5 mb-3'>No tienes ningún dominio</h3>
+                            <img src='../image/compraDominios.gif' class='rounded' style='height: 250px;'>
+                            <h3 class='mt-5 mb-3'>NO TIENES NINGÚN DOMINIO</h3> <br>
                             <a class='btn btn-primary' href='../shop/catalog.php'>Adquirir Dominio</a>
                         </div>
                     </div>";
@@ -101,9 +101,25 @@ switch ($_POST["opc"]) {
                 $consult = $ticket->consultClient($username);
                 $consultD = $ticket->consultDominios($username);
                 $ren = $consult->fetch_array(MYSQLI_ASSOC);
-                echo "<h2 class='text-center'>Abrir Nuevo Ticket</h2>
+                echo "
                 <form id='form-ticket'>
                     <div class='container mt-5 p-3 rounded-4 shadow' id='container-view'>
+                        <h2 class='text-center'>--- ABRIR NUEVO TICKET ---</h2>
+                        <div class='flex items-center gap-4 mt-4'>
+                            <img src='../image/A113.png' width='200' height='200' alt='Logo'>
+                            <div class='text-right'>
+                                 <h2 class='font-bold text-base' style='margin-bottom: 0;'>SAMAVA</h2>
+
+                                <p class='text-sm text-gray-500 dark:text-gray-400'>
+                                    San Juan del Río, Qro.<br>
+                                    Tecnología Comercial y Servicios Integrales Samava SAS de CV<br>
+                                    samavaservicios@gmail.com<br>
+                                    4271196134
+                                </p>
+                            </div>
+                        </div><br>
+                        <hr class='my-4'>
+
                         <h4 class='mb-4'>Información del Ticket</h4>    
                         <div class='row'>
                             <div class='col-lg-6 col-md-6 col-sm-12'>
@@ -123,12 +139,18 @@ switch ($_POST["opc"]) {
                             <div class='col-lg-4 col-md-4 col-sm-12'>
                                 <div class='m-2'>
                                     <label for='DEPARTAMENT'>Departamento</label>
-                                    <input type='text' class='form-control' id='DEPARTAMENT' value='Soporte Técnico' />
+                                    <select class='form-select' id='DEPARTAMENT'>
+                                    <option value=''>Selecciona una opción</option>
+                                    <option value='SOPORTE TÉCNICO' class='form-control'>SOPORTE TÉCNICO</option>
+                                    <option value='ATENCIÓN AL CLIENTE' class='form-control'>ATENCIÓN AL CLIENTE</option>
+                                    <option value='VENTAS' class='form-control'>VENTAS</option>
+                                    <option value='FACTURACIÓN' class='form-control'>FACTURACIÓN</option>
+                                    </select
                                 </div>
                             </div>
                             <div class='col-lg-4 col-md-4 col-sm-12'>
                                 <div class='m-2'>
-                                    <label for='DOMAIN'>Dominios Existentes</label>
+                                    <label for='DOMAIN'>Problemática Existente</label>
                                     <select class='form-select' id='DOMAIN'>
                                         <option>Selecciona una opción</option>";
                                         while ($renD = $consultD->fetch_array(MYSQLI_ASSOC)) {
@@ -141,23 +163,23 @@ switch ($_POST["opc"]) {
                                 <div class='m-2'>
                                     <label for='PRIORITY'>Prioridad</label>
                                     <select class='form-select' id='PRIORITY'>
-                                        <option>Selecciona una opción</option>
-                                        <option class='text-success'>Baja</option>
-                                        <option class='text-warning'>Media</option>
-                                        <option class='text-danger'>Alta</option>
+                                    <option value=''>Selecciona una opción</option>
+                                    <option value='BAJA' class='text-success'>BAJA</option>
+                                    <option value='MEDIA' class='text-warning'>MEDIA</option>
+                                    <option value='ALTA' class='text-danger'>ALTA</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class='container mt-5 p-3 rounded-4 shadow' id='container-view'>
+                        <hr class='my-4'>
+
                         <h4 class='mb-4'>Mensaje</h4>    
                         <div class='row'>
                             <div class='col-lg-12 col-md-12 col-sm-12'>
                                 <div class='m-2'>
                                     <label for='SUBJECT'>Asunto</label>
-                                    <input type='text' class='form-control' id='SUBJECT' placeholder='Escribe el asunto'/>
+                                    <input type='text' class='form-control' id='SUBJECT' placeholder='Escribe el asunto' oninput='validarLongitudMensaje(this, 50); convertirMayusculas(this)'/>
                                 </div>
                             </div>
                         </div>
@@ -165,85 +187,91 @@ switch ($_POST["opc"]) {
                             <div class='col-lg-12 col-md-12 col-sm-12'>
                                 <div class='m-2'>
                                     <label for='MESSAGE'>Mensaje</label>
-                                    <textarea class='form-control' id='MESSAGE' placeholder='Escribe tu mensaje' style='height: 200px'></textarea>
+                                    <textarea class='form-control' id='MESSAGE' placeholder='Escribe tu mensaje' style='height: 90px' oninput='validarLongitudMensaje(this, 200); convertirMayusculas(this)'></textarea>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-                
-                <div class='container mt-3 p-3'>
-                    <div class='row'>
-                        <div class='col-lg-3'></div>
-                        <div class='col-lg-6 text-center'>
-                            <button class='btn btn-primary p-2 me-5 shadow' onclick='javascript:addTicket();'>Subir</button>
-                            <button class='btn btn-danger p-2 shadow' onclick='javascript:cargarModulo(\"tickets\", \"list\");'>Cancelar</button>
+
+                        <hr class='my-4'>
+                            <div class='container mt-3 p-3'>
+                            <div class='row'>
+                                <div class='col-lg-3'></div>
+                                <div class='col-lg-6 text-center'>
+                                    <button class='btn btn-primary p-2 me-5 shadow' onclick='javascript:addTicket();' >Subir</button>
+                                    <button class='btn btn-danger p-2 shadow' onclick='javascript:cargarModulo(\"tickets\", \"list\");'>Cancelar</button>
+                                </div>
+                                <div class='col-lg-3'></div>
+                            </div>            
                         </div>
-                        <div class='col-lg-3'></div>
-                    </div>            
-                </div>";
-                break;
+                    </div>
+                </form>";
+            break;
+    
             case 'list':
                 $consult = $ticket->consult($username);
                 if ($consult->num_rows > 0) {
-                    echo "<button class='btn btn-primary mb-3 p-2' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Añadir otro ticket</button>";
+                    echo "<div id='ticket-section'>"; 
                     while ($ren = $consult->fetch_array(MYSQLI_ASSOC)) {
                         echo "<div class='px-5'>
-                        <h5>Información del Ticket: #$ren[id_tic]</h5>
                         <div class='row'>
                             <div class='col-lg-3 me-5 p-2 mb-1'>
                                 <div class='row rounded-4 shadow' id='container-view'>
+
+                                    <h5>INFORMACIÓN DEL TICKET DE: $username</h5><br>
+
                                     <div class='col-lg-12 p-3 border-bottom'>
-                                        <label for=''>Solicitante</label>
+                                        <label for=''>Solicitante: </label>
                                         <h5>$username</h5>
                                     </div>
                                     <div class='col-lg-12 p-3 border-bottom'>
-                                        <label for=''>Departamento</label>
+                                        <label for=''>Departamento: </label>
                                         <h5>$ren[dpto_tic]</h5>
                                     </div>
                                     <div class='col-lg-12 p-3 border-bottom'>
-                                        <label for=''>Reportado</label>
+                                        <label for=''>Reportado: </label>
                                         <h5>$ren[create_date]</h5>
                                     </div>
                                     <div class='col-lg-12 p-3 border-bottom'>
-                                        <label for=''>Prioridad</label>
-                                        <h5 class='text-danger'>$ren[prioridad_tic]</h5>
+                                        <label for=''>Prioridad: </label>
+                                        <h5 class='text-danger'>" . $ren['prioridad_tic'] . "</h5>
                                     </div>
     
-                                    <div class='col-lg-12 p-3'>
-                                        <label for=''>Estatus</label>";
+                                    <div class='col-lg-12 p-3 border-bottom' >
+                                        <label for=''>Estatus: </label>";
                                         if ($ren["entry_status"] == 1) {
-                                            echo "<h5 class='text-danger'>Pendiente</h5>";
+                                            echo "<h5 class='text-danger'>PENDIENTE</h5>";
                                         } else{
-                                            echo "<h5 class='text-success'>Resuelto</h5>";
+                                            echo "<h5 class='text-success'>RESUELTO</h5>";
                                         }
                                     echo "</div>
+
+                                    <div class='col-lg-12 p-3 border-bottom'>
+                                        <label for=''>Asunto: </label>
+                                        <h5>$ren[asunto_tic]</h5>
+                                    </div>
+
+                                    <div class='col-lg-12 p-3 border-bottom'>
+                                        <label for=''>Mensaje: </label>
+                                        <h5>$ren[mensaje_tic]</h5>
+                                    </div>
+
+                                    <div class='col-lg-12 p-3 border-bottom'>
+                                        <label for=''>IP: </label>
+                                    <h5>$ip</h5>
+                                    </div>  
+
+                                    <button class='btn btn-primary mb-3 p-2' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Añadir otro ticket</button>
+                                
                                 </div>
                             </div>
-    
-                            <div class='col-lg-8 p-2'>
-                                <div class='row shadow rounded-4' id='container-view''>
-                                    <div class='col-lg-12 p-3 border-bottom'>
-                                        <h5>$username</h5>
-                                        <p class='text-end' for=''>Fecha: $ren[create_date]</p>
-                                    </div>
-                                    <div class='col-lg-12 p-3 border-bottom'>
-                                        <div class='d-flex'>
-                                            <p class='fw-bold'> Asunto: <p class='ms-1'> $ren[asunto_tic]</p></p>
-                                        </div>
-                                        <p class='mb-3'>$ren[mensaje_tic]</p>
-                                        <p>IP: $ip</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         </div>";
                     }
+                    echo "</div>"; // Cierra el contenedor
                 } else{
                     echo "<div class='container mt-5 p-3 text-center shadow rounded-5' id='container-view'>
                     <div class='m-5 p-5'>
-                        <img src='../image/cloud.png' alt='' style='width: 64px; height: 64px;'>
-                        <h3 class='mt-5 mb-4'>No tienes tickets pendietes</h3>
+                        <img src='../image/ticket.jpg' alt='' style='width: 200px; height: 200px;'>
+                        <h3 class='mt-5 mb-4'>NO TIENES TICKETS PENDIENTES</h3><br>
                         <button class='btn btn-primary' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Agregar ticket</button>
                     </div>
                 </div>";
@@ -400,6 +428,6 @@ switch ($_POST["opc"]) {
         }
         break; 
     default:
-        echo "Error, No seleccionaste ninguna opción parael cliente";
+        echo "Error, No seleccionaste ninguna opción para el cliente";
         break;
 }

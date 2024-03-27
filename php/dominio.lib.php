@@ -68,7 +68,7 @@ class Dominio extends Connection{
 
     // SE MODIFICO EL LOGIN_NAME = USERNAME
     function consultClient($client){
-        $ejec = $this->execute("SELECT * FROM t_client WHERE USERNAME = '$client'");
+        $ejec = $this->execute("SELECT * FROM t_client WHERE LOGIN_NAME = '$client'");
         return $ejec;
     }
 

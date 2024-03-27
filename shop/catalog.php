@@ -1,34 +1,48 @@
 <?php
-    session_start();
-    error_reporting(0);
-    $login = $_SESSION["account"];
+session_start();
 
-    if ($login==null || $login=='') {
-        session_destroy();
-    } else{
-        if ($_SESSION["account"] == 1) {
-            $username = $_SESSION["username"];
-            $name = $_SESSION["name"];
-            $last_name = $_SESSION["last_name"];
-            $email = $_SESSION["email"];
-            $password = $_SESSION["password"];
-            $cellphone = $_SESSION["cellphone"];
-        } else if ($_SESSION["account"] != 1) {
-            $username = $_SESSION["username"];
-            $new = 1;
-        }
+// Verificar si no hay una sesión iniciada o si la variable de sesión "account" no está establecida
+if (!isset($_SESSION["account"]) || empty($_SESSION["account"])) {
+    header("Location: ../login.php"); // Redirigir a la página de inicio de sesión
+    exit; // Terminar la ejecución del script
+}
+
+// Verificar si se enviaron datos del formulario para cerrar sesión
+if (isset($_POST["close"])) {
+    session_destroy(); // Destruir la sesión actual
+    header("Location: ../login.php"); // Redirigir a la página de inicio de sesión
+    exit; // Terminar la ejecución del script
+} else if (isset($_POST["main"])) {
+    header("Location: ../main.php"); // Redirigir a otra página si se solicita
+    exit; // Terminar la ejecución del script
+} else if (isset($_POST["logueo"])) {
+    header("Location: ../login.php"); // Redirigir a otra página si se solicita
+    exit; // Terminar la ejecución del script
+}
+
+// Si el flujo del programa no se redirige, significa que el usuario tiene una sesión iniciada y puede acceder al contenido restante de este archivo
+$error_reporting = 0; // Puedes configurar el nivel de informes de error aquí, si es necesario
+
+// Tu código restante aquí
+$login = $_SESSION["account"];
+
+if ($login == null || $login == '') {
+    session_destroy();
+} else {
+    if ($_SESSION["account"] == 1) {
+        $username = $_SESSION["username"];
+        $name = $_SESSION["name"];
+        $last_name = $_SESSION["last_name"];
+        $email = $_SESSION["email"];
+        $password = $_SESSION["password"];
+        $cellphone = $_SESSION["cellphone"];
+    } else if ($_SESSION["account"] != 1) {
+        $username = $_SESSION["username"];
+        $new = 1;
     }
-
-
-    if (isset($_POST["close"])) {
-        session_destroy();
-        header("Location: ../login.php");
-    } else if (isset($_POST["main"])) {
-        header("Location: ../main.php");
-    } else if (isset($_POST["logueo"])) {
-        header("Location: ../login.php");
-    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

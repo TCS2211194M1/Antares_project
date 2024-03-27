@@ -34,7 +34,7 @@ class Client extends Connection
     {
 
 
-        $ejec = $this->execute("UPDATE t_client SET USERNAME='$request[username]', LOGIN_NAME='$request[login_name]', LOGIN_LAST_NAME='$request[login_last_name]',
+        $ejec = $this->execute("UPDATE t_client SET USERNAME='$request[login_name]', LOGIN_LAST_NAME='$request[login_last_name]',
         EMAIL='$request[email]', PASSWORD='$request[password]', CELLPHONE='$request[cellphone]', PHONE='$request[phone]', T_LOGIN='$request[t_login]', T_TAXID='$request[t_taxid]', 
         T_WORKORDER='$request[t_workorder]', UPDATE_DATE=NOW() WHERE T_CLIENT='$request[t_client]'");
         return $ejec;
@@ -114,7 +114,6 @@ class Client extends Connection
         $this->execute("SET SQL_SAFE_UPDATES = 1");
     }
 
-    //Consultas para los campos que requieren de otras tablas
     function login(){
         $ejec = $this->execute("SELECT * FROM t_login WHERE ENTRY_STATUS='0'");
         return $ejec;

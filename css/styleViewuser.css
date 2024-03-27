@@ -162,11 +162,7 @@
     background-color: #343a40; /* Color de fondo oscuro */
     color: #ffffff; /* Color del texto blanco */
     padding: 20px; /* Espaciado interno */
-    position: fixed; /* Fijar el footer */
-    bottom: 0; /* Anclar el footer al fondo de la pantalla */
     width: 100%; /* Ajustar el ancho al 100% */
-    left: 0; /* Alinear el footer a la izquierda */
-    z-index: 1000; /* Asegurar que el footer esté en la parte superior */
 }
 
 #contacto h5 {
@@ -205,13 +201,4 @@
     #contacto .col-sm-12 {
         text-align: center; /* Centrar el texto en dispositivos pequeños */
     }
-}
-
-/* Estilos para los iconos */
-.bi {
-    vertical-align: middle; /* Alinear verticalmente los iconos */
-}
-
-.text-blue {
-    color: #007bff !important; /* Cambiar el color del texto a azul */
 }

@@ -2257,34 +2257,6 @@ function modUser(){
     sol.open("POST", "../php/process.php");
     sol.send(datos);
 }
-//Función para agregar un ticket
-function addTicket(){
-    var sol = new XMLHttpRequest();
-    var f = document.querySelector("#form-ticket");
-        
-    datos.append("opc", "ticket");
-    datos.append("acc", "add");
-    datos.append("username", f.USERNAME.value);
-    datos.append("email", f.EMAIL.value);
-    datos.append("depto", f.DEPARTAMENT.value);
-    datos.append("dominio", f.DOMAIN.value);
-    datos.append("prioridad", f.PRIORITY.value);
-    datos.append("asunto", f.SUBJECT.value);
-    datos.append("mensaje", f.MESSAGE.value);
-
-    sol.addEventListener("load", function(e){
-        if (e.target.responseText > 0) {
-            swal("Success", "El ticket se ha registrado con éxito", "success");
-            cargarModulo("tickets", "list");
-        } else{
-            swal("Error", "Ocurrió un error al registrar el ticket", "error");
-            cargarModulo("tickets", "list");
-        }
-    });
-        
-    sol.open("POST", "../php/process.php");
-    sol.send(datos);
-}
 
 //Función que genera el pdf del pago del cliente
 function pdf() {

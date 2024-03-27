@@ -1,0 +1,236 @@
+/* CONTENEDOR DONDE SE IMPRIMIRAN TDDOS LAS OPCIONES */
+#container-general {
+    width: 100%; 
+    height: calc(100vh - 200px); /* Altura igual a la altura de la ventana menos la altura del nav */
+    padding: 20px; /* Espaciado interno para el contenido */
+    background-color: #E8E8E8; 
+    text-align: center; 
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es más largo que el contenedor */
+}
+
+/* DOMINIOS */
+/* ESTILOS CONTENEDOR SI EXISTEN DOMINIOS O NO */
+#container-view {
+    margin-top: 10px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 20px; 
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #FFFFFF; 
+    width: 100%; /* Ancho del contenedor */
+    height: 95%; /* Altura del contenedor */
+    max-width: none; /* Ancho máximo del contenedor (anular el máximo) */
+    max-height: none; /* Altura máxima del contenedor (anular el máximo) */
+}
+
+/* Estilos para la imagen dentro del contenedor */
+#container-view img {
+    height: 250px; 
+    margin-bottom: 20px; 
+}
+
+/* Estilos para el título dentro del contenedor */
+#container-view h3 {
+    margin-top: 20px; 
+    margin-bottom: 10px;
+    font-size: 1.5em; 
+}
+
+/* Estilos para el botón dentro del contenedor */
+#container-view .btn-primary {
+    text-decoration: none; /* Quitar subrayado */
+    color: #fff; 
+    background-color: #2196F3; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 1em; 
+    transition: background-color 0.3s; 
+}
+
+#container-view .btn-primary:hover {
+    background-color: #004D9B; 
+}
+
+
+/* TICKETS */
+/* Estilo N. Ticket */
+#form-ticket {
+    margin-top: 20px; 
+    margin-left: auto; /* Margen izquierdo automático para centrarlo horizontalmente */
+    margin-right: auto; /* Margen derecho automático para centrarlo horizontalmente */
+    width: 80%; 
+    max-width: 800px; /* Ancho máximo del formulario */
+    text-align: left; 
+}
+
+/* Estilos para las etiquetas de los campos de entrada */
+label {
+    font-weight: bold; /* Texto en negrita */
+    display: inline-block; /* Para que las etiquetas ocupen todo el ancho disponible */
+    width: 150px; 
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    /* Conserva el tamaño actual */
+    width: calc(100% - 160px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+/* Estilos para los campos de entrada al enfocar */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    /* Agrega la animación al hacer clic */
+    box-shadow: 0 0 5px rgba(0, 77, 155, 0.5);
+    outline: none; /* Elimina el borde alrededor del elemento al enfocarlo */
+}
+
+/* Estilos para los campos de selección */
+select {
+    appearance: none; /* Eliminar los estilos predeterminados de selección */
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" fill="%237C7C7C" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.293 7.293a1 1 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L10 9.586 6.707 6.293a1 1 0 0 0-1.414 0z"/></svg>'); /* Agregar una flecha personalizada */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-position: right 10px center; /* Posición de la imagen de fondo */
+    padding-right: 30px; 
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.btn-danger {
+    text-decoration: none; 
+    color: #fff; 
+    background-color: #dc3545; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+
+.btn-danger:hover {
+    background-color: #B31312; 
+}
+
+h4 {
+    margin-bottom: 10px; /* Separación inferior */
+}
+
+
+.m-2 {
+    margin-bottom: 15px; 
+}
+
+
+/* Estilos para la línea horizontal */
+hr {
+    border: none; /* Sin borde */
+    height: 2px; /* Altura de la línea */
+    background-color: #ccc; 
+}
+
+/* Estilos para el margen vertical */
+.my-4 {
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+
+
+/* Estilo para el contenedor general solo en este caso */
+#ticket-section .container-view {
+    width: fit-content; /* Ajustar el ancho al contenido */
+    margin: auto; /* Centrar el contenedor */
+    padding: 20px;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+    position: relative; /* Añadir posición relativa para posicionar el botón de forma absoluta */
+}
+
+/* Estilos para los títulos */
+#ticket-section h5 {
+    color: #343a40;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las etiquetas */
+#ticket-section label {
+    color: #6c757d;
+    font-size: 1em;
+    display: block;
+    width: 100px; /* Ancho fijo para los labels, ajusta según necesites */
+    float: left;
+    clear: left;
+}
+
+/* Estilos para los datos */
+#ticket-section h5, #ticket-section p {
+    color: #212529;
+    font-size: 1.1em;
+    margin-left: 120px; /* Margen a la izquierda para los datos, ajusta según necesites */
+}
+
+
+
+#ticket-section .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para las líneas divisorias */
+#ticket-section .border-bottom {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el estatus */
+#ticket-section .text-danger {
+    color: #dc3545;
+}
+
+#ticket-section .text-success {
+    color: #28a745;
+}
+
+/* Estilos para la sombra de los elementos */
+#ticket-section .shadow {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+}
+
+#ticket-section .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px; /* Ajustar el padding horizontal para aumentar el ancho */
+    font-size: 1em;
+    transition: background-color 0.3s;
+    bottom: 20px;
+    right: 20px;
+    margin-left: 120px; /* Margen a la izquierda para los datos, ajusta según necesites */
+
+}
+
+#ticket-section .btn-primary:hover {
+    background-color: #0056b3;
+}
