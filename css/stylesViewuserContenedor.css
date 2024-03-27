@@ -1,0 +1,56 @@
+/* CONTENEDOR DONDE SE IMPRIMIRAN TDDOS LAS OPCIONES */
+#container-general {
+    width: 100%; 
+    height: calc(100vh - 200px); /* Altura igual a la altura de la ventana menos la altura del nav */
+    padding: 20px; /* Espaciado interno para el contenido */
+    background-color: #E8E8E8; 
+    text-align: center; 
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es más largo que el contenedor */
+}
+
+/* ESTILOS CONTENEDOR SI EXISTEN DOMINIOS O NO */
+#container-view {
+    margin-top: 10px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 20px; 
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #FFFFFF; 
+    width: 100%; /* Ancho del contenedor */
+    height: 95%; /* Altura del contenedor */
+    max-width: none; /* Ancho máximo del contenedor (anular el máximo) */
+    max-height: none; /* Altura máxima del contenedor (anular el máximo) */
+}
+
+
+
+/* Estilos para la imagen dentro del contenedor */
+#container-view img {
+    height: 250px; 
+    margin-bottom: 20px; 
+}
+
+/* Estilos para el título dentro del contenedor */
+#container-view h3 {
+    margin-top: 20px; 
+    margin-bottom: 10px;
+    font-size: 1.5em; 
+}
+
+/* Estilos para el botón dentro del contenedor */
+#container-view .btn-primary {
+    text-decoration: none; /* Quitar subrayado */
+    color: #fff; /* Color del texto */
+    background-color: #2196F3; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 1em; /* Tamaño de fuente */
+    transition: background-color 0.3s; 
+}
+
+#container-view .btn-primary:hover {
+    background-color: #004D9B; /* Color de fondo al pasar el ratón */
+}

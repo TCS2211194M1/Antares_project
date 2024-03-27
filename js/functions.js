@@ -1947,6 +1947,7 @@ function deleteRow(opc, id){
 }
 
 // -------------------- Tienda Samava -------------------- \\
+
 function cargarCatalog(acc, id){
     var sol = new XMLHttpRequest();
     var contenido = document.getElementById("container");
@@ -2008,11 +2009,14 @@ function validar() {
     datos.append("dns", f.DNS.value);
     dominio=f.NAME_DOMAIN.value+f.DNS.value;
     var form = document.getElementById("form-comprar");
+    
 
 
     if (f.NAME_DOMAIN.value != '' && f.DNS.value != '') {
         sol.addEventListener("load", function(e){
             var buttons = document.getElementById("buttons-pay");
+            console.log("Respuesta del servidor:", e.target.responseText);
+
             if (e.target.responseText == 1) {
                 swal("Validado", "El nombre del dominio ingresado es correcto", "success");
                 form.style.display = "block"
@@ -2034,12 +2038,18 @@ function validar() {
 }
 
 //Función para comprar un producto del lado del cliente
-function comprar(){
+function comprar() {
+    console.log("Iniciando función comprar...");
+
     var sol = new XMLHttpRequest();
     var f = document.querySelector("#form-comprar");
     var username = document.getElementById("USERNAME").value;
     var formaPago = '';
-        
+    
+    console.log("Obteniendo datos del formulario...");
+    
+    var datos = new FormData(); // Inicializando FormData
+
     datos.append("opc", "dominio");
     datos.append("acc", "add");
     datos.append("id", f.ID.value);
@@ -2048,44 +2058,56 @@ function comprar(){
     datos.append("importe", f.IMPORTE.value);
     datos.append("referencia", f.REFERENCIA.value);
 
+    console.log("Datos del formulario agregados a FormData.");
+
     if (document.getElementById('1').checked) {
         formaPago = 'Efectivo';
-    } else if(document.getElementById('3').checked){
+    } else if (document.getElementById('3').checked) {
         formaPago = 'Transferencia';
-    } else if(document.getElementById('4').checked || document.getElementById('28').checked){
-        formaPago = 'Tarjeta de credito';
+    } else if (document.getElementById('4').checked || document.getElementById('28').checked) {
+        formaPago = 'Tarjeta de crédito';
     }
 
-    if (formaPago!='') {
+    console.log("Forma de pago seleccionada: " + formaPago);
+
+    if (formaPago !== '') {
         datos.append("pago", formaPago);
 
-        if (username == '' || username == null) {
+        if (username === '' || username === null) {
+            console.log("Usuario no identificado. Redirigiendo a la página de inicio de sesión...");
             location.href = "../login.php";
-        } else{
-            sol.addEventListener("load", function(e){
-                if (e.target.responseText > 0) {
-                    if (formaPago == 'Transferencia') {
-                        swal("Success", "La compra se ha realizado con éxito", "success");
+        } else {
+            console.log("Enviando solicitud al servidor...");
+            
+            sol.addEventListener("load", function(e) {
+                console.log("Respuesta del servidor:", e.target.responseText);
+                
+                if (e.target.responseText > 0) { // verificar de donde viene responseText
+                    if (formaPago === 'Transferencia') {
+                        console.log("Compra realizada con éxito. Redirigiendo a la página principal...");
+                        swal("Éxito", "La compra se ha realizado con éxito", "success");
                         location.href = "../html/indexT.php";
-                    } else if (formaPago == 'Efectivo'){
-                        swal("Success", "Se ha generado su hoja de pago", "success");
+                    } else if (formaPago === 'Efectivo') {
+                        console.log("Se ha generado la hoja de pago. Redirigiendo a la página principal...");
+                        swal("Éxito", "Se ha generado su hoja de pago", "success");
                         location.href = "../html/indexE.php";
                     }
-                } else{
+                } else {
+                    console.log("Error al realizar la compra.");
                     swal("Error", "Ocurrió un error al realizar tu compra", "error");
-                    location.href = "../shop/catalog.php";
+                    // ¿Qué hace esta función sleep(3)? No parece una función estándar de JavaScript.
                 }
             });
-        
+
             sol.open("POST", "../php/process.php");
             sol.send(datos);
         }
-    } else{
+    } else {
+        console.log("Error: Selecciona una forma de pago.");
         swal("Error", "Selecciona una forma de pago", "error");
     }
-
- 
 }
+
 
 // ------------------- Peticiones Ajax -------------------- \\
 function loadPage() {
@@ -2095,7 +2117,7 @@ function loadPage() {
 //Peticiones ajax
 function ajax(opc) {
     const http = new XMLHttpRequest();
-    const url = 'http://localhost/Project_Samava/php/ajax.php';
+    const url = 'http://localhost/Antares_project/php/ajax.php'; //aqui estaba como Project_Samava
 
     switch (true) {
         case opc == "estado":
@@ -2187,7 +2209,7 @@ function ajax(opc) {
 
 function ajax(opc, table) {
     const http = new XMLHttpRequest();
-    const url = 'http://localhost/Project_Samava/php/ajax.php';
+    const url = 'http://localhost/Antares_project/php/ajax.php'; // aqui estaba como Project_Samava
 
     switch (true) {
         case opc == "consult":
@@ -2313,3 +2335,62 @@ function pdf() {
     .save()
     .catch(err => console.log(err));
 }
+
+//  AQUI VA LO NUEVO QUE HICE  NOTAAAAAAAAAA!!!!!!!!
+
+var saved = false;
+
+function enableEdit(fieldName) {
+    var field = document.getElementById(fieldName);
+    field.disabled = false;
+    field.focus();
+
+    if (fieldName === 'password') {
+      document.getElementById('confirmPasswordDiv').style.display = 'block';
+      document.getElementById('confirmPassword').disabled = false;
+      document.getElementById('showPasswordCheckbox').disabled = false; // Habilitar el checkbox
+    } else {
+      document.getElementById('confirmPasswordDiv').style.display = 'none';
+      document.getElementById('confirmPassword').disabled = true;
+      document.getElementById('showPasswordCheckbox').disabled = true; // Deshabilitar el checkbox
+    }
+  }
+
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('PASSWORD');
+    var checkbox = document.getElementById('showPasswordCheckbox');
+    
+    if (checkbox.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+}
+
+function toggleEditMode(inputId) {
+    var input = document.getElementById(inputId);
+    var editButton = document.getElementById("editButton_" + inputId);
+
+    input.disabled = !input.disabled;
+
+    // Cambiar el texto del botón entre "Editar" y "Guardar"
+    if (input.disabled) {
+        editButton.innerHTML = "Editar";
+    } else {
+        editButton.innerHTML = "Guardar";
+    }
+}
+window.onload = function() {
+    var inputs = document.querySelectorAll('input[type="text"]');
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].disabled = true;
+    }
+};
+
+
+
+
+
+
+
+

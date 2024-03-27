@@ -1,0 +1,41 @@
+[2024-02-22 02:15:35] Nuevo usuario registrado: 
+[2024-02-22 02:39:58] Nuevo usuario registrado: 2402151003
+[2024-02-21 19:44:04] Nuevo usuario registrado: 2402151003
+[2024-02-21 19:48:53] Nuevo usuario registrado: 2402151003
+[2024-02-21 19:54:45] Nuevo usuario registrado: app.log
+[2024-02-21 20:00:12] Nuevo usuario registrado: app.log
+[2024-02-21 20:07:01] Nuevo usuario registrado: 2402008031app.log
+[2024-02-21 20:09:34] Nuevo usuario registrado: 2402011032app.log
+[2024-02-21 20:12:07] Nuevo usuario registrado: 2402011033app.log
+[2024-02-22 17:24:05] Nuevo usuario registrado: 2402009034app.log
+[2024-02-22 17:35:46] Nuevo usuario registrado: 2402003035app.log
+[2024-02-22 17:58:27] Nuevo usuario registrado: 2402009036app.log
+[2024-02-22 18:03:10] Nuevo usuario registrado: 2402016037app.log
+[2024-02-22 18:27:55] Nuevo usuario registrado: 2402009038app.log
+[2024-02-23 23:59:06] Nuevo usuario registrado: 2402014006app.log
+[2024-02-24 00:07:57] Nuevo usuario registrado: 2402010007app.log
+[2024-02-26 18:24:34] Nuevo usuario registrado: 2402015008app.log
+[2024-02-26 18:38:01] Nuevo usuario registrado: 2402009app.log
+[2024-02-26 18:46:52] Nuevo usuario registrado: 2402009app.log
+[2024-02-26 18:48:06] Nuevo usuario registrado: 2402009app.log
+[2024-02-26 19:01:50] Nuevo usuario registrado: 2402009app.log
+[2024-02-26 19:21:04] Nuevo usuario registrado: 2402009app.log
+[2024-02-26 21:33:56] Nuevo usuario registrado: 2402009app.log
+[2024-02-26 21:36:21] Nuevo usuario registrado: 2402009app.log
+[2024-02-26 21:37:25] Nuevo usuario registrado: 2402019009app.log
+[2024-02-26 21:42:13] Nuevo usuario registrado: 2402013010app.log
+[2024-02-26 21:47:48] Nuevo usuario registrado: 2402011app.log
+[2024-02-27 15:20:08] Nuevo usuario registrado: 240210011app.log
+[2024-02-27 15:21:17] Nuevo usuario registrado: 240215012app.log
+[2024-02-27 15:22:53] Nuevo usuario registrado: 2402142013app.log
+[2024-02-27 18:43:21] Nuevo usuario registrado: 24027014app.log
+[2024-02-27 18:45:21] Nuevo usuario registrado: 240211014app.log
+[2024-02-27 18:58:06] Nuevo usuario registrado: 2402006015app.log
+[2024-02-27 19:04:47] Nuevo usuario registrado: 2402142016app.log
+[2024-02-27 19:10:40] Nuevo usuario registrado: 2402201017app.log
+[2024-02-28 06:42:16] Nuevo usuario registrado: 2402197018app.log
+[2024-03-11 22:25:53] Error al intentar registrar usuario: Nombre de usuario duplicado
+[2024-03-11 22:26:33] Nuevo usuario registrado: 2403015019app.log
+[2024-03-14 11:47:33] Error al intentar registrar usuario: Nombre de usuario duplicado
+[2024-03-14 11:48:01] Error al intentar registrar usuario: Nombre de usuario duplicado
+[2024-03-14 11:48:30] Nuevo usuario registrado: 2403013020app.log

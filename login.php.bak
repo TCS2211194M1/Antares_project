@@ -16,7 +16,7 @@
             $_SESSION["password"] = htmlentities($_POST["password"]);
             $_SESSION["account"] = 2;
 
-            header("Location: ../Antares_project/principal.php");
+            header("Location: ../Antares_project/shop/catalog.php");
         } else{
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                 <strong>Error: </strong>Usuario o Contraseña incorrectos

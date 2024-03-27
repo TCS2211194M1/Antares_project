@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(57,49,60);
+    background: linear-gradient(115deg, rgba(57,49,60,1) 0%, rgba(205,228,250,1) 0%, rgba(159,204,249,1) 12%, rgba(75,156,237,1) 29%, rgba(52,133,215,1) 44%, rgba(37,124,212,1) 59%, rgba(15,111,207,1) 81%, rgba(5,112,218,1) 94%, rgba(0,102,204,1) 98%);
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: rgb(138,194,238);
+    background: rgb(138,194,238);
+    background: linear-gradient(62deg, rgba(138,194,238,1) 0%, 
+    rgba(135,194,250,1) 4%, rgba(174,207,238,1) 11%, rgba(186,214,242,1) 17%,
+     rgba(184,209,235,1) 22%, rgba(166,210,255,1) 30%, rgba(136,195,251,1) 75%, rgba(138,194,238,1) 89%);}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    border: 2px solid transparent;
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: #F3F3F3;
+}
+
+.input:hover,
+.input:focus,
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="tel"]:hover,
+input[type="tel"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+}
+
+
+
+
+
+    .switch {
+        position: relative;
+        height: 1.5rem;
+        width: 3rem;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 9999px;
+        background-color: rgba(100, 116, 139, 0.377);
+        transition: all .3s ease;
+      }
+      
+      .switch:checked {
+        background-color: rgba(77, 175, 80, 1);
+      }
+      
+      .switch::before {
+        position: absolute;
+        content: "";
+        left: calc(1.5rem - 1.6rem);
+        top: calc(1.5rem - 1.6rem);
+        display: block;
+        height: 1.6rem;
+        width: 1.6rem;
+        cursor: pointer;
+        border: 1px solid rgba(100, 116, 139, 0.527);
+        border-radius: 9999px;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+        transition: all .3s ease;
+      }
+      
+      .switch:hover::before {
+        box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+      }
+      
+      .switch:checked:hover::before {
+        box-shadow: 0 0 0px 8px rgba(77, 175, 80, .15)
+      }
+      
+      .switch:checked:before {
+        transform: translateX(100%);
+        border-color: rgba(77, 175, 80, 1);
+      }
+      
+
+
+input[type="submit"],
+input[type="button"] {
+    
+        padding: 1.3em 3em;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+      }
+      
+      
+      button:active {
+        transform: translateY(-1px);
+      }
+
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+
+input[type="submit"]:active,
+input[type="button"]:active {
+
+        transform: translateY(-1px);
+    
+
+}
+
+h1 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 2em; /* Tamaño de fuente */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    color: transparent; /* Hacemos el texto transparente */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6); /* Añadimos un borde al texto */
+    position: relative; /* Posición relativa para el efecto hover */
+}
+
+/* Estilo para el texto cuando se realiza el hover */
+h1:hover:before {
+    content: attr(data-text); /* Utilizamos el contenido del atributo data-text */
+    color: #37FF8B; /* Cambiamos el color del texto */
+    position: absolute; /* Posicionamos el texto absolutamente */
+    width: 100%; /* Ancho del texto al 100% */
+    text-align: center; /* Alineación del texto al centro */
+    top: 0; /* Colocamos el texto en la parte superior */
+    left: 0; /* Colocamos el texto en la parte izquierda */
+    -webkit-text-stroke: none; /* Quitamos el borde al texto */
+    transition: width 0.5s ease; /* Transición suave para el ancho */
+}
+

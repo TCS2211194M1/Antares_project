@@ -1,0 +1,17 @@
+/* Diseño del account.html*/
+#body-account{
+    background: linear-gradient(to right, rgb(15, 90, 170), rgb(75, 150, 240));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#container-image{
+
+}
+
+img{
+    transition: 1.5s;
+    object-fit: cover;
+}

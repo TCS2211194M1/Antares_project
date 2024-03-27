@@ -1,0 +1,5 @@
+2024-02-25 23:06:21 - Error: 'charmap' codec can't decode byte 0x81 in position 1753: character maps to <undefined>
+2024-02-25 23:06:21 - Cambio de 'Project_Samava' a 'Antares_project' completado en el archivo: c:\xampp\htdocs\www\Antares_project\login.php
+2024-02-25 23:06:21 - Cambio de 'Project_Samava' a 'Antares_project' completado en el archivo: c:\xampp\htdocs\www\Antares_project\main.php
+2024-02-25 23:06:21 - Cambio de 'Project_Samava' a 'Antares_project' completado en el archivo: c:\xampp\htdocs\www\Antares_project\perfilusr.php
+2024-02-25 23:06:21 - Cambio de 'Project_Samava' a 'Antares_project' completado en el archivo: c:\xampp\htdocs\www\Antares_project\registroExitoso.php

@@ -1,0 +1,5 @@
+account.php
+login.php
+main.php
+perfilusr.php
+registroExitoso.php

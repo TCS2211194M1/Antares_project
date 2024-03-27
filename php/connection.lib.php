@@ -1,9 +1,8 @@
-<?php
+<?php   
 
 class Connection
 {
-
-    private $con;
+    protected $con;
 
     function open()
     {
@@ -20,4 +19,6 @@ class Connection
         $res = $conne->query($query);
         return $res;
     }
+
+
 }

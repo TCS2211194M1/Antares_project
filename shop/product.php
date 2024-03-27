@@ -101,14 +101,7 @@
                         <hr class='border border-primary border-2'>
                         <p class='fs-5'>Hosted Domains: $ren[HOSTED_DOMAINS]</p>
                         <p class='fs-5'>Size Required: $ren[REQUIRED_SIZE]</p>
-                        <div class='row'>
-                            <div class='col-lg-6 col-md-6 col-sm-12'>
-                                <p text-center>Inicio de Vigencia: $ren[FECHA_DE_INICIO_DE_VIGENCIA]</p>
-                            </div>
-                            <div class='col-lg-6 col-md-6 col-sm-12'>
-                                <p class=''>Fin de Vigencia: $ren[FECHA_DE_FIN_DE_VIGENCIA]</p>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             
@@ -131,61 +124,11 @@
                 </div>
 
                 <br>
-
+        
             <form id='form-comprar' style='display: none;'>
                 <input type='hidden' value='$_POST[id]' id='ID'/>
                 <input type='hidden' value='$importe' id='IMPORTE'/>
-                <h3>Datos Generales</h3>
-
-                <div class='shadow rounded p-3' id='data-general'>
-                    <div class='row'>
-                        <div class='col-lg-2 col-md-2 col-sm-12'>
-                            <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='PAIS' placeholder='PAIS' required/>
-                                <label for='floatingInput'>PAIS</label>
-                            </div>
-                        </div>
-                        <div class='col-lg-2 col-md-2 col-sm-12'>
-                            <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='ESTADO' placeholder='ESTADO' required/>
-                                <label for='floatingInput'>ESTADO</label>
-                            </div>
-                        </div>
-                        <div class='col-lg-2 col-md-2 col-sm-12'>
-                            <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='CP' placeholder='C.P' required/>
-                                <label for='floatingInput'>C.P</label>
-                            </div>
-                        </div>
-                        <div class='col-lg-3 col-md-3 col-sm-12'>
-                            <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='CIUDAD' placeholder='CIUDAD' required/>
-                                <label for='floatingInput'>CIUDAD</label>
-                            </div>
-                        </div>
-                        <div class='col-lg-3 col-md-3 col-sm-12'>
-                            <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='CALLE' placeholder='CALLE' required/>
-                                <label for='floatingInput'>CALLE Y NÚMERO EXT</label>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class='row'>
-                        <div class='col-lg-3 col-md-3 col-sm-12'>
-                            <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='EMAIL' placeholder='EMAIL' required/>
-                                <label for='floatingInput'>EMAIL</label>
-                            </div>
-                        </div>
-                        <div class='col-lg-3 col-md-3 col-sm-12'>
-                            <div class='form-floating m-2 shadow'>
-                                <input type='text' class='form-control' id='TELÉFONO' placeholder='TELÉFONO' required/>
-                                <label for='floatingInput'>TELÉFONO</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
+               
                 <br>
 
                 <h3>Métodos de Pago</h3>
@@ -216,11 +159,33 @@
                                         </div>
                                     </div>
                                 </div>";
+                            } else if($ren["DESCRIPCION"] == 'Efectivo' or $ren["DESCRIPCION"] == 'Efectivo'){
+                                echo "<div class='row mb-2'>
+                                    <div class='col-lg-9'>
+                                        <div class='form-check'>
+                                            <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                            <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]
+                                              
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>";
+                            } else if($ren["DESCRIPCION"] == 'Transferencia electronica de fondos' or $ren["DESCRIPCION"] == 'Trasferencia'){
+                                echo "<div class='row mb-2'>
+                                    <div class='col-lg-9'>
+                                        <div class='form-check'>
+                                            <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                            <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]
+                                              
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>";
                                 } else{
-                                    echo "<div class='form-check'>
-                                        <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
-                                        <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
-                                    </div>";
+                                   // echo "<div class='form-check'>
+                                     //   <input class='form-check-input' type='radio' name='radioFormaPago' id='$ren[C_FORMAPAGO]' onclick='javascript:formaPago($ren[C_FORMAPAGO], $importe)'>
+                                       // <label class='form-check-label' for='radioFormaPago'>$ren[DESCRIPCION]</label>
+                                    //</div>";
                                 }
                             }
                         echo "</div>
@@ -232,7 +197,7 @@
             <div class='text-center mt-5' id='buttons-pay'></div>";
             
             break;
-        default:
+         default:
             echo "Error en productos";
             break;
     }

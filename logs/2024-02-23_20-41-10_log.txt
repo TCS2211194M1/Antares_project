@@ -1,0 +1,9 @@
+[2024-02-23 20:41:10.537052] Inicio del script
+[2024-02-23 20:41:10.537052] La ruta del script actual es: C:\xampp\htdocs\www\Antares_project\get_path.py
+[2024-02-23 20:41:10.538870] Directorio php_control creado
+[2024-02-23 20:41:10.539875] Archivos PHP guardados en php_control. Total encontrados: 5
+[2024-02-23 20:41:10.539875] Directorio logs_account creado para el archivo account.php
+[2024-02-23 20:41:10.541466] Directorio logs_login creado para el archivo login.php
+[2024-02-23 20:41:10.541466] Directorio logs_main creado para el archivo main.php
+[2024-02-23 20:41:10.541466] Directorio logs_perfilusr creado para el archivo perfilusr.php
+[2024-02-23 20:41:10.541466] Directorio logs_registroExitoso creado para el archivo registroExitoso.php

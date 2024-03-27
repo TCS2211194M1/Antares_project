@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu título aquí</title>
+    <link rel="stylesheet" href="../css/stylevu.css">
+
+</head>
+<body>
+
+
 <?php
 
 session_start();
@@ -76,13 +88,13 @@ switch ($_POST["opc"]) {
                         }
                         echo "</table></div>";
                     } else{
-                        echo "<h1>No tienes dominios pendientes</h1>";
+                        echo "<h1>NO TIENES DOMINIOS PENDIENTES</h1>";
                     }
                 } else{
                     echo "<div class='container mt-4 p-3 text-center shadow rounded-5' id='container-view'>
                         <div class='m-5 p-3'>
-                            <img src='../image/dominio.png' class='rounded' style='height: 250px;'>
-                            <h3 class='mt-5 mb-3'>No tienes ningún dominio</h3>
+                            <img src='../image/compraDominios.gif' class='rounded' style='height: 250px;'>
+                            <h3 class='mt-5 mb-3'>NO TIENE NINGUN DOMINIO</h3><br>
                             <a class='btn btn-primary' href='../shop/catalog.php'>Adquirir Dominio</a>
                         </div>
                     </div>";
@@ -104,7 +116,17 @@ switch ($_POST["opc"]) {
                 echo "<h2 class='text-center'>Abrir Nuevo Ticket</h2>
                 <form id='form-ticket'>
                     <div class='container mt-5 p-3 rounded-4 shadow' id='container-view'>
-                        <h4 class='mb-4'>Información del Ticket</h4>    
+                        <h4 class='mb-4'>Información del Ticket</h4>  
+                          
+                        <h3 > SAMAVA </h3>
+                    <p >
+                        <label> San juan del rio, Qro. </label ><br>
+                        <label> SAMAVA SAS DE CV </label> <br>
+                        <label> samava@gmail.com </label> <br>
+                        <label> Tel: 123-456-7890 </label> <br>
+                        
+                    </p><br>
+                    <br>
                         <div class='row'>
                             <div class='col-lg-6 col-md-6 col-sm-12'>
                                 <div class='m-2'>
@@ -230,7 +252,7 @@ switch ($_POST["opc"]) {
                                     <div class='col-lg-12 p-3 border-bottom'>
                                         <div class='d-flex'>
                                             <p class='fw-bold'> Asunto: <p class='ms-1'> $ren[asunto_tic]</p></p>
-                                        </div>
+                                        </div>  
                                         <p class='mb-3'>$ren[mensaje_tic]</p>
                                         <p>IP: $ip</p>
                                     </div>
@@ -242,8 +264,8 @@ switch ($_POST["opc"]) {
                 } else{
                     echo "<div class='container mt-5 p-3 text-center shadow rounded-5' id='container-view'>
                     <div class='m-5 p-5'>
-                        <img src='../image/cloud.png' alt='' style='width: 64px; height: 64px;'>
-                        <h3 class='mt-5 mb-4'>No tienes tickets pendietes</h3>
+                        <img src='../image/ticket.jpg' alt='' style='width: 200px; height: 200px;'>
+                        <h3 class='mt-5 mb-4'>NO TIENES TICKETS PENDIENTES</h3>
                         <button class='btn btn-primary' onclick='javascript:cargarModulo(\"tickets\",\"add\");'>Agregar ticket</button>
                     </div>
                 </div>";
@@ -255,92 +277,108 @@ switch ($_POST["opc"]) {
         }
         break;
 
-    case 'usuario':
-        $dominio = new Dominio();
-        switch ($_POST["acc"]) {
-            case 'details':
-                $consult = $dominio->consultClient($username);
-                $ren = $consult->fetch_array(MYSQLI_ASSOC);
-                $consultA = $dominio->consultActivos($username);
-                $consultI = $dominio->consultInactivos($username);
-                echo "<div class='container p-3 shadow rounded-3' id='table-data'>
-                    <div class='row'>
-                        <div class='col-lg-6 d-flex'>
-                            <table class='table table-borderless fs-4'>
-                                <thead>
-                                    <tr>
-                                        <th>Nombre de Usuario:</th>
-                                        <th class='fw-normal'>$ren[USERNAME]</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Nombre:</th>
-                                        <th class='fw-normal'>$ren[LOGIN_NAME]</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Apellidos:</th>
-                                        <th class='fw-normal'>$ren[LOGIN_LAST_NAME]</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Email:</th>
-                                        <th class='fw-normal'>$ren[EMAIL]</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Contraseña:</th>
-                                        <th class='fw-normal'>$ren[PASSWORD]</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Celular:</th>
-                                        <th class='fw-normal'>$ren[CELLPHONE]</th>
-                                    </tr>
-                                    <tr>
-                                        <th class='text-center table-borderless'>
-                                            <button class='btn btn-outline-primary' onclick='javascript:cargarModulo(\"usuario\", \"mod\");'><i class='bi bi-pencil-square me-2'></i>Modificar Datos</button>
-                                        </th>
-                                        <th class='text-center table-borderless'>
-                                            <form method='POST'>
-                                                <button class='btn btn-outline-danger' name='close'><i class='bi bi-box-arrow-left me-2'></i>Cerrar Sesión</button>
-                                            </form>
-                                        </th>
-                                    </tr>
-                                </thead>
-                            </table>  
-                        </div>
-                        <div class='col-lg-6 table-responsive'>
-                            <table class='table table-borderless table-responsive fs-4'>
-                                <thead>
-                                    <tr>
-                                        <th>Dominios activos:</th>";
-                                        if ($consultA->num_rows > 0) {
-                                            while ($renA = $consultA->fetch_array(MYSQLI_ASSOC)) {
-                                                echo "<th class='fw-normal'>'$renA[REGISTERED_DOMAIN]'</th>";
+
+       
+        
+       
+
+        case 'usuario':
+            $dominio = new Dominio();
+            switch ($_POST["acc"]) {
+                case 'details':
+                    $consult = $dominio->consultClient($username);
+                    $ren = $consult->fetch_array(MYSQLI_ASSOC);
+                    $consultA = $dominio->consultActivos($username);
+                    $consultI = $dominio->consultInactivos($username);
+                    echo "<div class='container p-3 shadow rounded-3' id='table-data'>
+                        <div class='row'>
+                            <div class='col-lg-6 d-flex'>
+                                
+                                    <thead>
+                                        <tr>
+                                       
+                                        <form class='formi'>
+                                        <br>
+                                        <h2>MIS DATOS</h2>
+                                              <label for='username'>Nombre de usuario:</label><br>
+                                    <input type='text' id='username' name='username' value='" . $ren['USERNAME'] . "' disabled>
+                                        </tr>
+                                        <tr>
+                                        <label for='login_name'>Nombre:</label><br>
+                                        <input type='text' id='login_name' name='login_name' value='" . $ren['LOGIN_NAME'] . "' disabled>
+                                        </tr>
+                                        <tr>
+                                        <label for='lastname'>Apellidos:</label><br>
+                                        <input type='text' id='lastname' name='lastname' value='" . $ren['LOGIN_LAST_NAME'] . "' disabled>
+                                        </tr>
+                                        <tr>
+                                        <label for='email'>Email:</label><br>
+                                        <input type='email' id='email' name='email' value='" . $ren['EMAIL'] . "' disabled>
+                                        </tr>
+                                        <tr>
+                                        <label for='password'>Contraseña:</label><br>
+                                        <input type='password' id='password' name='password' value='" . $ren['PASSWORD'] . "' disabled>
+                                        </tr>
+                                        <tr>
+                                        <label for='cellphone'>Teléfono:</label><br>
+                                        <input type='tel' id='cellphone' name='cellphone' value='" . $ren['CELLPHONE'] . "' disabled>
+                                        </tr><br>
+                                        <tr>
+                                            <th class='text-center table-borderless'>
+                                                <button class='btn btn-outline-primary' onclick='javascript:cargarModulo(\"usuario\", \"mod\");'><i class='bi bi-pencil-square me-2'></i>Modificar Datos</button>
+                                            </th>
+
+                                            </form class='formi'>
+                                            <br>
+
+                                            <th class='text-center table-borderless'>
+                                                <form method='POST'>
+                                                    <button class='btn btn-outline-danger' name='close'><i class='bi bi-box-arrow-left me-2'></i>Cerrar Sesión</button>
+                                                </form>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                
+                            </div>
+                            <div class='col-lg-6 table-responsive'>
+                                <table class='table table-borderless table-responsive fs-4'>
+                                    <thead>
+                                        <tr>
+                                            <th>Dominios activos:</th>";
+                                            if ($consultA->num_rows > 0) {
+                                                while ($renA = $consultA->fetch_array(MYSQLI_ASSOC)) {
+                                                    echo "<th class='fw-normal'>'$renA[REGISTERED_DOMAIN]'</th>";
+                                                }
+                                            } else{
+                                                echo "<th class='fw-normal'>0</th>";
                                             }
-                                        } else{
-                                            echo "<th class='fw-normal'>0</th>";
-                                        }
-                                    echo "</tr>
-                                    <tr>
-                                        <th>Dominios Inactivos: </th>";
-                                        if ($consultI->num_rows > 0) {
-                                            while ($renI = $consultI->fetch_array(MYSQLI_ASSOC)) {
-                                                echo "<th class='fw-normal'>'$renI[REGISTERED_DOMAIN]'</th>";
+                                        echo "</tr>
+                                        <tr>
+                                            <th>Dominios Inactivos: </th>";
+                                            if ($consultI->num_rows > 0) {
+                                                while ($renI = $consultI->fetch_array(MYSQLI_ASSOC)) {
+                                                    echo "<th class='fw-normal'>'$renI[REGISTERED_DOMAIN]'</th>";
+                                                }
+                                            } else{
+                                                echo "<th class='fw-normal'>0</th>";
                                             }
-                                        } else{
-                                            echo "<th class='fw-normal'>0</th>";
-                                        }
-                                    echo "</tr>
-                                </thead>
-                            </table>
+                                        echo "</tr>
+                                    </thead>
+                                </table>
+                            </div>
                         </div>
-                    </div>
-                    
-                </div>";
-                break;
+                        
+                    </div>";
+                    break;
 
             case 'mod':
                 $consult = $dominio->consultClient($username);
                 $ren = $consult->fetch_array(MYSQLI_ASSOC);
                 echo "<div class='container shadow rounded-5 p-5' id='mod-user'>
-                <form id='form-mod'>
+                <form id='form-mod' class='my-4'>
+                <br>
+                <h1>MODIFICAR MIS DATOS</h1>
+                <br>
                     <input type='hidden' value='$ren[T_CLIENT]' id='T_CLIENT'></input>
                     <div class='d-flex justify-content-center mb-4'>
                         <div class='col-lg-1 col-md-2 col-sm-2'>
@@ -348,6 +386,7 @@ switch ($_POST["opc"]) {
                         </div>
                         <div class='col-lg-3 col-md-3 col-sm-5'>
                             <input type='text' class='form-control ms-3' id='NAME' value='$ren[LOGIN_NAME]'></input>
+                           
                         </div>
                     </div>
                     <div class='d-flex justify-content-center mb-4'>
@@ -364,6 +403,7 @@ switch ($_POST["opc"]) {
                         </div>
                         <div class='col-lg-3 col-md-3 col-sm-5'>
                             <input type='text' class='form-control ms-3' id='EMAIL' value='$ren[EMAIL]'></input>
+                            <button type='button' class='btn btn-primary' onclick='toggleEditMode('EMAIL')' id='editButton_EMAIL'>Editar</button>
                         </div>
                     </div>
                     <div class='d-flex justify-content-center mb-4'>
@@ -371,7 +411,9 @@ switch ($_POST["opc"]) {
                             <h5>Contraseña</h5>
                         </div>
                         <div class='col-lg-3 col-md-3 col-sm-5'>
-                            <input type='text' class='form-control ms-3' id='PASSWORD' value='$ren[PASSWORD]'></input>
+                            <input type='password' class='form-control ms-3' id='PASSWORD' value='$ren[PASSWORD]'></input><br>
+                            <input type='checkbox' id='showPasswordCheckbox' onchange='togglePasswordVisibility()'>
+                            <label for='showPasswordCheckbox'>Mostrar contraseña</label><br>
                         </div>
                     </div>
                     <div class='d-flex justify-content-center mb-4'>
@@ -382,17 +424,25 @@ switch ($_POST["opc"]) {
                             <input type='text' class='form-control ms-3' id='CELLPHONE' value='$ren[CELLPHONE]'></input>
                         </div>
                     </div>
-                    </form>
                     <div class='d-flex justify-content-center mb-4'>
+            <div class='col-lg-1 col-md-1 col-sm-1'></div>
+            <div class='col-lg-2'><br>
+                <button class='btn btn-outline-success' onclick='javascript:modUser();'>Modificar Datos</button>
+            </div><br>
+        </div>
+        <div class='d-flex justify-content-center mb-4'>
+            <div class='col-lg-1 col-md-1 col-sm-1'></div>
+            <div class='col-lg-2'>
+                <button class='btn btn-outline-danger ms-2' onclick='javascript:cargarModulo(\"usuario\", \"details\");'>Cancelar</button>
+            </div>
+        </div>
+                    </form>
+                      <div class='d-flex justify-content-center mb-4'>
                         <div class='col-lg-1 col-md-1 col-sm-1'></div>
-                        <div class='col-lg-2'>
-                            <button class='btn btn-outline-success' onclick='javascript:modUser();'>Modificar Datos</button>
+                         
+                    
                         </div>
-                        <div class='col-lg-2'>
-                            <button class='btn btn-outline-danger ms-2' onclick='javascript:cargarModulo(\"usuario\", \"details\");'>Cancelar</button>
-                        </div>
-                    </div>
-                </div>";
+                      </div>";
                 break;    
             default:
                 echo "Error: No seleccionaste alguna operación (Listar, Modificar)";
@@ -403,3 +453,8 @@ switch ($_POST["opc"]) {
         echo "Error, No seleccionaste ninguna opción parael cliente";
         break;
 }
+?>
+
+
+</body>
+</html>
