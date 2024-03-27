@@ -2336,7 +2336,7 @@ function pdf() {
     .catch(err => console.log(err));
 }
 
-//  AQUI VA LO NUEVO QUE HICE  NOTAAAAAAAAAA!!!!!!!!
+//  AQUI VA LO NUEVO QUE HICE  
 
 var saved = false;
 
